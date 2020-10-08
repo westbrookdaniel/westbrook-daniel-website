@@ -1,3 +1,5 @@
+import Divider from "../Divider";
+
 export default function Nav() {
 	return (
 		<div>
@@ -5,7 +7,7 @@ export default function Nav() {
 				<h1>Logo</h1>
 				<div>Hamburger</div>
 			</div>
-			<div className="h-1 bg-gray-500"></div>
+			<Divider />
 		</div>
 	)
 }

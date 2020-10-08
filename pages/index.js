@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Nav from '../components/parts/Nav'
+import About from '../components/sections/About'
 import Hero from '../components/sections/Hero'
 
 export default function Home() {
@@ -11,7 +12,8 @@ export default function Home() {
 			</Head>
 
 			<Hero nav={Nav} />
-      
+
+			<About />
 		</div>
 	)
 }

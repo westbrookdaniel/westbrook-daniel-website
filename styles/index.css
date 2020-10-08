@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.row {
+    @apply flex lg:flex-row flex-col
+}
+.row > * {
+    @apply max-w-lg
+}
+.row > * + * {
+    @apply lg:ml-8 mt-3 lg:mt-0
+}
