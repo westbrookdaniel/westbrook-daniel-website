@@ -1,9 +1,9 @@
 import Container from "../layout/Container";
 import Form from "../parts/Form";
 
-export default function Contact() {
+export default function Contact(props) {
 	return (
-		<Container className="pt-16 pb-48">
+		<Container {...props}>
 			<h2 className="mb-2">Get in Touch</h2>
 			<div className="row mb-6">
 				<p>
