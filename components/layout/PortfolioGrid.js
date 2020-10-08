@@ -6,7 +6,7 @@ export default function PortfolioGrid({ array }) {
 	return (
 		<div>
 			<div className="grid grid-cols-2" style={{ gap: '0 2rem' }}>
-				{arrOut.map((el) => typeof el === 'function' && el())}
+				{arrOut.map((El, i) => typeof El === 'function' && <El key={i} />)}
 			</div>
 		</div>
 	)
