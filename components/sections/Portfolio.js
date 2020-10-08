@@ -21,8 +21,11 @@ export default function Portfolio() {
 function PortfolioItem() {
 	return (
 		<div>
-			<h3>Lorem Ipsum</h3>
-			<p>
+			<div className="flex justify-between w-full items-center mb-4">
+				<h3>Lorem Ipsum</h3>
+				<div>arr</div>
+			</div>
+			<p className="bg-gray-500 mb-3">
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
 				eligendi, numquam doloribus fugit id dicta ipsa animi quia maiores
 				molestias.

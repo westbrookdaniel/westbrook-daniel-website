@@ -5,14 +5,14 @@ export default function PortfolioGrid({ array }) {
 
 	return (
 		<div>
-			<div className="grid grid-cols-2">
+			<div className="grid grid-cols-2" style={{ gap: '0 2rem' }}>
 				{arrOut.map((el) => typeof el === 'function' && el())}
 			</div>
 		</div>
 	)
 }
 
-export const addDividers = (arr) => {
+const addDividers = (arr) => {
 	const output = []
 	for (let i = 0; i < arr.length; i++) {
 		const el = arr[i]

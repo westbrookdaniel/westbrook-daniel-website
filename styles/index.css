@@ -13,7 +13,7 @@
 }
 
 .grid-span {
-    grid-column: 1 / span 12;
+    grid-column: 1 / span 2;
 }
 
 h2 {
