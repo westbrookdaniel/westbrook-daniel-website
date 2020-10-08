@@ -1,17 +1,7 @@
 import Divider from '../Divider'
 
-export default function PortfolioGrid() {
-	const El = () => {
-		return (
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
-				eligendi, numquam doloribus fugit id dicta ipsa animi quia maiores
-				molestias.
-			</p>
-		)
-	}
-	const arr = [El, El, El, El, El]
-	const arrOut = addDividers(arr)
+export default function PortfolioGrid({ array }) {
+	const arrOut = addDividers(array)
 
 	return (
 		<div>
