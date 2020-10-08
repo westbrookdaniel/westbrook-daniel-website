@@ -23,3 +23,7 @@ h2 {
 h3 {
     @apply font-bold text-xl
 }
+
+.btn {
+    @apply px-8 py-1 font-bold
+}

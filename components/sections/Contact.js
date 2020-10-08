@@ -1,0 +1,17 @@
+import Container from "../layout/Container";
+import Form from "../parts/Form";
+
+export default function Contact() {
+	return (
+		<Container className="pt-16 pb-48">
+			<h2 className="mb-2">Get in Touch</h2>
+			<div className="row mb-6">
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+					soluta? Consequuntur facere omnis sapiente hic!
+				</p>
+			</div>
+			<Form />
+		</Container>
+	)
+}

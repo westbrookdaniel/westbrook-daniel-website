@@ -1,4 +1,3 @@
-import Row from '../layout/Row'
 import Container from '../layout/Container'
 import Divider from '../Divider'
 
@@ -7,7 +6,7 @@ export default function About() {
 		<Container spaced>
 			<h2>About Me</h2>
 			<Divider className="mt-4 mb-5" />
-			<Row>
+			<div className="row">
 				<p>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
 					eligendi, numquam doloribus fugit id dicta ipsa animi quia maiores
@@ -18,7 +17,7 @@ export default function About() {
 					eligendi, numquam doloribus fugit id dicta ipsa animi quia maiores
 					molestias.
 				</p>
-			</Row>
+			</div>
 		</Container>
 	)
 }

@@ -21,7 +21,7 @@ export default function Hero({ nav }) {
 					<Image src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" />
 				</Container>
 				<div
-					className="absolute bottom-0 left-0 bg-gray-500 w-full"
+					className="absolute bottom-0 left-0 bg-gray-400 w-full"
 					style={{ height: '50%' }}
 				></div>
 			</div>

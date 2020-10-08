@@ -25,7 +25,7 @@ function PortfolioItem() {
 				<h3 className="mr-6">Lorem Ipsum</h3>
 				<div>arr</div>
 			</div>
-			<p className="bg-gray-500 mb-3">
+			<p className="bg-gray-400 mb-3">
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
 				eligendi, numquam doloribus fugit id dicta ipsa animi quia maiores
 				molestias.
