@@ -1,5 +1,9 @@
 import Head from 'next/head'
+import Container from '../components/Container'
+import Divider from '../components/Divider'
 import Nav from '../components/parts/Nav'
+import PortfolioGrid from '../components/PortfolioGrid'
+import Row from '../components/Row'
 import About from '../components/sections/About'
 import Hero from '../components/sections/Hero'
 
@@ -14,6 +18,23 @@ export default function Home() {
 			<Hero nav={Nav} />
 
 			<About />
+
+			<Container spaced>
+				<h2 className="text-4xl font-bold">Portfolio</h2>
+				<Divider className="mt-4 mb-5" />
+				<PortfolioGrid>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+						eligendi, numquam doloribus fugit id dicta ipsa animi quia maiores
+						molestias.
+					</p>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+						eligendi, numquam doloribus fugit id dicta ipsa animi quia maiores
+						molestias.
+					</p>
+				</PortfolioGrid>
+			</Container>
 		</div>
 	)
 }
