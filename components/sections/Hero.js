@@ -1,15 +1,16 @@
 import Container from '../Container'
 import Image from '../Image'
 
-export default function Hero() {
+export default function Hero({ nav }) {
 	return (
 		<div className="md:h-screen flex flex-col">
 			<div>
-				<Container spaced>
-					<h2>Nav</h2>
-				</Container>
+				<Container spaced>{typeof nav === 'function' && nav()}</Container>
 				<Container className="m-auto">
-					<h1 className="text-5xl md:text-6xl font-bold" style={{ lineHeight: '1.2em' }}>
+					<h1
+						className="text-5xl md:text-6xl font-bold"
+						style={{ lineHeight: '1.2em' }}
+					>
 						Front End Developer in Perth working on building practical and fast
 						websites
 					</h1>

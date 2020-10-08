@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Nav from '../components/parts/Nav'
 import Hero from '../components/sections/Hero'
 
 export default function Home() {
@@ -9,7 +10,8 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Hero />
+			<Hero nav={Nav} />
+      
 		</div>
 	)
 }
