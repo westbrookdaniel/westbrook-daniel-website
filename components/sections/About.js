@@ -1,5 +1,5 @@
-import Row from '../Row'
-import Container from '../Container'
+import Row from '../layout/Row'
+import Container from '../layout/Container'
 import Divider from '../Divider'
 
 export default function About() {

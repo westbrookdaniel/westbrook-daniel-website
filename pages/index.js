@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Container from '../components/Container'
+import Container from '../components/layout/Container'
 import Divider from '../components/Divider'
 import Nav from '../components/parts/Nav'
-import PortfolioGrid from '../components/PortfolioGrid'
-import Row from '../components/Row'
+import PortfolioGrid from '../components/layout/PortfolioGrid'
+import Row from '../components/layout/Row'
 import About from '../components/sections/About'
 import Hero from '../components/sections/Hero'
 

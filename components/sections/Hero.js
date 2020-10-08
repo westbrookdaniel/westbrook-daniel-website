@@ -1,4 +1,4 @@
-import Container from '../Container'
+import Container from '../layout/Container'
 import Image from '../Image'
 
 export default function Hero({ nav }) {
