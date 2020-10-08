@@ -21,19 +21,7 @@ export default function Home() {
 
 			<Container spaced>
 				<h2 className="text-4xl font-bold">Portfolio</h2>
-				<Divider className="mt-4 mb-5" />
-				<PortfolioGrid>
-					<p>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
-						eligendi, numquam doloribus fugit id dicta ipsa animi quia maiores
-						molestias.
-					</p>
-					<p>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
-						eligendi, numquam doloribus fugit id dicta ipsa animi quia maiores
-						molestias.
-					</p>
-				</PortfolioGrid>
+				<PortfolioGrid />
 			</Container>
 		</div>
 	)
