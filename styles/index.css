@@ -15,3 +15,11 @@
 .grid-span {
     grid-column: 1 / span 12;
 }
+
+h2 {
+    @apply text-4xl font-bold
+}
+
+h3 {
+    @apply font-bold text-xl
+}
