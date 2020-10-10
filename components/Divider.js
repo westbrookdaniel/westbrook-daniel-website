@@ -1,3 +1,3 @@
 export default function Divider({ className = '', ...props }) {
-	return <div className={`h-1 bg-gray-400 ${className}`} {...props}></div>
+	return <div className={`h-line bg-themeGray-200 ${className}`} {...props}></div>
 }

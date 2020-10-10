@@ -25,7 +25,18 @@ module.exports = {
 
 			black: '#000',
 			white: '#fff',
-
+			themeGray: { 
+				50: '#ffffff', 
+				100: '#dadde1', 
+				200: '#bdc6ca', 
+				300: '#9eabb1', 
+				400: '#809097', 
+				500: '#66767d', 
+				600: '#4d5c63', 
+				700: '#36444b', 
+				800: '#1f2d34', 
+				900: '#09181e'
+			  },
 			gray: {
 				100: '#f7fafc',
 				200: '#edf2f7',
@@ -157,6 +168,7 @@ module.exports = {
 			48: '12rem',
 			56: '14rem',
 			64: '16rem',
+			line: '0.15rem',
 		},
 		backgroundColor: (theme) => theme('colors'),
 		backgroundImage: {

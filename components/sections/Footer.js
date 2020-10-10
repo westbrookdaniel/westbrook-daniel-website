@@ -6,7 +6,7 @@ export default function Footer() {
 			<div className="flex">
 				<div className="flex flex-grow items-baseline">
 					<p>Daniel</p>
-                    <div className="flex-grow h-1 mx-4 bg-gray-600"></div>
+                    <div className="flex-grow h-line mx-4 bg-themeGray-300"></div>
 					<p>Westbrook</p>
 				</div>
 				<div className="flex ml-32 space-x-8">
