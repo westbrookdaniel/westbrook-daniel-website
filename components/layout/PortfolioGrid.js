@@ -1,6 +1,5 @@
 import Divider from '../Divider'
 import { useContext, useEffect, useState } from 'react'
-import { TailwindCSS } from '../../TailwindProvider'
 
 export default function PortfolioGrid({ array }) {
 	const arrOut = useDividers(array)
