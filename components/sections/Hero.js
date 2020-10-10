@@ -18,7 +18,7 @@ export default function Hero({ nav }) {
 			</div>
 			<div className="flex-grow relative flex items-stretch">
 				<Container className="relative z-10" spaced>
-					<Image src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" />
+					<Image contain src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" />
 				</Container>
 				<div
 					className="absolute bottom-0 left-0 bg-gray-400 w-full"

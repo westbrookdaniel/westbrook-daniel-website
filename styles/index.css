@@ -12,10 +12,6 @@
     @apply lg:ml-8 mt-3 lg:mt-0
 }
 
-.grid-span {
-    grid-column: 1 / span 2;
-}
-
 h2 {
     @apply text-4xl font-bold
 }
