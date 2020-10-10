@@ -1,3 +1,5 @@
+import Button from '../Button'
+
 export default function Form() {
 	return (
 		<form className="max-w-lg">
@@ -6,9 +8,9 @@ export default function Form() {
 				<input type="text" />
 			</div>
 			<textarea name="" className="w-full mb-4"></textarea>
-			<button className="btn bg-yellow-600" onClick={(e) => e.preventDefault()}>
+			<Button onClick={(e) => e.preventDefault()}>
 				Send
-			</button>
+			</Button>
 		</form>
 	)
 }
