@@ -17,14 +17,6 @@ export async function getStaticProps({ params }) {
 	}
 }
 
-const CodeBlock = ({ language, value }) => {
-	return (
-		<SyntaxHighlighter showLineNumbers={true} language={language}>
-			{value}
-		</SyntaxHighlighter>
-	)
-}
-
 const PortfolioPage = ({ data: { data, content } }) => {
   // TODO: Setup Prose
 	return (
