@@ -4,8 +4,8 @@ import ReactMarkdown from 'react-markdown'
 
 export async function getStaticPaths() {
 	const pages = getPortfolios()
-	const paths = pages.map((page) => ({
-		params: { id: page.data.id },
+	const paths = pages.map(({ data }) => ({
+		params: { id: data.id },
 	}))
 	return { paths, fallback: false }
 }
