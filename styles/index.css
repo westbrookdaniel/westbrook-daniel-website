@@ -3,31 +3,55 @@
 @tailwind utilities;
 
 body {
-    @apply text-themeGray-600
+	@apply text-themeGray-600;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    @apply text-black
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply text-black;
 }
 
 .row {
-    @apply flex lg:flex-row flex-col
+	@apply flex lg:flex-row flex-col;
 }
 .row > * {
-    @apply max-w-lg
+	@apply max-w-lg;
 }
 .row > * + * {
-    @apply lg:ml-8 mt-3 lg:mt-0
+	@apply lg:ml-8 mt-3 lg:mt-0;
 }
 
 h2 {
-    @apply text-4xl font-bold
+	@apply text-4xl font-bold;
 }
 
 h3 {
-    @apply font-bold text-xl
+	@apply font-bold text-xl;
 }
 
 .btn {
-    @apply px-8 py-1 font-bold
+	@apply px-8 py-1 font-bold;
+}
+
+
+
+.fade-enter {
+	opacity: 0;
+}
+.fade-exit {
+	opacity: 1;
+}
+.fade-enter-active {
+	opacity: 1;
+}
+.fade-exit-active {
+	opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active {
+	transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }

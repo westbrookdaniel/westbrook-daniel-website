@@ -29,10 +29,6 @@ const PortfolioPage = ({ data: { data, content } }) => {
 			</Head>
 
 			<Container spaced>
-				<Nav />
-			</Container>
-
-			<Container spaced>
 				<p>Post: {data.id}</p>
 				<div className="prose">
 					<ReactMarkdown escapeHtml={true} source={content} />

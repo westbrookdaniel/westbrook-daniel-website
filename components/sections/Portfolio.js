@@ -1,3 +1,4 @@
+import { Fade } from 'react-awesome-reveal'
 import Image from '../Image'
 import Container from '../layout/Container'
 import PortfolioGrid from '../layout/PortfolioGrid'
@@ -21,12 +22,17 @@ export default function Portfolio() {
 
 function PortfolioItem() {
 	return (
-		<div>
-			<div className="flex w-full items-center">
-				<h3 className="mr-6">Lorem Ipsum</h3>
-				<div>arr</div>
+		<Fade fraction={0.5} triggerOnce={true}>
+			<div>
+				<div className="flex w-full items-center">
+					<h3 className="mr-6">Lorem Ipsum</h3>
+					<div>arr</div>
+				</div>
+				<Image
+					className="my-3"
+					src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+				/>
 			</div>
-			<Image className="my-3" src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" />
-		</div>
+		</Fade>
 	)
 }

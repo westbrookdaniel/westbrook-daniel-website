@@ -14,20 +14,19 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Hero nav={Nav} />
+			<Hero />
 
 			<div className="mt-16 mb-8">
-				<About />
+					<About />
 			</div>
 			<div className="mb-16">
-				<Portfolio />
+					<Portfolio />
 			</div>
 
 			<div className="bg-themeGray-100">
 				<Contact className="pt-16 pb-40" />
 				<Footer />
 			</div>
-
 		</div>
 	)
 }
