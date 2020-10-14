@@ -1,6 +1,9 @@
 import { useRouter } from 'next/router'
 import { getPortfolios, getPortfolio } from '../../util/get'
 import ReactMarkdown from 'react-markdown'
+import Nav from '../../components/parts/Nav'
+import Head from 'next/head'
+import Container from '../../components/layout/Container'
 
 export async function getStaticPaths() {
 	const pages = getPortfolios()
@@ -18,14 +21,24 @@ export async function getStaticProps({ params }) {
 }
 
 const PortfolioPage = ({ data: { data, content } }) => {
-  // TODO: Setup Prose
+	// TODO: Setup Prose and use MDX
 	return (
-		<>
-			<p>Post: {data.id}</p>
-			<div className="prose"> 
-				<ReactMarkdown escapeHtml={true} source={content} />
-			</div>
-		</>
+		<div>
+			<Head>
+				<title>{data.id}</title>
+			</Head>
+
+			<Container spaced>
+				<Nav />
+			</Container>
+
+			<Container spaced>
+				<p>Post: {data.id}</p>
+				<div className="prose">
+					<ReactMarkdown escapeHtml={true} source={content} />
+				</div>
+			</Container>
+		</div>
 	)
 }
 
