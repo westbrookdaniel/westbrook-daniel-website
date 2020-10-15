@@ -2,6 +2,8 @@ import Container from './Container'
 import Nav from '../parts/Nav'
 import Divider from '../Divider'
 import { Fade } from 'react-awesome-reveal'
+import Contact from '../sections/Contact'
+import Footer from '../sections/Footer'
 
 export default function Portfolio({ data, children }) {
 	return (
@@ -24,11 +26,15 @@ export default function Portfolio({ data, children }) {
 				</div>
 				<Divider />
 			</Container>
-			<Container spaced>
+			<Container spaced className='mb-12'>
 				<Fade delay={400}>
 					<div className="max-w-4xl">{children}</div>
 				</Fade>
 			</Container>
+			<div className="bg-themeGray-100">
+				<Contact className="pt-16 pb-40" />
+				<Footer />
+			</div>
 		</div>
 	)
 }
