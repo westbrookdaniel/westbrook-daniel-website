@@ -18,11 +18,16 @@ h6 {
 .row {
 	@apply flex lg:flex-row flex-col;
 }
-.row > * {
+.row-max > * {
 	@apply max-w-lg;
 }
 .row > * + * {
 	@apply lg:ml-8 mt-3 lg:mt-0;
+}
+
+h1 {
+	@apply text-5xl md:text-6xl font-bold;
+	line-height: 1.2em;
 }
 
 h2 {
@@ -36,8 +41,6 @@ h3 {
 .btn {
 	@apply px-8 py-1 font-bold;
 }
-
-
 
 .fade-enter {
 	opacity: 0;

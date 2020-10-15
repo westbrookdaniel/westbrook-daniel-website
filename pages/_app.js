@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
 			</div>
 			<SwitchTransition>
 				<CSSTransition
-					key={router.asPath}
+					key={router.pathname}
 					addEndListener={(node, done) => {
 						node.addEventListener('transitionend', done, false)
 					}}

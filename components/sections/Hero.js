@@ -9,30 +9,23 @@ export default function Hero() {
 	const height = useContext(NavContext)
 	const tailwind = useContext(TailwindCSS)
 
-	useEffect(() => {
-		console.log(tailwind?.theme.screens.md)
-	}, [tailwind])
-
 	return (
 		<div
 			className="flex flex-col"
-			style={{ height: `calc(100vh - ${height}px)` }}
+			style={{ minHeight: `calc(100vh - ${height}px)` }}
 		>
 			<div>
 				<Container className="m-auto">
 					<Fade delay={200}>
-						<h1
-							className="text-5xl md:text-6xl font-bold"
-							style={{ lineHeight: '1.2em' }}
-						>
+						<h1>
 							Front End Developer in Perth working on building practical and
 							fast websites
 						</h1>
 					</Fade>
 				</Container>
 			</div>
-			<Fade className="flex-grow" triggerOnce={true}>
-				<div className="h-full relative flex items-stretch">
+			<Fade className="flex-grow flex" triggerOnce>
+				<div className="flex-grow relative flex items-stretch">
 					<Container className="relative z-10" spaced>
 						<Image
 							contain

@@ -22,7 +22,7 @@ export default function Portfolio() {
 
 function PortfolioItem() {
 	return (
-		<Fade fraction={0.5} triggerOnce={true}>
+		<Fade fraction={0.5} triggerOnce>
 			<div>
 				<div className="flex w-full items-center">
 					<h3 className="mr-6">Lorem Ipsum</h3>
