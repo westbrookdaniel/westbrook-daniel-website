@@ -4,15 +4,27 @@ import { Fade } from 'react-awesome-reveal'
 import { TailwindCSS } from '../../TailwindProvider'
 import { useContext, useEffect, useState } from 'react'
 import { NavContext } from '../../pages/_app'
+import styled from '@emotion/styled'
+
+const Wrapper = styled.div`
+	@media (min-width: ${(props) => props.break}) {
+		min-height: calc(100vh - ${(props) => props.h || 0}px);
+	}
+`
+
+const Half = styled.div`
+	height: 50%;
+`
 
 export default function Hero() {
 	const height = useContext(NavContext)
 	const tailwind = useContext(TailwindCSS)
 
 	return (
-		<div
+		<Wrapper
 			className="flex flex-col"
-			style={{ minHeight: `calc(100vh - ${height}px)` }}
+			h={height}
+			break={tailwind?.theme.screens.md}
 		>
 			<div>
 				<Container className="m-auto">
@@ -32,12 +44,9 @@ export default function Hero() {
 							src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
 						/>
 					</Container>
-					<div
-						className="absolute bottom-0 left-0 bg-themeGray-100 w-full"
-						style={{ height: '50%' }}
-					></div>
+					<Half className="absolute bottom-0 left-0 bg-themeGray-100 w-full"></Half>
 				</div>
 			</Fade>
-		</div>
+		</Wrapper>
 	)
 }

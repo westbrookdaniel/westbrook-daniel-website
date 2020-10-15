@@ -1,5 +1,10 @@
 import Divider from '../Divider'
 import { useContext, useEffect, useState } from 'react'
+import styled from '@emotion/styled'
+
+const Gap = styled.div`
+	gap: 0 2rem;
+`
 
 export default function PortfolioGrid({ array }) {
 	const arrOut = useDividers(array)
@@ -7,14 +12,11 @@ export default function PortfolioGrid({ array }) {
 	return (
 		<div>
 			<Divider className="mt-6 mb-5 col-span-1 md:hidden" />
-			<div
-				className="grid grid-cols-1 md:grid-cols-2"
-				style={{ gap: '0 2rem' }}
-			>
+			<Gap className="grid grid-cols-1 md:grid-cols-2">
 				{arrOut.map((El, i) =>
 					typeof El === 'function' ? <El key={i} /> : null
 				)}
-			</div>
+			</Gap>
 		</div>
 	)
 }

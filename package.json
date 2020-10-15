@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/styled": "^10.0.27",
     "@mdx-js/loader": "^1.6.18",
     "@next/mdx": "^9.5.5",
     "gray-matter": "^4.0.2",
