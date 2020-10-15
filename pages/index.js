@@ -6,7 +6,24 @@ import Portfolio from '../components/sections/Portfolio'
 import Contact from '../components/sections/Contact'
 import Footer from '../components/sections/Footer'
 
-export default function Home() {
+export async function getStaticProps() {
+	const fs = require('fs')
+	const path = require('path')
+
+	const files = fs.readdirSync(path.join(process.cwd(), 'pages', 'p'), 'utf-8')
+	const fileNames = files.filter((fn) => fn.endsWith('.mdx'))
+
+	const portfolioData = []
+	fileNames.forEach((file) => {
+		const data = require(`./p/${file}`).metadata
+		data.slug = '/p/' + file.substring(0, file.length - 4)
+		portfolioData.push(data)
+	})
+
+	return { props: { portfolioData } }
+}
+
+export default function Home({ portfolioData }) {
 	return (
 		<div>
 			<Head>
@@ -17,10 +34,10 @@ export default function Home() {
 			<Hero />
 
 			<div className="mt-16 mb-8">
-					<About />
+				<About />
 			</div>
 			<div className="mb-16">
-					<Portfolio />
+				<Portfolio data={portfolioData} />
 			</div>
 
 			<div className="bg-themeGray-100">
