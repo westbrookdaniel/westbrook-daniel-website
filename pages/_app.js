@@ -29,6 +29,9 @@ function MyApp({ Component, pageProps }) {
 						node.addEventListener('transitionend', done, false)
 					}}
 					classNames="fade"
+					onExited={() => {
+						window.scrollTo(0, 0)
+					}}
 				>
 					<NavContext.Provider value={height}>
 						<Component {...pageProps} />

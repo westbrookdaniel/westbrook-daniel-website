@@ -20,7 +20,7 @@ export default function Portfolio({ data }) {
 export function PortfolioItem({ data }) {
 	return (
 		<Fade fraction={0.5} triggerOnce>
-			<Link href={data.slug}>
+			<Link href={data.slug} scroll={false}>
 				<a>
 					<div className="flex w-full items-center">
 						<h3 className="mr-6">{data.title}</h3>
