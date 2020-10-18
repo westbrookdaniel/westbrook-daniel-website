@@ -14,6 +14,10 @@ class MyDocument extends Document {
 						href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
 						rel="stylesheet"
 					/>
+					<link
+						rel="stylesheet"
+						href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css"
+					/>
 				</Head>
 				<body>
 					<Main />

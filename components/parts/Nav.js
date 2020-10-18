@@ -1,12 +1,15 @@
 import Divider from '../Divider'
 import Link from 'next/link'
+import Logo from './Logo'
 
 export default function Nav() {
 	return (
 		<div>
-			<div className="flex justify-between mb-2">
+			<div className="flex justify-between items-center mb-2">
 				<Link href="/" scroll={false}>
-					<a>Logo</a>
+					<a>
+						<Logo />
+					</a>
 				</Link>
 				<div className="flex space-x-8">
 					<Link href="/p/example-project" scroll={false}>
