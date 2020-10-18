@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Nav from '../components/parts/Nav'
 import About from '../components/sections/About'
 import Hero from '../components/sections/Hero'
-import Portfolio from '../components/sections/Portfolio'
+import PortfolioSection from '../components/sections/PortfolioSection'
 import Contact from '../components/sections/Contact'
 import Footer from '../components/sections/Footer'
 
@@ -37,7 +37,7 @@ export default function Home({ portfolioData }) {
 				<About />
 			</div>
 			<div className="mb-16">
-				<Portfolio data={portfolioData} />
+				<PortfolioSection data={portfolioData} />
 			</div>
 
 			<div className="bg-themeGray-100">

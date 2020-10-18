@@ -5,6 +5,9 @@ import { SwitchTransition, CSSTransition } from 'react-transition-group'
 import Container from '../components/layout/Container'
 import Nav from '../components/parts/Nav'
 import { createContext, useEffect, useRef, useState } from 'react'
+import { useScrollPosition } from '../util/useScrollPosition'
+import styled from '@emotion/styled'
+import StickyNav from '../components/parts/StickyNav'
 
 export const NavContext = createContext(null)
 
@@ -19,8 +22,9 @@ function MyApp({ Component, pageProps }) {
 
 	return (
 		<TailwindProvider>
-			<div className="px-8 md:px-16 lg:px-24 w-full py-10" ref={NavRef}>
-				<Nav />
+			<StickyNav />
+			<div className="w-full pb-10" ref={NavRef}>
+				<Nav className="pt-10" />
 			</div>
 			<SwitchTransition>
 				<CSSTransition

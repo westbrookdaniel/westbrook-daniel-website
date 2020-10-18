@@ -23,11 +23,17 @@ const Shape = styled.div`
 	background-color: #d43c29;
 `
 
-export default function Logo() {
+export default function Logo({ isSticky }) {
 	return (
 		<LogoText>
-			<span>Daniel</span> <Spacer />
-			<span>Westbrook</span>
+			{isSticky ? (
+				<span>DW</span>
+			) : (
+				<>
+					<span>Daniel</span> <Spacer />
+					<span>Westbrook</span>
+				</>
+			)}
 			<Shape />
 		</LogoText>
 	)

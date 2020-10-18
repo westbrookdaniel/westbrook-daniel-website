@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import { useEffect } from 'react'
 import { Fade } from 'react-awesome-reveal'
 import Image from '../Image'
 import Container from '../layout/Container'
 import PortfolioGrid from '../layout/PortfolioGrid'
 
-export default function Portfolio({ data }) {
+export default function PortfolioSection({ data }) {
 	const portfolioItems = data.map((p) => () => {
 		return <PortfolioItem data={p} />
 	})
