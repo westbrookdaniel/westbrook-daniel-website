@@ -189,7 +189,7 @@ module.exports = {
 			48: '12rem',
 			56: '14rem',
 			64: '16rem',
-			line: '0.15rem',
+			line: '0.1rem',
 		},
 		backgroundColor: (theme) => theme('colors'),
 		backgroundImage: {
