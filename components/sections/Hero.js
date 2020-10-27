@@ -41,7 +41,7 @@ export default function Hero() {
 					<Container className="relative z-10" spaced>
 						<Image
 							contain
-							src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+							src="/images/projects/xps-yNvVnPcurD8-unsplash.jpg"
 						/>
 					</Container>
 					<Half className="absolute bottom-0 left-0 bg-themeGray-100 w-full"></Half>

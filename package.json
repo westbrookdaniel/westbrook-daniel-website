@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@emotion/styled": "^10.0.27",
-    "@mdx-js/loader": "^1.6.18",
-    "@next/mdx": "^9.5.5",
-    "next": "^9.5.5",
+    "@mdx-js/loader": "^1.6.19",
+    "@next/mdx": "^10.0.0",
+    "next": "^10.0.0",
     "react": "^17.0.1",
     "react-awesome-reveal": "^3.3.1",
     "react-dom": "^17.0.1",
