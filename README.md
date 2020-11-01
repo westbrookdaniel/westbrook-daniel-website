@@ -13,21 +13,26 @@ yarn build
 yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Checklist
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- [ ] Add react-icons
+- [ ] Add layout tools for projects
+- [ ] Home page content
+- [ ] Finish footer styles
+- [ ] Outline and text select styling
+- [ ] Hidden until loaded logo
+- [ ] What to do for Attributions
+- [ ] Add Side Projects page / links
 
-## Learn More
+Add Projects
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] Proj Stories for Reddit
+- [ ] Proj Space of the Day
+- [ ] Proj Distinctive Homes WA
+- [ ] Proj TeaHome
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Finalising
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [ ] Optimise build
+- [ ] SEO
+- [ ] Host logo on backend
