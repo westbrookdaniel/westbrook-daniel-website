@@ -30,7 +30,7 @@ export function PortfolioItem({ data }) {
 					</div>
 					<Image
 						className="my-3"
-						src="/images/projects/xps-yNvVnPcurD8-unsplash.jpg"
+						src={data.src}
 					/>
 				</a>
 			</Link>
