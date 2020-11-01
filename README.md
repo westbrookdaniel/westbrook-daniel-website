@@ -18,10 +18,10 @@ yarn start
 - [x] Add react-icons
 - [x] Add layout tools for projects
 - [x] Finish footer styles
-- [ ] Home page content
+- [x] Home page content
 - [ ] Outline and text select styling
-- [ ] Hidden until loaded logo
-- [ ] What to do for Attributions
+- [ ] Hidden until loaded logo and hero image
+- [x] Remove Attributions
 - [ ] Add Side Projects page / links
 
 Add Projects

@@ -10,7 +10,6 @@ export default function Footer() {
 					<p>Westbrook</p>
 				</div>
 				<div className="flex ml-32 space-x-8">
-					<p>Attributions</p>
 					<p>Side Projects</p>
 				</div>
 			</div>

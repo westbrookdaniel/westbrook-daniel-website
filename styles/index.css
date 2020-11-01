@@ -39,7 +39,7 @@ h3 {
 }
 
 .btn {
-	@apply px-8 py-1 font-bold;
+	@apply px-8 py-2 font-bold;
 }
 
 .fade-enter {
