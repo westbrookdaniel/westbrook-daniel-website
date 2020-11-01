@@ -15,10 +15,10 @@ yarn start
 
 ## Checklist
 
-- [ ] Add react-icons
-- [ ] Add layout tools for projects
+- [x] Add react-icons
+- [x] Add layout tools for projects
+- [x] Finish footer styles
 - [ ] Home page content
-- [ ] Finish footer styles
 - [ ] Outline and text select styling
 - [ ] Hidden until loaded logo
 - [ ] What to do for Attributions

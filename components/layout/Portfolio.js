@@ -28,7 +28,7 @@ export default function Portfolio({ data, children }) {
 			</Container>
 			<Container spaced className='mb-12'>
 				<Fade delay={400}>
-					<div className="max-w-4xl">{children}</div>
+					<div>{children}</div>
 				</Fade>
 			</Container>
 			<div className="bg-themeGray-100">

@@ -4,6 +4,7 @@ import { Fade } from 'react-awesome-reveal'
 import Image from '../Image'
 import Container from '../layout/Container'
 import PortfolioGrid from '../layout/PortfolioGrid'
+import { CgArrowRight } from 'react-icons/cg'
 
 export default function PortfolioSection({ data }) {
 	const portfolioItems = data.map((p) => () => {
@@ -24,8 +25,8 @@ export function PortfolioItem({ data }) {
 			<Link href={data.slug} scroll={false}>
 				<a>
 					<div className="flex w-full items-center">
-						<h3 className="mr-6">{data.title}</h3>
-						<div>arr</div>
+						<h3 className="mr-4">{data.title}</h3>
+						<CgArrowRight/>
 					</div>
 					<Image
 						className="my-3"

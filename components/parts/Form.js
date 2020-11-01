@@ -4,13 +4,24 @@ export default function Form() {
 	return (
 		<form className="max-w-lg">
 			<div className="grid grid-cols-2 gap-4 mb-4">
-				<input type="text" />
-				<input type="text" />
+				<input
+					type="text"
+					className="focus:outline-none py-2 px-3"
+					placeholder="Name"
+				/>
+				<input
+					type="Email"
+					className="focus:outline-none py-2 px-3"
+					placeholder="Email"
+				/>
 			</div>
-			<textarea name="" className="w-full mb-4"></textarea>
-			<Button onClick={(e) => e.preventDefault()}>
-				Send
-			</Button>
+			<textarea
+				rows="4"
+				type="text"
+				className="focus:outline-none w-full mb-4 py-2 px-3"
+				placeholder="Message"
+			></textarea>
+			<Button onClick={(e) => e.preventDefault()}>Send</Button>
 		</form>
 	)
 }
