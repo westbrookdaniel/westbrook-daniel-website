@@ -19,7 +19,7 @@ yarn start
 - [x] Add layout tools for projects
 - [x] Finish footer styles
 - [x] Home page content
-- [ ] Outline and text select styling
+- [x] Outline and text select styling
 - [ ] Hidden until loaded logo and hero image
 - [x] Remove Attributions
 - [ ] Add Side Projects page / links
