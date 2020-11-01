@@ -6,7 +6,7 @@ export default function Paragraph({ withStack, children }) {
 			<div className="flex items-end flex-row space-x-8 my-8 w-100">
 				<div className="flex-grow max-w-4xl">{children}</div>
 				<p className="text-right flex-1">
-					{withStack.map(item => <>{item}<br/></>)}
+					{withStack.map((item, index) => <p key={index}>{item}</p>)}
 				</p>
 			</div>
 		)
