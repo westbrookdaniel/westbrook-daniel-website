@@ -26,7 +26,7 @@ export function PortfolioItem({ data }) {
 				<a>
 					<div className="flex w-full items-center">
 						<h3 className="mr-4">{data.title}</h3>
-						<CgArrowRight/>
+						<CgArrowRight color="#66767d" fontSize="1.2rem" />
 					</div>
 					<Image
 						className="my-3"

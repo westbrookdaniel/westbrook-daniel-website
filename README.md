@@ -21,6 +21,8 @@ yarn start
 - [x] Home page content
 - [x] Outline and text select styling
 - [x] Remove Attributions
+- [ ] Ham Nav for Projects
+- [ ] Mobile Repsponsive
 
 Add Projects
 

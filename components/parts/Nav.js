@@ -1,6 +1,7 @@
 import Divider from '../Divider'
 import Link from 'next/link'
 import Logo from './Logo'
+import { CgMenuRightAlt } from 'react-icons/cg'
 
 export default function Nav({ isSticky, className = '' }) {
 	return (
@@ -11,13 +12,12 @@ export default function Nav({ isSticky, className = '' }) {
 						<Logo isSticky={isSticky} />
 					</a>
 				</Link>
-				<div className="flex space-x-8">
-					<Link href="/p/example-project" scroll={false}>
-						<a>Example</a>
-					</Link>
-					<Link href="/p/normal" scroll={false}>
-						<a>Normal</a>
-					</Link>
+				<div className="flex space-x-8 items-center">
+					<CgMenuRightAlt
+						onClick={() => console.log('click')}
+						color="#66767d"
+						fontSize="1.5rem"
+					/>
 				</div>
 			</div>
 			<Divider />
