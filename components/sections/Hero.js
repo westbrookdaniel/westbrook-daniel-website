@@ -29,7 +29,7 @@ export default function Hero() {
 			<div>
 				<Container className="m-auto">
 					<Fade delay={200}>
-						<h1>
+						<h1 className="max-w-title">
 							Front End Developer and Designer in Perth Building
 							Modernistic Digital Solutions
 						</h1>
@@ -38,7 +38,7 @@ export default function Hero() {
 			</div>
 			<Fade className="flex-grow flex" triggerOnce>
 				<div className="flex-grow relative flex items-stretch">
-					<Container className="relative z-10" spaced>
+					<Container className="relative z-10 flex items-center" spaced>
 						<Image
 							contain
 							src="/images/projects/xps-yNvVnPcurD8-unsplash.jpg"

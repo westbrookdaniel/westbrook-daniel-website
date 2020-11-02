@@ -22,7 +22,7 @@ yarn start
 - [x] Outline and text select styling
 - [x] Remove Attributions
 - [ ] Ham Nav for Projects
-- [ ] Mobile Repsponsive
+- [x] Improve Repsponsive
 
 Add Projects
 
