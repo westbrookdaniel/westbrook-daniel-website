@@ -1,5 +1,6 @@
 import React from 'react'
+import NextImage from '../Image'
 
 export default function Image({ ...props }) {
-	return <img className="w-full" {...props} />
+	return <NextImage className="w-full" {...props} />
 }
