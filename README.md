@@ -35,6 +35,7 @@ Add Projects
 Finalising
 
 - [ ] Optimise build
+- [ ] Hover effects
 - [ ] SEO
 - [ ] Host logo on backend
 - [ ] Hidden until loaded logo and hero image
