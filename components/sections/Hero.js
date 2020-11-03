@@ -30,18 +30,22 @@ export default function Hero() {
 				<Container className="m-auto">
 					<Fade delay={200}>
 						<h1 className="max-w-title">
-							Front End Developer and Designer in Perth Building
-							Modernistic Digital Solutions
+							Front End Developer and Designer in Perth Building Modernistic
+							Digital Solutions
 						</h1>
 					</Fade>
 				</Container>
 			</div>
 			<Fade className="flex-grow flex" triggerOnce>
-				<div className="flex-grow relative flex items-stretch">
+				<div className="flex-grow max-w-full relative flex items-stretch">
 					<Container className="relative z-10 flex items-center" spaced>
 						<Image
+							priority
 							contain
-							src="/images/projects/xps-yNvVnPcurD8-unsplash.jpg"
+							quality={90}
+							width={7000}
+							height={3938}
+							src="/images/projects/hero-image.jpg"
 						/>
 					</Container>
 					<Half className="absolute bottom-0 left-0 bg-themeGray-100 w-full"></Half>
