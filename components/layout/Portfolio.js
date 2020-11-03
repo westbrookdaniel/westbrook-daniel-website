@@ -4,6 +4,7 @@ import Divider from '../Divider'
 import { Fade } from 'react-awesome-reveal'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
+import { CgArrowRight } from 'react-icons/cg'
 
 export default function Portfolio({ data, children }) {
 	return (
@@ -19,14 +20,17 @@ export default function Portfolio({ data, children }) {
 						</Fade>
 					</div>
 					<Fade triggerOnce>
-						<div>
-							<p>{data.date}</p>
+						<div className="flex items-center space-x-2">
+							<a href={data.link} target="_blank" rel="noopener noreferrer">
+								View Website
+							</a>
+							<CgArrowRight color="#66767d" fontSize="1.2rem" />
 						</div>
 					</Fade>
 				</div>
 				<Divider />
 			</Container>
-			<Container spaced className='mb-12'>
+			<Container spaced className="mb-12">
 				<Fade delay={400}>
 					<div>{children}</div>
 				</Fade>

@@ -30,7 +30,7 @@ export function PortfolioItem({ data }) {
 					</div>
 					<Image
 						className="my-3"
-						src={data.src}
+						src={data.feature}
 					/>
 				</a>
 			</Link>
