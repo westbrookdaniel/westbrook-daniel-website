@@ -39,4 +39,4 @@ Finalising
 - [ ] Optimise build
 - [ ] Hover effects
 - [ ] SEO
-- [ ] Host logo on backend
+- [x] Host logo on backend
