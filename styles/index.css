@@ -70,3 +70,13 @@ h3 {
 .max-w-title {
 	max-width: 1500px;
 }
+
+.hover-arrow .arrow {
+	@apply transition-transform duration-75 ease-in-out transform;
+}
+.hover-arrow:hover .arrow {
+	@apply translate-x-2;
+}
+.hover-arrow:active .arrow {
+	@apply translate-x-4;
+}

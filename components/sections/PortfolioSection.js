@@ -24,14 +24,15 @@ export function PortfolioItem({ data }) {
 		<Fade fraction={0.5} triggerOnce>
 			<Link href={data.slug} scroll={false}>
 				<a>
-					<div className="flex w-full items-center cursor-pointer">
-						<h3 className="mr-4">{data.title}</h3>
-						<CgArrowRight color="#66767d" fontSize="1.2rem" />
+					<div className="hover-arrow">
+						<div className="flex w-full items-center">
+							<h3 className="mr-4">{data.title}</h3>
+							<div className="arrow">
+								<CgArrowRight color="#66767d" fontSize="1.2rem" />
+							</div>
+						</div>
+						<Image className="my-3" loading="eager" src={data.feature} />
 					</div>
-					<Image
-						className="my-3"
-						src={data.feature}
-					/>
 				</a>
 			</Link>
 		</Fade>

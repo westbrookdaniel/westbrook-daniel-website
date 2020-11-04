@@ -41,6 +41,7 @@ export default function Hero() {
 					<Container className="relative z-10 flex items-center" spaced>
 						<Image
 							priority
+							loading="eager"
 							contain
 							quality={90}
 							width={7000}
