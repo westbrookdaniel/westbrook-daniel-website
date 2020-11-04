@@ -26,11 +26,13 @@ yarn start
 
 Add Projects
 
-- [ ] Proj Stories for Reddit
-- [ ] Proj Space of the Day
-- [ ] Proj Distinctive Homes WA
-- [ ] Proj TeaHome
+- [x] Proj Stories for Reddit
+- [x] Proj Space of the Day
+- [x] Proj Distinctive Homes WA
+- [x] Proj TeaHome
 - [ ] Add Side Projects page / links
+- [ ] Add link to graphics portfolio
+- [ ] Add link to resume
 
 Finalising
 
@@ -38,4 +40,3 @@ Finalising
 - [ ] Hover effects
 - [ ] SEO
 - [ ] Host logo on backend
-- [ ] Hidden until loaded logo and hero image
