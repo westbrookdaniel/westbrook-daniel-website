@@ -4,10 +4,10 @@ import Row from '../../components/portfolio/Row'
 import Image from '../../components/portfolio/Image'
 import Gallery from '../../components/portfolio/Gallery'
 
-export const prefix = "/images/projects/distinctive-homes"
+export const prefix = '/images/projects/distinctive-homes'
 export const metadata = {
 	title: 'Distinctive Homes',
-	description: 'Discover and read community made short stories',
+	description: 'Marketing Website for Distinctive Homes',
 	link: 'https://westbrookdaniel.com/',
 	feature: `${prefix}/distinctive.jpg`,
 }
@@ -16,22 +16,16 @@ export const metadata = {
 
 
 <Paragraph withStack={[
-	'React',
-	'Typescript',
-	'Webpack',
-	'Chakra UI',
-	'Framer Motion',
-	'Firebase',
+	'WordPress',
+	'HTML',
+	'CSS',
 ]}>
 
 
-A web app for reading short stories from Reddit’s many writing
-focused communities built with React and Typescript on a custom
-Webpack configuration. The website was developed to make Reddit
-short story content easily findable and consumable by the public,
-as well as provide a more accessible and enjoyable experience.
-It helps people with busy lives reconnect with bit-sized stories
-through a specialized reading experience.
+To develop an engaging and on brand website to help attract new customers
+and showcase Distinctive Homes WA’s Projects. As an established business,
+I was tasked to create a website that appealed to their audience whilst
+feeling refined, luxurious, independent and personable.
 
 </Paragraph>
 
@@ -48,39 +42,20 @@ through a specialized reading experience.
 
 ## Details
 
-This app was built with React with the framework Chakra UI. It utalises
-Firebase as a backend service and integrates a fully featured account system,
-along with posts gathered and parsed from Reddit. The website caches fetched
-data and also features search, filtering, favourites, and a dark mode.
+The website was built with marketing, SEO, and web best practices in mind.
+It was built with Wordpress to give the client a superior maintenance
+experience that allows them to easily update content and add projects
+in the future.
 
 </Row>
 
 
 <Gallery>
 	<Image src={`${prefix}/sections.jpg`} alt="Project" />
-	<Image src={`${prefix}/mobile.jpg`} alt="Project" />
+	<Image src={`${prefix}/closeup.jpg`} alt="Project" />
 </Gallery>
 
-<Row 
-	side="right" 
-	slot={(
-		<Image src={`${prefix}/closeup.jpg`} alt="Project" />
-	)}
->
-
-
-## Branding
-
-The color pallet and general aesthetic is a minimalist and modernized version
-of old library pages. This helps create a warm and comforting feeling, which
-along with the serif heading typefaces encourages a relaxing reading experience.
-The body typeface was chosen to be very legible and easy to read, whilst the
-images harmonies with the library style color pallet. The brandmark symbolizes
-a blocked out paragraph of text, showing how easily stories can be consumed
-in a simple and time effective way.
-
-</Row>
-
+<Image src={`${prefix}/mobile.jpg`} alt="Project" />
 
 </Portfolio>
 

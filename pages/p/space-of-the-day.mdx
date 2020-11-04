@@ -7,7 +7,7 @@ import Gallery from '../../components/portfolio/Gallery'
 export const prefix = "/images/projects/space-of-the-day"
 export const metadata = {
 	title: 'Space of the Day',
-	description: 'Discover and read community made short stories',
+	description: 'Discover astronomy pictures with a visual focus',
 	link: 'https://westbrookdaniel.com/',
 	feature: `${prefix}/space.jpg`,
 }
@@ -16,27 +16,24 @@ export const metadata = {
 
 
 <Paragraph withStack={[
-	'React',
-	'Typescript',
-	'Webpack',
-	'Chakra UI',
+	'React.js ',
 	'Framer Motion',
-	'Firebase',
+	'Tailwind CSS',
+	'NASA API',
 ]}>
 
 
-A web app for reading short stories from Reddit’s many writing
-focused communities built with React and Typescript on a custom
-Webpack configuration. The website was developed to make Reddit
-short story content easily findable and consumable by the public,
-as well as provide a more accessible and enjoyable experience.
-It helps people with busy lives reconnect with bit-sized stories
-through a specialized reading experience.
+To attract a younger audience to NASA’s Astronomy Picture of the Day. Currently
+their website not only looks outdated, but lacks a showcase previous days pictures
+and discoverability. This is solved in my solution by having the entire months
+images easily accessible and searchable. I kept the feeling of intrigue/FOMO
+intact through the use of a dramatic hero section and by only showing the last
+month worth of images.
 
 </Paragraph>
 
 
-<Image src={`${prefix}/stories.jpg`} alt="Project" />
+<Image src={`${prefix}/space.jpg`} alt="Project" />
 
 <Row 
 	side="left" 
@@ -48,10 +45,10 @@ through a specialized reading experience.
 
 ## Details
 
-This app was built with React with the framework Chakra UI. It utalises
-Firebase as a backend service and integrates a fully featured account system,
-along with posts gathered and parsed from Reddit. The website caches fetched
-data and also features search, filtering, favourites, and a dark mode.
+Website is built as a single page app using React Router with dynamic 
+loading of content on the client. Data is cached as you navigate, with 
+the ability to search the month images by name, date, and author, and 
+download them easily.
 
 </Row>
 
@@ -71,13 +68,16 @@ data and also features search, filtering, favourites, and a dark mode.
 
 ## Branding
 
-The color pallet and general aesthetic is a minimalist and modernized version
-of old library pages. This helps create a warm and comforting feeling, which
-along with the serif heading typefaces encourages a relaxing reading experience.
-The body typeface was chosen to be very legible and easy to read, whilst the
-images harmonies with the library style color pallet. The brandmark symbolizes
-a blocked out paragraph of text, showing how easily stories can be consumed
-in a simple and time effective way.
+The design aims to emphasize the core visual ideas of analytical, 
+knowledgeable, charismatic, user friendly, and astronomy. From 
+there I developed an aesthetic vision based on something that is 
+engaging and visually interesting. My visual concept is a magazine 
+cover which uses expressive, colorful type laid over images with a 
+steadfast and considered charisma. The name is a play on its source, 
+although using a quick attention seeking focus on space. The logo 
+typeface is Playfair Display with both the body and heading font 
+being Epilogue and the contrast between both typefaces helps to 
+create the feeling of a visual striking cover.
 
 </Row>
 
