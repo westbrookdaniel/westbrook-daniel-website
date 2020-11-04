@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled from '@emotion/styled'
+import Typist from 'react-typist'
+import useOnScreen from '../../util/useOnScreen'
 
 const LogoText = styled.p`
 	font-family: 'Hack';
@@ -13,7 +15,7 @@ const LogoText = styled.p`
 `
 
 const Spacer = styled.span`
-	width: 6px;
+	margin-right: 6px;
 `
 
 const Shape = styled.div`
@@ -23,18 +25,32 @@ const Shape = styled.div`
 	background-color: #d43c29;
 `
 
+const ShapeWrapper = styled.div`
+	height: 31px;
+	display: flex;
+	align-items: center;
+`
+
 export default function Logo({ isSticky }) {
+	const ref = useRef()
+	const onScreen = useOnScreen(ref)
+
 	return (
-		<LogoText>
-			{isSticky ? (
-				<span>DW</span>
-			) : (
-				<>
-					<span>Daniel</span> <Spacer />
-					<span>Westbrook</span>
-				</>
-			)}
-			<Shape />
+		<LogoText ref={ref}>
+			{onScreen &&
+				(isSticky ? (
+					<span>DW</span>
+				) : (
+					<Typist cursor={{ show: false }}>
+						Daniel
+						<Spacer />
+						<Typist.Delay ms={100} />
+						Westbrook
+					</Typist>
+				))}
+			<ShapeWrapper>
+				<Shape />
+			</ShapeWrapper>
 		</LogoText>
 	)
 }
