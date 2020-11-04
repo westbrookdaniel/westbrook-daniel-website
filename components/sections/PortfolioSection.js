@@ -24,7 +24,7 @@ export function PortfolioItem({ data }) {
 		<Fade fraction={0.5} triggerOnce>
 			<Link href={data.slug} scroll={false}>
 				<a>
-					<div className="flex w-full items-center">
+					<div className="flex w-full items-center cursor-pointer">
 						<h3 className="mr-4">{data.title}</h3>
 						<CgArrowRight color="#66767d" fontSize="1.2rem" />
 					</div>

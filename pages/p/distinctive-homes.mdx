@@ -1,0 +1,86 @@
+import Portfolio from '../../components/layout/Portfolio'
+import Paragraph from '../../components/portfolio/Paragraph'
+import Row from '../../components/portfolio/Row'
+import Image from '../../components/portfolio/Image'
+import Gallery from '../../components/portfolio/Gallery'
+
+export const prefix = "/images/projects/distinctive-homes"
+export const metadata = {
+	title: 'Distinctive Homes',
+	description: 'Discover and read community made short stories',
+	link: 'https://westbrookdaniel.com/',
+	feature: `${prefix}/distinctive.jpg`,
+}
+
+<Portfolio data={metadata}>
+
+
+<Paragraph withStack={[
+	'React',
+	'Typescript',
+	'Webpack',
+	'Chakra UI',
+	'Framer Motion',
+	'Firebase',
+]}>
+
+
+A web app for reading short stories from Reddit’s many writing
+focused communities built with React and Typescript on a custom
+Webpack configuration. The website was developed to make Reddit
+short story content easily findable and consumable by the public,
+as well as provide a more accessible and enjoyable experience.
+It helps people with busy lives reconnect with bit-sized stories
+through a specialized reading experience.
+
+</Paragraph>
+
+
+<Image src={`${prefix}/distinctive.jpg`} alt="Project" />
+
+<Row 
+	side="left" 
+	slot={(
+		<Image src={`${prefix}/contact.jpg`} alt="Project" />
+	)}
+>
+
+
+## Details
+
+This app was built with React with the framework Chakra UI. It utalises
+Firebase as a backend service and integrates a fully featured account system,
+along with posts gathered and parsed from Reddit. The website caches fetched
+data and also features search, filtering, favourites, and a dark mode.
+
+</Row>
+
+
+<Gallery>
+	<Image src={`${prefix}/sections.jpg`} alt="Project" />
+	<Image src={`${prefix}/mobile.jpg`} alt="Project" />
+</Gallery>
+
+<Row 
+	side="right" 
+	slot={(
+		<Image src={`${prefix}/closeup.jpg`} alt="Project" />
+	)}
+>
+
+
+## Branding
+
+The color pallet and general aesthetic is a minimalist and modernized version
+of old library pages. This helps create a warm and comforting feeling, which
+along with the serif heading typefaces encourages a relaxing reading experience.
+The body typeface was chosen to be very legible and easy to read, whilst the
+images harmonies with the library style color pallet. The brandmark symbolizes
+a blocked out paragraph of text, showing how easily stories can be consumed
+in a simple and time effective way.
+
+</Row>
+
+
+</Portfolio>
+
