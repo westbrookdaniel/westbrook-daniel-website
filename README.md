@@ -37,6 +37,6 @@ Add Projects
 Finalising
 
 - [ ] Optimise build
-- [ ] Hover effects
+- [x] Hover effects
 - [ ] SEO
 - [x] Host logo on backend
