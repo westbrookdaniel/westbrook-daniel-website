@@ -20,11 +20,11 @@ export default function Portfolio({ data, children }) {
 						</Fade>
 					</div>
 					<Fade triggerOnce>
-						<div className="flex items-center space-x-2 hover-arrow">
+						<div className="flex items-center space-x-2 hover-arrow text-themeRed-500">
 							<a href={data.link} target="_blank" rel="noopener noreferrer">
 								View Website
 							</a>
-							<CgArrowRight color="#66767d" className="arrow" fontSize="1.2rem" />
+							<CgArrowRight color="#d43c29" className="arrow" fontSize="1.2rem" />
 						</div>
 					</Fade>
 				</div>
