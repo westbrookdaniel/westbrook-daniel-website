@@ -30,8 +30,6 @@ Add Projects
 - [x] Proj Space of the Day
 - [x] Proj Distinctive Homes WA
 - [x] Proj TeaHome
-- [ ] Add Side Projects page / links
-- [ ] Add link to graphics portfolio
 - [ ] Add link to resume
 
 Finalising
@@ -40,3 +38,8 @@ Finalising
 - [x] Hover effects
 - [ ] SEO
 - [x] Host logo on backend
+
+Backburner
+
+- [ ] Add link to graphics portfolio
+- [ ] Add Side Projects page / links
