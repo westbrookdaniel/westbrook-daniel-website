@@ -7,6 +7,7 @@ import { useContext, useState } from 'react'
 import Container from '../layout/Container'
 import { LogoText, LogoShape, LogoSpacer, ShapeWrapper } from './Logo'
 import { NavContext } from '../../pages/_app'
+import { normal } from '../../util/transition'
 
 export default function Nav({ isSticky, className = '' }) {
 	const [isNavOpen, setIsNavOpen] = useState(false)
@@ -80,7 +81,9 @@ const LargeNav = ({ isOpen, setIsOpen }) => {
 								<li>
 									<Link href={page.slug} key={page.slug}>
 										<a onClick={() => setIsOpen(false)}>
-											<p className="font-bold text-2xl lg:text-4xl text-black">
+											<p
+												className={`font-bold text-2xl lg:text-4xl text-black ${normal} transform hover:translate-x-2 active:translate-x-0`}
+											>
 												{page.title}
 											</p>
 										</a>
