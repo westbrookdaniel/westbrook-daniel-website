@@ -1,27 +1,51 @@
+import { useState } from 'react'
 import Button from '../Button'
 
 export default function Form() {
+	const [status, setStatus] = useState('Send')
+
+	const handleSubmit = (e) => {
+		setStatus('Sending')
+		e.preventDefault()
+		const form = e.target
+		const data = new FormData(form)
+		const xhr = new XMLHttpRequest()
+		xhr.open(form.method, form.action)
+		xhr.setRequestHeader('Accept', 'application/json')
+		xhr.onreadystatechange = () => {
+			if (xhr.readyState !== XMLHttpRequest.DONE) return
+			if (xhr.status === 200) {
+				form.reset()
+				setStatus('Success')
+				setTimeout(() => {
+					setStatus('Send')
+				}, 1000);
+			} else {
+				setStatus('Failed')
+				setTimeout(() => {
+					setStatus('Send')
+				}, 1000);
+			}
+		}
+		xhr.send(data)
+	}
+
 	return (
-		<form className="max-w-lg">
-			<div className="grid grid-cols-2 gap-4 mb-4">
-				<input
-					type="text"
-					className="py-2 px-3"
-					placeholder="Name"
-				/>
-				<input
-					type="Email"
-					className="py-2 px-3"
-					placeholder="Email"
-				/>
-			</div>
+		<form
+			action="https://formspree.io/f/mjvprzdn"
+			method="POST"
+			onSubmit={handleSubmit}
+			className="max-w-lg"
+		>
+			<input type="email" name="email" className="mb-4 py-2 px-3 w-full" placeholder="Email" />
 			<textarea
 				rows="4"
 				type="text"
+				name="message"
 				className="w-full mb-4 py-2 px-3"
 				placeholder="Message"
 			></textarea>
-			<Button onClick={(e) => e.preventDefault()}>Send</Button>
+			<Button type="submit">{status}</Button>
 		</form>
 	)
 }
