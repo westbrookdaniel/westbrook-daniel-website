@@ -38,7 +38,7 @@ Finalising
 
 - [x] Optimise build
 - [x] Hover effects
-- [ ] SEO
+- [x] SEO
 - [x] Host logo on backend
 
 Backburner

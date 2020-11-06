@@ -25,6 +25,13 @@ export default function Home({ portfolioData }) {
 		<div>
 			<Head>
 				<title>Daniel Westbrook | Front End Developer and Designer</title>
+				<meta
+					name="description"
+					content="I am a Front End Developer and Designer with a history of working in 
+					the web development and design industry building websites and web apps. I enjoy 
+					formulating efficient, innovative solutions for Perth businesses and agencies 
+					that utalises strategic design thinking."
+				></meta>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 

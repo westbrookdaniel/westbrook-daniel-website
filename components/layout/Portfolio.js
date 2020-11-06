@@ -35,7 +35,7 @@ export default function Portfolio({ data, children, portfolioData }) {
 		<div>
 			<Head>
 				<title>{data.title} | Daniel Westbrook</title>
-				<link rel="icon" href="/favicon.ico" />
+				<meta name="description" content={data.description}></meta>
 			</Head>
 			<Container spaced>
 				<div className="row lg:items-end mb-6">
