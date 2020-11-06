@@ -7,7 +7,12 @@ module.exports = {
 		extendedFontSizeScale: true,
 		applyComplexClasses: true,
 	},
-	purge: [],
+	purge: [
+		'./components/**/*.js',
+		'./util/**/*.js',
+		'./pages/**/*.js',
+		'./styles/**/*.css',
+	],
 	target: 'relaxed',
 	prefix: '',
 	important: false,
