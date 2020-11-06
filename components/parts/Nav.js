@@ -51,7 +51,7 @@ const LargeNav = ({ isOpen, setIsOpen }) => {
 					<div className="px-8 md:px-16 lg:px-24">
 						<div className="flex justify-between items-center mb-2">
 							<Link href="/" scroll={false}>
-								<a>
+								<a onClick={() => setIsOpen(false)}>
 									<LogoText>
 										<span>DW</span>
 										<ShapeWrapper>
