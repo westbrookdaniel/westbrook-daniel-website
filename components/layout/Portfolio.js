@@ -43,15 +43,33 @@ export default function Portfolio({ data, children, portfolioData }) {
 						</Fade>
 					</div>
 					<Fade triggerOnce>
-						<div className="flex items-center space-x-2 hover-arrow text-themeRed-500">
-							<a href={data.link} target="_blank" rel="noopener noreferrer">
-								View Website
-							</a>
-							<CgArrowRight
-								color="#d43c29"
-								className="arrow"
-								fontSize="1.2rem"
-							/>
+						<div className="flex items-center space-x-10 text-themeRed-500">
+							<div className="flex items-center space-x-2 hover-arrow">
+								<a href={data.link} target="_blank" rel="noopener noreferrer">
+									View Website
+								</a>
+								<CgArrowRight
+									color="#d43c29"
+									className="arrow"
+									fontSize="1.2rem"
+								/>
+							</div>
+							{data.source && (
+								<div className="flex items-center space-x-2 hover-arrow">
+									<a
+										href={data.source}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Source
+									</a>
+									<CgArrowRight
+										color="#d43c29"
+										className="arrow"
+										fontSize="1.2rem"
+									/>
+								</div>
+							)}
 						</div>
 					</Fade>
 				</div>

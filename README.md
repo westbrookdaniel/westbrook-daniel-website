@@ -24,7 +24,7 @@ yarn start
 - [x] Ham Nav for Projects
 - [x] Improve Repsponsive
 - [x] Add more hover to projects scale
-- [ ] Add github links
+- [x] Add github links
 
 Add Projects
 
