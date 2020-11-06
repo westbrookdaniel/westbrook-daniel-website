@@ -23,7 +23,7 @@ yarn start
 - [x] Remove Attributions
 - [x] Ham Nav for Projects
 - [x] Improve Repsponsive
-- [ ] Add more hover to projects scale
+- [x] Add more hover to projects scale
 - [ ] Add github links
 
 Add Projects
@@ -36,7 +36,7 @@ Add Projects
 
 Finalising
 
-- [ ] Optimise build
+- [x] Optimise build
 - [x] Hover effects
 - [ ] SEO
 - [x] Host logo on backend
