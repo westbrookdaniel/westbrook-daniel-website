@@ -11,7 +11,7 @@ import StickyNav from '../components/parts/StickyNav'
 
 export const NavContext = createContext(null)
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, portfolioData }) {
 	const router = useRouter()
 	const NavRef = useRef(null)
 	const [height, setHeight] = useState(null)

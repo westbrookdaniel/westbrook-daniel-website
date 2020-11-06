@@ -23,6 +23,8 @@ yarn start
 - [x] Remove Attributions
 - [ ] Ham Nav for Projects
 - [x] Improve Repsponsive
+- [ ] Add more hover to projects
+- [ ] Add github links
 
 Add Projects
 

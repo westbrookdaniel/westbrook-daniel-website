@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import Typist from 'react-typist'
 import useOnScreen from '../../util/useOnScreen'
 
-const LogoText = styled.p`
+export const LogoText = styled.p`
 	font-family: 'Hack';
 	font-weight: 700;
 	font-size: 1.3rem;
@@ -14,18 +14,18 @@ const LogoText = styled.p`
 	user-select: none;
 `
 
-const Spacer = styled.span`
+export const LogoSpacer = styled.span`
 	margin-right: 6px;
 `
 
-const Shape = styled.div`
+export const LogoShape = styled.div`
 	height: 15px;
 	width: 8px;
 	margin-left: 4px;
 	background-color: #d43c29;
 `
 
-const ShapeWrapper = styled.div`
+export const ShapeWrapper = styled.div`
 	height: 31px;
 	display: flex;
 	align-items: center;
@@ -43,13 +43,13 @@ export default function Logo({ isSticky }) {
 				) : (
 					<Typist cursor={{ show: false }}>
 						Daniel
-						<Spacer />
+						<LogoSpacer />
 						<Typist.Delay ms={100} />
 						Westbrook
 					</Typist>
 				))}
 			<ShapeWrapper>
-				<Shape />
+				<LogoShape />
 			</ShapeWrapper>
 		</LogoText>
 	)
