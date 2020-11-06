@@ -12,8 +12,9 @@ export const metadata = {
 	feature: `${prefix}/stories.jpg`,
 }
 
-export default ({ children }) => (
-	<Portfolio data={metadata}>{children}</Portfolio>
+export { getStaticProps } from '../../util/getPortfolioData'
+export default ({ children, portfolioData }) => (
+	<Portfolio data={metadata} portfolioData={portfolioData}>{children}</Portfolio>
 )
 
 <Paragraph withStack={[

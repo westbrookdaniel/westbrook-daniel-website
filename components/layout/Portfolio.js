@@ -5,8 +5,17 @@ import { Fade } from 'react-awesome-reveal'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
 import { CgArrowRight } from 'react-icons/cg'
+import { useContext, useEffect } from 'react'
+import { NavContext } from '../../pages/_app'
 
-export default function Portfolio({ data, children }) {
+export default function Portfolio({ data, children, portfolioData }) {
+	const { setData, data: oldPortfolioData } = useContext(NavContext)
+	useEffect(() => {
+		if (!oldPortfolioData) {
+			setData(portfolioData)
+		}
+	}, [])
+
 	return (
 		<div>
 			<Container spaced>
@@ -24,7 +33,11 @@ export default function Portfolio({ data, children }) {
 							<a href={data.link} target="_blank" rel="noopener noreferrer">
 								View Website
 							</a>
-							<CgArrowRight color="#d43c29" className="arrow" fontSize="1.2rem" />
+							<CgArrowRight
+								color="#d43c29"
+								className="arrow"
+								fontSize="1.2rem"
+							/>
 						</div>
 					</Fade>
 				</div>

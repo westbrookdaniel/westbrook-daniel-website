@@ -7,26 +7,13 @@ import Contact from '../components/sections/Contact'
 import Footer from '../components/sections/Footer'
 import { useContext, useEffect } from 'react'
 import { NavContext } from './_app'
+import getPortfolioData from '../util/getPortfolioData'
 
 export async function getStaticProps() {
-	const fs = require('fs')
-	const path = require('path')
-
-	const files = fs.readdirSync(path.join(process.cwd(), 'pages', 'p'), 'utf-8')
-	const fileNames = files.filter((fn) => fn.endsWith('.mdx'))
-
-	const portfolioData = []
-	fileNames.forEach((file) => {
-		const data = require(`./p/${file}`).metadata
-		data.slug = '/p/' + file.substring(0, file.length - 4)
-		portfolioData.push(data)
-	})
-
-	return { props: { portfolioData } }
+	return getPortfolioData()
 }
 
 export default function Home({ portfolioData }) {
-	
 	const { setData, data } = useContext(NavContext)
 	useEffect(() => {
 		if (!data) {

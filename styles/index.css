@@ -67,6 +67,23 @@ h3 {
 	transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+.slide-enter {
+	transform: translate(100%); 
+}
+.slide-exit {
+	transform: translate(0px); 
+}
+.slide-enter-active {
+	transform: translate(0px); 
+}
+.slide-exit-active {
+	transform: translate(100%); 
+}
+.slide-enter-active,
+.slide-exit-active {
+	transition: all 500ms cubic-bezier(.4,.37,.37,1);
+}
+
 .max-w-title {
 	max-width: 1500px;
 }

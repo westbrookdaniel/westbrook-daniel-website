@@ -44,9 +44,9 @@ const LargeNav = ({ isOpen, setIsOpen }) => {
 				node.addEventListener('transitionend', done, false)
 			}}
 			unmountOnExit
-			classNames="fade"
+			classNames="slide"
 		>
-			<div className="bg-gray-400 pt-10 fixed w-full h-full top-0 bottom-0 left-0 right-0 z-50">
+			<div className="bg-white pt-10 fixed w-full h-full top-0 bottom-0 left-0 right-0 z-50">
 				<div className="w-full pb-10">
 					<div className="px-8 md:px-16 lg:px-24">
 						<div className="flex justify-between items-center mb-2">
@@ -72,18 +72,22 @@ const LargeNav = ({ isOpen, setIsOpen }) => {
 					</div>
 				</div>
 				<Container spaced>
-					<p>Nav Content</p>
-					<div className="py-10 space-y-4">
+					<p className="mb-2">Projects</p>
+					<Divider />
+					<ul className="py-10 space-y-6 list-none">
 						{data &&
 							data.map((page) => (
-								<Link href={page.slug} key={page.slug}>
-									<a onClick={() => setIsOpen(false)}>
-										<p>{page.title}</p>
-									</a>
-								</Link>
+								<li>
+									<Link href={page.slug} key={page.slug}>
+										<a onClick={() => setIsOpen(false)}>
+											<p className="font-bold text-4xl text-black">
+												{page.title}
+											</p>
+										</a>
+									</Link>
+								</li>
 							))}
-					</div>
-					<button onClick={() => setIsOpen(false)}>Close</button>
+					</ul>
 				</Container>
 			</div>
 		</CSSTransition>
