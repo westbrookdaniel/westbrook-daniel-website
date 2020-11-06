@@ -1,6 +1,8 @@
 # Website for [Me](westbrookdaniel.com)
 
-Sciripts
+I am a Front End Developer and Designer with a history of working in the web development and design industry building websites and web apps. I enjoy formulating efficient, innovative solutions for Perth businesses and agencies that utalises strategic design thinking.
+
+## Scripts
 
 ```bash
 # Development
@@ -12,36 +14,3 @@ yarn build
 # Start From Build
 yarn start
 ```
-
-## Checklist
-
-- [x] Add react-icons
-- [x] Add layout tools for projects
-- [x] Finish footer styles
-- [x] Home page content
-- [x] Outline and text select styling
-- [x] Remove Attributions
-- [x] Ham Nav for Projects
-- [x] Improve Repsponsive
-- [x] Add more hover to projects scale
-- [x] Add github links
-
-Add Projects
-
-- [x] Proj Stories for Reddit
-- [x] Proj Space of the Day
-- [x] Proj Distinctive Homes WA
-- [x] Proj TeaHome
-- [ ] Add link to resume
-
-Finalising
-
-- [x] Optimise build
-- [x] Hover effects
-- [x] SEO
-- [x] Host logo on backend
-
-Backburner
-
-- [ ] Add link to graphics portfolio
-- [ ] Add Side Projects page / links
