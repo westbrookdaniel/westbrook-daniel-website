@@ -21,9 +21,9 @@ yarn start
 - [x] Home page content
 - [x] Outline and text select styling
 - [x] Remove Attributions
-- [ ] Ham Nav for Projects
+- [x] Ham Nav for Projects
 - [x] Improve Repsponsive
-- [ ] Add more hover to projects
+- [ ] Add more hover to projects scale
 - [ ] Add github links
 
 Add Projects

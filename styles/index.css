@@ -93,11 +93,17 @@ h3 {
 }
 
 .hover-arrow .arrow {
-	@apply transition-transform duration-75 ease-in-out transform;
+	@apply transition-transform duration-100 ease-in-out transform;
+}
+.hover-arrow:hover img {
+	@apply scale-105;
+}
+.hover-arrow:active img {
+	@apply scale-100;
 }
 .hover-arrow:hover .arrow {
 	@apply translate-x-2;
 }
 .hover-arrow:active .arrow {
-	@apply translate-x-4;
+	@apply translate-x-0;
 }

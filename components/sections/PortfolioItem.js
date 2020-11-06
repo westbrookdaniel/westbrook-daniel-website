@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Fade } from 'react-awesome-reveal'
 import { CgArrowRight } from 'react-icons/cg'
+import { normal } from '../../util/transition'
 import Divider from '../Divider'
 import Image from '../Image'
 
@@ -22,7 +23,9 @@ export default function PortfolioItem({ data, nextProject }) {
 								<CgArrowRight color="#66767d" fontSize="1.2rem" />
 							</div>
 						</div>
-						<Image className="my-3" loading="eager" src={data.feature} />
+						<div className="my-3 overflow-hidden">
+						<Image className={`transform ${normal}`} loading="eager" src={data.feature} />
+						</div>
 					</div>
 				</a>
 			</Link>

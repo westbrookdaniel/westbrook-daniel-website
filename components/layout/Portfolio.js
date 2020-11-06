@@ -62,7 +62,7 @@ export default function Portfolio({ data, children, portfolioData }) {
 					<div>{children}</div>
 				</Fade>
 			</Container>
-			<Container spaced className="mb-12 lg:w-2/3">
+			<Container spaced className="mb-12 lg:w-1/2">
 				<Fade delay={400} triggerOnce>
 					{nextProject && <PortfolioItem nextProject data={nextProject} />}
 				</Fade>

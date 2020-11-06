@@ -80,7 +80,7 @@ const LargeNav = ({ isOpen, setIsOpen }) => {
 								<li>
 									<Link href={page.slug} key={page.slug}>
 										<a onClick={() => setIsOpen(false)}>
-											<p className="font-bold text-4xl text-black">
+											<p className="font-bold text-2xl lg:text-4xl text-black">
 												{page.title}
 											</p>
 										</a>

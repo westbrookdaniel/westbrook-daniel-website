@@ -1,1 +1,1 @@
-export const normal = 'transiton-colors transition duration-100'
+export const normal = 'transition duration-100'
