@@ -8,6 +8,7 @@ import { CgArrowRight } from 'react-icons/cg'
 import { useContext, useEffect, useState } from 'react'
 import { NavContext } from '../../pages/_app'
 import PortfolioItem from '../sections/PortfolioItem'
+import Head from 'next/head'
 
 export default function Portfolio({ data, children, portfolioData }) {
 	const { setData, data: oldPortfolioData } = useContext(NavContext)
@@ -32,6 +33,10 @@ export default function Portfolio({ data, children, portfolioData }) {
 
 	return (
 		<div>
+			<Head>
+				<title>{data.title} | Daniel Westbrook</title>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 			<Container spaced>
 				<div className="row lg:items-end mb-6">
 					<div className="max-w-6xl lg:mr-16">

@@ -24,7 +24,7 @@ export default function Home({ portfolioData }) {
 	return (
 		<div>
 			<Head>
-				<title>Daniel Westbrook</title>
+				<title>Daniel Westbrook | Front End Developer and Designer</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
