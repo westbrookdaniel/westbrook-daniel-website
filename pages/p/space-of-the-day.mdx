@@ -12,8 +12,9 @@ export const metadata = {
 	feature: `${prefix}/space.jpg`,
 }
 
-<Portfolio data={metadata}>
-
+export default ({ children }) => (
+	<Portfolio data={metadata}>{children}</Portfolio>
+)
 
 <Paragraph withStack={[
 	'React.js ',
@@ -77,6 +78,3 @@ create the feeling of a visual striking cover.
 </Paragraph>
 
 <Image src={`${prefix}/search.jpg`} alt="Project" />
-
-</Portfolio>
-

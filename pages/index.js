@@ -5,6 +5,8 @@ import Hero from '../components/sections/Hero'
 import PortfolioSection from '../components/sections/PortfolioSection'
 import Contact from '../components/sections/Contact'
 import Footer from '../components/sections/Footer'
+import { useContext, useEffect } from 'react'
+import { NavContext } from './_app'
 
 export async function getStaticProps() {
 	const fs = require('fs')
@@ -24,6 +26,14 @@ export async function getStaticProps() {
 }
 
 export default function Home({ portfolioData }) {
+	
+	const { setData, data } = useContext(NavContext)
+	useEffect(() => {
+		if (!data) {
+			setData(portfolioData)
+		}
+	}, [])
+
 	return (
 		<div>
 			<Head>

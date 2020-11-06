@@ -12,8 +12,9 @@ export const metadata = {
 	feature: `${prefix}/stories.jpg`,
 }
 
-<Portfolio data={metadata}>
-
+export default ({ children }) => (
+	<Portfolio data={metadata}>{children}</Portfolio>
+)
 
 <Paragraph withStack={[
 	'React',
@@ -80,7 +81,3 @@ a blocked out paragraph of text, showing how easily stories can be consumed
 in a simple and time effective way.
 
 </Row>
-
-
-</Portfolio>
-

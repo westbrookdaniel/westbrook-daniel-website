@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps, portfolioData }) {
 	const router = useRouter()
 	const NavRef = useRef(null)
 	const [height, setHeight] = useState(null)
+	const [data, setData] = useState(null)
 
 	useEffect(() => {
 		setHeight(NavRef.current?.clientHeight)
@@ -22,26 +23,26 @@ function MyApp({ Component, pageProps, portfolioData }) {
 
 	return (
 		<TailwindProvider>
-			<StickyNav />
-			<div className="w-full pb-10" ref={NavRef}>
-				<Nav className="pt-10" />
-			</div>
-			<SwitchTransition>
-				<CSSTransition
-					key={router.pathname}
-					addEndListener={(node, done) => {
-						node.addEventListener('transitionend', done, false)
-					}}
-					classNames="fade"
-					onExited={() => {
-						window.scrollTo(0, 0)
-					}}
-				>
-					<NavContext.Provider value={height}>
+			<NavContext.Provider value={{ height, data, setData }}>
+				<StickyNav />
+				<div className="w-full pb-10" ref={NavRef}>
+					<Nav className="pt-10" />
+				</div>
+				<SwitchTransition>
+					<CSSTransition
+						key={router.pathname}
+						addEndListener={(node, done) => {
+							node.addEventListener('transitionend', done, false)
+						}}
+						classNames="fade"
+						onExited={() => {
+							window.scrollTo(0, 0)
+						}}
+					>
 						<Component {...pageProps} />
-					</NavContext.Provider>
-				</CSSTransition>
-			</SwitchTransition>
+					</CSSTransition>
+				</SwitchTransition>
+			</NavContext.Provider>
 		</TailwindProvider>
 	)
 }

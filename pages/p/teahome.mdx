@@ -12,8 +12,9 @@ export const metadata = {
 	feature: `${prefix}/teahome.jpg`,
 }
 
-<Portfolio data={metadata}>
-
+export default ({ children }) => (
+	<Portfolio data={metadata}>{children}</Portfolio>
+)
 
 <Paragraph withStack={[
 	'Vanilla.js',
@@ -75,7 +76,3 @@ in typefaces and neutral core colors make it feel dependable, whilst the range
 specific accents emphasize its point of difference while showcasing creativity.
 
 </Row>
-
-
-</Portfolio>
-

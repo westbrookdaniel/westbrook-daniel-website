@@ -17,7 +17,7 @@ const Half = styled.div`
 `
 
 export default function Hero() {
-	const height = useContext(NavContext)
+	const { height } = useContext(NavContext)
 	const tailwind = useContext(TailwindCSS)
 
 	return (

@@ -3,11 +3,12 @@ import Link from 'next/link'
 import Logo from './Logo'
 import { CgMenuRightAlt, CgClose } from 'react-icons/cg'
 import { CSSTransition } from 'react-transition-group'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Container from '../layout/Container'
 import { LogoText, LogoShape, LogoSpacer, ShapeWrapper } from './Logo'
+import { NavContext } from '../../pages/_app'
 
-export default function Nav({ isSticky, className = '', portfolioData }) {
+export default function Nav({ isSticky, className = '' }) {
 	const [isNavOpen, setIsNavOpen] = useState(false)
 
 	return (
@@ -26,19 +27,16 @@ export default function Nav({ isSticky, className = '', portfolioData }) {
 						fontSize="1.5rem"
 					/>
 				</div>
-				<LargeNav
-					isOpen={isNavOpen}
-					data={portfolioData}
-					setIsOpen={setIsNavOpen}
-				/>
+				<LargeNav isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
 			</div>
 			<Divider />
 		</div>
 	)
 }
 
-const LargeNav = ({ isOpen, setIsOpen, data }) => {
-	console.log(data);
+const LargeNav = ({ isOpen, setIsOpen }) => {
+	const { data } = useContext(NavContext)
+
 	return (
 		<CSSTransition
 			in={isOpen}
@@ -75,6 +73,16 @@ const LargeNav = ({ isOpen, setIsOpen, data }) => {
 				</div>
 				<Container spaced>
 					<p>Nav Content</p>
+					<div className="py-10 space-y-4">
+						{data &&
+							data.map((page) => (
+								<Link href={page.slug} key={page.slug}>
+									<a onClick={() => setIsOpen(false)}>
+										<p>{page.title}</p>
+									</a>
+								</Link>
+							))}
+					</div>
 					<button onClick={() => setIsOpen(false)}>Close</button>
 				</Container>
 			</div>
