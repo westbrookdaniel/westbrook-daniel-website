@@ -10,14 +10,14 @@ export default function About() {
 				<p>
 					I am a Front End Developer and Designer with a history of working in
 					the web development and design industry building websites and web
-					apps. I enjoy formulating efficient, innovative solutions for Perth businesses
-					and agencies that utalises strategic design thinking.
+					apps. I enjoy formulating efficient, innovative solutions for Perth
+					businesses and agencies that utilise strategic design thinking.
 				</p>
 				<p>
-					My experience extends through working with in web agencies, direct
-					client relations, agile workplaces, and more. Through this I have
-					developed many websites with unique branding and varied complexity. I
-					always look to seek a challenge and develop knowledge in the latest
+					My experience extends through working with web agencies, direct client
+					relations, agile workplaces, and more. Through this, I have developed
+					many websites with unique branding and varying complexity. I always am
+					seeking new challenges and developing my knowledge of the latest
 					technologies.
 				</p>
 			</div>
