@@ -37,12 +37,12 @@ export default function Form() {
 			onSubmit={handleSubmit}
 			className="max-w-lg"
 		>
-			<input type="email" name="email" className="mb-4 py-2 px-3 w-full" placeholder="Email" />
+			<input type="email" name="email" className="mb-4 py-2 px-3 w-full rounded-none" placeholder="Email" />
 			<textarea
 				rows="4"
 				type="text"
 				name="message"
-				className="w-full mb-4 py-2 px-3"
+				className="w-full mb-4 py-2 px-3 rounded-none"
 				placeholder="Message"
 			></textarea>
 			<Button type="submit">{status}</Button>
