@@ -80,7 +80,7 @@ export default function Portfolio({ data, children, portfolioData }) {
 				</div>
 				<Divider />
 			</Container>
-			<Container spaced>
+			<Container className="pb-8 lg:pb-10">
 				<Fade delay={400} triggerOnce>
 					<div>{children}</div>
 				</Fade>
