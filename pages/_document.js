@@ -10,6 +10,10 @@ class MyDocument extends Document {
 		return (
 			<Html>
 				<Head>
+					{/* Global site tag (gtag.js) - Google Analytics */}
+					<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3S62B7X3T"></script>
+					
+					
 					<link
 						href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
 						rel="stylesheet"

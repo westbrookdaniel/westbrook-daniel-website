@@ -21,6 +21,16 @@ function MyApp({ Component, pageProps, portfolioData }) {
 		setHeight(NavRef.current?.clientHeight)
 	}, [NavRef.current])
 
+	useEffect(() => {
+		if (!window) return
+		window.dataLayer = window.dataLayer || []
+		function gtag() {
+			dataLayer.push(arguments)
+		}
+		gtag('js', new Date())
+		gtag('config', 'G-L3S62B7X3T')
+	}, [])
+
 	return (
 		<TailwindProvider>
 			<NavContext.Provider value={{ height, data, setData }}>

@@ -77,9 +77,9 @@ const LargeNav = ({ isOpen, setIsOpen }) => {
 					<Divider />
 					<ul className="py-10 space-y-6 list-none">
 						{data &&
-							data.map((page) => (
+							data.map((page, i) => (
 								<li>
-									<Link href={page.slug} key={page.slug}>
+									<Link href={page.slug} key={i}>
 										<a onClick={() => setIsOpen(false)}>
 											<p
 												className={`font-bold text-2xl lg:text-4xl text-black ${normal} transform hover:translate-x-2 active:translate-x-0`}
