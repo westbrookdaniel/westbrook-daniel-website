@@ -8,6 +8,7 @@ import Container from '../layout/Container'
 import { LogoText, LogoShape, LogoSpacer, ShapeWrapper } from './Logo'
 import { NavContext } from '../../pages/_app'
 import { normal } from '../../util/transition'
+import Socials from './Socials'
 
 export default function Nav({ isSticky, className = '' }) {
 	const [isNavOpen, setIsNavOpen] = useState(false)
@@ -47,7 +48,7 @@ const LargeNav = ({ isOpen, setIsOpen }) => {
 			unmountOnExit
 			classNames="slide"
 		>
-			<div className="bg-white pt-10 fixed w-full h-full top-0 bottom-0 left-0 right-0 z-50">
+			<div className="bg-white pt-10 fixed w-full h-full flex flex-col top-0 bottom-0 left-0 right-0 z-50">
 				<div className="w-full pb-10">
 					<div className="px-8 md:px-16 lg:px-24">
 						<div className="flex justify-between items-center mb-2">
@@ -72,10 +73,10 @@ const LargeNav = ({ isOpen, setIsOpen }) => {
 						</div>
 					</div>
 				</div>
-				<Container spaced>
+				<Container spaced className="flex-grow flex flex-col">
 					<p className="mb-2">Projects</p>
 					<Divider />
-					<ul className="py-10 space-y-6 list-none">
+					<ul className="py-10 space-y-6 list-none flex-grow">
 						{data &&
 							data.map((page, i) => (
 								<li>
@@ -91,6 +92,7 @@ const LargeNav = ({ isOpen, setIsOpen }) => {
 								</li>
 							))}
 					</ul>
+					<Socials gridCol="grid-cols-6" />
 				</Container>
 			</div>
 		</CSSTransition>
