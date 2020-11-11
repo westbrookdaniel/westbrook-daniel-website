@@ -24,7 +24,7 @@ export default function PortfolioItem({ data, nextProject }) {
 							</div>
 						</div>
 						<div className="my-3 overflow-hidden">
-						<Image className={`transform ${normal}`} loading="eager" src={data.feature} />
+						<Image alt={`${data.title} Project`} className={`transform ${normal}`} loading="eager" src={data.feature} />
 						</div>
 					</div>
 				</a>

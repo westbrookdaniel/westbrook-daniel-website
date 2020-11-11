@@ -47,6 +47,7 @@ export default function Hero() {
 							width={7000}
 							height={3938}
 							src="/images/projects/hero-image.jpg"
+							alt="Hero Project"
 						/>
 					</Container>
 					<Half className="absolute bottom-0 left-0 bg-themeGray-100 w-full"></Half>

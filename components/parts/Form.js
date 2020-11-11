@@ -32,12 +32,14 @@ export default function Form() {
 			className="max-w-lg"
 		>
 			<input
+				id="email"
 				type="email"
 				name="email"
 				className="mb-4 py-2 px-3 w-full rounded-none"
 				placeholder="Email"
 			/>
 			<textarea
+				id="message"
 				rows="4"
 				type="text"
 				name="message"
