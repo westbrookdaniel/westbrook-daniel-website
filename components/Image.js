@@ -14,6 +14,6 @@ export default function Image({
 
 	const res = width && height ? { width, height } : { unsized: true }
 	return (
-		<NextImage {...res} loading={loading} className={classString} {...props} />
+		<NextImage {...res} loading={loading} className={classString} layout="responsive" {...props} />
 	)
 }
