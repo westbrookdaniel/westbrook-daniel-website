@@ -2,5 +2,9 @@ import React from 'react'
 import NextImage from '../Image'
 
 export default function Image({ ...props }) {
-	return <NextImage className="w-full" {...props} />
+	return (
+		<Fade triggerOnce>
+			<NextImage className="w-full" {...props} />
+		</Fade>
+	)
 }

@@ -12,8 +12,7 @@ export default function Image({
 	if (contain) classString = 'h-full object-contain'
 	if (className) classString += ` ${className}`
 
-	const res = width && height ? { width, height } : { unsized: true }
 	return (
-		<NextImage {...res} loading={loading} className={classString} layout="responsive" {...props} />
+		<NextImage loading={loading} className={classString} layout="responsive" {...props} />
 	)
 }
