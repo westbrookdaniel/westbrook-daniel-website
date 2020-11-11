@@ -1,5 +1,6 @@
 import Container from '../layout/Container'
 import Socials from '../parts/Socials'
+import { normal } from '../../util/transition'
 
 export default function Footer() {
 	return (
@@ -13,7 +14,11 @@ export default function Footer() {
 				<Socials
 					className="lg:ml-16"
 					extras={
-						<a href="images/static/daniel-westbrook-resume.pdf" download>
+						<a
+							href="images/static/daniel-westbrook-resume.pdf"
+							className={`${normal} color-hover`}
+							download
+						>
 							<p>Resume</p>
 						</a>
 					}

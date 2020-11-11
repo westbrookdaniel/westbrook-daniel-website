@@ -6,17 +6,27 @@ import {
 	AiFillGithub,
 	AiFillInstagram,
 } from 'react-icons/ai'
+import { normal } from '../../util/transition'
 
-export default function Socials({ className, extras, gridCol = 'grid-cols-4', ...props }) {
+export default function Socials({
+	className,
+	extras,
+	gridCol = 'grid-cols-4',
+	...props
+}) {
 	const iconStyle = {
 		fontSize: '1.3em',
 	}
 	return (
-		<div className={`xs:flex grid ${gridCol} gap-8 xs:gap-0 mt-6 lg:mt-0 xs:space-x-8 items-center ${className}`} {...props} >
+		<div
+			className={`xs:flex grid ${gridCol} gap-8 xs:gap-0 mt-6 lg:mt-0 xs:space-x-8 items-center ${className}`}
+			{...props}
+		>
 			<a
 				href="https://twitter.com/DanielW29381255"
 				target="_blank"
 				rel="noopener noreferrer"
+				className={`${normal} color-hover`}
 			>
 				<AiOutlineTwitter {...iconStyle} />
 			</a>
@@ -24,6 +34,7 @@ export default function Socials({ className, extras, gridCol = 'grid-cols-4', ..
 				href="https://www.linkedin.com/in/daniel-westbrook-692227196/"
 				target="_blank"
 				rel="noopener noreferrer"
+				className={`${normal} color-hover`}
 			>
 				<AiFillLinkedin {...iconStyle} />
 			</a>
@@ -31,6 +42,7 @@ export default function Socials({ className, extras, gridCol = 'grid-cols-4', ..
 				href="https://github.com/westbrookdaniel/"
 				target="_blank"
 				rel="noopener noreferrer"
+				className={`${normal} color-hover`}
 			>
 				<AiFillGithub {...iconStyle} />
 			</a>
@@ -38,6 +50,7 @@ export default function Socials({ className, extras, gridCol = 'grid-cols-4', ..
 				href="https://www.instagram.com/bywestbrookdaniel/"
 				target="_blank"
 				rel="noopener noreferrer"
+				className={`${normal} color-hover`}
 			>
 				<AiFillInstagram {...iconStyle} />
 			</a>
@@ -45,6 +58,7 @@ export default function Socials({ className, extras, gridCol = 'grid-cols-4', ..
 				href="https://www.behance.net/westbrookdaniel/"
 				target="_blank"
 				rel="noopener noreferrer"
+				className={`${normal} color-hover`}
 			>
 				<AiFillBehanceCircle {...iconStyle} />
 			</a>

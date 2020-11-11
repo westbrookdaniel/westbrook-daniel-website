@@ -107,3 +107,7 @@ h3 {
 .hover-arrow:active .arrow {
 	@apply translate-x-0;
 }
+
+.color-hover {
+	@apply hover:text-yellow-700 active:text-themeGray-600 focus:text-themeGray-600
+}
