@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Button from '../Button'
 
 export default function Form() {
-	const [status, setStatus] = useState('Send')
+	const [status, setStatus] = useState(null)
 
 	const handleSubmit = (e) => {
 		setStatus('Sending')
@@ -16,15 +16,9 @@ export default function Form() {
 			if (xhr.readyState !== XMLHttpRequest.DONE) return
 			if (xhr.status === 200) {
 				form.reset()
-				setStatus('Success')
-				setTimeout(() => {
-					setStatus('Send')
-				}, 1000);
+				setStatus('Successfully Sent')
 			} else {
-				setStatus('Failed')
-				setTimeout(() => {
-					setStatus('Send')
-				}, 1000);
+				setStatus('Failed. Please Try Again')
 			}
 		}
 		xhr.send(data)
@@ -37,7 +31,12 @@ export default function Form() {
 			onSubmit={handleSubmit}
 			className="max-w-lg"
 		>
-			<input type="email" name="email" className="mb-4 py-2 px-3 w-full rounded-none" placeholder="Email" />
+			<input
+				type="email"
+				name="email"
+				className="mb-4 py-2 px-3 w-full rounded-none"
+				placeholder="Email"
+			/>
 			<textarea
 				rows="4"
 				type="text"
@@ -45,7 +44,14 @@ export default function Form() {
 				className="w-full mb-4 py-2 px-3 rounded-none"
 				placeholder="Message"
 			></textarea>
-			<Button type="submit">{status}</Button>
+			<div className="sm:flex items-center sm:space-x-4">
+				<Button className="mb-4 sm:mb-0" type="submit">
+					Send
+				</Button>
+				{status && (
+					<p className="border-line border-themeGray-200 px-3 py-2">{status}</p>
+				)}
+			</div>
 		</form>
 	)
 }
