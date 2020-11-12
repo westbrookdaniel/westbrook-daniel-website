@@ -9,6 +9,14 @@ export default function Form() {
 		e.preventDefault()
 		const form = e.target
 		const data = new FormData(form)
+		if (!data.get('email')) {
+			setStatus('Please Enter Your Email')
+			return
+		}
+		if (!data.get('message')) {
+			setStatus('Please Enter a Message')
+			return
+		}
 		const xhr = new XMLHttpRequest()
 		xhr.open(form.method, form.action)
 		xhr.setRequestHeader('Accept', 'application/json')
