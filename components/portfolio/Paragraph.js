@@ -5,9 +5,10 @@ export default function Paragraph({ withStack, children }) {
 		return (
 			<div className="xl:flex items-end flex-row space-x-0 space-y-8 xl:space-y-8 xl:space-x-8 my-8 w-100">
 				<div className="flex-grow max-w-4xl">{children}</div>
-				<p className="xl:text-right flex-1">
+				<div className="xl:text-right flex-1">
+					<h3>Technologies</h3>
 					{withStack.map((item, index) => <p key={index}>{item}</p>)}
-				</p>
+				</div>
 			</div>
 		)
 
