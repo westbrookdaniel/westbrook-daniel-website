@@ -5,7 +5,7 @@ import NextImage from '../Image'
 export default function Image({ ...props }) {
 	return (
 		<Fade triggerOnce>
-			<NextImage className="w-full" {...props} />
+			<NextImage className="w-full" loading="eager" {...props} />
 		</Fade>
 	)
 }

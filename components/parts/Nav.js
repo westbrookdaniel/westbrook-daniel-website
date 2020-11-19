@@ -48,20 +48,10 @@ const LargeNav = ({ isOpen, setIsOpen }) => {
 			unmountOnExit
 			classNames="slide"
 		>
-			<div className="bg-white pt-10 fixed w-full h-full flex flex-col top-0 bottom-0 left-0 right-0 z-50">
+			<div className="bg-white shadow-2xl pt-10 fixed w-nav max-w-full h-full flex flex-col top-0 bottom-0 right-0 z-50">
 				<div className="w-full pb-10">
 					<div className="px-8 md:px-16 lg:px-24">
-						<div className="flex justify-between items-center mb-2">
-							<Link href="/" scroll={false}>
-								<a onClick={() => setIsOpen(false)}>
-									<LogoText>
-										<span>DW</span>
-										<ShapeWrapper>
-											<LogoShape />
-										</ShapeWrapper>
-									</LogoText>
-								</a>
-							</Link>
+						<div className="flex justify-end items-center mb-2">
 							<div className="flex space-x-8 items-center">
 								<CgClose
 									className="cursor-pointer"
