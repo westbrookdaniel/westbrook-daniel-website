@@ -5,6 +5,7 @@ import { TailwindCSS } from '../../TailwindProvider'
 import { useContext, useEffect, useState } from 'react'
 import { NavContext } from '../../pages/_app'
 import styled from '@emotion/styled'
+import Link from 'next/link'
 
 const Wrapper = styled.div`
 	@media (min-width: ${(props) => props.break}) {
@@ -39,16 +40,19 @@ export default function Hero() {
 			<Fade className="flex-grow flex" triggerOnce>
 				<div className="flex-grow max-w-full relative flex items-stretch">
 					<Container className="relative z-10 flex items-center" spaced>
-						<Image
-							priority
-							loading="eager"
-							contain
-							quality={90}
-							width={7000}
-							height={3938}
-							src="/images/projects/hero-image.jpg"
-							alt="Hero Project"
-						/>
+						<Link href="/p/stories-for-reddit" scroll={false}>
+							<Image
+								className="cursor-pointer"
+								priority
+								loading="eager"
+								contain
+								quality={90}
+								width={7000}
+								height={3938}
+								src="/images/projects/hero-image.jpg"
+								alt="Hero Project"
+							/>
+						</Link>
 					</Container>
 					<Half className="absolute bottom-0 left-0 bg-themeGray-100 w-full"></Half>
 				</div>
