@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import Typist from 'react-typist'
 import useOnScreen from '../../util/useOnScreen'
 
-export const LogoText = styled.p`
+export const LogoText = styled.div`
 	font-family: 'Hack';
 	font-weight: 700;
 	font-size: 1.3rem;

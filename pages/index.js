@@ -21,6 +21,21 @@ export default function Home({ portfolioData }) {
 		}
 	}, [])
 
+	const sideData = [
+		{
+			slug: 'https://img-board.netlify.app/',
+			title: 'IMG Board',
+		},
+		{
+			slug: 'https://color-maker.netlify.app/',
+			title: 'Color Maker',
+		},
+		{
+			slug: 'https://inspoapp.netlify.app/',
+			title: 'Inspo App',
+		},
+	]
+
 	return (
 		<div>
 			<Head>
@@ -41,7 +56,12 @@ export default function Home({ portfolioData }) {
 				<About />
 			</div>
 			<div className="mb-16">
-				<PortfolioSection data={portfolioData} />
+				<PortfolioSection title={<h2>Portfolio</h2>} data={portfolioData} />
+				<PortfolioSection
+					title={<h3>Side Projects</h3>}
+					small
+					data={sideData}
+				/>
 			</div>
 
 			<div className="bg-themeGray-100">

@@ -41,17 +41,16 @@ export default function Hero() {
 				<div className="flex-grow max-w-full relative flex items-stretch">
 					<Container className="relative z-10 flex items-center" spaced>
 						<Link href="/p/stories-for-reddit" scroll={false}>
-							<Image
-								className="cursor-pointer"
-								priority
-								loading="eager"
-								contain
-								quality={90}
-								width={7000}
-								height={3938}
-								src="/images/projects/hero-image.jpg"
-								alt="Hero Project"
-							/>
+							<a>
+								<Image
+									className="cursor-pointer w-auto"
+									loading="eager"
+									contain
+									quality={90}
+									src="/images/projects/hero-image.jpg"
+									alt="Hero Project"
+								/>
+							</a>
 						</Link>
 					</Container>
 					<Half className="absolute bottom-0 left-0 bg-themeGray-100 w-full"></Half>
