@@ -22,6 +22,7 @@ function MyApp({ Component, pageProps, portfolioData }) {
 	}, [NavRef.current])
 
 	useEffect(() => {
+		console.log('%c Nothing to See Here...', "font-family: Hack, Helvetica, sans-serif; color: #4d5c63; padding: 16px 0; font-style: italic;")
 		if (!window) return
 		window.dataLayer = window.dataLayer || []
 		function gtag() {
