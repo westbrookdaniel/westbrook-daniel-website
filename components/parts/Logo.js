@@ -12,6 +12,9 @@ export const LogoText = styled.div`
 	color: #d43c29;
 	text-transform: uppercase;
 	user-select: none;
+	.Typist {
+		line-height: 1em;
+	}
 `
 
 export const LogoSpacer = styled.span`
