@@ -11,7 +11,7 @@ export default function Image({
 	...props
 }) {
 	let classString = ''
-	if (contain) classString = 'h-full object-contain'
+	if (contain) classString = 'object-contain'
 	if (className) classString += ` ${className}`
 
 	const res = width && height ? { width, height } : { unsized: true }
