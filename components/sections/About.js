@@ -8,7 +8,7 @@ export default function About() {
 			<Divider className="mt-4 mb-5" />
 			<div className="row row-max">
 				<p>
-					I am a Front End Developer and Designer with a history of working in
+					I am a Full Stack Developer and Designer with a history of working in
 					the web development and design industry building websites and web
 					apps. I enjoy formulating efficient, innovative solutions for Perth
 					businesses and agencies that utilise strategic design thinking.

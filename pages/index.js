@@ -39,10 +39,10 @@ export default function Home({ portfolioData }) {
 	return (
 		<div>
 			<Head>
-				<title>Daniel Westbrook | Front End Developer and Designer</title>
+				<title>Daniel Westbrook | Full Stack Developer and Designer</title>
 				<meta
 					name="description"
-					content="I am a Front End Developer and Designer with a history of working in 
+					content="I am a Full Stack Developer and Designer with a history of working in 
 					the web development and design industry building websites and web apps. I enjoy 
 					formulating efficient, innovative solutions for Perth businesses and agencies 
 					that utalises strategic design thinking."

@@ -8,8 +8,8 @@ module.exports = withMDX({
 		autoPrerender: false,
 	},
 	images: {
-		deviceSizes: [320, 420, 768, 1024, 1200, 2400],
-		imageSizes: [320, 420, 768, 1024, 1200, 1200],
+		deviceSizes: [320, 420, 768, 1024, 1200],
+		imageSizes: [320, 420, 768, 1024, 1200],
 		iconSizes: [],
 		domains: [],
 		path: '/_next/image',

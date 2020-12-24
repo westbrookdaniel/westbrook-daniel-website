@@ -31,7 +31,7 @@ export default function Hero() {
 				<Container className="m-auto">
 					<Fade delay={200}>
 						<h1 className="max-w-title">
-							Front End Developer and Designer in Perth Building Modernistic
+							Full Stack Developer and Designer in Perth Building Modernistic
 							Digital Solutions
 						</h1>
 					</Fade>
