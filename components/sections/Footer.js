@@ -11,9 +11,7 @@ export default function Footer() {
 					<div className="flex-grow h-line mx-4 bg-themeGray-300"></div>
 					<p>Westbrook</p>
 				</div>
-				<Socials
-					className="lg:ml-16"
-				/>
+				<Socials className="lg:ml-16" />
 			</div>
 		</Container>
 	)

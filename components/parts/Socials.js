@@ -23,14 +23,6 @@ export default function Socials({
 			{...props}
 		>
 			<a
-				href="https://twitter.com/DanielW29381255"
-				target="_blank"
-				rel="noopener noreferrer"
-				className={`${normal} color-hover`}
-			>
-				<AiOutlineTwitter {...iconStyle} />
-			</a>
-			<a
 				href="https://www.linkedin.com/in/daniel-westbrook-692227196/"
 				target="_blank"
 				rel="noopener noreferrer"
@@ -45,14 +37,6 @@ export default function Socials({
 				className={`${normal} color-hover`}
 			>
 				<AiFillGithub {...iconStyle} />
-			</a>
-			<a
-				href="https://www.instagram.com/bywestbrookdaniel/"
-				target="_blank"
-				rel="noopener noreferrer"
-				className={`${normal} color-hover`}
-			>
-				<AiFillInstagram {...iconStyle} />
 			</a>
 			<a
 				href="https://www.behance.net/westbrookdaniel/"
