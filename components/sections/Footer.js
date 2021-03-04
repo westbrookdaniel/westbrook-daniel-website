@@ -13,15 +13,6 @@ export default function Footer() {
 				</div>
 				<Socials
 					className="lg:ml-16"
-					extras={
-						<a
-							href="images/static/daniel-westbrook-resume.pdf"
-							className={`${normal} color-hover`}
-							download
-						>
-							<p>Resume</p>
-						</a>
-					}
 				/>
 			</div>
 		</Container>
