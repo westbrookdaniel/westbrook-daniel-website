@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import React, { useEffect } from 'react'
 import { useScrollPosition } from '../../util/useScrollPosition'
+import Container from '../layout/Container'
 import Nav from './Nav'
 
 const Wrapper = styled.div`
@@ -16,7 +17,9 @@ export default function StickyNav() {
 			className="w-full fixed z-10 transition-all duration-300 ease-in-out"
 			{...scrollProps}
 		>
-			<Nav isSticky className="pt-3 bg-white" />
+			<Container>
+				<Nav isSticky className="pt-3 bg-white" />
+			</Container>
 		</Wrapper>
 	)
 }

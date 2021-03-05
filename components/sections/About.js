@@ -6,7 +6,7 @@ export default function About() {
 		<Container spaced>
 			<h2>About Me</h2>
 			<Divider className="mt-4 mb-5" />
-			<div className="row row-max">
+			<div className="row">
 				<p>
 					I am a Full Stack Developer and Designer with a history of working in
 					the web development and design industry building websites and web

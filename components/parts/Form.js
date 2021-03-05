@@ -37,7 +37,6 @@ export default function Form() {
 			action="https://formspree.io/f/mjvprzdn"
 			method="POST"
 			onSubmit={handleSubmit}
-			className="max-w-lg"
 		>
 			<input
 				id="email"

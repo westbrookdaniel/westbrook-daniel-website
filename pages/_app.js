@@ -13,13 +13,7 @@ export const NavContext = createContext(null)
 
 function MyApp({ Component, pageProps, portfolioData }) {
 	const router = useRouter()
-	const NavRef = useRef(null)
-	const [height, setHeight] = useState(null)
 	const [data, setData] = useState(null)
-
-	useEffect(() => {
-		setHeight(NavRef.current?.clientHeight)
-	}, [NavRef.current])
 
 	useEffect(() => {
 		console.log('%c Nothing to See Here...', "font-family: Hack, Helvetica, sans-serif; color: #4d5c63; padding: 16px 0; font-style: italic;")
@@ -34,11 +28,8 @@ function MyApp({ Component, pageProps, portfolioData }) {
 
 	return (
 		<TailwindProvider>
-			<NavContext.Provider value={{ height, data, setData }}>
+			<NavContext.Provider value={{ data, setData }}>
 				<StickyNav />
-				<div className="w-full pb-10" ref={NavRef}>
-					<Nav className="pt-10" />
-				</div>
 				<SwitchTransition>
 					<CSSTransition
 						key={router.pathname}

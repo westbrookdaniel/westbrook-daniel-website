@@ -14,7 +14,7 @@ export default function Nav({ isSticky, className = '' }) {
 	const [isNavOpen, setIsNavOpen] = useState(false)
 
 	return (
-		<div className={`px-8 md:px-16 lg:px-24 ${className}`}>
+		<div className={` ${className}`}>
 			<div className="flex justify-between items-center mb-2">
 				<Link href="/" scroll={false}>
 					<a>
@@ -50,7 +50,7 @@ const LargeNav = ({ isOpen, setIsOpen }) => {
 		>
 			<div className="bg-white shadow-2xl pt-10 fixed w-nav max-w-full h-full flex flex-col top-0 bottom-0 right-0 z-50">
 				<div className="w-full pb-10">
-					<div className="px-8 md:px-16 lg:px-24">
+					<div className="">
 						<div className="flex justify-end items-center mb-2">
 							<div className="flex space-x-8 items-center">
 								<CgClose

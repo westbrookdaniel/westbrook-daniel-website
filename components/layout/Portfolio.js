@@ -37,8 +37,13 @@ export default function Portfolio({ data, children, portfolioData }) {
 				<title>{data.title} | Daniel Westbrook</title>
 				<meta name="description" content={data.description}></meta>
 			</Head>
+			<Container>
+				<div className="w-full pb-10">
+					<Nav className="pt-10" />
+				</div>
+			</Container>
 			<Container spaced>
-				<div className="row lg:items-end mb-6">
+				<div className="flex-row lg:items-end mb-6">
 					<div className="max-w-6xl lg:mr-16">
 						<Fade delay={200} triggerOnce>
 							<h1 className="mb-4">{data.title}</h1>
@@ -85,10 +90,12 @@ export default function Portfolio({ data, children, portfolioData }) {
 					<div>{children}</div>
 				</Fade>
 			</Container>
-			<Container spaced className="mb-12 lg:w-1/2">
-				<Fade delay={400} triggerOnce>
-					{nextProject && <PortfolioItem nextProject data={nextProject} />}
-				</Fade>
+			<Container spaced className="mb-12">
+				<div className="row">
+					<Fade delay={400} triggerOnce>
+						{nextProject && <PortfolioItem nextProject data={nextProject} />}
+					</Fade>
+				</div>
 			</Container>
 			<div className="bg-themeGray-100">
 				<Contact className="pt-16 pb-40" />
