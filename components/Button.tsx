@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { ButtonHTMLAttributes } from 'react'
 import { normal } from '../util/transition'
 
-export default function Button({
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
+	theme?: 'gray' | 'yellow'
+	className?: string
+}
+
+const Button: React.FC<Props> = ({
 	children,
 	theme = 'yellow',
 	className,
 	...props
-}) {
+}) => {
 	let themeString
 	switch (theme) {
 		case 'gray':
@@ -28,3 +33,5 @@ export default function Button({
 		</button>
 	)
 }
+
+export default Button

@@ -1,17 +1,17 @@
 import '../styles/index.css'
-import TailwindProvider from '../TailwindProvider'
 import { useRouter } from 'next/router'
 import { SwitchTransition, CSSTransition } from 'react-transition-group'
-import Container from '../components/layout/Container'
-import Nav from '../components/parts/Nav'
 import { createContext, useEffect, useRef, useState } from 'react'
-import { useScrollPosition } from '../util/useScrollPosition'
-import styled from '@emotion/styled'
 import StickyNav from '../components/parts/StickyNav'
+import { AppProps } from 'next/dist/next-server/lib/router/router'
 
 export const NavContext = createContext(null)
 
-function MyApp({ Component, pageProps, portfolioData }) {
+declare global {
+    interface Window { dataLayer: any[]; }
+}
+
+function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter()
 	const [data, setData] = useState(null)
 
@@ -19,15 +19,11 @@ function MyApp({ Component, pageProps, portfolioData }) {
 		console.log('%c Nothing to See Here...', "font-family: Hack, Helvetica, sans-serif; color: #4d5c63; padding: 16px 0; font-style: italic;")
 		if (!window) return
 		window.dataLayer = window.dataLayer || []
-		function gtag() {
-			dataLayer.push(arguments)
-		}
-		gtag('js', new Date())
-		gtag('config', 'G-L3S62B7X3T')
+		window.dataLayer.push('js', new Date())
+		window.dataLayer.push('config', 'G-L3S62B7X3T')
 	}, [])
 
 	return (
-		<TailwindProvider>
 			<NavContext.Provider value={{ data, setData }}>
 				<StickyNav />
 				<SwitchTransition>
@@ -45,7 +41,6 @@ function MyApp({ Component, pageProps, portfolioData }) {
 					</CSSTransition>
 				</SwitchTransition>
 			</NavContext.Provider>
-		</TailwindProvider>
 	)
 }
 

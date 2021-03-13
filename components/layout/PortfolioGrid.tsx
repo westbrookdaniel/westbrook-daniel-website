@@ -1,14 +1,16 @@
 import Divider from '../Divider'
-import { useContext, useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 
 const Gap = styled.div`
 	gap: 0 2rem;
 `
 
-export default function PortfolioGrid({ array }) {
-	const arrOut = useDividers(array)
+interface Props {
+	array: JSX.Element[]
+}
 
+export default function PortfolioGrid({ array }: Props) {
+	const arrOut = useDividers(array)
 	return (
 		<div>
 			<Divider className="mt-6 mb-5 col-span-1 md:hidden" />
@@ -21,10 +23,9 @@ export default function PortfolioGrid({ array }) {
 	)
 }
 
-const useDividers = (arr) => {
+const useDividers = (arr: JSX.Element[]) => {
 	const output = []
 	for (let i = 0; i < arr.length; i++) {
-		const El = arr[i]
 		if (!(i % 2)) {
 			output.push(() => (
 				<Divider className="mt-6 mb-5 col-span-1 md:col-span-2 hidden md:block" />
@@ -32,7 +33,7 @@ const useDividers = (arr) => {
 		}
 		output.push(() => (
 			<div className="mb-6 md:mb-0" key={i}>
-				<El />
+				{arr[i]}
 			</div>
 		))
 	}

@@ -1,6 +1,5 @@
 import Container from '../layout/Container'
 import Socials from '../parts/Socials'
-import { normal } from '../../util/transition'
 
 export default function Footer() {
 	return (

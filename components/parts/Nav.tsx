@@ -3,14 +3,18 @@ import Link from 'next/link'
 import Logo from './Logo'
 import { CgMenuRightAlt, CgClose } from 'react-icons/cg'
 import { CSSTransition } from 'react-transition-group'
-import { useContext, useState } from 'react'
+import { Dispatch, SetStateAction, useContext, useState } from 'react'
 import Container from '../layout/Container'
-import { LogoText, LogoShape, LogoSpacer, ShapeWrapper } from './Logo'
 import { NavContext } from '../../pages/_app'
 import { normal } from '../../util/transition'
 import Socials from './Socials'
 
-export default function Nav({ isSticky, className = '' }) {
+interface Props {
+	isSticky?: boolean
+	className?: string
+}
+
+export default function Nav({ isSticky, className = '' }: Props) {
 	const [isNavOpen, setIsNavOpen] = useState(false)
 
 	return (
@@ -36,7 +40,12 @@ export default function Nav({ isSticky, className = '' }) {
 	)
 }
 
-const LargeNav = ({ isOpen, setIsOpen }) => {
+interface LargeProps {
+	isOpen?: boolean
+	setIsOpen: Dispatch<SetStateAction<boolean>>
+}
+
+const LargeNav = ({ isOpen, setIsOpen }: LargeProps) => {
 	const { data } = useContext(NavContext)
 
 	return (

@@ -1,14 +1,18 @@
-export const reorder = (source, prop, reversed = false) => {
+export function reorder<T>(
+	source: T[],
+	prop: keyof T,
+	reversed: boolean = false
+) {
 	if (!source) return
 	const tempOrder = [...source]
 	const newOrder = sortBy(tempOrder, (el) => el[prop])
 	if (reversed) {
 		newOrder.reverse()
 	}
-	return newOrder
+	return newOrder as T[]
 }
 
-export const sortBy = (oldArray, matchFunc) => {
+export function sortBy(oldArray: any[], matchFunc: Function) {
 	const array = [...oldArray]
 	for (let i = array.length; i; ) {
 		const o = array[--i]

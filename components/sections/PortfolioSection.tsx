@@ -4,7 +4,13 @@ import PortfolioGrid from '../layout/PortfolioGrid'
 import PortfolioItem from './PortfolioItem'
 import SmallItem from './SmallItem'
 
-export default function PortfolioSection({ data, small, title }) {
+interface Props {
+	data: any
+	small?: boolean
+	title: JSX.Element | string
+}
+
+const PortfolioSection: React.FC<Props> = ({ data, small, title }) => {
 	const portfolioItems = data.map((p) => () => {
 		if (small) {
 			return <SmallItem data={p} />
@@ -30,3 +36,5 @@ export default function PortfolioSection({ data, small, title }) {
 		</Container>
 	)
 }
+
+export default PortfolioSection

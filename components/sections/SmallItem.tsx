@@ -1,10 +1,6 @@
-import Link from 'next/link'
 import { CgArrowRight } from 'react-icons/cg'
-import { normal } from '../../util/transition'
-import Divider from '../Divider'
-import Image from '../Image'
 
-export default function SmallItem({ data }) {
+export default function SmallItem({ data }: { data: any }) {
 	return (
 		<a href={data.slug} target="_blank" rel="noopener noreferrer">
 			<div className="hover-arrow">

@@ -4,10 +4,10 @@ export default function getPortfolioData() {
 	const reorder = require('../util/reorder').reorder
 
 	const files = fs.readdirSync(path.join(process.cwd(), 'pages', 'p'), 'utf-8')
-	const fileNames = files.filter((fn) => fn.endsWith('.mdx'))
+	const fileNames = files.filter((fn: string) => fn.endsWith('.mdx'))
 
 	const rawData = []
-	fileNames.forEach((file) => {
+	fileNames.forEach((file: string) => {
 		const data = require(`../pages/p/${file}`).metadata
 		data.slug = '/p/' + file.substring(0, file.length - 4)
 		rawData.push(data)

@@ -4,7 +4,12 @@ import { useScrollPosition } from '../../util/useScrollPosition'
 import Container from '../layout/Container'
 import Nav from './Nav'
 
-const Wrapper = styled.div`
+interface Props {
+	isScrolling: boolean
+	scrollTopPos: number
+}
+
+const Wrapper = styled.div<Props>`
 	top: ${(props) =>
 		props.isScrolling || props.scrollTopPos < 700 ? '-100px' : '0'};
 `

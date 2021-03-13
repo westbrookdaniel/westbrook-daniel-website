@@ -1,19 +1,23 @@
 import React from 'react'
 import {
 	AiFillBehanceCircle,
-	AiOutlineTwitter,
 	AiFillLinkedin,
 	AiFillGithub,
-	AiFillInstagram,
 } from 'react-icons/ai'
 import { normal } from '../../util/transition'
 
+interface Props {
+	className?: string
+	extras?: JSX.Element | null
+	gridCol?: string
+}
+
 export default function Socials({
-	className,
-	extras,
+	className = '',
+	extras = null,
 	gridCol = 'grid-cols-4',
 	...props
-}) {
+}: Props) {
 	const iconStyle = {
 		fontSize: '1.3em',
 	}

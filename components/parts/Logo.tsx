@@ -34,7 +34,11 @@ export const ShapeWrapper = styled.div`
 	align-items: center;
 `
 
-export default function Logo({ isSticky }) {
+interface Props {
+	isSticky?: boolean
+}
+
+export default function Logo({ isSticky }: Props) {
 	const ref = useRef()
 	const onScreen = useOnScreen(ref)
 

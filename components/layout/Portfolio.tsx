@@ -8,8 +8,14 @@ import { useContext, useEffect, useState } from 'react'
 import { NavContext } from '../../pages/_app'
 import PortfolioItem from '../sections/PortfolioItem'
 import Head from 'next/head'
+import { PortfolioMetadata } from '../../util/types'
 
-export default function Portfolio({ data, children, portfolioData }) {
+interface Props {
+	data: PortfolioMetadata
+	portfolioData: any
+}
+
+const Portfolio: React.FC<Props> = ({ data, children, portfolioData }) => {
 	const { setData, data: oldPortfolioData } = useContext(NavContext)
 	useEffect(() => {
 		if (!oldPortfolioData) {
@@ -20,7 +26,9 @@ export default function Portfolio({ data, children, portfolioData }) {
 	const [nextProject, setNextProject] = useState(null)
 	useEffect(() => {
 		if (!(portfolioData && data)) return
-		const currentPort = portfolioData.find((port) => port.title === data.title)
+		const currentPort = portfolioData.find(
+			(port: PortfolioMetadata) => port.title === data.title
+		)
 		const i = portfolioData.indexOf(currentPort)
 		let next = portfolioData[i + 1]
 		if (next) {
@@ -87,3 +95,5 @@ export default function Portfolio({ data, children, portfolioData }) {
 		</div>
 	)
 }
+
+export default Portfolio

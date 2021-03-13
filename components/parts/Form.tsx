@@ -1,13 +1,13 @@
-import { useState } from 'react'
+import { FormEvent, useState } from 'react'
 import Button from '../Button'
 
 export default function Form() {
 	const [status, setStatus] = useState(null)
 
-	const handleSubmit = (e) => {
+	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
 		setStatus('Sending')
 		e.preventDefault()
-		const form = e.target
+		const form = e.target as HTMLFormElement
 		const data = new FormData(form)
 		if (!data.get('email')) {
 			setStatus('Please Enter Your Email')
@@ -36,7 +36,7 @@ export default function Form() {
 		<form
 			action="https://formspree.io/f/mjvprzdn"
 			method="POST"
-			onSubmit={handleSubmit}
+			onSubmit={(e) => handleSubmit(e)}
 		>
 			<input
 				id="email"
@@ -47,8 +47,7 @@ export default function Form() {
 			/>
 			<textarea
 				id="message"
-				rows="4"
-				type="text"
+				rows={4}
 				name="message"
 				className="w-full mb-4 py-2 px-3 rounded-none"
 				placeholder="Message"

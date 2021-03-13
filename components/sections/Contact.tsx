@@ -1,7 +1,7 @@
-import Container from '../layout/Container'
+import Container, { ContainerProps } from '../layout/Container'
 import Form from '../parts/Form'
 
-export default function Contact(props) {
+export default function Contact(props: ContainerProps) {
 	return (
 		<Container {...props}>
 			<h2 className="mb-2">Get in Touch</h2>

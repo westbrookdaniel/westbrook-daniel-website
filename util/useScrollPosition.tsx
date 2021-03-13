@@ -5,9 +5,9 @@ export const useScrollPosition = () => {
 	const [scrollTopPos, setScrollTopPos] = useState(0)
 
 	useEffect(() => {
-		const onScroll = (e) => {
-			setScrollTopPos(e.target.documentElement.scrollTop)
-			setIsScrolling(e.target.documentElement.scrollTop > scrollTopPos)
+		const onScroll = (e: Event) => {
+			setScrollTopPos((e.target as Document).documentElement.scrollTop)
+			setIsScrolling((e.target as Document).documentElement.scrollTop > scrollTopPos)
 		}
 
 		window.addEventListener('scroll', onScroll)

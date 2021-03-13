@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Nav from '../components/parts/Nav'
 import About from '../components/sections/About'
 import Hero from '../components/sections/Hero'
 import PortfolioSection from '../components/sections/PortfolioSection'
@@ -13,7 +12,11 @@ export async function getStaticProps() {
 	return getPortfolioData()
 }
 
-export default function Home({ portfolioData }) {
+interface Props {
+	portfolioData: any
+}
+
+export default function Home({ portfolioData }: Props) {
 	const { setData, data } = useContext(NavContext)
 	useEffect(() => {
 		if (!data) {

@@ -1,8 +1,5 @@
 import Container from '../layout/Container'
 import Image from '../Image'
-import { TailwindCSS } from '../../TailwindProvider'
-import { useContext, useEffect, useState } from 'react'
-import { NavContext } from '../../pages/_app'
 import styled from '@emotion/styled'
 import Link from 'next/link'
 import Nav from '../parts/Nav'
@@ -12,7 +9,6 @@ const Half = styled.div`
 `
 
 export default function Hero() {
-	const tailwind = useContext(TailwindCSS)
 
 	return (
 		<Container className="m-auto">
