@@ -16,7 +16,7 @@ interface Props {
 	portfolioData: any
 }
 
-export default function Home({ portfolioData }: Props) {
+const Home: React.FC<Props> = ({ portfolioData }) => {
 	const { setData, data } = useContext(NavContext)
 	useEffect(() => {
 		if (!data) {
@@ -74,3 +74,5 @@ export default function Home({ portfolioData }: Props) {
 		</div>
 	)
 }
+
+export default Home
