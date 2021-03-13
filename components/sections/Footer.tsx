@@ -4,7 +4,7 @@ import Socials from '../parts/Socials'
 export default function Footer() {
 	return (
 		<Container spaced>
-			<div className="lg:flex h-full">
+			<div className="lg:flex h-full justify-between">
 				<div className="flex flex-grow items-baseline">
 					<p>Daniel</p>
 					<div className="flex-grow h-line mx-4 bg-themeGray-300"></div>

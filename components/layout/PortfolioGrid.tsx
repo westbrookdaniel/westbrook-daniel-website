@@ -26,6 +26,7 @@ export default function PortfolioGrid({ array }: Props) {
 const useDividers = (arr: JSX.Element[]) => {
 	const output = []
 	for (let i = 0; i < arr.length; i++) {
+		const El = arr[i] as any
 		if (!(i % 2)) {
 			output.push(() => (
 				<Divider className="mt-6 mb-5 col-span-1 md:col-span-2 hidden md:block" />
@@ -33,7 +34,7 @@ const useDividers = (arr: JSX.Element[]) => {
 		}
 		output.push(() => (
 			<div className="mb-6 md:mb-0" key={i}>
-				{arr[i]}
+				<El />
 			</div>
 		))
 	}

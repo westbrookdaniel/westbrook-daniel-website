@@ -46,7 +46,7 @@ interface LargeProps {
 }
 
 const LargeNav = ({ isOpen, setIsOpen }: LargeProps) => {
-	const { data } = useContext(NavContext)
+	const { data } = useContext(NavContext)!
 
 	return (
 		<CSSTransition
@@ -58,8 +58,8 @@ const LargeNav = ({ isOpen, setIsOpen }: LargeProps) => {
 			classNames="slide"
 		>
 			<div className="bg-white shadow-2xl pt-10 fixed w-nav max-w-full h-full flex flex-col top-0 bottom-0 right-0 z-50">
-				<div className="w-full pb-10">
-					<div className="">
+				<Container spaced className="flex-grow flex flex-col">
+					<div className="w-full pb-10">
 						<div className="flex justify-end items-center mb-2">
 							<div className="flex space-x-8 items-center">
 								<CgClose
@@ -71,8 +71,6 @@ const LargeNav = ({ isOpen, setIsOpen }: LargeProps) => {
 							</div>
 						</div>
 					</div>
-				</div>
-				<Container spaced className="flex-grow flex flex-col">
 					<p className="mb-2">Projects</p>
 					<Divider />
 					<ul className="py-10 space-y-6 list-none flex-grow">

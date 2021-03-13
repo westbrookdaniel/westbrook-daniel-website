@@ -16,7 +16,8 @@ interface Props {
 }
 
 const Portfolio: React.FC<Props> = ({ data, children, portfolioData }) => {
-	const { setData, data: oldPortfolioData } = useContext(NavContext)
+	const { setData, data: oldPortfolioData } = useContext(NavContext)!
+	
 	useEffect(() => {
 		if (!oldPortfolioData) {
 			setData(portfolioData)

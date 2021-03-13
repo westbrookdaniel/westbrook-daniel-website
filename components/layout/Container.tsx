@@ -14,7 +14,7 @@ export default function Container({
 	style = {},
 	...props
 }: ContainerProps) {
-	let classString = `px-8 md:px-16 lg:px-24 w-full m-auto`
+	let classString = `px-8 md:px-16 lg:px-24 w-full mx-auto`
 	if (spaced) classString += ` py-8 lg:py-10`
 	if (className) classString += ` ${className}`
 

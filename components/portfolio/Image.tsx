@@ -2,6 +2,14 @@ import { ImageProps } from 'next/image'
 import React from 'react'
 import NextImage from '../Image'
 
-export default function Image(props: ImageProps ) {
-	return <NextImage className="w-full" loading="eager" {...props} />
+export default function Image(props: any) {
+	return (
+		<NextImage
+			width={800}
+			height={500}
+			className="w-full object-cover"
+			loading="eager"
+			{...props}
+		/>
+	)
 }
