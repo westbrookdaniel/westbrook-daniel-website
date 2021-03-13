@@ -8,7 +8,6 @@ import Footer from '../components/sections/Footer'
 import { useContext, useEffect } from 'react'
 import { NavContext } from './_app'
 import Container from '../components/layout/Container'
-import { Fade } from 'react-awesome-reveal'
 import Image from '../components/Image'
 import Divider from '../components/Divider'
 import Button from '../components/Button'
@@ -30,10 +29,8 @@ export default function Error() {
 			</Head>
 
 			<Container className="m-auto">
-				<Fade delay={200}>
-					<h1 className="max-w-title">404 Page Not Found</h1>
-					<Divider className="mt-4 mb-5" />
-				</Fade>
+				<h1 className="max-w-title">404 Page Not Found</h1>
+				<Divider className="mt-4 mb-5" />∫{' '}
 				<Container spaced>
 					<div className="row">
 						<div className="max-w-xs space-y-4">

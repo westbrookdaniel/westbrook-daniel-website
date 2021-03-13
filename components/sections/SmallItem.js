@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Fade } from 'react-awesome-reveal'
 import { CgArrowRight } from 'react-icons/cg'
 import { normal } from '../../util/transition'
 import Divider from '../Divider'
