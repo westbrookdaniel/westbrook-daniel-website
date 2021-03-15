@@ -39,7 +39,7 @@ interface Props {
 }
 
 export default function Logo({ isSticky }: Props) {
-	const ref = useRef()
+	const ref = useRef(null)
 	const onScreen = useOnScreen(ref)
 
 	return (

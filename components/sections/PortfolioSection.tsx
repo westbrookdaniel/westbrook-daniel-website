@@ -11,7 +11,7 @@ interface Props {
 }
 
 const PortfolioSection: React.FC<Props> = ({ data, small, title }) => {
-	const portfolioItems = data.map((p) => () => {
+	const portfolioItems = data.map((p: any) => () => {
 		if (small) {
 			return <SmallItem data={p} />
 		}
@@ -26,7 +26,7 @@ const PortfolioSection: React.FC<Props> = ({ data, small, title }) => {
 			{title}
 			{small ? (
 				<div className="mt-4 flex md:space-x-16 flex-col md:flex-row">
-					{portfolioItems.map((Item, i) => (
+					{portfolioItems.map((Item: any, i: number) => (
 						<Item key={i} />
 					))}
 				</div>

@@ -2,7 +2,7 @@ import { FormEvent, useState } from 'react'
 import Button from '../Button'
 
 export default function Form() {
-	const [status, setStatus] = useState(null)
+	const [status, setStatus] = useState<string | null>(null)
 
 	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
 		setStatus('Sending')

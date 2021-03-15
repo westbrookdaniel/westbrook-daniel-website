@@ -13,7 +13,6 @@ module.exports = {
 		'./pages/**/*.js',
 		'./styles/**/*.css',
 	],
-	target: 'relaxed',
 	prefix: '',
 	important: false,
 	separator: ':',
