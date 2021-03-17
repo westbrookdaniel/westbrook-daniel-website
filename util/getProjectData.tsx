@@ -1,4 +1,4 @@
-export default function getPortfolioData() {
+export default function getProjectData() {
 	const fs = require('fs')
 	const path = require('path')
 	const reorder = require('../util/reorder').reorder
@@ -13,11 +13,11 @@ export default function getPortfolioData() {
 		rawData.push(data)
 	})
 
-	const portfolioData = reorder(rawData, 'order')
+	const projectData = reorder(rawData, 'order')
 
-	return { props: { portfolioData } }
+	return { props: { projectData } }
 }
 
 export async function getStaticProps() {
-	return getPortfolioData()
+	return getProjectData()
 }

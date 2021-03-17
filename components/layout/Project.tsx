@@ -6,38 +6,38 @@ import Footer from '../sections/Footer'
 import { CgArrowRight } from 'react-icons/cg'
 import { useContext, useEffect, useState } from 'react'
 import { NavContext } from '../../pages/_app'
-import PortfolioItem from '../sections/PortfolioItem'
+import ProjectItem from '../sections/ProjectItem'
 import Head from 'next/head'
-import { PortfolioMetadata } from '../../util/types'
+import { ProjectMetadata } from '../../util/types'
 
 interface Props {
-	data: PortfolioMetadata
-	portfolioData: any
+	data: ProjectMetadata
+	projectData: any
 }
 
-const Portfolio: React.FC<Props> = ({ data, children, portfolioData }) => {
-	const { setData, data: oldPortfolioData } = useContext(NavContext)!
+const Project: React.FC<Props> = ({ data, children, projectData }) => {
+	const { setData, data: oldProjectData } = useContext(NavContext)!
 	
 	useEffect(() => {
-		if (!oldPortfolioData) {
-			setData(portfolioData)
+		if (!oldProjectData) {
+			setData(projectData)
 		}
 	}, [])
 
 	const [nextProject, setNextProject] = useState(null)
 	useEffect(() => {
-		if (!(portfolioData && data)) return
-		const currentPort = portfolioData.find(
-			(port: PortfolioMetadata) => port.title === data.title
+		if (!(projectData && data)) return
+		const currentPort = projectData.find(
+			(port: ProjectMetadata) => port.title === data.title
 		)
-		const i = portfolioData.indexOf(currentPort)
-		let next = portfolioData[i + 1]
+		const i = projectData.indexOf(currentPort)
+		let next = projectData[i + 1]
 		if (next) {
 			setNextProject(next)
 		} else {
-			setNextProject(portfolioData[0])
+			setNextProject(projectData[0])
 		}
-	}, [portfolioData, data])
+	}, [projectData, data])
 
 	return (
 		<div>
@@ -86,7 +86,7 @@ const Portfolio: React.FC<Props> = ({ data, children, portfolioData }) => {
 			<Container className="pb-8 lg:pb-10">{children}</Container>
 			<Container spaced className="mb-12">
 				<div className="row">
-					{nextProject && <PortfolioItem nextProject data={nextProject} />}
+					{nextProject && <ProjectItem nextProject data={nextProject} />}
 				</div>
 			</Container>
 			<div className="bg-themeGray-100">
@@ -97,4 +97,4 @@ const Portfolio: React.FC<Props> = ({ data, children, portfolioData }) => {
 	)
 }
 
-export default Portfolio
+export default Project

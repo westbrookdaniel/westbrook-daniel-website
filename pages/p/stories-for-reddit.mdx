@@ -1,8 +1,8 @@
-import Portfolio from '../../components/layout/Portfolio'
-import Paragraph from '../../components/portfolio/Paragraph'
-import Row from '../../components/portfolio/Row'
-import Image from '../../components/portfolio/Image'
-import Gallery from '../../components/portfolio/Gallery'
+import Project from '../../components/layout/Project'
+import Paragraph from '../../components/project/Paragraph'
+import Row from '../../components/project/Row'
+import Image from '../../components/project/Image'
+import Gallery from '../../components/project/Gallery'
 
 export const prefix = "/images/projects/stories-for-reddit"
 export const metadata = {
@@ -14,9 +14,9 @@ export const metadata = {
 	order: 1,
 }
 
-export { getStaticProps } from '../../util/getPortfolioData'
-export default ({ children, portfolioData }) => (
-	<Portfolio data={metadata} portfolioData={portfolioData}>{children}</Portfolio>
+export { getStaticProps } from '../../util/getProjectData'
+export default ({ children, projectData }) => (
+	<Project data={metadata} projectData={projectData}>{children}</Project>
 )
 
 <Paragraph withStack={[

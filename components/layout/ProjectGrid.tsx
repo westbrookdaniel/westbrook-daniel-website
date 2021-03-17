@@ -9,7 +9,7 @@ interface Props {
 	array: JSX.Element[]
 }
 
-export default function PortfolioGrid({ array }: Props) {
+export default function ProjectGrid({ array }: Props) {
 	const arrOut = useDividers(array)
 	return (
 		<div>

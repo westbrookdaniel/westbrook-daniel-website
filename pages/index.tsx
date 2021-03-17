@@ -1,26 +1,26 @@
 import Head from 'next/head'
 import About from '../components/sections/About'
 import Hero from '../components/sections/Hero'
-import PortfolioSection from '../components/sections/PortfolioSection'
+import ProjectSection from '../components/sections/ProjectSection'
 import Contact from '../components/sections/Contact'
 import Footer from '../components/sections/Footer'
 import { useContext, useEffect } from 'react'
 import { NavContext } from './_app'
-import getPortfolioData from '../util/getPortfolioData'
+import getProjectData from '../util/getProjectData'
 
 export async function getStaticProps() {
-	return getPortfolioData()
+	return getProjectData()
 }
 
 interface Props {
-	portfolioData: any
+	projectData: any
 }
 
-const Home: React.FC<Props> = ({ portfolioData }) => {
+const Home: React.FC<Props> = ({ projectData }) => {
 	const { setData, data } = useContext(NavContext)!
 	useEffect(() => {
 		if (!data) {
-			setData(portfolioData)
+			setData(projectData)
 		}
 	}, [])
 
@@ -59,8 +59,8 @@ const Home: React.FC<Props> = ({ portfolioData }) => {
 				<About />
 			</div>
 			<div className="mb-16">
-				<PortfolioSection title={<h2>Portfolio</h2>} data={portfolioData} />
-				<PortfolioSection
+				<ProjectSection title={<h2>Projects</h2>} data={projectData} />
+				<ProjectSection
 					title={<h3>Side Projects</h3>}
 					small
 					data={sideData}
@@ -68,8 +68,8 @@ const Home: React.FC<Props> = ({ portfolioData }) => {
 			</div>
 
 			<div className="bg-themeGray-100">
-				<Contact className="pt-16 pb-40" />
-				<Footer />
+				<Contact className="pt-16 pb-32" />
+				<Footer noSocials />
 			</div>
 		</div>
 	)

@@ -1,5 +1,6 @@
 import Container, { ContainerProps } from '../layout/Container'
 import Form from '../parts/Form'
+import Socials from '../parts/Socials'
 
 export default function Contact(props: ContainerProps) {
 	return (
@@ -7,11 +8,11 @@ export default function Contact(props: ContainerProps) {
 			<h2 className="mb-2">Get in Touch</h2>
 			<div className="row">
 				<div>
-					<p className="mb-6">
+					<p className="mb-8">
 						Contact me to discover how we can work together to enhance your
 						digital experience, or just have a chat.
 					</p>
-					<Form />
+					<Socials fontSize="2em" />
 				</div>
 			</div>
 		</Container>

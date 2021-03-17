@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Container from '../layout/Container'
-import PortfolioGrid from '../layout/PortfolioGrid'
-import PortfolioItem from './PortfolioItem'
+import ProjectGrid from '../layout/ProjectGrid'
+import ProjectItem from './ProjectItem'
 import SmallItem from './SmallItem'
 
 interface Props {
@@ -10,15 +10,15 @@ interface Props {
 	title: JSX.Element | string
 }
 
-const PortfolioSection: React.FC<Props> = ({ data, small, title }) => {
-	const portfolioItems = data.map((p: any) => () => {
+const ProjectSection: React.FC<Props> = ({ data, small, title }) => {
+	const projectItems = data.map((p: any) => () => {
 		if (small) {
 			return <SmallItem data={p} />
 		}
-		return <PortfolioItem data={p} />
+		return <ProjectItem data={p} />
 	})
 	// if (small) {
-	// 	console.log(portfolioItems);
+	// 	console.log(projectItems);
 	// }
 
 	return (
@@ -26,15 +26,15 @@ const PortfolioSection: React.FC<Props> = ({ data, small, title }) => {
 			{title}
 			{small ? (
 				<div className="mt-4 flex md:space-x-16 flex-col md:flex-row">
-					{portfolioItems.map((Item: any, i: number) => (
+					{projectItems.map((Item: any, i: number) => (
 						<Item key={i} />
 					))}
 				</div>
 			) : (
-				<PortfolioGrid array={portfolioItems} />
+				<ProjectGrid array={projectItems} />
 			)}
 		</Container>
 	)
 }
 
-export default PortfolioSection
+export default ProjectSection

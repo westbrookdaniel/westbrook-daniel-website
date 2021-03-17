@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { CgArrowRight } from 'react-icons/cg'
 import { normal } from '../../util/transition'
-import { PortfolioMetadata } from '../../util/types'
+import { ProjectMetadata } from '../../util/types'
 import Divider from '../Divider'
 import Image from '../Image'
 
@@ -10,7 +10,7 @@ interface Props {
 	nextProject?: boolean
 }
 
-const PortfolioItem: React.FC<Props> = ({ data, nextProject }) => {
+const ProjectItem: React.FC<Props> = ({ data, nextProject }) => {
 	return (
 		<Link href={data.slug} scroll={false}>
 			<a>
@@ -43,4 +43,4 @@ const PortfolioItem: React.FC<Props> = ({ data, nextProject }) => {
 	)
 }
 
-export default PortfolioItem
+export default ProjectItem

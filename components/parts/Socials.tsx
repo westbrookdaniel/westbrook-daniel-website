@@ -3,6 +3,7 @@ import {
 	AiFillBehanceCircle,
 	AiFillLinkedin,
 	AiFillGithub,
+	AiFillMail,
 } from 'react-icons/ai'
 import { normal } from '../../util/transition'
 
@@ -10,22 +11,27 @@ interface Props {
 	className?: string
 	extras?: JSX.Element | null
 	gridCol?: string
+	fontSize?: string
 }
 
 export default function Socials({
 	className = '',
 	extras = null,
 	gridCol = 'grid-cols-4',
+	fontSize,
 	...props
 }: Props) {
 	const iconStyle = {
-		fontSize: '1.3em',
+		fontSize: fontSize || '1.3em',
 	}
 	return (
 		<div
 			className={`xs:flex grid ${gridCol} gap-8 xs:gap-0 mt-6 lg:mt-0 xs:space-x-8 items-center ${className}`}
 			{...props}
 		>
+			<a href="mailto:westy12dan@gmail.com" className={`${normal} color-hover`}>
+				<AiFillMail {...iconStyle} />
+			</a>
 			<a
 				href="https://www.linkedin.com/in/daniel-westbrook-692227196/"
 				target="_blank"

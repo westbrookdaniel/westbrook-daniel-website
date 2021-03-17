@@ -1,7 +1,11 @@
 import Container from '../layout/Container'
 import Socials from '../parts/Socials'
 
-export default function Footer() {
+interface Props {
+	noSocials?: boolean
+}
+
+const Footer: React.FC<Props> = ({ noSocials }) => {
 	return (
 		<Container spaced>
 			<div className="lg:flex h-full justify-between">
@@ -10,8 +14,10 @@ export default function Footer() {
 					<div className="flex-grow h-line mx-4 bg-themeGray-300"></div>
 					<p>Westbrook</p>
 				</div>
-				<Socials className="lg:ml-16" />
+				{noSocials ? null : <Socials className="lg:ml-16" />}
 			</div>
 		</Container>
 	)
 }
+
+export default Footer

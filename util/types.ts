@@ -1,4 +1,4 @@
-export interface PortfolioMetadata {
+export interface ProjectMetadata {
 	title: string
 	description: string
 	link: string
