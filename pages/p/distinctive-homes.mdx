@@ -6,16 +6,18 @@ import Gallery from '../../components/project/Gallery'
 
 export const prefix = '/images/projects/distinctive-homes'
 export const metadata = {
-	title: 'Distinctive Homes WA',
-	description: 'Marketing Website for Distinctive Homes WA',
-	link: 'https://www.distinctivehomeswa.com.au/',
-	feature: `${prefix}/distinctive.jpg`,
-	order: 2,
+    title: 'Distinctive Homes WA',
+    description: 'Marketing Website for Distinctive Homes WA',
+    link: 'https://www.distinctivehomeswa.com.au/',
+    feature: `${prefix}/distinctive.jpg`,
+    order: 2,
 }
 
 export { getStaticProps } from '../../util/getProjectData'
 export default ({ children, projectData }) => (
-	<Project data={metadata} projectData={projectData}>{children}</Project>
+    <Project data={metadata} projectData={projectData}>
+        {children}
+    </Project>
 )
 
 <Paragraph withStack={[
@@ -24,22 +26,20 @@ export default ({ children, projectData }) => (
 	'CSS',
 ]}>
 
-
-Built to develop an engaging and on-brand website to help attract new customers 
-and showcase Distinctive Homes WA’s Projects. I was tasked to create a website 
-for their established business that appealed to their audience whilst feeling 
+Built to develop an engaging and on-brand website to help attract new customers
+and showcase Distinctive Homes WA’s Projects. I was tasked to create a website
+for their established business that appealed to their audience whilst feeling
 refined, luxurious, independent and personable.
 
 Developed while working for <a href="https://eclipsedesigns.com.au/" target="_blank" rel="noopener noreferrer">Eclipse Design Solutions</a>
 
 </Paragraph>
 
-
 <Image src={`${prefix}/distinctive.jpg`} alt="Hero" />
 
 <Gallery>
-	<Image src={`${prefix}/sections.jpg`} alt="Sections" />
-	<Image src={`${prefix}/closeup.jpg`} alt="Close up" />
+    <Image src={`${prefix}/sections.jpg`} alt="Sections" />
+    <Image src={`${prefix}/closeup.jpg`} alt="Close up" />
 </Gallery>
 
 <Row 
@@ -49,16 +49,13 @@ Developed while working for <a href="https://eclipsedesigns.com.au/" target="_bl
 	)}
 >
 
-
 ## Development
 
-The website was created with marketing, SEO, and web best practices 
-in mind. It was built with WordPress to give the client a superior 
-maintenance experience that allows them to easily update content and 
+The website was created with marketing, SEO, and web best practices
+in mind. It was built with WordPress to give the client a superior
+maintenance experience that allows them to easily update content and
 add projects in the future.
 
-
 </Row>
-
 
 <Image src={`${prefix}/mobile.jpg`} alt="Mobile" />

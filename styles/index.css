@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 body {
-	@apply text-themeGray-600;
+    @apply text-themeGray-600;
 }
 
 * {
-	@apply focus:outline-none;
+    @apply focus:outline-none;
 }
 
 ::selection {
-	@apply bg-themeGray-200;
+    @apply bg-themeGray-200;
 }
 
 h1,
@@ -20,100 +20,100 @@ h3,
 h4,
 h5,
 h6 {
-	@apply text-black;
+    @apply text-black;
 }
 
 .flex-row {
-	@apply flex lg:flex-row flex-col justify-between;
+    @apply flex lg:flex-row flex-col justify-between;
 }
 .flex-row > * + * {
-	@apply ml-0 lg:ml-8 mt-3 lg:mt-0;
+    @apply ml-0 lg:ml-8 mt-3 lg:mt-0;
 }
 
 .row {
-	@apply block gap-8 grid-cols-2 lg:grid;
+    @apply block gap-8 grid-cols-2 lg:grid;
 }
 
 h1 {
-	@apply text-2xl sm:text-5xl lg:text-6xl font-bold;
-	line-height: 1.2em;
+    @apply text-2xl sm:text-5xl lg:text-6xl font-bold;
+    line-height: 1.2em;
 }
 
 h2 {
-	@apply text-2xl sm:text-4xl font-bold;
+    @apply text-2xl sm:text-4xl font-bold;
 }
 
 h3 {
-	@apply font-bold text-lg sm:text-xl;
+    @apply font-bold text-lg sm:text-xl;
 }
 
 .btn {
-	@apply px-8 py-2 font-bold;
+    @apply px-8 py-2 font-bold;
 }
 
 .fade-enter {
-	opacity: 0;
+    opacity: 0;
 }
 .fade-exit {
-	opacity: 1;
+    opacity: 1;
 }
 .fade-enter-active {
-	opacity: 1;
+    opacity: 1;
 }
 .fade-exit-active {
-	opacity: 0;
+    opacity: 0;
 }
 .fade-enter-active,
 .fade-exit-active {
-	transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .slide-enter {
-	transform: translate(100px);
-	opacity: 0;
+    transform: translate(100px);
+    opacity: 0;
 }
 .slide-exit {
-	transform: translate(0);
-	opacity: 1;
+    transform: translate(0);
+    opacity: 1;
 }
 .slide-enter-active {
-	transform: translate(0);
-	opacity: 1;
+    transform: translate(0);
+    opacity: 1;
 }
 .slide-exit-active {
-	transform: translate(0);
-	opacity: 0;
+    transform: translate(0);
+    opacity: 0;
 }
 .slide-enter-active,
 .slide-exit-active {
-	transition: all 300ms cubic-bezier(0.4, 0.37, 0.37, 1);
+    transition: all 300ms cubic-bezier(0.4, 0.37, 0.37, 1);
 }
 
 .max-w-title {
-	max-width: 1500px;
+    max-width: 1500px;
 }
 
 .hover-arrow .arrow {
-	@apply transition-transform duration-100 ease-in-out transform;
+    @apply transition-transform duration-100 ease-in-out transform;
 }
 .hover-arrow:hover img {
-	@apply scale-105;
+    @apply scale-105;
 }
 .hover-arrow:active img {
-	@apply scale-100;
+    @apply scale-100;
 }
 .hover-arrow:hover .arrow {
-	@apply translate-x-2;
+    @apply translate-x-2;
 }
 .hover-arrow:active .arrow {
-	@apply translate-x-0;
+    @apply translate-x-0;
 }
 
 .color-hover {
-	@apply hover:text-yellow-700 active:text-themeGray-600 focus:text-themeGray-600;
+    @apply hover:text-yellow-700 active:text-themeGray-600 focus:text-themeGray-600;
 }
 
 /* This should be handled by tailwind but isn't sometimes */
 .flex-grow {
-	flex-grow: 1;
+    flex-grow: 1;
 }

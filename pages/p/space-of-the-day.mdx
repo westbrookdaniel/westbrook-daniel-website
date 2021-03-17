@@ -4,19 +4,21 @@ import Row from '../../components/project/Row'
 import Image from '../../components/project/Image'
 import Gallery from '../../components/project/Gallery'
 
-export const prefix = "/images/projects/space-of-the-day"
+export const prefix = '/images/projects/space-of-the-day'
 export const metadata = {
-	title: 'Space of the Day',
-	description: 'Discover astronomy pictures with a visual focus',
-	link: 'https://spaceoftheday.netlify.app/',
-	feature: `${prefix}/space.jpg`,
-	source: 'https://github.com/westbrookdaniel/space-of-the-day',
-	order: 0,
+    title: 'Space of the Day',
+    description: 'Discover astronomy pictures with a visual focus',
+    link: 'https://spaceoftheday.netlify.app/',
+    feature: `${prefix}/space.jpg`,
+    source: 'https://github.com/westbrookdaniel/space-of-the-day',
+    order: 0,
 }
 
 export { getStaticProps } from '../../util/getProjectData'
 export default ({ children, projectData }) => (
-	<Project data={metadata} projectData={projectData}>{children}</Project>
+    <Project data={metadata} projectData={projectData}>
+        {children}
+    </Project>
 )
 
 <Paragraph withStack={[
@@ -26,16 +28,13 @@ export default ({ children, projectData }) => (
 	'NASA API',
 ]}>
 
-
-The purpose of this website is to attract a younger audience to NASA’s Astronomy 
-Picture of the Day by providing a better experience with a more appealing design. 
-This is solved in my solution by having the entire months images easily accessible 
-and searchable. I kept the feeling of intrigue/FOMO intact through the use of a 
+The purpose of this website is to attract a younger audience to NASA’s Astronomy
+Picture of the Day by providing a better experience with a more appealing design.
+This is solved in my solution by having the entire months images easily accessible
+and searchable. I kept the feeling of intrigue/FOMO intact through the use of a
 dramatic hero section and by only showing the last month worth of images.
 
-
 </Paragraph>
-
 
 <Image src={`${prefix}/space.jpg`} alt="Hero" />
 
@@ -46,34 +45,31 @@ dramatic hero section and by only showing the last month worth of images.
 	)}
 >
 
-
 ## Development
 
-Website is built as a single page app using React Router with dynamic 
-loading of content on the client. Data is cached as you navigate, with 
-the ability to search the month images by name, date, and author, and 
+Website is built as a single page app using React Router with dynamic
+loading of content on the client. Data is cached as you navigate, with
+the ability to search the month images by name, date, and author, and
 download them easily.
 
 </Row>
 
-
 <Gallery>
-	<Image src={`${prefix}/mobile.jpg`} alt="Mobile" />
-	<Image src={`${prefix}/about.jpg`} alt="About" />
+    <Image src={`${prefix}/mobile.jpg`} alt="Mobile" />
+    <Image src={`${prefix}/about.jpg`} alt="About" />
 </Gallery>
 
 <Paragraph>
 
-
 ## Branding
 
-The design aims to emphasize the core visual ideas of analytical, knowledgeable, 
-charismatic, user friendly, and astronomy. From there I developed an aesthetic 
-vision based on something that is engaging and visually interesting. My visual 
-concept is a magazine cover which uses expressive, colourful type laid over 
-images with a steadfast and considered charisma. The name is a play on its source, 
-but with a low attention-span and visual focus. The logo typeface is Playfair 
-Display with both the body and heading font being Epilogue and the contrast 
+The design aims to emphasize the core visual ideas of analytical, knowledgeable,
+charismatic, user friendly, and astronomy. From there I developed an aesthetic
+vision based on something that is engaging and visually interesting. My visual
+concept is a magazine cover which uses expressive, colourful type laid over
+images with a steadfast and considered charisma. The name is a play on its source,
+but with a low attention-span and visual focus. The logo typeface is Playfair
+Display with both the body and heading font being Epilogue and the contrast
 between both typefaces helps to create the feeling of a visually striking cover.
 
 </Paragraph>

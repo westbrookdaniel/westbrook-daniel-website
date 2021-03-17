@@ -6,17 +6,19 @@ import Gallery from '../../components/project/Gallery'
 
 export const prefix = '/images/projects/teahome'
 export const metadata = {
-	title: 'TeaHome',
-	description: 'Online based tea store for limited run teas',
-	link: 'https://tea-home.herokuapp.com/',
-	feature: `${prefix}/teahome.jpg`,
-	source: 'https://github.com/westbrookdaniel/teahome',
-	order: 3,
+    title: 'TeaHome',
+    description: 'Online based tea store for limited run teas',
+    link: 'https://tea-home.herokuapp.com/',
+    feature: `${prefix}/teahome.jpg`,
+    source: 'https://github.com/westbrookdaniel/teahome',
+    order: 3,
 }
 
 export { getStaticProps } from '../../util/getProjectData'
 export default ({ children, projectData }) => (
-	<Project data={metadata} projectData={projectData}>{children}</Project>
+    <Project data={metadata} projectData={projectData}>
+        {children}
+    </Project>
 )
 
 <Paragraph withStack={[
@@ -28,15 +30,12 @@ export default ({ children, projectData }) => (
 	'SASS',
 ]}>
 
-
-This website is for a fictional e-commerce business aimed to provide customers 
-with unique and fresh teas in a modern, repeatable, environment. The brand 
-wanted to release teas in different lines and feel like a part of your 
+This website is for a fictional e-commerce business aimed to provide customers
+with unique and fresh teas in a modern, repeatable, environment. The brand
+wanted to release teas in different lines and feel like a part of your
 routine and everyday life.
 
-
 </Paragraph>
-
 
 <Image src={`${prefix}/teahome.jpg`} alt="Hero" />
 
@@ -47,23 +46,21 @@ routine and everyday life.
 	)}
 >
 
-
 ## Development
 
-The app features a MongoDB database accessed through JSON data from the 
-Express server, which statically serves the single page app. It utilizes 
-hash-based routing and uses the template engine Mustache for simple insertion 
-of data into layouts. The app has dynamic collection routes, product modals, 
-and an account system. Products and collections can also be altered using 
-the built-in admin account and interface which has full create, read, 
+The app features a MongoDB database accessed through JSON data from the
+Express server, which statically serves the single page app. It utilizes
+hash-based routing and uses the template engine Mustache for simple insertion
+of data into layouts. The app has dynamic collection routes, product modals,
+and an account system. Products and collections can also be altered using
+the built-in admin account and interface which has full create, read,
 update, and delete functionality.
 
 </Row>
 
-
 <Gallery>
-	<Image src={`${prefix}/profile.jpg`} alt="Profile" />
-	<Image src={`${prefix}/single.jpg`} alt="Single" />
+    <Image src={`${prefix}/profile.jpg`} alt="Profile" />
+    <Image src={`${prefix}/single.jpg`} alt="Single" />
 </Gallery>
 
 <Row 
@@ -73,13 +70,11 @@ update, and delete functionality.
 	)}
 >
 
-
 ## Branding
 
-To achieve this goal with the branding, it utilizes a consistent and subdued 
-look and feel that is rounded to feel supportive and friendly. The consistency 
-in typefaces and neutral core colours make it feel dependable, whilst the range 
+To achieve this goal with the branding, it utilizes a consistent and subdued
+look and feel that is rounded to feel supportive and friendly. The consistency
+in typefaces and neutral core colours make it feel dependable, whilst the range
 specific accents emphasize its point of difference while showcasing creativity.
 
 </Row>
-
