@@ -308,7 +308,17 @@ module.exports = {
             default: '1',
         },
         fontFamily: {
-            sans: [
+            display: [
+                'Poppins',
+                '-apple-system',
+                'BlinkMacSystemFont',
+                'sans-serif',
+                '"Apple Color Emoji"',
+                '"Segoe UI Emoji"',
+                '"Segoe UI Symbol"',
+                '"Noto Color Emoji"',
+            ],
+            body: [
                 'Work Sans',
                 '-apple-system',
                 'BlinkMacSystemFont',

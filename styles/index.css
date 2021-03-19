@@ -4,6 +4,7 @@
 
 body {
     @apply text-themeGray-600;
+    @apply font-body;
 }
 
 * {
@@ -21,6 +22,7 @@ h4,
 h5,
 h6 {
     @apply text-black;
+    @apply font-display;
 }
 
 .flex-row {
@@ -35,7 +37,7 @@ h6 {
 }
 
 h1 {
-    @apply text-2xl sm:text-5xl lg:text-6xl font-bold;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold;
     line-height: 1.2em;
 }
 
