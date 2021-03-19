@@ -3,6 +3,7 @@ import Container from '../components/layout/Container'
 import Divider from '../components/Divider'
 import Button from '../components/Button'
 import Link from 'next/link'
+import Nav from '../components/parts/Nav'
 
 export default function Error() {
     return (
@@ -22,17 +23,21 @@ export default function Error() {
             </Head>
 
             <Container className="m-auto">
+                <div className="w-full mb-12">
+                    <Nav className="pt-10" />
+                </div>
                 <h1 className="max-w-title">404 Page Not Found</h1>
-                <Divider className="mt-4 mb-5" />∫{' '}
                 <Container spaced>
                     <div className="row">
-                        <div className="max-w-xs space-y-4">
-                            <p>
+                        <div className="max-w-xs">
+                            <p className="mb-4">
                                 The page you are looking for either does not
                                 exist or can not be found.
                             </p>
                             <Link href="/" scroll={false}>
-                                <Button>Home</Button>
+                                <a>
+                                    <Button>Home</Button>
+                                </a>
                             </Link>
                         </div>
                     </div>
