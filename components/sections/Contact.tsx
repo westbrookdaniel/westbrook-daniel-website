@@ -1,6 +1,5 @@
 import Container, { ContainerProps } from '../layout/Container'
-import Form from '../parts/Form'
-import Socials from '../parts/Socials'
+import Socials from '../Socials'
 
 export default function Contact(props: ContainerProps) {
     return (

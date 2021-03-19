@@ -3,7 +3,7 @@ import Container from '../components/layout/Container'
 import Divider from '../components/Divider'
 import Button from '../components/Button'
 import Link from 'next/link'
-import Nav from '../components/parts/Nav'
+import Nav from '../components/nav/Nav'
 
 export default function Error() {
     return (

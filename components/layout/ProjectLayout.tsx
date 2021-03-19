@@ -1,5 +1,5 @@
 import Container from './Container'
-import Nav from '../parts/Nav'
+import Nav from '../nav/Nav'
 import Divider from '../Divider'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'

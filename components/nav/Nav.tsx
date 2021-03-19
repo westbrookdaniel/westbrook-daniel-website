@@ -1,13 +1,13 @@
 import Divider from '../Divider'
 import Link from 'next/link'
-import Logo from './Logo'
+import Logo from '../Logo'
 import { CgMenuRightAlt, CgClose } from 'react-icons/cg'
 import { CSSTransition } from 'react-transition-group'
 import { Dispatch, SetStateAction, useContext, useState } from 'react'
 import Container from '../layout/Container'
 import { NavContext } from '../../pages/_app'
 import { normal } from '../../util/transition'
-import Socials from './Socials'
+import Socials from '../Socials'
 
 interface Props {
     isSticky?: boolean

@@ -1,5 +1,5 @@
 import Container from '../layout/Container'
-import Nav from '../parts/Nav'
+import Nav from '../nav/Nav'
 import Image from '../Image'
 
 export default function Hero() {

@@ -5,7 +5,7 @@ import {
     AiFillGithub,
     AiFillMail,
 } from 'react-icons/ai'
-import { normal } from '../../util/transition'
+import { normal } from '../util/transition'
 
 interface Props {
     className?: string

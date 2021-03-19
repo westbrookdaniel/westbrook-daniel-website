@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import styled from '@emotion/styled'
 import Typist from 'react-typist'
-import useOnScreen from '../../util/useOnScreen'
+import useOnScreen from '../util/useOnScreen'
 
 export const LogoText = styled.div`
     font-family: 'Hack';

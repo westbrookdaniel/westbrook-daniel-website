@@ -9,7 +9,7 @@ import {
     useRef,
     useState,
 } from 'react'
-import StickyNav from '../components/parts/StickyNav'
+import StickyNav from '../components/nav/StickyNav'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
 
 interface NavContext {

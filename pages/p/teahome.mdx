@@ -1,4 +1,4 @@
-import Project from '../../components/layout/Project'
+import ProjectLayout from '../../components/layout/ProjectLayout'
 import Paragraph from '../../components/project/Paragraph'
 import Row from '../../components/project/Row'
 import Image from '../../components/project/Image'
@@ -16,9 +16,9 @@ export const metadata = {
 
 export { getStaticProps } from '../../util/getProjectData'
 export default ({ children, projectData }) => (
-    <Project data={metadata} projectData={projectData}>
+    <ProjectLayout data={metadata} projectData={projectData}>
         {children}
-    </Project>
+    </ProjectLayout>
 )
 
 <Paragraph withStack={[

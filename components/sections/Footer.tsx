@@ -1,5 +1,5 @@
 import Container from '../layout/Container'
-import Socials from '../parts/Socials'
+import Socials from '../Socials'
 
 interface Props {
     noSocials?: boolean
