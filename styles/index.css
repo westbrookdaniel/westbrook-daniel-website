@@ -28,6 +28,7 @@ h6 {
 .flex-row {
     @apply flex lg:flex-row flex-col justify-between;
 }
+
 .flex-row > * + * {
     @apply ml-0 lg:ml-8 mt-3 lg:mt-0;
 }
