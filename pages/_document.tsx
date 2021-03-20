@@ -24,6 +24,12 @@ class MyDocument extends Document {
 
                     {/* Fonts */}
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    {/* Preload stylesheet */}
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Work+Sans&display=swap"
+                        rel="preload"
+                        as="style"
+                    />
                     <link
                         href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Work+Sans&display=swap"
                         rel="stylesheet"
