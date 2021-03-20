@@ -30,8 +30,8 @@ const ProjectItem: React.FC<Props> = ({ data, nextProject }) => {
                     <div className="my-3 overflow-hidden">
                         <Image
                             alt={`${data.title} Project`}
-                            width={700}
-                            height={400}
+                            width={400}
+                            height={250}
                             className={`object-cover transform ${normal}`}
                             loading="eager"
                             src={data.feature}

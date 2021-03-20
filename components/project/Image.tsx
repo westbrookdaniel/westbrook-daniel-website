@@ -2,14 +2,19 @@ import { ImageProps } from 'next/image'
 import React from 'react'
 import NextImage from '../Image'
 
-export default function Image(props: any) {
+interface Props {
+    small?: boolean
+    [key: string]: any
+}
+
+export default function Image({ small, ...props }: Props) {
     return (
         <NextImage
-            width={800}
-            height={500}
+            width={small ? 400 : 800}
+            height={small ? 250 : 500}
             className="w-full object-cover"
             loading="eager"
-            {...props}
+            {...(props as any)}
         />
     )
 }
