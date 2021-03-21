@@ -50,6 +50,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     addEndListener={(node, done) => {
                         node.addEventListener('transitionend', done, false)
                     }}
+                    appear
                     classNames="fade"
                     onExited={() => {
                         window.scrollTo(0, 0)
