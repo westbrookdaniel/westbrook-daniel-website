@@ -1,22 +1,24 @@
-import Portfolio from '../../components/layout/Portfolio'
-import Paragraph from '../../components/portfolio/Paragraph'
-import Row from '../../components/portfolio/Row'
-import Image from '../../components/portfolio/Image'
-import Gallery from '../../components/portfolio/Gallery'
+import ProjectLayout from '../../components/layout/ProjectLayout'
+import Paragraph from '../../components/project/Paragraph'
+import Row from '../../components/project/Row'
+import Image from '../../components/project/Image'
+import Gallery from '../../components/project/Gallery'
 
 export const prefix = '/images/projects/teahome'
 export const metadata = {
-	title: 'TeaHome',
-	description: 'Online based tea store for limited run teas',
-	link: 'https://tea-home.herokuapp.com/',
-	feature: `${prefix}/teahome.jpg`,
-	source: 'https://github.com/westbrookdaniel/teahome',
-	order: 3,
+    title: 'TeaHome',
+    description: 'Online based tea store for limited run teas',
+    link: 'https://tea-home.herokuapp.com/',
+    feature: `${prefix}/teahome.jpg`,
+    source: 'https://github.com/westbrookdaniel/teahome',
+    order: 3,
 }
 
-export { getStaticProps } from '../../util/getPortfolioData'
-export default ({ children, portfolioData }) => (
-	<Portfolio data={metadata} portfolioData={portfolioData}>{children}</Portfolio>
+export { getStaticProps } from '../../util/getProjectData'
+export default ({ children, projectData }) => (
+    <ProjectLayout data={metadata} projectData={projectData}>
+        {children}
+    </ProjectLayout>
 )
 
 <Paragraph withStack={[
@@ -28,58 +30,51 @@ export default ({ children, portfolioData }) => (
 	'SASS',
 ]}>
 
-
-This website is for a fictional e-commerce business aimed to provide customers 
-with unique and fresh teas in a modern, repeatable, environment. The brand 
-wanted to release teas in different lines and feel like a part of your 
+This website is for a fictional e-commerce business aimed to provide customers
+with unique and fresh teas in a modern, repeatable, environment. The brand
+wanted to release teas in different lines and feel like a part of your
 routine and everyday life.
 
-
 </Paragraph>
-
 
 <Image src={`${prefix}/teahome.jpg`} alt="Hero" />
 
 <Row 
 	side="right" 
 	slot={(
-		<Image src={`${prefix}/all.jpg`} alt="All Teas" />
+		<Image small src={`${prefix}/all.jpg`} alt="All Teas" />
 	)}
 >
 
-
 ## Development
 
-The app features a MongoDB database accessed through JSON data from the 
-Express server, which statically serves the single page app. It utilizes 
-hash-based routing and uses the template engine Mustache for simple insertion 
-of data into layouts. The app has dynamic collection routes, product modals, 
-and an account system. Products and collections can also be altered using 
-the built-in admin account and interface which has full create, read, 
+The app features a MongoDB database accessed through JSON data from the
+Express server, which statically serves the single page app. It utilizes
+hash-based routing and uses the template engine Mustache for simple insertion
+of data into layouts. The app has dynamic collection routes, product modals,
+and an account system. Products and collections can also be altered using
+the built-in admin account and interface which has full create, read,
 update, and delete functionality.
 
 </Row>
 
-
 <Gallery>
-	<Image src={`${prefix}/profile.jpg`} alt="Profile" />
-	<Image src={`${prefix}/single.jpg`} alt="Single" />
+    <Image src={`${prefix}/profile.jpg`} alt="Profile" />
+    <Image src={`${prefix}/single.jpg`} alt="Single" />
 </Gallery>
 
 <Row 
 	side="left" 
 	slot={(
-		<Image src={`${prefix}/item.jpg`} alt="Single Item" />
+		<Image small src={`${prefix}/item.jpg`} alt="Single Item" />
 	)}
 >
 
-
 ## Branding
 
-To achieve this goal with the branding, it utilizes a consistent and subdued 
-look and feel that is rounded to feel supportive and friendly. The consistency 
-in typefaces and neutral core colours make it feel dependable, whilst the range 
+To achieve this goal with the branding, it utilizes a consistent and subdued
+look and feel that is rounded to feel supportive and friendly. The consistency
+in typefaces and neutral core colours make it feel dependable, whilst the range
 specific accents emphasize its point of difference while showcasing creativity.
 
 </Row>
-

@@ -1,22 +1,24 @@
-import Portfolio from '../../components/layout/Portfolio'
-import Paragraph from '../../components/portfolio/Paragraph'
-import Row from '../../components/portfolio/Row'
-import Image from '../../components/portfolio/Image'
-import Gallery from '../../components/portfolio/Gallery'
+import ProjectLayout from '../../components/layout/ProjectLayout'
+import Paragraph from '../../components/project/Paragraph'
+import Row from '../../components/project/Row'
+import Image from '../../components/project/Image'
+import Gallery from '../../components/project/Gallery'
 
-export const prefix = "/images/projects/stories-for-reddit"
+export const prefix = '/images/projects/stories-for-reddit'
 export const metadata = {
-	title: 'Stories for Reddit',
-	description: 'Discover and read community made short stories',
-	link: 'https://stories-for-reddit.vercel.app/',
-	feature: `${prefix}/stories.jpg`,
-	source: 'https://github.com/westbrookdaniel/stories-for-reddit',
-	order: 1,
+    title: 'Stories for Reddit',
+    description: 'Discover and read community made short stories',
+    link: 'https://stories-for-reddit.vercel.app/',
+    feature: `${prefix}/stories.jpg`,
+    source: 'https://github.com/westbrookdaniel/stories-for-reddit',
+    order: 1,
 }
 
-export { getStaticProps } from '../../util/getPortfolioData'
-export default ({ children, portfolioData }) => (
-	<Portfolio data={metadata} portfolioData={portfolioData}>{children}</Portfolio>
+export { getStaticProps } from '../../util/getProjectData'
+export default ({ children, projectData }) => (
+    <ProjectLayout data={metadata} projectData={projectData}>
+        {children}
+    </ProjectLayout>
 )
 
 <Paragraph withStack={[
@@ -28,17 +30,14 @@ export default ({ children, portfolioData }) => (
 	'Firebase',
 ]}>
 
-
-Stories for Reddit is a web app for reading short stories from Reddit’s 
-many writing focused communities built with React and Typescript on a 
-custom Webpack configuration. The website was developed to make Reddit's 
-short story content easily findable and consumable by the public, as well 
-as provide a more accessible and enjoyable experience. It helps people with 
+Stories for Reddit is a web app for reading short stories from Reddit’s
+many writing focused communities built with React and Typescript on a
+custom Webpack configuration. The website was developed to make Reddit's
+short story content easily findable and consumable by the public, as well
+as provide a more accessible and enjoyable experience. It helps people with
 busy lives reconnect with bite-sized stories through a specialized reading experience.
 
-
 </Paragraph>
-
 
 <Image src={`${prefix}/stories.jpg`} alt="Hero" />
 
@@ -49,40 +48,36 @@ busy lives reconnect with bite-sized stories through a specialized reading exper
 	)}
 >
 
-
 ## Development
 
-This app was built with React with the framework Chakra UI. 
-It utilises Firebase as a backend service and integrates a 
-fully-featured account system, along with posts gathered and 
-parsed from Reddit. The website caches fetched data and also 
+This app was built with React with the framework Chakra UI.
+It utilises Firebase as a backend service and integrates a
+fully-featured account system, along with posts gathered and
+parsed from Reddit. The website caches fetched data and also
 features search, filtering, favourites, and a dark mode.
 
 </Row>
 
-
 <Gallery>
-	<Image src={`${prefix}/menu.jpg`} alt="Menu" />
-	<Image src={`${prefix}/list.jpg`} alt="Listing" />
+    <Image src={`${prefix}/menu.jpg`} alt="Menu" />
+    <Image src={`${prefix}/list.jpg`} alt="Listing" />
 </Gallery>
 
 <Row 
 	side="right" 
 	slot={(
-		<Image src={`${prefix}/reader.jpg`} alt="Reader" />
+		<Image small src={`${prefix}/reader.jpg`} alt="Reader" />
 	)}
 >
 
-
 ## Branding
 
-The colour pallet and general aesthetic is a minimalist and modernized 
-version of old library pages. This helps create a warm and comforting 
-feeling, which along with the serif heading typefaces encourages a relaxing 
-reading experience. The body typeface was chosen to be very legible and 
-easy to read, whilst the images harmonies with the library-style colour 
-pallet. The brandmark symbolizes a blocked out paragraph of text, 
+The colour pallet and general aesthetic is a minimalist and modernized
+version of old library pages. This helps create a warm and comforting
+feeling, which along with the serif heading typefaces encourages a relaxing
+reading experience. The body typeface was chosen to be very legible and
+easy to read, whilst the images harmonies with the library-style colour
+pallet. The brandmark symbolizes a blocked out paragraph of text,
 showing how easily stories can be consumed in a simple and time-effective way.
-
 
 </Row>
