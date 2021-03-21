@@ -69,9 +69,12 @@ h3 {
     opacity: 0;
 }
 .fade-enter-active,
-.fade-appear-active,
 .fade-exit-active {
     transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.fade-appear-active {
+    transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1) 100ms;
 }
 
 .slide-enter {

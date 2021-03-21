@@ -51,7 +51,7 @@ export default function Logo({ isSticky }: Props) {
                     <Typist cursor={{ show: false }}>
                         Daniel
                         <LogoSpacer />
-                        <Typist.Delay ms={100} />
+                        <Typist.Delay ms={200} />
                         Westbrook
                     </Typist>
                 ))}
