@@ -46,13 +46,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             <StickyNav />
             <SwitchTransition>
                 <CSSTransition
-                    timeout={{
-                        appear: 800,
-                        enter: 300,
-                        exit: 300,
-                    }}
-
                     key={router.pathname}
+                    addEndListener={(node, done) => {
+                        node.addEventListener('transitionend', done, false)
+                    }}
                     appear
                     classNames="fade"
                     onExited={() => {
