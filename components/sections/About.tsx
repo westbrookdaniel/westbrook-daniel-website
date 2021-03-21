@@ -8,18 +8,46 @@ export default function About() {
             <Divider className="mt-4 mb-5" />
             <div className="row">
                 <p>
-                    I am a Full Stack Developer and Designer with a history of
-                    working in the web development and design industry building
-                    websites and web apps. I enjoy formulating efficient,
-                    innovative solutions for Perth businesses and agencies that
-                    utilise strategic design thinking.
+                    I am a Full Stack Developer and Designer primarily working
+                    with React building web apps. I enjoy formulating
+                    performant, innovative solutions and exploring new tools and
+                    technologies.
                 </p>
                 <p>
-                    My experience extends through working with web agencies,
-                    direct client relations, agile workplaces, and more. Through
-                    this, I have developed many websites with unique branding
-                    and varying complexity. I always am seeking new challenges
-                    and developing my knowledge of the latest technologies.
+                    Some of my favourite things are{' '}
+                    <a
+                        href="https://nextjs.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Next.js
+                    </a>
+                    ,{' '}
+                    <a
+                        href="https://tailwindcss.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        TailwindCSS
+                    </a>
+                    , and{' '}
+                    <a
+                        href="https://www.typescriptlang.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Typescript
+                    </a>
+                    . When I'm not coding you can find me playing sport (tennis
+                    and hockey), video games, or listening to{' '}
+                    <a
+                        href="https://open.spotify.com/user/the12thdan?si=e7c_O6S1TDW6z7kr83TD9Q"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        music
+                    </a>
+                    .
                 </p>
             </div>
         </Container>

@@ -120,3 +120,11 @@ h3 {
 .flex-grow {
     flex-grow: 1;
 }
+
+p a {
+    text-decoration: underline;
+}
+
+p a:hover {
+    text-decoration: none;
+}

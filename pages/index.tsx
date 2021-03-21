@@ -42,15 +42,13 @@ const Home: React.FC<Props> = ({ projectData }) => {
     return (
         <div>
             <Head>
-                <title>
-                    Daniel Westbrook | Full Stack Developer and Designer
-                </title>
+                <title>Daniel Westbrook | Full Stack Developer</title>
                 <meta
                     name="description"
-                    content="I am a Full Stack Developer and Designer with a history of working in 
-					the web development and design industry building websites and web apps. I enjoy 
-					formulating efficient, innovative solutions for Perth businesses and agencies 
-					that utalises strategic design thinking."
+                    content="I am a Full Stack Developer and Designer primarily working
+                    with React building web apps. I enjoy formulating
+                    performant, innovative solutions and exploring new tools and
+                    technologies."
                 ></meta>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
