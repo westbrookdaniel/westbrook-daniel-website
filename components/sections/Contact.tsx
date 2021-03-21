@@ -7,9 +7,9 @@ export default function Contact(props: ContainerProps) {
             <h2 className="mb-2">Get in Touch</h2>
             <div className="row">
                 <div>
-                    <p className="mb-8">
-                        Contact me to discover how we can work together to
-                        enhance your digital experience, or just have a chat.
+                    <p className="mb-8 max-w-md">
+                        If you want to chat feel free to send me an email,
+                        otherwise feel free to have a look through my socials.
                     </p>
                     <Socials fontSize="2em" />
                 </div>
