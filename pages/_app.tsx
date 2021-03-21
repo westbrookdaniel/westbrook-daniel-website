@@ -1,3 +1,4 @@
+import '../styles/fonts.css'
 import '../styles/index.css'
 import { useRouter } from 'next/router'
 import { SwitchTransition, CSSTransition } from 'react-transition-group'

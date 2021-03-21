@@ -120,7 +120,3 @@ h3 {
 .flex-grow {
     flex-grow: 1;
 }
-
-html.wf-loading * {
-    opacity: 0;
-}
