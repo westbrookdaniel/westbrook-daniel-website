@@ -1,6 +1,7 @@
 import Divider from '../Divider'
 import Link from 'next/link'
 import Logo from '../Logo'
+import BlogLogo from '../BlogLogo'
 import { CgMenuRightAlt, CgClose } from 'react-icons/cg'
 import { CSSTransition } from 'react-transition-group'
 import { Dispatch, SetStateAction, useContext, useState } from 'react'
@@ -11,10 +12,11 @@ import Socials from '../Socials'
 
 interface Props {
     isSticky?: boolean
+    blog?: boolean
     className?: string
 }
 
-export default function Nav({ isSticky, className = '' }: Props) {
+export default function Nav({ isSticky, blog, className = '' }: Props) {
     const [isNavOpen, setIsNavOpen] = useState(false)
 
     return (
@@ -22,7 +24,11 @@ export default function Nav({ isSticky, className = '' }: Props) {
             <div className="flex justify-between items-center mb-2">
                 <Link href="/" scroll={false}>
                     <a>
-                        <Logo isSticky={isSticky} />
+                        {blog ? (
+                            <BlogLogo isSticky={isSticky} />
+                        ) : (
+                            <Logo isSticky={isSticky} />
+                        )}
                     </a>
                 </Link>
                 <div className="flex space-x-8 items-center">

@@ -13,7 +13,7 @@ export async function getStaticProps() {
 }
 
 interface Props {
-    projectData: any
+    projectData: any[]
 }
 
 const Home: React.FC<Props> = ({ projectData }) => {
