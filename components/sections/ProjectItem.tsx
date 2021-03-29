@@ -27,11 +27,11 @@ const ProjectItem: React.FC<Props> = ({ data, nextProject }) => {
                             <CgArrowRight color="#66767d" fontSize="1.2rem" />
                         </div>
                     </div>
-                    <div className="my-3 overflow-hidden">
+                    <div className="my-3 rounded-lg overflow-hidden">
                         <Image
                             alt={`${data.title} Project`}
                             width={400}
-                            height={250}
+                            height={270}
                             className={`object-cover transform ${normal}`}
                             loading="eager"
                             src={data.feature}

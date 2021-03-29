@@ -21,7 +21,7 @@ const Code = ({ children, className }: Props) => {
                     className={className}
                     style={{
                         ...style,
-                        borderRadius: 0,
+                        borderRadius: "0.5rem",
                         overflow: 'scroll',
                         marginTop: 24,
                         marginBottom: 24,
