@@ -9,7 +9,7 @@ export default function Contact(props: ContainerProps) {
                 <div>
                     <p className="mb-8 max-w-md">
                         If you want to chat feel free to send me an email,
-                        otherwise feel free to have a look through my socials.
+                        otherwise check out my socials.
                     </p>
                     <Socials fontSize="2em" />
                 </div>

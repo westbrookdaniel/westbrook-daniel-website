@@ -41,15 +41,19 @@ const BlogLayout: FC<Props> = ({ meta, children, projectData }) => {
                 </div>
             </Container>
             <Container spaced>
-                <div className="flex-row lg:items-end mb-6">
+                <div className="flex-row lg:items-end">
                     <div className="max-w-6xl lg:mr-16">
                         <h1 className="mb-4">{meta.title}</h1>
                         <p>{meta.description}</p>
                     </div>
                 </div>
-                <Divider />
             </Container>
-            <Container className="pb-8 lg:pb-10">{children}</Container>
+            <Container className="pb-24">
+                <div className="prose-sm md:prose lg:prose-lg">
+                    <Divider />
+                    {children}
+                </div>
+            </Container>
             <div className="bg-themeGray-100">
                 <Contact className="pt-16 pb-40" />
                 <Footer />

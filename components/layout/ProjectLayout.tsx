@@ -91,7 +91,14 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                 </div>
                 <Divider />
             </Container>
-            <Container className="pb-8 lg:pb-10">{children}</Container>
+            <Container className="pb-8 lg:pb-10">
+                <div
+                    className="prose-sm md:prose lg:prose-lg"
+                    style={{ maxWidth: 'none' }}
+                >
+                    {children}
+                </div>
+            </Container>
             <Container spaced className="mb-12">
                 <div className="row">
                     {nextProject && (

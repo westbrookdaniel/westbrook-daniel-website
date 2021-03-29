@@ -23,6 +23,15 @@ module.exports = {
     important: false,
     separator: ':',
     theme: {
+        extend: {
+            typography: {
+                DEFAULT: {
+                    css: {
+                        lineHeight: "1.5em"
+                    }
+                }
+            }
+        },
         screens: {
             xs: '500px',
             sm: '640px',
@@ -848,5 +857,7 @@ module.exports = {
         animation: ['responsive'],
     },
     corePlugins: {},
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/typography')
+    ],
 }

@@ -5,6 +5,8 @@
 body {
     @apply text-themeGray-600;
     @apply font-body;
+    @apply sm:text-sm lg:text-lg md:text-base;
+    @apply leading-relaxed;
 }
 
 * {
