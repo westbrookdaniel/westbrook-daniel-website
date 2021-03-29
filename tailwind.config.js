@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
     future: {
         removeDeprecatedGapUtilities: true,
@@ -27,10 +29,42 @@ module.exports = {
             typography: {
                 DEFAULT: {
                     css: {
-                        lineHeight: "1.5em"
-                    }
-                }
-            }
+                        lineHeight: '1.5em',
+                        code: {
+                            color: 'inherit',
+                            fontWeight: 'inherit',
+                        },
+                        'code::before': {
+                            content: '"`"',
+                        },
+                        'code::after': {
+                            content: '"`"',
+                        },
+                        'a code': {
+                            color: colors.gray[900],
+                        },
+                        pre: {
+                            backgroundColor: 'none',
+                            marginTop: '0',
+                            marginBottom: '0',
+                            borderRadius: 'none',
+                            paddingTop: '0',
+                            paddingRight: '0',
+                            paddingBottom: '0',
+                            paddingLeft: '0',
+                        },
+                        'pre code': {
+                            fontSize: '0.9rem',
+                        },
+                        'pre code::before': {
+                            content: 'none',
+                        },
+                        'pre code::after': {
+                            content: 'none',
+                        },
+                    },
+                },
+            },
         },
         screens: {
             xs: '500px',
@@ -857,7 +891,5 @@ module.exports = {
         animation: ['responsive'],
     },
     corePlugins: {},
-    plugins: [
-        require('@tailwindcss/typography')
-    ],
+    plugins: [require('@tailwindcss/typography')],
 }

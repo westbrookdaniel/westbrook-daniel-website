@@ -11,7 +11,9 @@ import {
     useState,
 } from 'react'
 import StickyNav from '../components/nav/StickyNav'
+import { MDXProvider } from '@mdx-js/react'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
+import { MdxComponents } from '../util/MdxComponents'
 
 interface NavContext {
     data: any[] | null
@@ -42,24 +44,26 @@ function MyApp({ Component, pageProps }: AppProps) {
     }, [])
 
     return (
-        <NavContext.Provider value={{ data, setData }}>
-            <StickyNav />
-            <SwitchTransition>
-                <CSSTransition
-                    key={router.pathname}
-                    addEndListener={(node, done) => {
-                        node.addEventListener('transitionend', done, false)
-                    }}
-                    appear
-                    classNames="fade"
-                    onExited={() => {
-                        window.scrollTo(0, 0)
-                    }}
-                >
-                    <Component {...pageProps} />
-                </CSSTransition>
-            </SwitchTransition>
-        </NavContext.Provider>
+        <MDXProvider components={MdxComponents}>
+            <NavContext.Provider value={{ data, setData }}>
+                <StickyNav />
+                <SwitchTransition>
+                    <CSSTransition
+                        key={router.pathname}
+                        addEndListener={(node, done) => {
+                            node.addEventListener('transitionend', done, false)
+                        }}
+                        appear
+                        classNames="fade"
+                        onExited={() => {
+                            window.scrollTo(0, 0)
+                        }}
+                    >
+                        <Component {...pageProps} />
+                    </CSSTransition>
+                </SwitchTransition>
+            </NavContext.Provider>
+        </MDXProvider>
     )
 }
 
