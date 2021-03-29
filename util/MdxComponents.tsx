@@ -1,6 +1,10 @@
 import React from 'react'
-import Highlight, { defaultProps, Language, PrismTheme } from 'prism-react-renderer'
-import theme from "./theme-gruvbox-dark"
+import Highlight, {
+    defaultProps,
+    Language,
+    PrismTheme,
+} from 'prism-react-renderer'
+import theme from './theme-gruvbox-dark'
 
 interface Props {
     className: string
@@ -8,7 +12,9 @@ interface Props {
 }
 
 const Code = ({ children, className }: Props) => {
-    const language = className.replace(/language-/, '') as Language
+    const language = className
+        ? (className.replace(/language-/, '') as Language)
+        : 'markup'
     return (
         <Highlight
             {...defaultProps}
@@ -21,11 +27,11 @@ const Code = ({ children, className }: Props) => {
                     className={className}
                     style={{
                         ...style,
-                        borderRadius: "0.5rem",
+                        borderRadius: '0.5rem',
                         overflow: 'scroll',
-                        marginTop: 24,
-                        marginBottom: 24,
-                        padding: 18,
+                        marginTop: 20,
+                        marginBottom: 20,
+                        padding: 24,
                     }}
                 >
                     {tokens.map((line, i) => (

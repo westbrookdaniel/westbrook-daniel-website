@@ -27,21 +27,50 @@ module.exports = {
     theme: {
         extend: {
             typography: {
+                sm: {
+                    css: {
+                        lineHeight: '1.5em',
+                        code: {
+                            color: '#1d2021',
+                            backgroundColor: '#fbf8f3',
+                            fontWeight: 'normal',
+                            padding: '2px 4px',
+                            borderRadius: '6px',
+                            whitespace: "pre"
+                        },
+                        'code::before': {
+                            content: 'none',
+                        },
+                        'code::after': {
+                            content: 'none',
+                        },
+                        'a code': {
+                            color: colors.gray[900],
+                        },
+                    },
+                },
                 DEFAULT: {
                     css: {
                         lineHeight: '1.5em',
                         code: {
-                            color: 'inherit',
-                            fontWeight: 'inherit',
+                            color: '#1d2021',
+                            backgroundColor: '#fbf8f3',
+                            fontWeight: 'normal',
+                            padding: '3px 5px',
+                            borderRadius: '6px',
+                            whitespace: "pre"
                         },
                         'code::before': {
-                            content: '"`"',
+                            content: 'none',
                         },
                         'code::after': {
-                            content: '"`"',
+                            content: 'none',
                         },
                         'a code': {
                             color: colors.gray[900],
+                        },
+                        'a': {
+                            color: 'inherit' 
                         },
                         pre: {
                             backgroundColor: 'none',
@@ -359,7 +388,7 @@ module.exports = {
                 '"Noto Color Emoji"',
             ],
             body: [
-                'Work Sans',
+                'Roboto',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 'sans-serif',
