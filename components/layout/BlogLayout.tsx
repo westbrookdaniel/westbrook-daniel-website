@@ -1,3 +1,4 @@
+import styled from '@emotion/styled'
 import Head from 'next/head'
 import { FC, useContext, useEffect } from 'react'
 import { NavContext } from '../../pages/_app'
@@ -18,6 +19,17 @@ interface Props {
     }
     projectData: any[]
 }
+
+const Wrapper = styled.div`
+    max-width: unset;
+
+    & > :not(pre) {
+        max-width: 750px;
+    }
+    pre {
+        max-width: 900px;
+    }
+`
 
 const BlogLayout: FC<Props> = ({ meta, children, projectData }) => {
     const { setData, data } = useContext(NavContext)!
@@ -49,10 +61,10 @@ const BlogLayout: FC<Props> = ({ meta, children, projectData }) => {
                 </div>
             </Container>
             <Container className="pb-24">
-                <div className="prose-sm md:prose lg:prose-lg">
+                <Wrapper className="prose-sm md:prose lg:prose-lg">
                     <Divider />
                     {children}
-                </div>
+                </Wrapper>
             </Container>
             <div className="bg-themeGray-100">
                 <Contact className="pt-16 pb-40" />

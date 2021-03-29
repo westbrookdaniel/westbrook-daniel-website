@@ -53,9 +53,6 @@ module.exports = {
                             paddingBottom: '0',
                             paddingLeft: '0',
                         },
-                        'pre code': {
-                            fontSize: '0.9rem',
-                        },
                         'pre code::before': {
                             content: 'none',
                         },
