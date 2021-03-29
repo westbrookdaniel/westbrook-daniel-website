@@ -1,6 +1,10 @@
 import React from 'react'
-import Highlight, { defaultProps, Language, PrismTheme } from 'prism-react-renderer'
-import theme from "./theme-gruvbox-dark"
+import Highlight, {
+    defaultProps,
+    Language,
+    PrismTheme,
+} from 'prism-react-renderer'
+import theme from './theme-gruvbox-dark'
 
 interface Props {
     className: string
@@ -22,9 +26,11 @@ const Code = ({ children, className }: Props) => {
                     style={{
                         ...style,
                         overflow: 'scroll',
-                        marginTop: 20,
-                        marginBottom: 20,
-                        padding: 16,
+                        marginTop: 24,
+                        marginBottom: 24,
+                        marginLeft: -18,
+                        marginRight: -18,
+                        padding: 18,
                     }}
                 >
                     {tokens.map((line, i) => (
