@@ -7,37 +7,32 @@ import Footer from '../components/sections/Footer'
 import { useContext, useEffect } from 'react'
 import { NavContext } from './_app'
 import getProjectData from '../util/getProjectData'
+import { sideData } from '../data/sideData'
+import getBlogData from '../util/getBlogData'
 
 export async function getStaticProps() {
-    return getProjectData()
+    const projectData = getProjectData()
+    const blogData = getBlogData()
+    return {
+        props: {
+            projectData,
+            blogData,
+        },
+    }
 }
 
 interface Props {
     projectData: any[]
+    blogData: any[]
 }
 
-const Home: React.FC<Props> = ({ projectData }) => {
+const Home: React.FC<Props> = ({ projectData, blogData }) => {
     const { setData, data } = useContext(NavContext)!
     useEffect(() => {
         if (!data) {
             setData(projectData)
         }
     }, [])
-
-    const sideData = [
-        {
-            slug: 'https://img-board.netlify.app/',
-            title: 'IMG Board',
-        },
-        {
-            slug: 'https://color-maker.netlify.app/',
-            title: 'Color Maker',
-        },
-        {
-            slug: 'https://inspoapp.netlify.app/',
-            title: 'Inspo App',
-        },
-    ]
 
     return (
         <div>
@@ -59,11 +54,14 @@ const Home: React.FC<Props> = ({ projectData }) => {
                 <About />
             </div>
             <div className="mb-16">
-                <ProjectSection title={<h2>Projects</h2>} data={projectData} />
                 <ProjectSection
-                    title={<h3>Side Projects</h3>}
+                    title={<h2>Blog Posts</h2>}
+                    data={blogData}
+                />
+                <ProjectSection
+                    title={<h3>Projects</h3>}
                     small
-                    data={sideData}
+                    data={[...projectData, ...sideData]}
                 />
             </div>
 

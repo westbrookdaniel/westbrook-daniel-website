@@ -25,7 +25,7 @@ const ProjectSection: React.FC<Props> = ({ data, small, title }) => {
         <Container spaced>
             {title}
             {small ? (
-                <div className="mt-4 flex md:space-x-16 flex-col md:flex-row">
+                <div className="grid mt-4 gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
                     {projectItems.map((Item: any, i: number) => (
                         <Item key={i} />
                     ))}

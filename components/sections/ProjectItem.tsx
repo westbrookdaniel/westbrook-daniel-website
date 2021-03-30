@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { CgArrowRight } from 'react-icons/cg'
 import { normal } from '../../util/transition'
+import truncate from '../../util/truncate'
 import { ProjectMetadata } from '../../util/types'
 import Divider from '../Divider'
 import Image from '../Image'
@@ -22,7 +23,7 @@ const ProjectItem: React.FC<Props> = ({ data, nextProject }) => {
                         </>
                     )}
                     <div className="flex w-full items-center">
-                        <h3 className="mr-4">{data.title}</h3>
+                        <h3 className="mr-4">{truncate(data.title, 50)}</h3>
                         <div className="arrow">
                             <CgArrowRight color="#66767d" fontSize="1.2rem" />
                         </div>

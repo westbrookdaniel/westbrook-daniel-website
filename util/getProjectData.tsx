@@ -16,11 +16,10 @@ export default function getProjectData() {
         rawData.push(data)
     })
 
-    const projectData = reorder(rawData, 'order')
-
-    return { props: { projectData } }
+    return reorder(rawData, 'order')
 }
 
 export async function getStaticProps() {
-    return getProjectData()
+    const projectData = getProjectData()
+    return { props: { projectData } }
 }
