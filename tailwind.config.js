@@ -378,7 +378,7 @@ module.exports = {
         },
         fontFamily: {
             display: [
-                'Poppins',
+                'Rowan',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 'sans-serif',

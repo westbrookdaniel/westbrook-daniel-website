@@ -86,7 +86,7 @@ const LargeNav = ({ isOpen, setIsOpen }: LargeProps) => {
                                     <Link href={page.slug}>
                                         <a onClick={() => setIsOpen(false)}>
                                             <p
-                                                className={`font-display font-bold text-2xl lg:text-4xl text-black ${normal} transform hover:translate-x-2 active:translate-x-0`}
+                                                className={`font-display font-semibold text-2xl lg:text-4xl text-black ${normal} transform hover:translate-x-2 active:translate-x-0`}
                                             >
                                                 {page.title}
                                             </p>
