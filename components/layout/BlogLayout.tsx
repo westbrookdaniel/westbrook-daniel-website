@@ -61,7 +61,7 @@ const BlogLayout: FC<Props> = ({ meta, children, projectData }) => {
                 </div>
             </Container>
             <Container className="pb-24">
-                <Wrapper className="prose-sm md:prose lg:prose-lg">
+                <Wrapper className="prose lg:prose-lg">
                     <Divider />
                     {children}
                 </Wrapper>
