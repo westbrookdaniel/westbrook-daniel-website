@@ -6,7 +6,6 @@ import BlogSection from '../components/sections/BlogSection'
 import Contact from '../components/sections/Contact'
 import Footer from '../components/sections/Footer'
 import getProjectData from '../util/getProjectData'
-import { sideData } from '../data/sideData'
 import getBlogData from '../util/getBlogData'
 import { BlogData, ProjectData } from '../util/types'
 
@@ -46,22 +45,23 @@ const Home: React.FC<Props> = ({ projectData, blogData }) => {
             <div className="mt-12 mb-6">
                 <About />
             </div>
-            <div className="mb-16">
+            <div className="mb-24">
                 <BlogSection
                     title={<h2>Blog Posts</h2>}
                     limit
                     data={blogData}
                 />
                 <ProjectSection
-                    title={<h3>Projects</h3>}
+                    title={<h2>Projects</h2>}
                     small
-                    data={[...projectData, ...sideData]}
+                    data={projectData}
+                    seeAll
                 />
             </div>
 
             <div className="bg-themeGray-100">
                 <Contact className="pt-16 pb-32" />
-                <Footer noSocials />
+                <Footer />
             </div>
         </div>
     )

@@ -1,11 +1,12 @@
 import Container from '../layout/Container'
+import NavLinks from '../nav/NavLinks'
 import Socials from '../Socials'
 
 interface Props {
-    noSocials?: boolean
+    withSocials?: boolean
 }
 
-const Footer: React.FC<Props> = ({ noSocials }) => {
+const Footer: React.FC<Props> = ({ withSocials }) => {
     return (
         <Container spaced>
             <div className="lg:flex h-full justify-between">
@@ -14,7 +15,10 @@ const Footer: React.FC<Props> = ({ noSocials }) => {
                     <div className="flex-grow h-line mx-4 bg-themeGray-300"></div>
                     <p>Westbrook</p>
                 </div>
-                {noSocials ? null : <Socials className="lg:ml-16" />}
+                {withSocials ? <Socials className="lg:ml-16" /> : null}
+                <nav className="space-x-8 lg:ml-16">
+                    <NavLinks />
+                </nav>
             </div>
         </Container>
     )

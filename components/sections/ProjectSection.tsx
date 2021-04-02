@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ProjectData } from '../../util/types'
+import Divider from '../Divider'
 import Container from '../layout/Container'
 import ProjectGrid from '../layout/ProjectGrid'
 import ProjectItem from './ProjectItem'
@@ -9,9 +10,10 @@ interface Props {
     data: ProjectData[]
     small?: boolean
     title: JSX.Element | string
+    seeAll?: boolean
 }
 
-const ProjectSection: React.FC<Props> = ({ data, small, title }) => {
+const ProjectSection: React.FC<Props> = ({ data, small, title, seeAll }) => {
     const projectItems = data.map((p: any) => () => {
         if (small) {
             return <SmallItem data={p} />
@@ -31,6 +33,16 @@ const ProjectSection: React.FC<Props> = ({ data, small, title }) => {
             ) : (
                 <ProjectGrid array={projectItems} />
             )}
+            {seeAll ? (
+                <div className="flex mt-6 items-center space-x-8 w-full">
+                    <Divider className="flex-grow" />
+                    <Link href="/p" scroll={false}>
+                        <a className="flex link-style justify-center items-center">
+                            See All Projects
+                        </a>
+                    </Link>
+                </div>
+            ) : null}
         </Container>
     )
 }

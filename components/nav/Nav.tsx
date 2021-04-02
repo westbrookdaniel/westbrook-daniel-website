@@ -2,6 +2,7 @@ import Divider from '../Divider'
 import Link from 'next/link'
 import Logo from '../Logo'
 import BlogLogo from '../BlogLogo'
+import NavLinks from './NavLinks'
 
 interface Props {
     isSticky?: boolean
@@ -23,12 +24,7 @@ export default function Nav({ isSticky, blog, className = '' }: Props) {
                     </a>
                 </Link>
                 <nav className="flex space-x-8 items-center">
-                    <Link href="/blog" scroll={false}>
-                        <a>Blog</a>
-                    </Link>
-                    <Link href="/p" scroll={false}>
-                        <a>Projects</a>
-                    </Link>
+                    <NavLinks />
                 </nav>
             </div>
             <Divider />

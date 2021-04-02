@@ -32,7 +32,7 @@ const BlogSection: React.FC<Props> = ({ data, title, limit }) => {
                 <div className="flex mt-4 md:mt-1 items-center space-x-8 w-full">
                     <Divider className="flex-grow" />
                     <Link href="/blog" scroll={false}>
-                        <a className="flex justify-center items-center">
+                        <a className="flex link-style justify-center items-center">
                             See All Posts
                         </a>
                     </Link>

@@ -129,10 +129,16 @@ h3 {
     flex-grow: 1;
 }
 
-p a {
+.link-style {
+    text-decoration: none;
+}
+.link-style:hover {
     text-decoration: underline;
 }
 
+p a {
+    text-decoration: underline;
+}
 p a:hover {
     text-decoration: none;
 }

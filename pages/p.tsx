@@ -42,7 +42,7 @@ const Blog: React.FC<Props> = ({ projectData }) => {
             </div>
             <div className="bg-themeGray-100">
                 <Contact className="pt-16 pb-32" />
-                <Footer noSocials />
+                <Footer />
             </div>
         </div>
     )
