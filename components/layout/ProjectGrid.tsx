@@ -2,7 +2,7 @@ import Divider from '../Divider'
 import styled from '@emotion/styled'
 
 interface Props {
-    array: JSX.Element[]
+    array: (() => JSX.Element)[]
 }
 
 export default function ProjectGrid({ array }: Props) {
@@ -19,7 +19,7 @@ export default function ProjectGrid({ array }: Props) {
     )
 }
 
-const useDividers = (arr: JSX.Element[]) => {
+const useDividers = (arr: (() => JSX.Element)[]) => {
     const output = []
     for (let i = 0; i < arr.length; i++) {
         const El = arr[i] as any
