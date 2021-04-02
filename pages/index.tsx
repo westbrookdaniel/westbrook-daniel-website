@@ -47,7 +47,11 @@ const Home: React.FC<Props> = ({ projectData, blogData }) => {
                 <About />
             </div>
             <div className="mb-16">
-                <BlogSection title={<h2>Blog Posts</h2>} data={blogData} />
+                <BlogSection
+                    title={<h2>Blog Posts</h2>}
+                    limit
+                    data={blogData}
+                />
                 <ProjectSection
                     title={<h3>Projects</h3>}
                     small
