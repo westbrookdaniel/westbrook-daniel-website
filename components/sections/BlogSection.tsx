@@ -22,12 +22,12 @@ const BlogSection: React.FC<Props> = ({ data, title }) => {
                     .slice(0, 3)
                     .map((Item: () => JSX.Element, i: number) => (
                         <>
-                            <Divider />
-                            <Item key={i} />
+                            <Divider className="mb-2" key={i + 'a'} />
+                            <Item key={i + 'b'} />
                         </>
                     ))}
             </div>
-            <div className="flex items-center space-x-8 w-full">
+            <div className="flex mt-4 md:mt-1 items-center space-x-8 w-full">
                 <Divider className="flex-grow" />
                 <Link href="/blog" scroll={false}>
                     <a className="flex justify-center items-center">

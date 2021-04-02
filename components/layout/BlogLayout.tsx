@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { FC, useContext, useEffect } from 'react'
 import { ProjectMeta } from '../../util/types'
 import Divider from '../Divider'
+import Image from '../Image'
 import Nav from '../nav/Nav'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
@@ -46,14 +47,25 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                 </div>
             </Container>
             <Container spaced>
-                <div className="flex-row lg:items-end">
-                    <div className="max-w-6xl lg:mr-16">
+                <div className="space-y-8 items-end">
+                    <div className="max-w-6xl">
                         <h1 className="mb-4">{meta.title}</h1>
                         <p>
                             {dayjs(meta.date).format('DD/MM/YYYY')} -{' '}
                             {meta.description}
                         </p>
                     </div>
+                    {meta.feature ? (
+                        <div className="max-w-lg">
+                            <Image
+                                width={500}
+                                height={300}
+                                className="object-cover transform"
+                                loading="eager"
+                                src={meta.feature}
+                            />
+                        </div>
+                    ) : null}
                 </div>
             </Container>
             <Container className="pb-24">
