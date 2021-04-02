@@ -36,7 +36,7 @@ module.exports = {
                             fontWeight: 'normal',
                             padding: '2px 4px',
                             borderRadius: '6px',
-                            whitespace: "pre"
+                            whitespace: 'pre',
                         },
                         'code::before': {
                             content: 'none',
@@ -58,7 +58,7 @@ module.exports = {
                             fontWeight: 'normal',
                             padding: '3px 5px',
                             borderRadius: '6px',
-                            whitespace: "pre"
+                            whitespace: 'pre',
                         },
                         'code::before': {
                             content: 'none',
@@ -69,8 +69,8 @@ module.exports = {
                         'a code': {
                             color: colors.gray[900],
                         },
-                        'a': {
-                            color: 'inherit' 
+                        a: {
+                            color: 'inherit',
                         },
                         pre: {
                             backgroundColor: 'none',

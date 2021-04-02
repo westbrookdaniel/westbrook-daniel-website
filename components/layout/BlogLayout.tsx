@@ -15,7 +15,7 @@ interface Props {
         title: string
         description: string
         feature: string
-        date: number;
+        date: number
     }
     projectData: ProjectMeta[]
 }
@@ -49,7 +49,10 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                 <div className="flex-row lg:items-end">
                     <div className="max-w-6xl lg:mr-16">
                         <h1 className="mb-4">{meta.title}</h1>
-                        <p>{dayjs(meta.date).format('DD/MM/YYYY')} - {meta.description}</p>
+                        <p>
+                            {dayjs(meta.date).format('DD/MM/YYYY')} -{' '}
+                            {meta.description}
+                        </p>
                     </div>
                 </div>
             </Container>
