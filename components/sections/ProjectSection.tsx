@@ -12,7 +12,7 @@ interface Props {
 }
 
 const ProjectSection: React.FC<Props> = ({ data, small, title }) => {
-    const projectItems = data.map((p: any) => () => {
+    const projectItems = data.map((p: any) => {
         if (small) {
             return <SmallItem data={p} />
         }
