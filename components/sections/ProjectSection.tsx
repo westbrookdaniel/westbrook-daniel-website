@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import { ProjectData } from '../../util/types'
 import Container from '../layout/Container'
 import ProjectGrid from '../layout/ProjectGrid'
 import ProjectItem from './ProjectItem'
 import SmallItem from './SmallItem'
 
 interface Props {
-    data: any
+    data: ProjectData[]
     small?: boolean
     title: JSX.Element | string
 }
@@ -17,9 +18,6 @@ const ProjectSection: React.FC<Props> = ({ data, small, title }) => {
         }
         return <ProjectItem data={p} />
     })
-    // if (small) {
-    // 	console.log(projectItems);
-    // }
 
     return (
         <Container spaced>

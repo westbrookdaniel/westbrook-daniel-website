@@ -5,31 +5,23 @@ import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
 import { CgArrowRight } from 'react-icons/cg'
 import { useContext, useEffect, useState } from 'react'
-import { NavContext } from '../../pages/_app'
 import ProjectItem from '../sections/ProjectItem'
 import Head from 'next/head'
-import { ProjectMetadata } from '../../util/types'
+import { ProjectMeta, ProjectData } from '../../util/types'
 
 interface Props {
-    data: ProjectMetadata
-    projectData: any
+    data: ProjectMeta
+    projectData: ProjectData[]
 }
 
 const Project: React.FC<Props> = ({ data, children, projectData }) => {
-    const { setData, data: oldProjectData } = useContext(NavContext)!
-
-    useEffect(() => {
-        if (!oldProjectData) {
-            setData(projectData)
-        }
-    }, [])
-
-    const [nextProject, setNextProject] = useState(null)
+    const [nextProject, setNextProject] = useState<null | ProjectData>(null)
     useEffect(() => {
         if (!(projectData && data)) return
         const currentPort = projectData.find(
-            (port: ProjectMetadata) => port.title === data.title
+            (port: ProjectMeta) => port.title === data.title
         )
+        if (!currentPort) return setNextProject(projectData[0])
         const i = projectData.indexOf(currentPort)
         let next = projectData[i + 1]
         if (next) {

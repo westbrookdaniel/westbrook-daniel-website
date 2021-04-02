@@ -2,13 +2,13 @@ import Head from 'next/head'
 import About from '../components/sections/About'
 import Hero from '../components/sections/Hero'
 import ProjectSection from '../components/sections/ProjectSection'
+import BlogSection from '../components/sections/BlogSection'
 import Contact from '../components/sections/Contact'
 import Footer from '../components/sections/Footer'
-import { useContext, useEffect } from 'react'
-import { NavContext } from './_app'
 import getProjectData from '../util/getProjectData'
 import { sideData } from '../data/sideData'
 import getBlogData from '../util/getBlogData'
+import { BlogData, ProjectData } from '../util/types'
 
 export async function getStaticProps() {
     const projectData = getProjectData()
@@ -22,18 +22,11 @@ export async function getStaticProps() {
 }
 
 interface Props {
-    projectData: any[]
-    blogData: any[]
+    projectData: ProjectData[]
+    blogData: BlogData[]
 }
 
 const Home: React.FC<Props> = ({ projectData, blogData }) => {
-    const { setData, data } = useContext(NavContext)!
-    useEffect(() => {
-        if (!data) {
-            setData(projectData)
-        }
-    }, [])
-
     return (
         <div>
             <Head>
@@ -50,14 +43,11 @@ const Home: React.FC<Props> = ({ projectData, blogData }) => {
 
             <Hero />
 
-            <div className="mt-16 mb-8">
+            <div className="mt-12 mb-6">
                 <About />
             </div>
             <div className="mb-16">
-                <ProjectSection
-                    title={<h2>Blog Posts</h2>}
-                    data={blogData}
-                />
+                <BlogSection title={<h2>Blog Posts</h2>} data={blogData} />
                 <ProjectSection
                     title={<h3>Projects</h3>}
                     small

@@ -1,9 +1,8 @@
 import styled from '@emotion/styled'
+import dayjs from 'dayjs'
 import Head from 'next/head'
 import { FC, useContext, useEffect } from 'react'
-import { NavContext } from '../../pages/_app'
-import getProjectData from '../../util/getProjectData'
-import { ProjectMetadata } from '../../util/types'
+import { ProjectMeta } from '../../util/types'
 import Divider from '../Divider'
 import Nav from '../nav/Nav'
 import Contact from '../sections/Contact'
@@ -16,8 +15,9 @@ interface Props {
         title: string
         description: string
         feature: string
+        date: number;
     }
-    projectData: any[]
+    projectData: ProjectMeta[]
 }
 
 const Wrapper = styled.div`
@@ -31,14 +31,7 @@ const Wrapper = styled.div`
     }
 `
 
-const BlogLayout: FC<Props> = ({ meta, children, projectData }) => {
-    const { setData, data } = useContext(NavContext)!
-    useEffect(() => {
-        if (!data) {
-            setData(projectData)
-        }
-    }, [])
-
+const BlogLayout: FC<Props> = ({ meta, children }) => {
     return (
         <div>
             <Head>
@@ -56,7 +49,7 @@ const BlogLayout: FC<Props> = ({ meta, children, projectData }) => {
                 <div className="flex-row lg:items-end">
                     <div className="max-w-6xl lg:mr-16">
                         <h1 className="mb-4">{meta.title}</h1>
-                        <p>{meta.description}</p>
+                        <p>{dayjs(meta.date).format('DD/MM/YYYY')} - {meta.description}</p>
                     </div>
                 </div>
             </Container>

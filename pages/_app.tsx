@@ -15,13 +15,6 @@ import { MDXProvider } from '@mdx-js/react'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
 import { MdxComponents } from '../util/MdxComponents'
 
-interface NavContext {
-    data: any[] | null
-    setData: Dispatch<SetStateAction<any[] | null>>
-}
-
-export const NavContext = createContext<NavContext | null>(null)
-
 declare global {
     interface Window {
         dataLayer: any[]
@@ -30,7 +23,6 @@ declare global {
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter()
-    const [data, setData] = useState<any[] | null>(null)
 
     useEffect(() => {
         console.log(
@@ -45,24 +37,22 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <MDXProvider components={MdxComponents}>
-            <NavContext.Provider value={{ data, setData }}>
-                <StickyNav />
-                <SwitchTransition>
-                    <CSSTransition
-                        key={router.pathname}
-                        addEndListener={(node, done) => {
-                            node.addEventListener('transitionend', done, false)
-                        }}
-                        appear
-                        classNames="fade"
-                        onExited={() => {
-                            window.scrollTo(0, 0)
-                        }}
-                    >
-                        <Component {...pageProps} />
-                    </CSSTransition>
-                </SwitchTransition>
-            </NavContext.Provider>
+            <StickyNav />
+            <SwitchTransition>
+                <CSSTransition
+                    key={router.pathname}
+                    addEndListener={(node, done) => {
+                        node.addEventListener('transitionend', done, false)
+                    }}
+                    appear
+                    classNames="fade"
+                    onExited={() => {
+                        window.scrollTo(0, 0)
+                    }}
+                >
+                    <Component {...pageProps} />
+                </CSSTransition>
+            </SwitchTransition>
         </MDXProvider>
     )
 }
