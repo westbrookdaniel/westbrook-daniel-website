@@ -51,11 +51,15 @@ export default function BlogLogo({ isSticky }: Props) {
                         <Typist cursor={{ show: false }}>
                             <LogoType>
                                 <LogoText ref={ref}>
-                                    <LogoSpacer />
-                                    Daniel
-                                    <LogoSpacer />
-                                    <Typist.Delay ms={200} />
-                                    Westbrook
+                                    <LogoSpacer />D
+                                    <span className="hidden md:block">
+                                        aniel
+                                        <LogoSpacer />
+                                    </span>
+                                    W
+                                    <span className="hidden md:block">
+                                        estbrook
+                                    </span>
                                 </LogoText>
                             </LogoType>
                         </Typist>

@@ -6,21 +6,16 @@ import NavLinks from './NavLinks'
 
 interface Props {
     isSticky?: boolean
-    blog?: boolean
     className?: string
 }
 
-export default function Nav({ isSticky, blog, className = '' }: Props) {
+export default function Nav({ isSticky, className = '' }: Props) {
     return (
         <div className={` ${className}`}>
             <div className="flex justify-between items-center mb-2">
                 <Link href="/" scroll={false}>
                     <a>
-                        {blog ? (
-                            <BlogLogo isSticky={isSticky} />
-                        ) : (
-                            <Logo isSticky={isSticky} />
-                        )}
+                        <Logo isSticky={isSticky} />
                     </a>
                 </Link>
                 <nav className="flex space-x-8 items-center">

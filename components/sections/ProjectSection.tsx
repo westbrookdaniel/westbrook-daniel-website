@@ -46,7 +46,7 @@ const ProjectSection: React.FC<Props> = ({ data, small, title, seeAll }) => {
                     </Link>
                 </div>
             ) : (
-                <Divider className="mt-8" />
+                <Divider className="mt-8 hidden md:block" />
             )}
         </Container>
     )

@@ -43,7 +43,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
             </Head>
             <Container>
                 <div className="w-full pb-10">
-                    <Nav className="pt-10" blog />
+                    <Nav className="pt-10" />
                 </div>
             </Container>
             <Container spaced>

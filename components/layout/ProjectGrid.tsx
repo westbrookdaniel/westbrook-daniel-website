@@ -8,6 +8,7 @@ export default function ProjectGrid({ array }: Props) {
     const arrOut = useDividers(array)
     return (
         <div>
+            <Divider className="mt-6 mb-5 col-span-1 md:hidden" />
             <div className="grid gap-x-8 grid-cols-1 md:grid-cols-2">
                 {arrOut.map((El, i) =>
                     typeof El === 'function' ? <El key={i} /> : null

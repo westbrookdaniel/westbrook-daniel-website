@@ -84,10 +84,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                 <Divider />
             </Container>
             <Container className="pb-8 lg:pb-10">
-                <div
-                    className="prose-sm md:prose lg:prose-lg"
-                    style={{ maxWidth: 'none' }}
-                >
+                <div className="prose lg:prose-lg" style={{ maxWidth: 'none' }}>
                     {children}
                 </div>
             </Container>

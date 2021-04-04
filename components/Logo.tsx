@@ -49,10 +49,12 @@ export default function Logo({ isSticky }: Props) {
                     <span>DW</span>
                 ) : (
                     <Typist cursor={{ show: false }}>
-                        Daniel
-                        <LogoSpacer />
-                        <Typist.Delay ms={200} />
-                        Westbrook
+                        D
+                        <span className="hidden md:block">
+                            aniel
+                            <LogoSpacer />
+                        </span>
+                        W<span className="hidden md:block">estbrook</span>
                     </Typist>
                 ))}
             <ShapeWrapper>
