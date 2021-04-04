@@ -20,12 +20,10 @@ const BlogSection: React.FC<Props> = ({ data, title, limit }) => {
     return (
         <Container spaced>
             {title}
+            <Divider className="mt-6" />
             <div className="grid mt-6 gap-4">
                 {items.map((Item: () => JSX.Element, i: number) => (
-                    <>
-                        <Divider className="mb-2" key={i + 'a'} />
-                        <Item key={i + 'b'} />
-                    </>
+                    <Item key={i} />
                 ))}
             </div>
             {limit ? (
@@ -37,7 +35,9 @@ const BlogSection: React.FC<Props> = ({ data, title, limit }) => {
                         </a>
                     </Link>
                 </div>
-            ) : null}
+            ) : (
+                <Divider className="mt-6" />
+            )}
         </Container>
     )
 }

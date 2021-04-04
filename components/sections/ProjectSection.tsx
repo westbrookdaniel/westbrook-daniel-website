@@ -25,16 +25,19 @@ const ProjectSection: React.FC<Props> = ({ data, small, title, seeAll }) => {
         <Container spaced>
             {title}
             {small ? (
-                <div className="grid mt-4 gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
-                    {projectItems.map((Item: any, i: number) => (
-                        <Item key={i} />
-                    ))}
-                </div>
+                <>
+                    <Divider className="mt-6 mb-8" />
+                    <div className="grid mt-4 gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
+                        {projectItems.map((Item: any, i: number) => (
+                            <Item key={i} />
+                        ))}
+                    </div>
+                </>
             ) : (
                 <ProjectGrid array={projectItems} />
             )}
             {seeAll ? (
-                <div className="flex mt-6 items-center space-x-8 w-full">
+                <div className="flex mt-4 items-center space-x-8 w-full">
                     <Divider className="flex-grow" />
                     <Link href="/p" scroll={false}>
                         <a className="flex link-style justify-center items-center">
@@ -42,7 +45,9 @@ const ProjectSection: React.FC<Props> = ({ data, small, title, seeAll }) => {
                         </a>
                     </Link>
                 </div>
-            ) : null}
+            ) : (
+                <Divider className="mt-8" />
+            )}
         </Container>
     )
 }

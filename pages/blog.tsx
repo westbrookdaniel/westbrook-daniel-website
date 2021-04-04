@@ -25,7 +25,7 @@ const Blog: React.FC<Props> = ({ blogData }) => {
                     title={
                         <>
                             <h1 className="max-w-title">Blog</h1>
-                            <p className="mt-4 mb-8">
+                            <p className="mt-4 mb-10">
                                 Read my latest posts where I write about things
                                 that I'm finding interesting
                             </p>
