@@ -6,10 +6,36 @@ import Highlight, {
 } from 'prism-react-renderer'
 import theme from './theme-gruvbox-dark'
 
+import styled from '@emotion/styled'
+
 interface Props {
     className: string
     children: string
 }
+
+const Pre = styled.pre`
+    border-radius: 0.5rem;
+    overflow: scroll;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 20px;
+`
+
+const Line = styled.div`
+    display: table-row;
+`
+
+const LineNo = styled.span`
+    display: table-cell;
+    text-align: right;
+    padding-right: 1.25em;
+    user-select: none;
+    opacity: 0.3;
+`
+
+const LineContent = styled.span`
+    display: table-cell;
+`
 
 const Code = ({ children, className }: Props) => {
     const language = className
@@ -23,28 +49,21 @@ const Code = ({ children, className }: Props) => {
             language={language}
         >
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <pre
-                    className={className}
-                    style={{
-                        ...style,
-                        borderRadius: '0.5rem',
-                        overflow: 'scroll',
-                        marginTop: 20,
-                        marginBottom: 20,
-                        padding: 24,
-                    }}
-                >
+                <Pre className={className} style={style}>
                     {tokens.map((line, i) => (
-                        <div key={i} {...getLineProps({ line, key: i })}>
-                            {line.map((token, key) => (
-                                <span
-                                    key={key}
-                                    {...getTokenProps({ token, key })}
-                                />
-                            ))}
-                        </div>
+                        <Line key={i} {...getLineProps({ line, key: i })}>
+                            <LineNo className="hidden md:block">{i + 1}</LineNo>
+                            <LineContent>
+                                {line.map((token, key) => (
+                                    <span
+                                        key={key}
+                                        {...getTokenProps({ token, key })}
+                                    />
+                                ))}
+                            </LineContent>
+                        </Line>
                     ))}
-                </pre>
+                </Pre>
             )}
         </Highlight>
     )
@@ -53,4 +72,9 @@ const Code = ({ children, className }: Props) => {
 export const MdxComponents = {
     code: Code,
     pre: ({ children }: any) => children,
+    a: ({ children, ...props }: any) => (
+        <a target="_blank" rel="noopener noreferrer" {...props}>
+            {children}
+        </a>
+    ),
 }

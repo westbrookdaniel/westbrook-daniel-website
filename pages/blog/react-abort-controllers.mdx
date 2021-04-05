@@ -1,0 +1,110 @@
+import BlogLayout from '../../components/layout/BlogLayout'
+import Divider from '../../components/Divider'
+const prefix = '/images/blog/react-abort-controllers'
+export const meta = {
+    title: 'Using AbortControllers to Cancel Fetch in React',
+    description: 'How to use the web api to cancel fetch easily',
+    date: 1617619498253,
+    feature: `${prefix}/feature.jpg`,
+}
+export { getStaticProps } from '../../util/getProjectData'
+export default props => <BlogLayout {...props} />
+
+Photo by [Vishu](https://unsplash.com/@vishujoo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/jet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+<Divider />
+
+Why is this a problem?
+
+```jsx
+const Example = () => {
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/posts/1')
+            .then(res => res.json())
+            .then(json => setMessage(json.title))
+            .catch(error => console.error(error.message))
+    }, [])
+    return <div>{message}</div>
+}
+```
+
+If we unmount the component while this fetch is in process we will get the following error.
+
+```
+Warning: Can't perform a React state update on an unmounted component.
+This is a no-op, but it indicates a memory leak in your application.
+To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount
+method.
+```
+
+What does this mean? `update on an unmounted component` summarizes it well. We are trying to
+but you're unnecessarily hindering the performance of your application. change the state of
+a component that no longer exists. While this is bad behavior, it doesn't actually cause
+this app to break. Although, you are wasting resources on doing unnecessary actions. So let's
+fix it by canceling the fetch.
+
+```jsx
+useEffect(() => {
+    const controller = new AbortController()
+
+    fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        signal: controller.signal,
+    })
+        .then(res => res.json())
+        .then(json => setMessage(json.title))
+        .catch(error => console.error(error.message))
+
+    return () => controller.abort()
+}, [])
+```
+
+This uses the web api `AbortController` as the signal for fetch. You can see [here](https://caniuse.com/abortcontroller)
+that it already has 92% support across browsers (although not IE). By returning a function from `useEffect` we
+can trigger the abort controller on dismount (see the React [docs](https://reactjs.org/docs/hooks-effect.html#example-using-hooks-1))
+
+There is a problem with this solution. When the component is unmounted while a fetch call is in progress, we
+get this message being logged to the console:
+
+```
+The user aborted a request.
+```
+
+This happens because aborting the fetch doesn't magically delete the promise - it fails with an
+`AbortError` which is getting logged in our `catch`. We can fix that by doing this.
+
+```jsx
+useEffect(() => {
+    const controller = new AbortController()
+
+    fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        signal: controller.signal,
+    })
+        .then(res => res.json())
+        .then(json => setMessage(json.title))
+        .catch(error => {
+            if (error.name !== 'AbortError') {
+                console.error(error.message)
+            }
+        })
+
+    return () => controller.abort()
+}, [])
+```
+
+Here we are ignoring the error if it has the name `AbortError`. Problem solved! You can read
+more about `AbortController` on [MDN](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+
+Although, for managing a request this still doesn't expose a loading state, refetch data, or
+indicate to the ui when the request has failed. If you don't want to deal with all of this,
+you're probably better off just using [`react-query`](https://react-query.tanstack.com/) instead.
+
+```jsx
+const { data, isLoading /* etc... */ } = useQuery('title', () =>
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then(res => res.json())
+        .then(res => res.title)
+)
+```
+
+How much easier is that! You can find an example of all of these methods implemented on
+[CodeSandbox](https://codesandbox.io/s/mutable-pine-psldb?file=/src/Comp.js).

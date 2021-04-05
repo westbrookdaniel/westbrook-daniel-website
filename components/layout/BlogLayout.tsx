@@ -70,12 +70,11 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
             </Container>
             <Container className="pb-24">
                 <Wrapper className="prose lg:prose-lg">
-                    <Divider />
                     {children}
                 </Wrapper>
             </Container>
             <div className="bg-themeGray-100">
-                <Contact className="pt-16 pb-40" />
+                <Contact blog className="pt-16 pb-40" />
                 <Footer />
             </div>
         </div>
