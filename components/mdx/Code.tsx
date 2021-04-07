@@ -1,11 +1,9 @@
-import React from 'react'
 import Highlight, {
     defaultProps,
     Language,
     PrismTheme,
 } from 'prism-react-renderer'
-import theme from './theme-gruvbox-dark'
-
+import theme from '../../util/theme-gruvbox-dark'
 import styled from '@emotion/styled'
 
 interface Props {
@@ -26,7 +24,6 @@ const Line = styled.div`
 `
 
 const LineNo = styled.span`
-    display: table-cell;
     text-align: right;
     padding-right: 1.25em;
     user-select: none;
@@ -52,7 +49,9 @@ const Code = ({ children, className }: Props) => {
                 <Pre className={className} style={style}>
                     {tokens.map((line, i) => (
                         <Line key={i} {...getLineProps({ line, key: i })}>
-                            <LineNo className="hidden md:block">{i + 1}</LineNo>
+                            <LineNo className="hidden md:table-cell">
+                                {i + 1}
+                            </LineNo>
                             <LineContent>
                                 {line.map((token, key) => (
                                     <span
@@ -69,12 +68,4 @@ const Code = ({ children, className }: Props) => {
     )
 }
 
-export const MdxComponents = {
-    code: Code,
-    pre: ({ children }: any) => children,
-    a: ({ children, ...props }: any) => (
-        <a target="_blank" rel="noopener noreferrer" {...props}>
-            {children}
-        </a>
-    ),
-}
+export default Code

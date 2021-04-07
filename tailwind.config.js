@@ -72,16 +72,6 @@ module.exports = {
                         a: {
                             color: 'inherit',
                         },
-                        pre: {
-                            backgroundColor: 'none',
-                            marginTop: '0',
-                            marginBottom: '0',
-                            borderRadius: 'none',
-                            paddingTop: '0',
-                            paddingRight: '0',
-                            paddingBottom: '0',
-                            paddingLeft: '0',
-                        },
                         'pre code::before': {
                             content: 'none',
                         },
