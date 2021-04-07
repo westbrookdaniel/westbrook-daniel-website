@@ -1,7 +1,7 @@
 import NextImage, { ImageProps } from 'next/image'
 
 export default function Image({
-    loading = 'lazy',
+    loading = 'eager',
     className = '',
     ...props
 }: ImageProps) {
