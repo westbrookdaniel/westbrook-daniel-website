@@ -34,7 +34,11 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
 
     return (
         <div>
-            <HeadWithGraph title={data.title} description={data.description} />
+            <HeadWithGraph
+                title={data.title}
+                image={data.feature}
+                description={data.description}
+            />
             <Container>
                 <div className="w-full pb-10">
                     <Nav className="pt-10" />

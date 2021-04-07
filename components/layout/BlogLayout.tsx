@@ -29,7 +29,11 @@ const Wrapper = styled.div`
 const BlogLayout: FC<Props> = ({ meta, children }) => {
     return (
         <div>
-            <HeadWithGraph title={meta.title} description={meta.snippet} />
+            <HeadWithGraph
+                title={meta.title}
+                image={meta.feature}
+                description={meta.snippet}
+            />
             <Container>
                 <div className="w-full pb-10">
                     <Nav className="pt-10" />
