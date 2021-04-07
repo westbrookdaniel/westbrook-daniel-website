@@ -41,6 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <StickyNav />
             <SwitchTransition>
                 <CSSTransition
+                    className="min-h-screen flex flex-col"
                     key={router.pathname}
                     addEndListener={(node, done) => {
                         node.addEventListener('transitionend', done, false)
@@ -51,7 +52,9 @@ function MyApp({ Component, pageProps }: AppProps) {
                         window.scrollTo(0, 0)
                     }}
                 >
-                    <Component {...pageProps} />
+                    <div className="min-h-screen flex flex-col">
+                        <Component {...pageProps} />
+                    </div>
                 </CSSTransition>
             </SwitchTransition>
         </MDXProvider>

@@ -15,14 +15,14 @@ interface Props {
 
 const Blog: React.FC<Props> = ({ blogData }) => {
     return (
-        <div>
+        <>
             <HeadWithGraph title="Blog" />
             <Container className="m-auto">
                 <div className="w-full mb-12">
                     <Nav className="pt-10" />
                 </div>
             </Container>
-            <div className="mb-16">
+            <div className="mb-16 flex-grow">
                 <BlogSection
                     title={
                         <>
@@ -40,7 +40,7 @@ const Blog: React.FC<Props> = ({ blogData }) => {
                 <Contact className="pt-16 pb-32" />
                 <Footer />
             </div>
-        </div>
+        </>
     )
 }
 

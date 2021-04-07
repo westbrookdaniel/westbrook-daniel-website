@@ -28,7 +28,7 @@ interface Props {
 
 const Home: React.FC<Props> = ({ projectData, blogData }) => {
     return (
-        <div>
+        <>
             <HeadWithGraph />
 
             <Hero />
@@ -36,7 +36,7 @@ const Home: React.FC<Props> = ({ projectData, blogData }) => {
             <div className="mt-12 mb-6">
                 <About />
             </div>
-            <div className="mb-24">
+            <div className="mb-24 flex-grow">
                 <BlogSection
                     title={<h2>Blog Posts</h2>}
                     limit
@@ -54,7 +54,7 @@ const Home: React.FC<Props> = ({ projectData, blogData }) => {
                 <Contact className="pt-16 pb-32" />
                 <Footer />
             </div>
-        </div>
+        </>
     )
 }
 

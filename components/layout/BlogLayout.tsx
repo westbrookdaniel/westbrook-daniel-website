@@ -28,7 +28,7 @@ const Wrapper = styled.div`
 
 const BlogLayout: FC<Props> = ({ meta, children }) => {
     return (
-        <div>
+        <>
             <HeadWithGraph
                 title={meta.title}
                 image={meta.feature}
@@ -61,14 +61,14 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                     ) : null}
                 </div>
             </Container>
-            <Container className="pb-24">
+            <Container className="pb-24 flex-grow">
                 <Wrapper className="prose lg:prose-lg">{children}</Wrapper>
             </Container>
             <div className="bg-themeGray-100">
                 <Contact blog className="pt-16 pb-40" />
                 <Footer />
             </div>
-        </div>
+        </>
     )
 }
 

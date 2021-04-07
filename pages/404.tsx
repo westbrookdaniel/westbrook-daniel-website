@@ -8,10 +8,10 @@ import HeadWithGraph from '../util/HeadWithGraph'
 
 export default function Error() {
     return (
-        <div>
+        <>
             <HeadWithGraph title="Page Not Found" />
 
-            <Container className="m-auto">
+            <Container className="m-auto flex-grow">
                 <div className="w-full mb-12">
                     <Nav className="pt-10" />
                 </div>
@@ -32,6 +32,6 @@ export default function Error() {
                     </div>
                 </Container>
             </Container>
-        </div>
+        </>
     )
 }

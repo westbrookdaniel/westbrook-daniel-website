@@ -16,7 +16,7 @@ interface Props {
 
 const Blog: React.FC<Props> = ({ projectData }) => {
     return (
-        <div>
+        <>
             <HeadWithGraph
                 title="Projects"
                 image="/images/projects/space-of-the-day/space"
@@ -26,7 +26,7 @@ const Blog: React.FC<Props> = ({ projectData }) => {
                     <Nav className="pt-10" />
                 </div>
             </Container>
-            <div className="mb-24">
+            <div className="mb-24 flex-grow">
                 <ProjectSection
                     title={
                         <>
@@ -49,7 +49,7 @@ const Blog: React.FC<Props> = ({ projectData }) => {
                 <Contact className="pt-16 pb-32" />
                 <Footer />
             </div>
-        </div>
+        </>
     )
 }
 

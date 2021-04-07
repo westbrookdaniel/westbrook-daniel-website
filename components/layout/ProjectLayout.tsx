@@ -33,7 +33,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
     }, [projectData, data])
 
     return (
-        <div>
+        <>
             <HeadWithGraph
                 title={data.title}
                 image={data.feature}
@@ -85,7 +85,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                 </div>
                 <Divider />
             </Container>
-            <Container className="pb-8 lg:pb-10">
+            <Container className="pb-8 lg:pb-10 flex-grow">
                 <div className="prose lg:prose-lg" style={{ maxWidth: 'none' }}>
                     {children}
                 </div>
@@ -101,7 +101,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                 <Contact className="pt-16 pb-40" />
                 <Footer />
             </div>
-        </div>
+        </>
     )
 }
 
