@@ -38,11 +38,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <MDXProvider components={MdxComponents}>
-            <HeadWithGraph>
-                <meta property="og:site_name" content="Daniel Westbrook" />
-                <link rel="icon" href="/favicon.ico" />
-            </HeadWithGraph>
-
             <StickyNav />
             <SwitchTransition>
                 <CSSTransition

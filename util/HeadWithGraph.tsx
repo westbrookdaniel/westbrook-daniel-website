@@ -52,6 +52,8 @@ const HeadWithGraph: React.FC<Props> = ({
                     technologies.`
                 }
             />
+            <meta property="og:site_name" content="Daniel Westbrook" />
+            <link rel="icon" href="/favicon.ico" />
             {children}
         </Head>
     )
