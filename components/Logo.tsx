@@ -48,14 +48,17 @@ export default function Logo({ isSticky }: Props) {
                 (isSticky ? (
                     <span>DW</span>
                 ) : (
-                    <Typist cursor={{ show: false }}>
-                        D
-                        <span className="hidden md:inline">
-                            aniel
+                    <>
+                        <Typist
+                            className="hidden md:block"
+                            cursor={{ show: false }}
+                        >
+                            Daniel
                             <LogoSpacer />
-                        </span>
-                        W<span className="hidden md:inline">estbrook</span>
-                    </Typist>
+                            Westbrook
+                        </Typist>
+                        <span className="Typist block md:hidden">DW</span>
+                    </>
                 ))}
             <ShapeWrapper>
                 <LogoShape />
