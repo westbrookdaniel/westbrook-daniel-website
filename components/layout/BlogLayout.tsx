@@ -1,9 +1,8 @@
 import styled from '@emotion/styled'
 import dayjs from 'dayjs'
 import Head from 'next/head'
-import { FC, useContext, useEffect } from 'react'
-import { ProjectMeta } from '../../util/types'
-import Divider from '../Divider'
+import { FC } from 'react'
+import { BlogMeta } from '../../util/types'
 import Image from '../Image'
 import Nav from '../nav/Nav'
 import Contact from '../sections/Contact'
@@ -12,13 +11,7 @@ import Container from './Container'
 
 interface Props {
     prefix: string
-    meta: {
-        title: string
-        description: string
-        feature: string
-        date: number
-    }
-    projectData: ProjectMeta[]
+    meta: BlogMeta
 }
 
 const Wrapper = styled.div`
@@ -36,10 +29,8 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
     return (
         <div>
             <Head>
-                <title>
-                    {meta.title} | Blog {'>'} Daniel Westbrook
-                </title>
-                <meta name="description" content={meta.description}></meta>
+                <title>{meta.title} | Blog by Daniel Westbrook</title>
+                <meta name="description" content={meta.snippet}></meta>
             </Head>
             <Container>
                 <div className="w-full pb-10">
@@ -69,9 +60,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                 </div>
             </Container>
             <Container className="pb-24">
-                <Wrapper className="prose lg:prose-lg">
-                    {children}
-                </Wrapper>
+                <Wrapper className="prose lg:prose-lg">{children}</Wrapper>
             </Container>
             <div className="bg-themeGray-100">
                 <Contact blog className="pt-16 pb-40" />

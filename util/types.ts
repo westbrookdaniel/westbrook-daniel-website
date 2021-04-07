@@ -17,6 +17,7 @@ export interface BlogMeta {
     description: string
     date: number
     feature: string
+    snippet: string
 }
 
 export interface BlogData extends BlogMeta {

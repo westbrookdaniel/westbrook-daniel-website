@@ -6,6 +6,9 @@ export const meta = {
     description: 'How to use the web api to cancel fetch easily',
     date: 1617619498253,
     feature: `${prefix}/feature.jpg`,
+    snippet: `In react we can use fetch in a useEffect to get a request when the page loads... This uses the web 
+    api AbortController as the signal for fetch. By returning a function from useEffect we can trigger 
+    the abort controller on dismount...`,
 }
 export { getStaticProps } from '../../util/getProjectData'
 export default props => <BlogLayout {...props} />
