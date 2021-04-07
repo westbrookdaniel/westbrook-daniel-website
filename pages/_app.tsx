@@ -14,6 +14,7 @@ import StickyNav from '../components/nav/StickyNav'
 import { MDXProvider } from '@mdx-js/react'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
 import { MdxComponents } from '../components/mdx'
+import HeadWithGraph from '../util/HeadWithGraph'
 
 declare global {
     interface Window {
@@ -37,6 +38,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <MDXProvider components={MdxComponents}>
+            <HeadWithGraph>
+                <meta property="og:site_name" content="Daniel Westbrook" />
+                <link rel="icon" href="/favicon.ico" />
+            </HeadWithGraph>
+
             <StickyNav />
             <SwitchTransition>
                 <CSSTransition

@@ -5,6 +5,7 @@ import Contact from '../components/sections/Contact'
 import React from 'react'
 import BlogSection from '../components/sections/BlogSection'
 import { BlogData } from '../util/types'
+import HeadWithGraph from '../util/HeadWithGraph'
 
 export { getStaticProps } from '../util/getBlogData'
 
@@ -15,6 +16,7 @@ interface Props {
 const Blog: React.FC<Props> = ({ blogData }) => {
     return (
         <div>
+            <HeadWithGraph title="Blog" />
             <Container className="m-auto">
                 <div className="w-full mb-12">
                     <Nav className="pt-10" />

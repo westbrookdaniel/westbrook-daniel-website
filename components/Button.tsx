@@ -16,7 +16,7 @@ const Button: React.FC<Props> = ({
     switch (theme) {
         case 'gray':
             themeString =
-                'bg-themeGray-200 hover:bg-themeGray-300 active:bg-themeGray-400 border-line border-themeGray-2 hover:border-themeGray-300 active:border-themeGray-400  text-black'
+                'bg-themeGray-200 hover:bg-themeGray-300 active:bg-themeGray-400 border-line border-themeGray-2 hover:border-themeGray-300 active:border-themeGray-400 text-black'
         case 'yellow':
         default:
             themeString =

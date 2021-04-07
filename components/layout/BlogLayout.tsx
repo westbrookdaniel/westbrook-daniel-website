@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import dayjs from 'dayjs'
 import Head from 'next/head'
 import { FC } from 'react'
+import HeadWithGraph from '../../util/HeadWithGraph'
 import { BlogMeta } from '../../util/types'
 import Image from '../Image'
 import Nav from '../nav/Nav'
@@ -28,10 +29,7 @@ const Wrapper = styled.div`
 const BlogLayout: FC<Props> = ({ meta, children }) => {
     return (
         <div>
-            <Head>
-                <title>{meta.title} | Blog by Daniel Westbrook</title>
-                <meta name="description" content={meta.snippet}></meta>
-            </Head>
+            <HeadWithGraph title={meta.title} description={meta.snippet} />
             <Container>
                 <div className="w-full pb-10">
                     <Nav className="pt-10" />

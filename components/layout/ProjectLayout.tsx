@@ -8,6 +8,7 @@ import { useContext, useEffect, useState } from 'react'
 import ProjectItem from '../sections/ProjectItem'
 import Head from 'next/head'
 import { ProjectMeta, ProjectData } from '../../util/types'
+import HeadWithGraph from '../../util/HeadWithGraph'
 
 interface Props {
     data: ProjectMeta
@@ -33,10 +34,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
 
     return (
         <div>
-            <Head>
-                <title>{data.title} | Daniel Westbrook</title>
-                <meta name="description" content={data.description}></meta>
-            </Head>
+            <HeadWithGraph title={data.title} description={data.description} />
             <Container>
                 <div className="w-full pb-10">
                     <Nav className="pt-10" />

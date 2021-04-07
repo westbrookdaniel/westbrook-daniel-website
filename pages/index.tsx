@@ -8,6 +8,7 @@ import Footer from '../components/sections/Footer'
 import getProjectData from '../util/getProjectData'
 import getBlogData from '../util/getBlogData'
 import { BlogData, ProjectData } from '../util/types'
+import HeadWithGraph from '../util/HeadWithGraph'
 
 export async function getStaticProps() {
     const projectData = getProjectData()
@@ -28,17 +29,7 @@ interface Props {
 const Home: React.FC<Props> = ({ projectData, blogData }) => {
     return (
         <div>
-            <Head>
-                <title>Daniel Westbrook | Full Stack Developer</title>
-                <meta
-                    name="description"
-                    content="I am a Full Stack Developer and Designer primarily working
-                    with React building web apps. I enjoy formulating
-                    performant, innovative solutions and exploring new tools and
-                    technologies."
-                ></meta>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+            <HeadWithGraph />
 
             <Hero />
 

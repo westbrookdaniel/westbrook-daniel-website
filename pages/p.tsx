@@ -6,6 +6,7 @@ import React from 'react'
 import { ProjectData } from '../util/types'
 import ProjectSection from '../components/sections/ProjectSection'
 import { sideData } from '../data/sideData'
+import HeadWithGraph from '../util/HeadWithGraph'
 
 export { getStaticProps } from '../util/getProjectData'
 
@@ -16,6 +17,10 @@ interface Props {
 const Blog: React.FC<Props> = ({ projectData }) => {
     return (
         <div>
+            <HeadWithGraph
+                title="Projects"
+                image="/images/projects/space-of-the-day/space"
+            />
             <Container className="m-auto">
                 <div className="w-full mb-12">
                     <Nav className="pt-10" />
