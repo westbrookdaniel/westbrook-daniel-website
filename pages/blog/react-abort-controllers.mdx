@@ -14,7 +14,7 @@ Photo by [Vishu](https://unsplash.com/@vishujoo?utm_source=unsplash&utm_medium=r
 
 <Divider />
 
-Why is this a problem?
+In react we can use fetch in a useEffect to get a request when the page loads. So why is the code below a problem?
 
 ```jsx
 const Example = () => {
@@ -37,11 +37,10 @@ To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmo
 method.
 ```
 
-What does this mean? `update on an unmounted component` summarizes it well. We are trying to
-but you're unnecessarily hindering the performance of your application. change the state of
-a component that no longer exists. While this is bad behavior, it doesn't actually cause
-this app to break. Although, you are wasting resources on doing unnecessary actions. So let's
-fix it by canceling the fetch.
+What does this mean? `update on an unmounted component` summarizes it well. We are
+change the state of a component that no longer exists because it the component has been removed.
+This can lead to your app breaking in weird ways, as well as you wasting resources on unnecessary
+actions. So let's fix it by canceling the fetch.
 
 ```jsx
 useEffect(() => {
@@ -58,9 +57,9 @@ useEffect(() => {
 }, [])
 ```
 
-This uses the web api `AbortController` as the signal for fetch. You can see [here](https://caniuse.com/abortcontroller)
-that it already has 92% support across browsers (although not IE). By returning a function from `useEffect` we
-can trigger the abort controller on dismount (see the React [docs](https://reactjs.org/docs/hooks-effect.html#example-using-hooks-1))
+This uses the web api `AbortController` as the signal for fetch. By returning a function from `useEffect` we
+can trigger the abort controller on dismount (see the React [docs](https://reactjs.org/docs/hooks-effect.html#example-using-hooks-1)).
+The `AbortSignal` (`controller.singal`) is then passed into the fetch as an argument and voilà!
 
 There is a problem with this solution. When the component is unmounted while a fetch call is in progress, we
 get this message being logged to the console:
@@ -70,7 +69,7 @@ The user aborted a request.
 ```
 
 This happens because aborting the fetch doesn't magically delete the promise - it fails with an
-`AbortError` which is getting logged in our `catch`. We can fix that by doing this.
+`AbortError` which is getting logged in our `catch`.
 
 ```jsx
 useEffect(() => {
@@ -93,10 +92,11 @@ useEffect(() => {
 
 Here we are ignoring the error if it has the name `AbortError`. Problem solved! You can read
 more about `AbortController` on [MDN](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+You can see [here](https://caniuse.com/abortcontroller) that it has 92% support across browsers (although not IE).
 
-Although, for managing a request this still doesn't expose a loading state, refetch data, or
-indicate to the ui when the request has failed. If you don't want to deal with all of this,
-you're probably better off just using [`react-query`](https://react-query.tanstack.com/) instead.
+Although, this request this still doesn't expose a loading state or indicate to the ui if it has failed.
+If you don't want to deal with all of this, you're probably better off just using
+[`react-query`](https://react-query.tanstack.com/) instead (which also does it in a lot less code).
 
 ```jsx
 const { data, isLoading /* etc... */ } = useQuery('title', () =>
