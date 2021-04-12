@@ -11,14 +11,10 @@ import {
     useState,
 } from 'react'
 import StickyNav from '../components/nav/StickyNav'
+import { MDXProvider } from '@mdx-js/react'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
-
-interface NavContext {
-    data: any[] | null
-    setData: Dispatch<SetStateAction<any[] | null>>
-}
-
-export const NavContext = createContext<NavContext | null>(null)
+import { MdxComponents } from '../components/mdx'
+import HeadWithGraph from '../util/HeadWithGraph'
 
 declare global {
     interface Window {
@@ -28,7 +24,6 @@ declare global {
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter()
-    const [data, setData] = useState<any[] | null>(null)
 
     useEffect(() => {
         console.log(
@@ -42,10 +37,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     }, [])
 
     return (
-        <NavContext.Provider value={{ data, setData }}>
+        <MDXProvider components={MdxComponents}>
             <StickyNav />
             <SwitchTransition>
                 <CSSTransition
+                    className="min-h-screen flex flex-col"
                     key={router.pathname}
                     addEndListener={(node, done) => {
                         node.addEventListener('transitionend', done, false)
@@ -56,10 +52,12 @@ function MyApp({ Component, pageProps }: AppProps) {
                         window.scrollTo(0, 0)
                     }}
                 >
-                    <Component {...pageProps} />
+                    <div className="min-h-screen flex flex-col">
+                        <Component {...pageProps} />
+                    </div>
                 </CSSTransition>
             </SwitchTransition>
-        </NavContext.Provider>
+        </MDXProvider>
     )
 }
 

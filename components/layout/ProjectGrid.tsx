@@ -1,12 +1,7 @@
 import Divider from '../Divider'
-import styled from '@emotion/styled'
-
-const Gap = styled.div`
-    gap: 0 2rem;
-`
 
 interface Props {
-    array: JSX.Element[]
+    array: (() => JSX.Element)[]
 }
 
 export default function ProjectGrid({ array }: Props) {
@@ -14,16 +9,16 @@ export default function ProjectGrid({ array }: Props) {
     return (
         <div>
             <Divider className="mt-6 mb-5 col-span-1 md:hidden" />
-            <Gap className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid gap-x-8 grid-cols-1 md:grid-cols-2">
                 {arrOut.map((El, i) =>
                     typeof El === 'function' ? <El key={i} /> : null
                 )}
-            </Gap>
+            </div>
         </div>
     )
 }
 
-const useDividers = (arr: JSX.Element[]) => {
+const useDividers = (arr: (() => JSX.Element)[]) => {
     const output = []
     for (let i = 0; i < arr.length; i++) {
         const El = arr[i] as any

@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
     future: {
         removeDeprecatedGapUtilities: true,
@@ -23,6 +25,63 @@ module.exports = {
     important: false,
     separator: ':',
     theme: {
+        extend: {
+            typography: {
+                sm: {
+                    css: {
+                        lineHeight: '1.5em',
+                        code: {
+                            color: '#1d2021',
+                            backgroundColor: '#fbf8f3',
+                            fontWeight: 'normal',
+                            padding: '2px 4px',
+                            borderRadius: '6px',
+                            whitespace: 'pre',
+                        },
+                        'code::before': {
+                            content: 'none',
+                        },
+                        'code::after': {
+                            content: 'none',
+                        },
+                        'a code': {
+                            color: colors.gray[900],
+                        },
+                    },
+                },
+                DEFAULT: {
+                    css: {
+                        lineHeight: '1.5em',
+                        code: {
+                            color: '#1d2021',
+                            backgroundColor: '#fbf8f3',
+                            fontWeight: 'normal',
+                            padding: '3px 5px',
+                            borderRadius: '6px',
+                            whitespace: 'pre',
+                        },
+                        'code::before': {
+                            content: 'none',
+                        },
+                        'code::after': {
+                            content: 'none',
+                        },
+                        'a code': {
+                            color: colors.gray[900],
+                        },
+                        a: {
+                            color: 'inherit',
+                        },
+                        'pre code::before': {
+                            content: 'none',
+                        },
+                        'pre code::after': {
+                            content: 'none',
+                        },
+                    },
+                },
+            },
+        },
         screens: {
             xs: '500px',
             sm: '640px',
@@ -200,7 +259,7 @@ module.exports = {
             48: '12rem',
             56: '14rem',
             64: '16rem',
-            line: '0.1rem',
+            line: '1px',
         },
         backgroundColor: theme => theme('colors'),
         backgroundImage: {
@@ -309,7 +368,7 @@ module.exports = {
         },
         fontFamily: {
             display: [
-                'Poppins',
+                'Rowan',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 'sans-serif',
@@ -319,7 +378,7 @@ module.exports = {
                 '"Noto Color Emoji"',
             ],
             body: [
-                'Work Sans',
+                'Roboto',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 'sans-serif',
@@ -848,5 +907,5 @@ module.exports = {
         animation: ['responsive'],
     },
     corePlugins: {},
-    plugins: [],
+    plugins: [require('@tailwindcss/typography')],
 }

@@ -8,9 +8,9 @@ export default function About() {
             <Divider className="mt-4 mb-5" />
             <div className="row">
                 <p>
-                    I am a Full Stack Developer and Designer primarily working
-                    with React building web apps. I enjoy formulating
-                    performant, innovative solutions and exploring new tools and
+                    Hi, I'm Daniel Westbrook and I am a Full Stack Developer and
+                    Designer primarily working with React building web apps. I
+                    creating performant solutions and exploring new tools and
                     technologies.
                 </p>
                 <p>

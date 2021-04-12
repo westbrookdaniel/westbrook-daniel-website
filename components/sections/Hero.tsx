@@ -13,7 +13,7 @@ export default function Hero() {
                     Full Stack Developer and Designer, Currently Working at{' '}
                     <a
                         href="https://unearthed.solutions/"
-                        className="hover:underline italic"
+                        className="link-style italic"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

@@ -11,9 +11,13 @@ const Paragraph: React.FC<Props> = ({ withStack = [], children }) => {
                 <div className="flex-grow max-w-4xl">{children}</div>
                 <div className="xl:text-right flex-1">
                     <h3>Technologies</h3>
-                    {withStack.map((item, index) => (
-                        <p key={index}>{item}</p>
-                    ))}
+                    <p>
+                        {withStack.map((item, index) => (
+                            <span className="block" key={index}>
+                                {item}
+                            </span>
+                        ))}
+                    </p>
                 </div>
             </div>
         )

@@ -1,5 +1,16 @@
 import NextImage, { ImageProps } from 'next/image'
 
-export default function Image({ loading = 'lazy', ...props }: ImageProps) {
-    return <NextImage layout="responsive" loading={loading} {...props} />
+export default function Image({
+    loading = 'eager',
+    className = '',
+    ...props
+}: ImageProps) {
+    return (
+        <NextImage
+            layout="responsive"
+            className={'rounded-lg ' + className}
+            loading={loading}
+            {...props}
+        />
+    )
 }
