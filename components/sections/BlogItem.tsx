@@ -14,7 +14,7 @@ const BlogItem: React.FC<Props> = ({ data }) => {
     return (
         <Link href={data.slug} scroll={false}>
             <a className="mb-2">
-                <div className="grid gap-8 grid-cols-5 hover-arrow">
+                <div className="md:grid gap-8 grid-cols-5 hover-arrow">
                     <div className="md:block hidden my-3 rounded-lg overflow-hidden">
                         <Image
                             alt={`${data.title} Project`}
