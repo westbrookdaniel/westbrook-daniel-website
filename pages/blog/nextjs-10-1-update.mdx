@@ -1,0 +1,66 @@
+import BlogLayout from '../../components/layout/BlogLayout'
+import Divider from '../../components/Divider'
+const prefix = '/images/blog/nextjs-10-1-update'
+export const meta = {
+    title: "Nextjs 10.1's Development Improvements",
+    description:
+        'Learn about the latest updates to next/image and other improvements',
+    date: 1618230568834,
+    feature: `${prefix}/feature.jpg`,
+    snippet: `In react we can use fetch in a useEffect to get a request when the page loads... This uses the web 
+    api AbortController as the signal for fetch. By returning a function from useEffect we can trigger 
+    the abort controller on dismount...`,
+}
+export { getStaticProps } from '../../util/getProjectData'
+export default props => <BlogLayout {...props} />
+
+Photo by [Jake Givens](https://unsplash.com/@jakegivens?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/fast?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+<Divider />
+
+Nextjs just got it's most recent update - 10.1 - which brings a lot of new exciting features. Some highlights include:
+
+-   3x faster refresh
+-   Reduced install time/size
+-   `next/image` Improvements
+-   Custom 500 page
+-   Initial Webpack 5 support
+
+I want go deeper into into the changes to `next/image` because I think they
+do an awesome job at improving the development experience of them.
+
+## What is `next/image`?
+
+"drop-in replacement" but width and height is required
+Automatic Image Optimization
+working with vercel - now can use custom loaders
+automatically serves different images optimised to screen size and format
+
+```jsx
+import Image from 'next/image'
+
+<Image src="/profile-picture.jpg" width="400" height="400" alt="Profile Picture">
+```
+
+## Now in built in WebAssembly
+
+used to use a native dependency.
+native dependencies consuming 50% of Next.js' total install size
+
+now with WebAssembly.  
+reduced install size by ~30MB and added support for Apple Silicon M1 MacBooks
+now works in next dev and next start
+
+still improving with SIMD extensions and multi-threading.
+
+## Did I mention development is faster?
+
+previous development struggles
+
+3x Faster Refresh
+You can get even faster with future webpack5
+and even faster again with future strictPostcssConfiguration
+
+Theres lots more in this update that you should check out
+
+You can see more in [Nextjs' blog post](https://nextjs.org/blog/next-10-1)
