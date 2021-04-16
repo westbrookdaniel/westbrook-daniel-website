@@ -15,4 +15,8 @@ module.exports = withMDX({
         path: '/_next/image',
         loader: 'default',
     },
+    future: {
+        webpack5: true,
+        strictPostcssConfiguration: true,
+    },
 })
