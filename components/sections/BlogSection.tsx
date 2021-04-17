@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { reorder } from '../../util/reorder'
 import { BlogData } from '../../util/types'
 import Divider from '../Divider'
 import Container from '../layout/Container'
@@ -11,7 +12,9 @@ interface Props {
 }
 
 const BlogSection: React.FC<Props> = ({ data, title, limit }) => {
-    const projectItems = data.map((p: BlogData) => () => {
+    const sortedData = reorder(data, 'date', true) || []
+
+    const projectItems = sortedData.map((p: BlogData) => () => {
         return <BlogItem data={p} />
     })
 
