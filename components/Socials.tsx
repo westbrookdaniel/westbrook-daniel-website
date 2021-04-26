@@ -4,6 +4,7 @@ import {
     AiFillLinkedin,
     AiFillGithub,
     AiFillMail,
+    AiFillTwitterCircle,
 } from 'react-icons/ai'
 import { normal } from '../util/transition'
 
@@ -58,6 +59,14 @@ export default function Socials({
                 className={`${normal} color-hover`}
             >
                 <AiFillBehanceCircle {...iconStyle} />
+            </a>
+            <a
+                href="https://twitter.com/DanielW29381255"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${normal} color-hover`}
+            >
+                <AiFillTwitterCircle {...iconStyle} />
             </a>
             {extras}
         </div>
