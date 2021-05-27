@@ -4,7 +4,7 @@ import Typist from 'react-typist'
 import useOnScreen from '../util/useOnScreen'
 
 export const LogoText = styled.div`
-    font-family: 'Hack';
+    font-family: 'Hack', 'Courier New', Courier, monospace;
     font-weight: 700;
     font-size: 1.3rem;
     display: flex;

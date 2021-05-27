@@ -19,14 +19,14 @@ const BlogText = styled.div`
 `
 
 const BlogType = styled.div`
-    font-family: 'Hack';
+    font-family: 'Hack', 'Courier New', Courier, monospace;
     font-weight: 700;
     font-size: 1.28rem;
     line-height: 1em;
 `
 
 const LogoType = styled.div`
-    font-family: 'Hack';
+    font-family: 'Hack', 'Courier New', Courier, monospace;
     font-weight: 700;
     font-size: 1.3rem;
     color: #d43c29;

@@ -12,7 +12,7 @@ var theme = {
     plain: {
         backgroundColor: '#1d2021',
         color: '#ebdbb2',
-        fontFamily: 'Hack, "Courier New", monospace',
+        fontFamily: "'Hack', 'Courier New', 'Courier', 'monospace'",
     },
     styles: [
         {
