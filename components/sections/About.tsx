@@ -9,7 +9,7 @@ export default function About() {
             <div className="row">
                 <p>
                     Hi, I'm Daniel Westbrook and I am a Full Stack Developer and
-                    Designer primarily working with React building web apps. I
+                    Designer primarily working with React building web apps. I enjoy
                     creating performant solutions and exploring new tools and
                     technologies.
                 </p>
