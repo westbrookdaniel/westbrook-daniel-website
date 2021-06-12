@@ -36,7 +36,7 @@ const Blog: React.FC<Props> = ({ blogData }) => {
                     data={blogData}
                 />
             </div>
-            <div className="bg-themeGray-100">
+            <div className="bg-subtle">
                 <Contact className="pt-16 pb-32" />
                 <Footer />
             </div>

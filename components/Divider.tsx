@@ -7,7 +7,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 const Divider: React.FC<Props> = ({ className = '', ...props }) => {
     return (
         <div
-            className={`h-line bg-themeGray-200 ${className}`}
+            className={`h-line bg-lines ${className}`}
             {...props}
         ></div>
     )

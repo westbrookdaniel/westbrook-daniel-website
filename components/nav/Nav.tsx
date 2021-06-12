@@ -1,7 +1,6 @@
 import Divider from '../Divider'
 import Link from 'next/link'
 import Logo from '../Logo'
-import BlogLogo from '../BlogLogo'
 import NavLinks from './NavLinks'
 
 interface Props {

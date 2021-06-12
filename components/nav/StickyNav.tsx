@@ -23,7 +23,7 @@ export default function StickyNav() {
             {...scrollProps}
         >
             <Container>
-                <Nav isSticky className="pt-3 bg-white" />
+                <Nav isSticky className="pt-3 bg-background" />
             </Container>
         </Wrapper>
     )

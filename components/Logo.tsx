@@ -9,7 +9,7 @@ export const LogoText = styled.div`
     font-size: 1.3rem;
     display: flex;
     align-items: center;
-    color: #d43c29;
+    color: var(--brand);
     text-transform: uppercase;
     user-select: none;
     .Typist {
@@ -25,7 +25,7 @@ export const LogoShape = styled.div`
     height: 15px;
     width: 8px;
     margin-left: 4px;
-    background-color: #d43c29;
+    background-color: var(--brand);
 `
 
 export const ShapeWrapper = styled.div`

@@ -29,7 +29,7 @@ const LogoType = styled.div`
     font-family: 'Hack', 'Courier New', Courier, monospace;
     font-weight: 700;
     font-size: 1.3rem;
-    color: #d43c29;
+    color: var(--brand);
 `
 
 export default function BlogLogo({ isSticky }: Props) {
@@ -43,7 +43,7 @@ export default function BlogLogo({ isSticky }: Props) {
                     <span>DW</span>
                 ) : (
                     <>
-                        <BlogType className="text-black">
+                        <BlogType className="text-heading-on-background">
                             Blog
                             <LogoSpacer />
                             {'>'}

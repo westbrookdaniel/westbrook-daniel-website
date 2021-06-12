@@ -30,7 +30,7 @@ const BlogItem: React.FC<Props> = ({ data }) => {
                             <h3 className="mr-4">{truncate(data.title, 90)}</h3>
                             <div className="arrow">
                                 <CgArrowRight
-                                    color="#66767d"
+                                    color="var(--lines)"
                                     fontSize="1.2rem"
                                 />
                             </div>

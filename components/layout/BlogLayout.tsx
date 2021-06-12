@@ -64,7 +64,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
             <Container className="pb-24 flex-grow">
                 <Wrapper className="prose lg:prose-lg">{children}</Wrapper>
             </Container>
-            <div className="bg-themeGray-100">
+            <div className="bg-subtle">
                 <Contact blog className="pt-16 pb-40" />
                 <Footer />
             </div>

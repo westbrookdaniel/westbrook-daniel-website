@@ -45,7 +45,7 @@ const Blog: React.FC<Props> = ({ projectData }) => {
                     data={sideData}
                 />
             </div>
-            <div className="bg-themeGray-100">
+            <div className="bg-subtle">
                 <Contact className="pt-16 pb-32" />
                 <Footer />
             </div>

@@ -2,19 +2,12 @@ import '../styles/fonts.css'
 import '../styles/index.css'
 import { useRouter } from 'next/router'
 import { SwitchTransition, CSSTransition } from 'react-transition-group'
-import {
-    createContext,
-    Dispatch,
-    SetStateAction,
-    useEffect,
-    useRef,
-    useState,
-} from 'react'
+import { useEffect } from 'react'
 import StickyNav from '../components/nav/StickyNav'
 import { MDXProvider } from '@mdx-js/react'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
 import { MdxComponents } from '../components/mdx'
-import HeadWithGraph from '../util/HeadWithGraph'
+import ThemeHandler from './ThemeHandler'
 
 declare global {
     interface Window {
@@ -37,26 +30,28 @@ function MyApp({ Component, pageProps }: AppProps) {
     }, [])
 
     return (
-        <MDXProvider components={MdxComponents}>
-            <StickyNav />
-            <SwitchTransition>
-                <CSSTransition
-                    className="min-h-screen flex flex-col"
-                    key={router.pathname}
-                    addEndListener={(node, done) => {
-                        node.addEventListener('transitionend', done, false)
-                    }}
-                    classNames="fade"
-                    onExited={() => {
-                        window.scrollTo(0, 0)
-                    }}
-                >
-                    <div className="min-h-screen flex flex-col">
-                        <Component {...pageProps} />
-                    </div>
-                </CSSTransition>
-            </SwitchTransition>
-        </MDXProvider>
+        <ThemeHandler>
+            <MDXProvider components={MdxComponents}>
+                <StickyNav />
+                <SwitchTransition>
+                    <CSSTransition
+                        className="min-h-screen flex flex-col"
+                        key={router.pathname}
+                        addEndListener={(node, done) => {
+                            node.addEventListener('transitionend', done, false)
+                        }}
+                        classNames="fade"
+                        onExited={() => {
+                            window.scrollTo(0, 0)
+                        }}
+                    >
+                        <div className="min-h-screen flex flex-col">
+                            <Component {...pageProps} />
+                        </div>
+                    </CSSTransition>
+                </SwitchTransition>
+            </MDXProvider>
+        </ThemeHandler>
     )
 }
 

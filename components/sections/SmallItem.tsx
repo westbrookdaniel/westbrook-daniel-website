@@ -5,11 +5,11 @@ export default function SmallItem({ data }: { data: any }) {
     const contents = (
         <div className="hover-arrow">
             <div className="flex w-full items-center">
-                <h4 className="font-body font-normal mr-2 text-themeGray-600">
+                <h4 className="font-body font-normal mr-2 text-on-background">
                     {data.title}
                 </h4>
                 <div className="arrow">
-                    <CgArrowRight color="#66767d" fontSize="1.2rem" />
+                    <CgArrowRight color="var(--lines)" fontSize="1.2rem" />
                 </div>
             </div>
         </div>

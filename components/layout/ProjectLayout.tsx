@@ -4,9 +4,8 @@ import Divider from '../Divider'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
 import { CgArrowRight } from 'react-icons/cg'
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import ProjectItem from '../sections/ProjectItem'
-import Head from 'next/head'
 import { ProjectMeta, ProjectData } from '../../util/types'
 import HeadWithGraph from '../../util/HeadWithGraph'
 
@@ -50,7 +49,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                         <h1 className="mb-4">{data.title}</h1>
                         <p>{data.description}</p>
                     </div>
-                    <div className="flex items-center space-x-10 text-themeRed-500">
+                    <div className="flex items-center space-x-10 text-brand">
                         <div className="flex items-center space-x-2 hover-arrow">
                             <a
                                 href={data.link}
@@ -60,7 +59,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                                 View Website
                             </a>
                             <CgArrowRight
-                                color="#d43c29"
+                                color="var(--brand)"
                                 className="arrow"
                                 fontSize="1.2rem"
                             />
@@ -75,7 +74,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                                     Source
                                 </a>
                                 <CgArrowRight
-                                    color="#d43c29"
+                                    color="var(--brand)"
                                     className="arrow"
                                     fontSize="1.2rem"
                                 />
@@ -97,7 +96,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                     )}
                 </div>
             </Container>
-            <div className="bg-themeGray-100">
+            <div className="bg-subtle">
                 <Contact className="pt-16 pb-40" />
                 <Footer />
             </div>
