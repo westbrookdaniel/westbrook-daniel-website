@@ -16,7 +16,12 @@ const setLocalStorage = (key: string, value: string) =>
     window.localStorage.setItem(key, JSON.stringify(value))
 
 export const useTheme = create<ThemeStore>(set => ({
-    theme: getLocalStorage('theme') || 'light',
+    theme:
+        getLocalStorage('theme') || typeof window !== 'undefined'
+            ? window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+            : 'light',
     changeTheme: theme => set({ theme }),
     rotateTheme: () =>
         set(s => {
@@ -71,8 +76,21 @@ export const themes = {
 
 const ThemeHandler: React.FC = ({ children }) => {
     const theme = useTheme(s => s.theme)
+    const changeTheme = useTheme(s => s.changeTheme)
     useEffect(() => {
         if (!document.documentElement) return
+
+        window
+            .matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', e => {
+                console.log(e.matches)
+                if (e.matches) {
+                    changeTheme('dark')
+                } else {
+                    changeTheme('light')
+                }
+            })
+
         const currentTheme = themes[theme]
         Object.keys(currentTheme).forEach(key => {
             const value = currentTheme[key as keyof typeof currentTheme]
