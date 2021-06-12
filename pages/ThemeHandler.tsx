@@ -3,7 +3,7 @@ import create from 'zustand'
 
 interface ThemeStore {
     theme: keyof typeof themes
-    changeTheme: (theme: keyof typeof themes) => void
+    updateTheme: (theme: keyof typeof themes) => void
     rotateTheme: () => void
 }
 
@@ -15,14 +15,20 @@ const setLocalStorage = (key: string, value: string) =>
     typeof window !== 'undefined' &&
     window.localStorage.setItem(key, JSON.stringify(value))
 
-export const useTheme = create<ThemeStore>(set => ({
+console.log(getLocalStorage('theme'))
+
+export const useTheme = create<ThemeStore>((set, get) => ({
     theme:
-        getLocalStorage('theme') || typeof window !== 'undefined'
+        getLocalStorage('theme') ||
+        (typeof window !== 'undefined'
             ? window.matchMedia('(prefers-color-scheme: dark)').matches
                 ? 'dark'
                 : 'light'
-            : 'light',
-    changeTheme: theme => set({ theme }),
+            : 'light'),
+    updateTheme: theme => {
+        setLocalStorage('theme', theme)
+        set({ theme })
+    },
     rotateTheme: () =>
         set(s => {
             const keys = Object.keys(themes)
@@ -72,31 +78,65 @@ export const themes = {
         lines: '#4d5c63',
         selection: '#36444b',
     },
+    green: {
+        brand: '#10B981',
+        'on-brand': '#fff',
+
+        accent: '#6EE7B7',
+        'accent-hover': '#A7F3D0',
+        'accent-focus': '#D1FAE5',
+        'on-accent': '#064E3B',
+
+        background: '#064E3B',
+        subtle: '#065F46',
+        'on-background': '#6EE7B7',
+        'heading-on-background': '#ECFDF5',
+
+        lines: '#059669',
+        selection: '#047857',
+    },
+    mono: {
+        brand: '#ffffff',
+        'on-brand': '#000000',
+
+        accent: '#ffffff',
+        'accent-hover': '#dbdbdb',
+        'accent-focus': '#c5c5c5',
+        'on-accent': '#000',
+
+        background: '#000000',
+        subtle: '#141414',
+        'on-background': '#fafafa',
+        'heading-on-background': '#ffffff',
+
+        lines: '#383838',
+        selection: '#2b2b2b',
+    },
 }
 
 const ThemeHandler: React.FC = ({ children }) => {
     const theme = useTheme(s => s.theme)
-    const changeTheme = useTheme(s => s.changeTheme)
+    const updateTheme = useTheme(s => s.updateTheme)
     useEffect(() => {
         if (!document.documentElement) return
 
         window
             .matchMedia('(prefers-color-scheme: dark)')
             .addEventListener('change', e => {
-                console.log(e.matches)
                 if (e.matches) {
-                    changeTheme('dark')
+                    updateTheme('dark')
                 } else {
-                    changeTheme('light')
+                    updateTheme('light')
                 }
             })
 
         const currentTheme = themes[theme]
+
         Object.keys(currentTheme).forEach(key => {
             const value = currentTheme[key as keyof typeof currentTheme]
             document.documentElement.style.setProperty(`--${key}`, value)
         })
-    }, [theme])
+    }, [theme, updateTheme])
 
     return <div>{children}</div>
 }
