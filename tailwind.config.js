@@ -44,10 +44,9 @@ module.exports = {
                         },
                         'ul > li::before': {
                             backgroundColor: 'var(--on-background)',
-                        },                        lineHeight: '1.5em',
+                        },
+                        lineHeight: '1.5em',
                         code: {
-                            color: '#1d2021',
-                            backgroundColor: '#fbf8f3',
                             fontWeight: 'normal',
                             padding: '2px 4px',
                             borderRadius: '6px',
@@ -84,8 +83,8 @@ module.exports = {
                         },
                         lineHeight: '1.5em',
                         code: {
-                            color: '#1d2021',
-                            backgroundColor: '#fbf8f3',
+                            color: 'var(--on-background)',
+                            backgroundColor: 'var(--subtle)',
                             fontWeight: 'normal',
                             padding: '3px 5px',
                             borderRadius: '6px',

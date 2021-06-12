@@ -3,7 +3,7 @@ import Highlight, {
     Language,
     PrismTheme,
 } from 'prism-react-renderer'
-import theme from '../../util/theme-gruvbox-dark'
+import theme from 'prism-react-renderer/themes/oceanicNext'
 import styled from '@emotion/styled'
 
 interface Props {
