@@ -9,13 +9,13 @@ export default function getBlogData(): BlogData[] {
         path.join(process.cwd(), 'pages', 'blog'),
         'utf-8'
     )
-    const fileNames = files.filter((fn: string) => fn.endsWith('.mdx'))
+    const fileNames = files.filter((fn: string) => !fn.startsWith('.'))
 
     const rawData: BlogMeta[] = []
     fileNames.forEach((file: string) => {
-        const data = require(`../pages/blog/${file}`).meta
+        const data = require(`../pages/blog/${file}/index.mdx`).meta
         if (data) {
-            data.slug = '/blog/' + file.substring(0, file.length - 4)
+            data.slug = '/blog/' + file
             rawData.push(data)
         }
     })

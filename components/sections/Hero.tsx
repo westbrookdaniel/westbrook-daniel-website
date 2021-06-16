@@ -1,6 +1,7 @@
 import Container from '../layout/Container'
 import Nav from '../nav/Nav'
 import Image from '../Image'
+import image from '../../public/images/projects/me.jpg'
 
 export default function Hero() {
     return (
@@ -25,7 +26,7 @@ export default function Hero() {
                         <Image
                             width={200}
                             height={200}
-                            src="/images/projects/me.jpg"
+                            src={image}
                             alt="Photo of Daniel Westbrook"
                         />
                     </div>

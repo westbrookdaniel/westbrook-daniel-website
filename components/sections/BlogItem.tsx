@@ -18,10 +18,10 @@ const BlogItem: React.FC<Props> = ({ data }) => {
                     <div className="md:block hidden my-3 rounded-lg overflow-hidden">
                         <Image
                             alt={`${data.title} Project`}
-                            width={400}
-                            height={270}
                             className={`object-cover transform ${normal}`}
                             loading="eager"
+                            width={400}
+                            height={270}
                             src={data.feature}
                         />
                     </div>

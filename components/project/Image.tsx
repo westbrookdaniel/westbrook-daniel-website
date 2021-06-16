@@ -1,5 +1,5 @@
 import React from 'react'
-import NextImage from '../Image'
+import NextImage from 'next/image'
 
 interface Props {
     small?: boolean
@@ -9,9 +9,10 @@ interface Props {
 export default function Image({ small, ...props }: Props) {
     return (
         <NextImage
+            layout="responsive"
             width={small ? 400 : 800}
             height={small ? 250 : 500}
-            className="w-full object-cover"
+            className="rounded-lg w-full object-cover"
             {...(props as any)}
         />
     )

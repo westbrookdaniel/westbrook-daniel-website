@@ -4,7 +4,7 @@ import { normal } from '../../util/transition'
 import truncate from '../../util/truncate'
 import { ProjectData } from '../../util/types'
 import Divider from '../Divider'
-import Image from '../Image'
+import Image from '../project/Image'
 
 interface Props {
     data: ProjectData

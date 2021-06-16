@@ -2,7 +2,7 @@ export interface ProjectMeta {
     title: string
     description?: string
     link?: string
-    feature?: string
+    feature?: StaticImageData
     order?: number
     external?: boolean
     source?: string
@@ -16,7 +16,7 @@ export interface BlogMeta {
     title: string
     description: string
     date: number
-    feature: string
+    feature: StaticImageData
     snippet: string
 }
 

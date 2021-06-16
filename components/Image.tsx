@@ -1,15 +1,13 @@
 import NextImage, { ImageProps } from 'next/image'
 
-export default function Image({
-    loading,
-    className = '',
-    ...props
-}: ImageProps) {
+export default function Image({ className = '', src, ...props }: ImageProps) {
     return (
         <NextImage
             layout="responsive"
             className={'rounded-lg ' + className}
-            loading={loading}
+            placeholder="blur"
+            // This type needs fixing
+            src={src as any}
             {...props}
         />
     )
