@@ -26,6 +26,7 @@ export default function Hero() {
                         <Image
                             width={200}
                             height={200}
+                            loading="eager"
                             src={image}
                             alt="Photo of Daniel Westbrook"
                         />
