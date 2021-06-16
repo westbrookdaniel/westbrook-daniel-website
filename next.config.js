@@ -16,7 +16,6 @@ module.exports = withMDX({
         loader: 'default',
     },
     future: {
-        webpack5: true,
         strictPostcssConfiguration: true,
     },
 })
