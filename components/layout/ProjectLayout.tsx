@@ -35,7 +35,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
         <>
             <HeadWithGraph
                 title={data.title}
-                image={data.feature}
+                image={data.feature?.src}
                 description={data.description}
             />
             <Container>

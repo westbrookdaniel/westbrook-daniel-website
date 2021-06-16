@@ -31,7 +31,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
         <>
             <HeadWithGraph
                 title={meta.title}
-                image={meta.feature}
+                image={meta.feature.src}
                 description={meta.snippet}
             />
             <Container>
