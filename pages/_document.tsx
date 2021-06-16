@@ -5,6 +5,7 @@ import Document, {
     NextScript,
     DocumentContext,
 } from 'next/document'
+import Script from 'next/script'
 
 class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {
@@ -17,10 +18,10 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     {/* Global site tag (gtag.js) - Google Analytics */}
-                    <script
-                        async
+                    <Script
                         src="https://www.googletagmanager.com/gtag/js?id=G-L3S62B7X3T"
-                    ></script>
+                        strategy="afterInteractive"
+                    />
                 </Head>
                 <body>
                     <Main />
