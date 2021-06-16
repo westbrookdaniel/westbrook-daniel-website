@@ -26,6 +26,7 @@ export default function Hero() {
                             width={200}
                             height={200}
                             src="/images/projects/me.jpg"
+                            alt="Photo of Daniel Westbrook"
                         />
                     </div>
                 </div>

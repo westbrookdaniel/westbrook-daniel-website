@@ -21,12 +21,6 @@ class MyDocument extends Document {
                         async
                         src="https://www.googletagmanager.com/gtag/js?id=G-L3S62B7X3T"
                     ></script>
-
-                    {/* External Fonts */}
-                    <link
-                        rel="stylesheet"
-                        href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css"
-                    />
                 </Head>
                 <body>
                     <Main />

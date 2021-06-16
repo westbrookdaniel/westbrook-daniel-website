@@ -14,9 +14,12 @@ interface Props {
 const BlogSection: React.FC<Props> = ({ data, title, limit }) => {
     const sortedData = reorder(data, 'date', true) || []
 
-    const projectItems = sortedData.map((p: BlogData) => () => {
-        return <BlogItem data={p} />
-    })
+    const projectItems = sortedData.map(
+        (p: BlogData) =>
+            function Item() {
+                return <BlogItem data={p} />
+            }
+    )
 
     const items = limit ? projectItems.slice(0, 3) : projectItems
 

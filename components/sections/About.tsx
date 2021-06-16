@@ -8,7 +8,7 @@ export default function About() {
             <Divider className="mt-4 mb-5" />
             <div className="row">
                 <p>
-                    Hi, I'm Daniel Westbrook and I am a Full Stack Developer and
+                    Hi, I&apos;m Daniel Westbrook and I am a Full Stack Developer and
                     Designer primarily working with React building web apps. I enjoy
                     creating performant solutions and exploring new tools and
                     technologies.
@@ -38,7 +38,7 @@ export default function About() {
                     >
                         Typescript
                     </a>
-                    . When I'm not coding you can find me playing sport (tennis
+                    . When I&apos;m not coding you can find me playing sport (tennis
                     and hockey), video games, or listening to{' '}
                     <a
                         href="https://open.spotify.com/user/the12thdan?si=e7c_O6S1TDW6z7kr83TD9Q"

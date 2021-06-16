@@ -33,7 +33,7 @@ const Blog: React.FC<Props> = ({ projectData }) => {
                             <h1 className="max-w-title">Projects</h1>
                             <p className="my-4">
                                 Read about some of the projects or experiments
-                                I've worked on.
+                                I&apos;ve worked on.
                             </p>
                         </>
                     }

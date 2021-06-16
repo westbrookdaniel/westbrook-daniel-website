@@ -35,6 +35,8 @@
         "@types/react-transition-group": "^4.4.1",
         "@types/react-typist": "^2.0.1",
         "autoprefixer": "^10.2.5",
+        "eslint": "^7.28.0",
+        "eslint-config-next": "^11.0.0",
         "postcss": "^8.2.8",
         "prettier": "^2.2.1",
         "tailwindcss": "^2.0.3",

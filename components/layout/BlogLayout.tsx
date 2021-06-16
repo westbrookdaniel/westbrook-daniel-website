@@ -56,6 +56,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                                 className="object-cover transform"
                                 loading="eager"
                                 src={meta.feature}
+                                alt={meta.title}
                             />
                         </div>
                     ) : null}

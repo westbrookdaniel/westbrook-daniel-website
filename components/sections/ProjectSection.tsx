@@ -14,7 +14,7 @@ interface Props {
 }
 
 const ProjectSection: React.FC<Props> = ({ data, small, title, seeAll }) => {
-    const projectItems = data.map((p: any) => () => {
+    const projectItems = data.map((p: any) => function Item() {
         if (small) {
             return <SmallItem data={p} />
         }
