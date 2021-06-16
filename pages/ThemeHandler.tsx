@@ -15,8 +15,6 @@ const setLocalStorage = (key: string, value: string) =>
     typeof window !== 'undefined' &&
     window.localStorage.setItem(key, JSON.stringify(value))
 
-console.log(getLocalStorage('theme'))
-
 export const useTheme = create<ThemeStore>((set, get) => ({
     theme:
         getLocalStorage('theme') ||
