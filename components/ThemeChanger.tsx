@@ -1,4 +1,4 @@
-import { BsMoon } from 'react-icons/Bs'
+import { BsMoon } from 'react-icons/bs'
 import { useTheme } from '../pages/ThemeHandler'
 import { normal } from '../util/transition'
 
