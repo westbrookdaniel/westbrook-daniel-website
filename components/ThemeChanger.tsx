@@ -1,5 +1,5 @@
 import { BsMoon } from 'react-icons/bs'
-import { useTheme } from '../pages/ThemeHandler'
+import { useTheme } from './ThemeHandler'
 import { normal } from '../util/transition'
 
 interface Props {
