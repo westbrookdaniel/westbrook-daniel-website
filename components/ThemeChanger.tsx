@@ -1,4 +1,4 @@
-import { AiFillTool } from 'react-icons/ai'
+import { BsMoon } from 'react-icons/Bs'
 import { useTheme } from '../pages/ThemeHandler'
 import { normal } from '../util/transition'
 
@@ -9,11 +9,15 @@ interface Props {
 const ThemeChanger: React.FC<Props> = ({ className = '' }) => {
     const rotateTheme = useTheme(s => s.rotateTheme)
     return (
-        <AiFillTool
-            fontSize="1.3em"
-            className={`${normal} cursor-pointer color-hover ${className}`}
+        <div
+            className={`${normal} inline-flex space-x-3 items-center cursor-pointer color-hover ${className}`}
             onClick={rotateTheme}
-        />
+        >
+            <BsMoon fontSize="1.2em" />
+            <p style={{ marginTop: '2px' }} className="md:hidden select-none">
+                Change Theme
+            </p>
+        </div>
     )
 }
 
