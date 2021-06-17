@@ -20,7 +20,7 @@ export default function About() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Next.js
+                        Nextjs
                     </a>
                     ,{' '}
                     <a
