@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import Typist from 'react-typist'
 import useOnScreen from '../util/useOnScreen'
 import { LogoShape, LogoSpacer, LogoText, ShapeWrapper } from './Logo'
+import { codeFont } from '../util/codeFont'
 
 interface Props {
     isSticky?: boolean
@@ -19,14 +20,14 @@ const BlogText = styled.div`
 `
 
 const BlogType = styled.div`
-    font-family: 'Hack', 'Courier New', Courier, monospace;
+    font-family: ${codeFont};
     font-weight: 700;
     font-size: 1.28rem;
     line-height: 1em;
 `
 
 const LogoType = styled.div`
-    font-family: 'Hack', 'Courier New', Courier, monospace;
+    font-family: ${codeFont};
     font-weight: 700;
     font-size: 1.3rem;
     color: var(--brand);

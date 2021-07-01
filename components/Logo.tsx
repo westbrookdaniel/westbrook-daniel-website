@@ -2,9 +2,10 @@ import React, { useRef } from 'react'
 import styled from '@emotion/styled'
 import Typist from 'react-typist'
 import useOnScreen from '../util/useOnScreen'
+import { codeFont } from '../util/codeFont'
 
 export const LogoText = styled.div`
-    font-family: 'Hack', 'Courier New', Courier, monospace;
+    font-family: ${codeFont};
     font-weight: 700;
     font-size: 1.3rem;
     display: flex;

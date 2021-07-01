@@ -4,7 +4,7 @@
         url('/fonts/Rowan-Semibold.ttf') format('ttf');
     font-weight: 600;
     font-style: normal;
-    font-display: block;
+    font-display: swap;
 }
 
 @font-face {
@@ -13,7 +13,7 @@
         url('/fonts/Rowan-SemiboldItalic.ttf') format('ttf');
     font-weight: 600;
     font-style: italic;
-    font-display: block;
+    font-display: swap;
 }
 
 @font-face {
@@ -22,5 +22,8 @@
         url('/fonts/Roboto-Regular.ttf') format('ttf');
     font-weight: 400;
     font-style: normal;
-    font-display: block;
+    font-display: swap;
 }
+
+/* External Fonts */
+@import 'https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css';

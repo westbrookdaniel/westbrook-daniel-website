@@ -265,6 +265,7 @@ module.exports = {
         fontFamily: {
             display: [
                 'Rowan',
+                'Georgia',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 'sans-serif',
@@ -283,7 +284,14 @@ module.exports = {
                 '"Segoe UI Symbol"',
                 '"Noto Color Emoji"',
             ],
-            mono: ['Hack', 'Courier New', 'Courier', 'monospace'],
+            mono: [
+                'Hack',
+                'Monaco',
+                'Consolas',
+                'Courier New',
+                'Courier',
+                'monospace',
+            ],
         },
         fontSize: {
             xs: '0.75rem',

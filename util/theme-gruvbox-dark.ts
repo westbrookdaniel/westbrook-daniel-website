@@ -1,3 +1,5 @@
+import { codeFont } from './codeFont'
+
 /**
  * Custom Gruvbox Theme
  *
@@ -12,7 +14,7 @@ var theme = {
     plain: {
         backgroundColor: '#1d2021',
         color: '#ebdbb2',
-        fontFamily: "'Hack', 'Courier New', 'Courier', 'monospace'",
+        fontFamily: codeFont,
     },
     styles: [
         {
