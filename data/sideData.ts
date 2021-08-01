@@ -14,4 +14,9 @@ export const sideData = [
         title: 'Inspo App',
         external: true,
     },
+    {
+        slug: 'https://timetablebuilder.netlify.app/',
+        title: 'Timetable Builder',
+        external: true,
+    },
 ]
