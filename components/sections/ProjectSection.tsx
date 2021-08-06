@@ -39,7 +39,7 @@ const ProjectSection: React.FC<Props> = ({ data, small, title, seeAll }) => {
             {seeAll ? (
                 <div className="flex mt-4 items-center space-x-8 w-full">
                     <Divider className="flex-grow" />
-                    <Link href="/p" scroll={false}>
+                    <Link href="/p">
                         <a className="flex link-style justify-center items-center">
                             See All Projects
                         </a>

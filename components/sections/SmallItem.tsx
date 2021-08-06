@@ -24,7 +24,7 @@ export default function SmallItem({ data }: { data: any }) {
     }
 
     return (
-        <Link href={data.slug} scroll={false}>
+        <Link href={data.slug}>
             <a>{contents}</a>
         </Link>
     )

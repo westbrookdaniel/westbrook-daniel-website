@@ -12,7 +12,7 @@ interface Props {
 
 const BlogItem: React.FC<Props> = ({ data }) => {
     return (
-        <Link href={data.slug} scroll={false}>
+        <Link href={data.slug}>
             <a className="mb-2">
                 <div className="md:grid gap-8 grid-cols-5 hover-arrow">
                     <div className="md:block hidden my-3 rounded-lg overflow-hidden">

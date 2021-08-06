@@ -23,7 +23,7 @@ export default function Error() {
                                 The page you are looking for either does not
                                 exist or can not be found.
                             </p>
-                            <Link href="/" scroll={false}>
+                            <Link href="/">
                                 <a>
                                     <Button>Home</Button>
                                 </a>

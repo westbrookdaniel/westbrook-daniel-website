@@ -12,7 +12,7 @@ const Footer: React.FC<Props> = ({ withSocials }) => {
     return (
         <Container spaced>
             <div className="md:flex h-full justify-between items-center">
-                <Link href="/" scroll={false}>
+                <Link href="/">
                     <a className="flex-grow">
                         <div className="flex items-baseline">
                             <p>Daniel</p>

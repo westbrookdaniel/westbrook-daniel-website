@@ -12,7 +12,7 @@ export default function Nav({ isSticky, className = '' }: Props) {
     return (
         <div className={` ${className}`}>
             <div className="flex justify-between items-center mb-2">
-                <Link href="/" scroll={false}>
+                <Link href="/">
                     <a>
                         <Logo isSticky={isSticky} />
                     </a>

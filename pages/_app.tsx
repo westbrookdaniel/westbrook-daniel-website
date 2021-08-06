@@ -1,7 +1,7 @@
 import '../styles/fonts.css'
 import '../styles/index.css'
+import '../styles/prism-holi-theme.css'
 import { useRouter } from 'next/router'
-import { SwitchTransition, CSSTransition } from 'react-transition-group'
 import { useEffect } from 'react'
 import StickyNav from '../components/nav/StickyNav'
 import { MDXProvider } from '@mdx-js/react'
@@ -33,23 +33,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ThemeHandler>
             <MDXProvider components={MdxComponents}>
                 <StickyNav />
-                <SwitchTransition>
-                    <CSSTransition
-                        className="min-h-screen flex flex-col"
-                        key={router.pathname}
-                        addEndListener={(node, done) => {
-                            node.addEventListener('transitionend', done, false)
-                        }}
-                        classNames="fade"
-                        onExited={() => {
-                            window.scrollTo(0, 0)
-                        }}
-                    >
-                        <div className="min-h-screen flex flex-col">
-                            <Component {...pageProps} />
-                        </div>
-                    </CSSTransition>
-                </SwitchTransition>
+                <div className="min-h-screen flex flex-col">
+                    <Component {...pageProps} />
+                </div>
             </MDXProvider>
         </ThemeHandler>
     )

@@ -13,7 +13,7 @@ interface Props {
 
 const ProjectItem: React.FC<Props> = ({ data, nextProject }) => {
     return (
-        <Link href={data.slug} scroll={false}>
+        <Link href={data.slug}>
             <a>
                 <div className="hover-arrow">
                     {nextProject && (

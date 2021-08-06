@@ -5,10 +5,10 @@ interface Props {}
 const NavLinks: React.FC<Props> = props => {
     return (
         <>
-            <Link href="/blog" scroll={false}>
+            <Link href="/blog">
                 <a className="link-style">Blog</a>
             </Link>
-            <Link href="/p" scroll={false}>
+            <Link href="/p">
                 <a className="link-style">Projects</a>
             </Link>
         </>
