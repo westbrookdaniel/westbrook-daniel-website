@@ -1,6 +1,5 @@
 import '../styles/fonts.css'
 import '../styles/index.css'
-import '../styles/prism-holi-theme.css'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import StickyNav from '../components/nav/StickyNav'
