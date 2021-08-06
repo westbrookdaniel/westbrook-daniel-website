@@ -1,7 +1,7 @@
 import Container from '../layout/Container'
 import Nav from '../nav/Nav'
 import Image from '../Image'
-import me from '../../public/images/projects/me.jpg'
+import me from '../../public/images/me.jpg'
 
 export default function Hero() {
     return (
