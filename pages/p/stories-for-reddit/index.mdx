@@ -1,20 +1,24 @@
-import ProjectLayout from '../../components/layout/ProjectLayout'
-import Paragraph from '../../components/project/Paragraph'
-import Row from '../../components/project/Row'
-import Image from '../../components/project/Image'
-import Gallery from '../../components/project/Gallery'
+import ProjectLayout from '../../../components/layout/ProjectLayout'
+import Paragraph from '../../../components/project/Paragraph'
+import Row from '../../../components/project/Row'
+import Image from '../../../components/project/Image'
+import Gallery from '../../../components/project/Gallery'
+import stories from './images/list.jpg'
+import reader from './images/menu.jpg'
+import mobile from './images/mobile.jpg'
+import menu from './images/reader.jpg'
+import list from './images/stories.jpg'
 
-export const prefix = '/images/projects/stories-for-reddit'
 export const metadata = {
     title: 'Stories for Reddit',
     description: 'Discover and read community made short stories',
     link: 'https://stories-for-reddit.vercel.app/',
-    feature: `${prefix}/stories.jpg`,
+    feature: stories,
     source: 'https://github.com/westbrookdaniel/stories-for-reddit',
     order: 1,
 }
 
-export { getStaticProps } from '../../util/getProjectData'
+export { getStaticProps } from '../../../util/getProjectData'
 export default ({ children, projectData }) => (
     <ProjectLayout data={metadata} projectData={projectData}>
         {children}
@@ -39,12 +43,12 @@ busy lives reconnect with bite-sized stories through a specialized reading exper
 
 </Paragraph>
 
-<Image src={`${prefix}/stories.jpg`} alt="Hero" />
+<Image src={stories} alt="Hero" />
 
 <Row 
 	side="left" 
 	slot={(
-		<Image src={`${prefix}/mobile.jpg`} alt="Mobile" />
+		<Image src={mobile} alt="Mobile" />
 	)}
 >
 
@@ -59,14 +63,14 @@ features search, filtering, favourites, and a dark mode.
 </Row>
 
 <Gallery>
-    <Image src={`${prefix}/menu.jpg`} alt="Menu" />
-    <Image src={`${prefix}/list.jpg`} alt="Listing" />
+    <Image src={menu} alt="Menu" />
+    <Image src={list} alt="Listing" />
 </Gallery>
 
 <Row 
 	side="right" 
 	slot={(
-		<Image small src={`${prefix}/reader.jpg`} alt="Reader" />
+		<Image small src={reader} alt="Reader" />
 	)}
 >
 

@@ -1,20 +1,24 @@
-import ProjectLayout from '../../components/layout/ProjectLayout'
-import Paragraph from '../../components/project/Paragraph'
-import Row from '../../components/project/Row'
-import Image from '../../components/project/Image'
-import Gallery from '../../components/project/Gallery'
+import ProjectLayout from '../../../components/layout/ProjectLayout'
+import Paragraph from '../../../components/project/Paragraph'
+import Row from '../../../components/project/Row'
+import Image from '../../../components/project/Image'
+import Gallery from '../../../components/project/Gallery'
+import all from './images/all.jpg'
+import item from './images/item.jpg'
+import profile from './images/profile.jpg'
+import single from './images/single.jpg'
+import teahome from './images/teahome.jpg'
 
-export const prefix = '/images/projects/teahome'
 export const metadata = {
     title: 'TeaHome',
     description: 'Online based tea store for limited run teas',
     link: 'https://tea-home.herokuapp.com/',
-    feature: `${prefix}/teahome.jpg`,
+    feature: teahome,
     source: 'https://github.com/westbrookdaniel/teahome',
     order: 3,
 }
 
-export { getStaticProps } from '../../util/getProjectData'
+export { getStaticProps } from '../../../util/getProjectData'
 export default ({ children, projectData }) => (
     <ProjectLayout data={metadata} projectData={projectData}>
         {children}
@@ -37,12 +41,12 @@ routine and everyday life.
 
 </Paragraph>
 
-<Image src={`${prefix}/teahome.jpg`} alt="Hero" />
+<Image src={teahome} alt="Hero" />
 
 <Row 
 	side="right" 
 	slot={(
-		<Image small src={`${prefix}/all.jpg`} alt="All Teas" />
+		<Image small src={all} alt="All Teas" />
 	)}
 >
 
@@ -59,14 +63,14 @@ update, and delete functionality.
 </Row>
 
 <Gallery>
-    <Image src={`${prefix}/profile.jpg`} alt="Profile" />
-    <Image src={`${prefix}/single.jpg`} alt="Single" />
+    <Image src={profile} alt="Profile" />
+    <Image src={single} alt="Single" />
 </Gallery>
 
 <Row 
 	side="left" 
 	slot={(
-		<Image small src={`${prefix}/item.jpg`} alt="Single Item" />
+		<Image small src={item} alt="Single Item" />
 	)}
 >
 

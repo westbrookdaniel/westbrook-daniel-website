@@ -1,20 +1,24 @@
-import ProjectLayout from '../../components/layout/ProjectLayout'
-import Paragraph from '../../components/project/Paragraph'
-import Row from '../../components/project/Row'
-import Image from '../../components/project/Image'
-import Gallery from '../../components/project/Gallery'
+import ProjectLayout from '../../../components/layout/ProjectLayout'
+import Paragraph from '../../../components/project/Paragraph'
+import Row from '../../../components/project/Row'
+import Image from '../../../components/project/Image'
+import Gallery from '../../../components/project/Gallery'
+import space from "./images/about.jpg"
+import single from "./images/mobile.jpg"
+import search from "./images/search.jpg"
+import mobile from "./images/single.jpg"
+import about from "./images/space.jpg"
 
-export const prefix = '/images/projects/space-of-the-day'
 export const metadata = {
     title: 'Space of the Day',
     description: 'Discover astronomy pictures with a visual focus',
     link: 'https://spaceoftheday.netlify.app/',
-    feature: `${prefix}/space.jpg`,
+    feature: space,
     source: 'https://github.com/westbrookdaniel/space-of-the-day',
     order: 0,
 }
 
-export { getStaticProps } from '../../util/getProjectData'
+export { getStaticProps } from '../../../util/getProjectData'
 export default ({ children, projectData }) => (
     <ProjectLayout data={metadata} projectData={projectData}>
         {children}
@@ -36,12 +40,12 @@ dramatic hero section and by only showing the last month worth of images.
 
 </Paragraph>
 
-<Image src={`${prefix}/space.jpg`} alt="Hero" />
+<Image src={space} alt="Hero" />
 
 <Row 
 	side="left" 
 	slot={(
-		<Image small src={`${prefix}/single.jpg`} alt="Single" />
+		<Image small src={single} alt="Single" />
 	)}
 >
 
@@ -55,8 +59,8 @@ download them easily.
 </Row>
 
 <Gallery>
-    <Image src={`${prefix}/mobile.jpg`} alt="Mobile" />
-    <Image src={`${prefix}/about.jpg`} alt="About" />
+    <Image src={mobile} alt="Mobile" />
+    <Image src={about} alt="About" />
 </Gallery>
 
 <Paragraph>
@@ -74,4 +78,4 @@ between both typefaces helps to create the feeling of a visually striking cover.
 
 </Paragraph>
 
-<Image src={`${prefix}/search.jpg`} alt="Search" />
+<Image src={search} alt="Search" />

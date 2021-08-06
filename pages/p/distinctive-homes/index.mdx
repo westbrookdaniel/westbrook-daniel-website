@@ -1,19 +1,23 @@
-import ProjectLayout from '../../components/layout/ProjectLayout'
-import Paragraph from '../../components/project/Paragraph'
-import Row from '../../components/project/Row'
-import Image from '../../components/project/Image'
-import Gallery from '../../components/project/Gallery'
+import ProjectLayout from '../../../components/layout/ProjectLayout'
+import Paragraph from '../../../components/project/Paragraph'
+import Row from '../../../components/project/Row'
+import Image from '../../../components/project/Image'
+import Gallery from '../../../components/project/Gallery'
+import distinctive from "./images/distinctive.jpg"
+import closeup from "./images/closeup.jpg"
+import contact from "./images/contact.jpg"
+import mobile from "./images/mobile.jpg"
+import sections from "./images/sections.jpg"
 
-export const prefix = '/images/projects/distinctive-homes'
 export const metadata = {
     title: 'Distinctive Homes WA',
     description: 'Marketing Website for Distinctive Homes WA',
     link: 'https://www.distinctivehomeswa.com.au/',
-    feature: `${prefix}/distinctive.jpg`,
+    feature: distinctive,
     order: 2,
 }
 
-export { getStaticProps } from '../../util/getProjectData'
+export { getStaticProps } from '../../../util/getProjectData'
 export default ({ children, projectData }) => (
     <ProjectLayout data={metadata} projectData={projectData}>
         {children}
@@ -35,17 +39,17 @@ Developed while working for <a href="https://eclipsedesigns.com.au/" target="_bl
 
 </Paragraph>
 
-<Image src={`${prefix}/distinctive.jpg`} alt="Hero" />
+<Image src={distinctive} alt="Hero" />
 
 <Gallery>
-    <Image src={`${prefix}/sections.jpg`} alt="Sections" />
-    <Image src={`${prefix}/closeup.jpg`} alt="Close up" />
+    <Image src={sections} alt="Sections" />
+    <Image src={closeup} alt="Close up" />
 </Gallery>
 
 <Row 
 	side="left" 
 	slot={(
-		<Image small src={`${prefix}/contact.jpg`} alt="Contact" />
+		<Image small src={contact} alt="Contact" />
 	)}
 >
 
@@ -58,4 +62,4 @@ add projects in the future.
 
 </Row>
 
-<Image src={`${prefix}/mobile.jpg`} alt="Mobile" />
+<Image src={mobile} alt="Mobile" />
