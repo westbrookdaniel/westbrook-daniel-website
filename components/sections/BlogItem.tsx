@@ -14,7 +14,7 @@ const BlogItem: React.FC<Props> = ({ data }) => {
     return (
         <Link href={data.slug}>
             <a className="mb-2">
-                <div className="md:grid gap-8 grid-cols-5 hover-arrow">
+                <div className="md:grid gap-8 grid-cols-6 hover-arrow">
                     <div className="md:block hidden my-3 rounded-lg overflow-hidden">
                         <Image
                             alt={`${data.title} Project`}
@@ -25,7 +25,7 @@ const BlogItem: React.FC<Props> = ({ data }) => {
                             src={data.feature}
                         />
                     </div>
-                    <div className="flex col-span-4 flex-col justify-center">
+                    <div className="flex col-span-5 flex-col justify-center">
                         <div className="flex w-full items-center mb-2">
                             <h3 className="mr-4">{truncate(data.title, 90)}</h3>
                             <div className="arrow">

@@ -27,7 +27,7 @@ const BlogSection: React.FC<Props> = ({ data, title, limit }) => {
         <Container spaced>
             {title}
             <Divider className="mt-6" />
-            <div className="grid mt-6 gap-4">
+            <div className="grid mt-6 gap-2">
                 {items.map((Item: () => JSX.Element, i: number) => (
                     <Item key={i} />
                 ))}
