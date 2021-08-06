@@ -31,9 +31,9 @@ export const useTheme = create<ThemeStore>((set, get) => ({
         set(s => {
             const keys = Object.keys(themes)
             const i = keys.indexOf(s.theme)
-            const newTheme = (keys.length - 1 > i
-                ? keys[i + 1]
-                : keys[0]) as keyof typeof themes
+            const newTheme = (
+                keys.length - 1 > i ? keys[i + 1] : keys[0]
+            ) as keyof typeof themes
             setLocalStorage('theme', newTheme)
             return { theme: newTheme }
         }),
@@ -68,13 +68,13 @@ export const themes = {
         'accent-focus': '#af8f3e',
         'on-accent': '#fff',
 
-        background: '#09181e',
-        subtle: '#1f2d34',
-        'on-background': '#9eabb1',
-        'heading-on-background': '#fff',
+        background: '#000000',
+        subtle: '#141618',
+        'on-background': '#959fa8',
+        'heading-on-background': '#ffffff',
 
-        lines: '#4d5c63',
-        selection: '#36444b',
+        lines: '#383838',
+        selection: '#2b2b2b',
     },
     green: {
         brand: '#10B981',
@@ -92,23 +92,6 @@ export const themes = {
 
         lines: '#059669',
         selection: '#047857',
-    },
-    mono: {
-        brand: '#ffffff',
-        'on-brand': '#000000',
-
-        accent: '#ffffff',
-        'accent-hover': '#dbdbdb',
-        'accent-focus': '#c5c5c5',
-        'on-accent': '#000',
-
-        background: '#000000',
-        subtle: '#141414',
-        'on-background': '#fafafa',
-        'heading-on-background': '#ffffff',
-
-        lines: '#383838',
-        selection: '#2b2b2b',
     },
 }
 
