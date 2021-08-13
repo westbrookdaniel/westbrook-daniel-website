@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
+import * as React from 'react'
 import styled from '@emotion/styled'
-import Typist from 'react-typist'
 import useOnScreen from '../util/useOnScreen'
 import { codeFont } from '../util/codeFont'
+import Typed from 'typed.js'
 
 export const LogoText = styled.div`
     font-family: ${codeFont};
@@ -13,9 +13,6 @@ export const LogoText = styled.div`
     color: var(--brand);
     text-transform: uppercase;
     user-select: none;
-    .Typist {
-        line-height: 1em;
-    }
 `
 
 export const LogoSpacer = styled.span`
@@ -40,8 +37,27 @@ interface Props {
 }
 
 export default function Logo({ isSticky }: Props) {
-    const ref = useRef(null)
+    const ref = React.useRef(null)
     const onScreen = useOnScreen(ref)
+
+    const [typed, setTyped] = React.useState<Typed | null>(null)
+
+    const logoText = React.useCallback((node: HTMLSpanElement) => {
+        if (node !== null) {
+            setTyped(
+                new Typed(node, {
+                    strings: ['Daniel<span style="margin-left: 6px"></span>Westbrook'],
+                    startDelay: 50,
+                    typeSpeed: 50,
+                    showCursor: false,
+                })
+            )
+        }
+    }, [])
+
+    React.useEffect(() => {
+        return () => typed?.destroy()
+    }, [typed])
 
     return (
         <LogoText ref={ref}>
@@ -50,15 +66,8 @@ export default function Logo({ isSticky }: Props) {
                     <span>DW</span>
                 ) : (
                     <>
-                        <Typist
-                            className="hidden md:block"
-                            cursor={{ show: false }}
-                        >
-                            Daniel
-                            <LogoSpacer />
-                            Westbrook
-                        </Typist>
-                        <span className="Typist block md:hidden">DW</span>
+                        <span ref={logoText} className="hidden leading-4 md:block"></span>
+                        <span className="block md:hidden">DW</span>
                     </>
                 ))}
             <ShapeWrapper>
