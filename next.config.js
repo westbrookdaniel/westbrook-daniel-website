@@ -7,6 +7,7 @@ module.exports = withMDX({
     devIndicators: {
         autoPrerender: false,
     },
+    experimental: { esmExternals: true },
     images: {
         deviceSizes: [320, 420, 768, 1024],
         imageSizes: [320, 420, 768, 1024],
