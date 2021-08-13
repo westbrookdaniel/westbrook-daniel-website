@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import StickyNav from '../components/nav/StickyNav'
 import { MDXProvider } from '@mdx-js/react'
-import { AppProps } from 'next/dist/next-server/lib/router/router'
+import { AppProps } from 'next/dist/shared/lib/router/router'
 import { MdxComponents } from '../components/mdx'
 import ThemeHandler from '../components/ThemeHandler'
 

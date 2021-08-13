@@ -63,11 +63,11 @@ export default function Logo({ isSticky }: Props) {
         <LogoText ref={ref}>
             {onScreen &&
                 (isSticky ? (
-                    <span>DW</span>
+                    <span className="leading-4">DW</span>
                 ) : (
                     <>
                         <span ref={logoText} className="hidden leading-4 md:block"></span>
-                        <span className="block md:hidden">DW</span>
+                        <span className="leading-4 block md:hidden">DW</span>
                     </>
                 ))}
             <ShapeWrapper>
