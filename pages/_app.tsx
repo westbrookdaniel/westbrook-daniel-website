@@ -1,12 +1,12 @@
 import '../styles/fonts.css'
 import '../styles/index.css'
-import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import StickyNav from '../components/nav/StickyNav'
 import { MDXProvider } from '@mdx-js/react'
 import { AppProps } from 'next/dist/shared/lib/router/router'
 import { MdxComponents } from '../components/mdx'
 import ThemeHandler from '../components/ThemeHandler'
+import Script from 'next/script'
 
 declare global {
     interface Window {
@@ -15,8 +15,6 @@ declare global {
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
-    const router = useRouter()
-
     useEffect(() => {
         console.log(
             '%c Nothing to See Here...',
@@ -33,6 +31,11 @@ function MyApp({ Component, pageProps }: AppProps) {
             <MDXProvider components={MdxComponents}>
                 <StickyNav />
                 <div className="min-h-screen flex flex-col">
+                    {/* Global site tag (gtag.js) - Google Analytics */}
+                    <Script
+                        src="https://www.googletagmanager.com/gtag/js?id=G-L3S62B7X3T"
+                        strategy="afterInteractive"
+                    />
                     <Component {...pageProps} />
                 </div>
             </MDXProvider>
