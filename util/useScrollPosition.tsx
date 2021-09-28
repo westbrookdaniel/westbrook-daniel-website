@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react'
 
 export const useScrollPosition = () => {
-    // const [isScrolling, setIsScrolling] = useState(false)
+    const [isScrolling, setIsScrolling] = useState(false)
     const [scrollTopPos, setScrollTopPos] = useState(0)
 
     useEffect(() => {
         const onScroll = (e: Event) => {
             setScrollTopPos((e.target as Document).documentElement.scrollTop)
-            // setIsScrolling(
-            //     (e.target as Document).documentElement.scrollTop > scrollTopPos
-            // )
+            setIsScrolling(
+                (e.target as Document).documentElement.scrollTop > scrollTopPos
+            )
         }
 
         window.addEventListener('scroll', onScroll)
@@ -17,5 +17,5 @@ export const useScrollPosition = () => {
         return () => window.removeEventListener('scroll', onScroll)
     }, [scrollTopPos])
 
-    return { isScrolling: false, scrollTopPos }
+    return { isScrolling, scrollTopPos }
 }
