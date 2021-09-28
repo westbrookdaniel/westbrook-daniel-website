@@ -4,7 +4,7 @@
         url('/fonts/Rowan-Semibold.ttf') format('ttf');
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -13,7 +13,7 @@
         url('/fonts/Rowan-SemiboldItalic.ttf') format('ttf');
     font-weight: 600;
     font-style: italic;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -22,7 +22,7 @@
         url('/fonts/Roboto-Regular.ttf') format('ttf');
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 /* External Fonts */
