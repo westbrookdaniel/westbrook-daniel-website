@@ -6,6 +6,7 @@ import React from 'react'
 import BlogSection from '../components/sections/BlogSection'
 import { BlogData } from '../util/types'
 import HeadWithGraph from '../util/HeadWithGraph'
+import Divider from '../components/Divider'
 
 export { getStaticProps } from '../util/getBlogData'
 
@@ -37,6 +38,7 @@ const Blog: React.FC<Props> = ({ blogData }) => {
                 />
             </div>
             <div className="bg-subtle">
+                <Divider />
                 <Contact className="pt-16 pb-32" />
                 <Footer />
             </div>

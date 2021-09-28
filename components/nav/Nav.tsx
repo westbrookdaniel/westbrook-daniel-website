@@ -6,9 +6,14 @@ import NavLinks from './NavLinks'
 interface Props {
     isSticky?: boolean
     className?: string
+    withDivider?: boolean
 }
 
-export default function Nav({ isSticky, className = '' }: Props) {
+export default function Nav({
+    isSticky,
+    withDivider = true,
+    className = '',
+}: Props) {
     return (
         <div className={` ${className}`}>
             <div className="flex justify-between items-center mb-2">
@@ -21,7 +26,7 @@ export default function Nav({ isSticky, className = '' }: Props) {
                     <NavLinks />
                 </nav>
             </div>
-            <Divider />
+            {withDivider ? <Divider /> : null}
         </div>
     )
 }

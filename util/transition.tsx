@@ -1,1 +1,1 @@
-export const normal = 'transition duration-100'
+export const normal = 'transition duration-200 ease-in-out'

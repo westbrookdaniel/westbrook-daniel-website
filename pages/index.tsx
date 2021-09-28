@@ -8,6 +8,7 @@ import getProjectData from '../util/getProjectData'
 import getBlogData from '../util/getBlogData'
 import { BlogData, ProjectData } from '../util/types'
 import HeadWithGraph from '../util/HeadWithGraph'
+import Divider from '../components/Divider'
 
 export async function getStaticProps() {
     const projectData = getProjectData()
@@ -50,6 +51,7 @@ const Home: React.FC<Props> = ({ projectData, blogData }) => {
             </div>
 
             <div className="bg-subtle">
+                <Divider />
                 <Contact className="pt-16 pb-32" />
                 <Footer />
             </div>

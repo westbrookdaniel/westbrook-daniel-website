@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Divider from '../Divider'
 import Container from '../layout/Container'
 import NavLinks from '../nav/NavLinks'
 import Socials from '../Socials'
@@ -11,19 +12,14 @@ interface Props {
 const Footer: React.FC<Props> = ({ withSocials }) => {
     return (
         <Container spaced>
+            <Divider className="mb-10" />
             <div className="md:flex h-full justify-between items-center">
-                <Link href="/">
-                    <a className="flex-grow">
-                        <div className="flex items-baseline">
-                            <p>Daniel</p>
-                            <div className="flex-grow h-line mx-4 bg-lines"></div>
-                            <p>Westbrook</p>
-                        </div>
-                    </a>
-                </Link>
-                <ThemeChanger className="mt-6 md:mt-0 md:ml-16" />
+                <ThemeChanger className="mt-6 md:mt-0" />
                 {withSocials ? <Socials className="md:ml-16" /> : null}
                 <nav className="space-x-8 mt-6 md:mt-0 md:ml-16">
+                    <Link href="/">
+                        <a className="link-style">Home</a>
+                    </Link>
                     <NavLinks />
                 </nav>
             </div>

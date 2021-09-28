@@ -97,6 +97,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                 </div>
             </Container>
             <div className="bg-subtle">
+                <Divider />
                 <Contact className="pt-16 pb-40" />
                 <Footer />
             </div>

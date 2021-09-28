@@ -7,6 +7,7 @@ import { AppProps } from 'next/dist/shared/lib/router/router'
 import { MdxComponents } from '../components/mdx'
 import ThemeHandler from '../components/ThemeHandler'
 import Script from 'next/script'
+import { VerticalDivider } from '../components/Divider'
 
 declare global {
     interface Window {
@@ -30,13 +31,17 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ThemeHandler>
             <MDXProvider components={MdxComponents}>
                 <StickyNav />
-                <div className="min-h-screen flex flex-col">
+                <div className="min-h-screen flex justify-center">
                     {/* Global site tag (gtag.js) - Google Analytics */}
                     <Script
                         src="https://www.googletagmanager.com/gtag/js?id=G-L3S62B7X3T"
                         strategy="beforeInteractive"
                     />
-                    <Component {...pageProps} />
+                    <VerticalDivider className="hidden xl:block" />
+                    <div className="min-h-screen flex-grow max-w-[1200px] flex flex-col">
+                        <Component {...pageProps} />
+                    </div>
+                    <VerticalDivider className="hidden xl:block" />
                 </div>
             </MDXProvider>
         </ThemeHandler>

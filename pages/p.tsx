@@ -7,6 +7,7 @@ import { ProjectData } from '../util/types'
 import ProjectSection from '../components/sections/ProjectSection'
 import { sideData } from '../data/sideData'
 import HeadWithGraph from '../util/HeadWithGraph'
+import Divider from '../components/Divider'
 
 export { getStaticProps } from '../util/getProjectData'
 
@@ -46,6 +47,7 @@ const Blog: React.FC<Props> = ({ projectData }) => {
                 />
             </div>
             <div className="bg-subtle">
+                <Divider />
                 <Contact className="pt-16 pb-32" />
                 <Footer />
             </div>

@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { FC } from 'react'
 import HeadWithGraph from '../../util/HeadWithGraph'
 import { BlogMeta } from '../../util/types'
+import Divider from '../Divider'
 import Image from '../Image'
 import Nav from '../nav/Nav'
 import Contact from '../sections/Contact'
@@ -49,7 +50,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                         </p>
                     </div>
                     {meta.feature ? (
-                        <div className="max-w-lg">
+                        <div className="max-w-lg xl:-ml-16 xl:z-20">
                             <Image
                                 width={500}
                                 height={300}
@@ -66,6 +67,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                 <Wrapper className="prose lg:prose-lg">{children}</Wrapper>
             </Container>
             <div className="bg-subtle">
+                <Divider />
                 <Contact blog className="pt-16 pb-40" />
                 <Footer />
             </div>
