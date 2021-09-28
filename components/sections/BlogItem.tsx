@@ -14,7 +14,7 @@ const BlogItem: React.FC<Props> = ({ data }) => {
     return (
         <Link href={data.slug}>
             <a className="mb-2">
-                <div className="md:grid gap-8 grid-cols-6 hover-arrow">
+                <div className="md:grid gap-8 grid-cols-8 hover-arrow">
                     <div className="md:block hidden my-3 xl:-ml-16 xl:z-20">
                         <Image
                             alt={`${data.title} Project`}
