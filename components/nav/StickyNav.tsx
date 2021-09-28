@@ -19,11 +19,11 @@ export default function StickyNav() {
 
     return (
         <Wrapper
-            className="w-full fixed z-10 transition-all duration-300 ease-in-out"
+            className="w-full fixed z-10 transition-all duration-300 ease-in-out bg-background"
             {...scrollProps}
         >
             <Container>
-                <Nav isSticky className="pt-3 bg-background" />
+                <Nav isSticky className="pt-3" />
             </Container>
         </Wrapper>
     )
