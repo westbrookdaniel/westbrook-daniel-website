@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     {/* Global site tag (gtag.js) - Google Analytics */}
                     <Script
                         src="https://www.googletagmanager.com/gtag/js?id=G-L3S62B7X3T"
-                        strategy="afterInteractive"
+                        strategy="beforeInteractive"
                     />
                     <Component {...pageProps} />
                 </div>
