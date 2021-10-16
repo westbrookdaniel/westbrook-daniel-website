@@ -125,7 +125,7 @@ export const themes = {
         'heading-on-background': '#ffffff',
 
         lines: '#2e465c',
-        selection: '#2b2b2b',
+        selection: '#4f6f94',
     },
 }
 
