@@ -13,7 +13,7 @@ export default function Container({
     className = '',
     ...props
 }: ContainerProps) {
-    let classString = `w-full mx-auto`
+    let classString = `w-full mx-auto max-w-6xl`
     if (spaced) classString += ` py-8 lg:py-10`
     if (className) classString += ` ${className}`
 

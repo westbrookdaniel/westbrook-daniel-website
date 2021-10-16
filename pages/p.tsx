@@ -47,7 +47,6 @@ const Blog: React.FC<Props> = ({ projectData }) => {
                 />
             </div>
             <div className="bg-subtle">
-                <Divider />
                 <Contact className="pt-16 pb-32" />
                 <Footer />
             </div>

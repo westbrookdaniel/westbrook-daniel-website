@@ -31,18 +31,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ThemeHandler>
             <MDXProvider components={MdxComponents}>
                 <StickyNav />
-                <div className="min-h-screen flex justify-center">
-                    {/* Global site tag (gtag.js) - Google Analytics */}
-                    <Script
-                        src="https://www.googletagmanager.com/gtag/js?id=G-L3S62B7X3T"
-                        strategy="beforeInteractive"
-                    />
-                    <VerticalDivider className="hidden xl:block" />
-                    <div className="min-h-screen flex-grow max-w-[1200px] flex flex-col">
-                        <Component {...pageProps} />
-                    </div>
-                    <VerticalDivider className="hidden xl:block" />
-                </div>
+                {/* Global site tag (gtag.js) - Google Analytics */}
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-L3S62B7X3T"
+                    strategy="beforeInteractive"
+                />
+                <Component {...pageProps} />
             </MDXProvider>
         </ThemeHandler>
     )
