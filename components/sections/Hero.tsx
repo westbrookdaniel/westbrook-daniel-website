@@ -22,7 +22,7 @@ export default function Hero() {
                     </a>
                 </h1>
                 <div className="flex justify-end items-center">
-                    <div className="w-48 max-h-48 xl:w-64 xl:max-h-64 xl:-mr-16 xl:z-20">
+                    <div className="w-48 max-h-48 xl:w-64 xl:max-h-64">
                         <Image
                             width={200}
                             height={200}

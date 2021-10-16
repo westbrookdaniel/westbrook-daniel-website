@@ -50,7 +50,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                         </p>
                     </div>
                     {meta.feature ? (
-                        <div className="max-w-lg xl:-ml-16 xl:z-20">
+                        <div className="max-w-lg">
                             <Image
                                 width={500}
                                 height={300}
