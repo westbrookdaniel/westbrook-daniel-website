@@ -93,10 +93,44 @@ export const themes = {
         lines: '#059669',
         selection: '#047857',
     },
+    outrun: {
+        brand: '#ffb773',
+        'on-brand': '#fff',
+
+        accent: '#ffdf99',
+        'accent-hover': '#ffcc6c',
+        'accent-focus': '#e0b25b',
+        'on-accent': '#42064e',
+
+        background: '#14132c',
+        subtle: '#1a1931',
+        'on-background': '#887d9e',
+        'heading-on-background': '#fff0d4',
+
+        lines: '#4b355c',
+        selection: '#5f1c68',
+    },
+    ocean: {
+        brand: '#83bad3',
+        'on-brand': '#fff',
+
+        accent: '#83bad3',
+        'accent-hover': '#729da8',
+        'accent-focus': '#5d8392',
+        'on-accent': '#fff',
+
+        background: '#162635',
+        subtle: '#213244',
+        'on-background': '#a1bad1',
+        'heading-on-background': '#ffffff',
+
+        lines: '#2e465c',
+        selection: '#2b2b2b',
+    },
 }
 
 const ThemeHandler: React.FC = ({ children }) => {
-    const theme = useTheme(s => s.theme)
+    const { theme, rotateTheme } = useTheme()
     const updateTheme = useTheme(s => s.updateTheme)
     useEffect(() => {
         if (!document.documentElement) return
@@ -113,11 +147,13 @@ const ThemeHandler: React.FC = ({ children }) => {
 
         const currentTheme = themes[theme]
 
+        if (!currentTheme) return rotateTheme()
+
         Object.keys(currentTheme).forEach(key => {
             const value = currentTheme[key as keyof typeof currentTheme]
             document.documentElement.style.setProperty(`--${key}`, value)
         })
-    }, [theme, updateTheme])
+    }, [rotateTheme, theme, updateTheme])
 
     return <div>{children}</div>
 }
