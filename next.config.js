@@ -4,10 +4,11 @@ const withMDX = require('@next/mdx')({
 
 module.exports = withMDX({
     pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx', 'md'],
-    devIndicators: {
-        autoPrerender: false,
+    experimental: {
+        esmExternals: true,
+        reactRoot: 'concurrent',
+        scrollRestoration: true,
     },
-    experimental: { esmExternals: true },
     images: {
         deviceSizes: [320, 420, 768, 1024],
         imageSizes: [320, 420, 768, 1024],
