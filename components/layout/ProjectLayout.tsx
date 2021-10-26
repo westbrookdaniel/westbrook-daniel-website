@@ -4,7 +4,7 @@ import Divider from '../Divider'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
 import { CgArrowRight } from 'react-icons/cg'
-import { useEffect, useState } from 'react'
+import { useMemo } from 'react'
 import ProjectItem from '../sections/ProjectItem'
 import { ProjectMeta, ProjectData } from '../../util/types'
 import HeadWithGraph from '../../util/HeadWithGraph'
@@ -15,21 +15,19 @@ interface Props {
 }
 
 const Project: React.FC<Props> = ({ data, children, projectData }) => {
-    const [nextProject, setNextProject] = useState<null | ProjectData>(null)
-    useEffect(() => {
-        if (!(projectData && data)) return
+    const nextProject = useMemo(() => {
         const currentPort = projectData.find(
             (port: ProjectMeta) => port.title === data.title
         )
-        if (!currentPort) return setNextProject(projectData[0])
+        if (!currentPort) return projectData[0]
         const i = projectData.indexOf(currentPort)
         let next = projectData[i + 1]
         if (next) {
-            setNextProject(next)
+            return next
         } else {
-            setNextProject(projectData[0])
+            return projectData[0]
         }
-    }, [projectData, data])
+    }, [data.title, projectData])
 
     return (
         <>
