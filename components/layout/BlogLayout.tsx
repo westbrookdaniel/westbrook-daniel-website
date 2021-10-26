@@ -1,6 +1,4 @@
-import styled from '@emotion/styled'
 import dayjs from 'dayjs'
-import Head from 'next/head'
 import { FC } from 'react'
 import HeadWithGraph from '../../util/HeadWithGraph'
 import { BlogMeta } from '../../util/types'
@@ -15,17 +13,6 @@ interface Props {
     prefix: string
     meta: BlogMeta
 }
-
-const Wrapper = styled.div`
-    max-width: unset;
-
-    & > :not(pre) {
-        max-width: 750px;
-    }
-    pre {
-        max-width: 900px;
-    }
-`
 
 const BlogLayout: FC<Props> = ({ meta, children }) => {
     return (
@@ -64,7 +51,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                 </div>
             </Container>
             <Container className="pb-24 flex-grow">
-                <Wrapper className="prose lg:prose-lg">{children}</Wrapper>
+                <div className="blog-wrapper prose lg:prose-lg">{children}</div>
             </Container>
             <div className="bg-subtle">
                 <Contact blog className="pt-16 pb-40" />

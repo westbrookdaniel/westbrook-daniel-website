@@ -4,35 +4,11 @@ import Highlight, {
     PrismTheme,
 } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/oceanicNext'
-import styled from '@emotion/styled'
 
 interface Props {
     className: string
     children: string
 }
-
-const Pre = styled.pre`
-    border-radius: 0.5rem;
-    overflow: scroll;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    padding: 20px;
-`
-
-const Line = styled.div`
-    display: table-row;
-`
-
-const LineNo = styled.span`
-    text-align: right;
-    padding-right: 1.25em;
-    user-select: none;
-    opacity: 0.3;
-`
-
-const LineContent = styled.span`
-    display: table-cell;
-`
 
 const Code = ({ children, className }: Props) => {
     const language = className
@@ -46,23 +22,41 @@ const Code = ({ children, className }: Props) => {
             language={language}
         >
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <Pre className={className} style={style}>
-                    {tokens.map((line, i) => (
-                        <Line key={i} {...getLineProps({ line, key: i })}>
-                            <LineNo className="hidden md:table-cell">
-                                {i + 1}
-                            </LineNo>
-                            <LineContent>
-                                {line.map((token, key) => (
-                                    <span
-                                        key={key}
-                                        {...getTokenProps({ token, key })}
-                                    />
-                                ))}
-                            </LineContent>
-                        </Line>
-                    ))}
-                </Pre>
+                <pre
+                    className={
+                        className + ' rounded-md overflow-scroll my-4 p-8'
+                    }
+                    style={style}
+                >
+                    {tokens.map((line, i) => {
+                        const { className, ...lineProps } = getLineProps({
+                            line,
+                            key: i,
+                        })
+                        return (
+                            <div
+                                className={className + ' table-row'}
+                                key={i}
+                                {...lineProps}
+                            >
+                                <span className="hidden md:table-cell text-right pr-2 select-none opacity-25">
+                                    {i + 1}
+                                </span>
+                                <span className="table-cell">
+                                    {line.map((token, key) => (
+                                        <span
+                                            key={key}
+                                            {...getTokenProps({
+                                                token,
+                                                key,
+                                            })}
+                                        />
+                                    ))}
+                                </span>
+                            </div>
+                        )
+                    })}
+                </pre>
             )}
         </Highlight>
     )

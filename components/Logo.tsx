@@ -1,36 +1,6 @@
 import * as React from 'react'
-import styled from '@emotion/styled'
 import useOnScreen from '../util/useOnScreen'
-import { codeFont } from '../util/codeFont'
 import Typed from 'typed.js'
-
-export const LogoText = styled.div`
-    font-family: ${codeFont};
-    font-weight: 700;
-    font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-    color: var(--brand);
-    text-transform: uppercase;
-    user-select: none;
-`
-
-export const LogoSpacer = styled.span`
-    margin-right: 6px;
-`
-
-export const LogoShape = styled.div`
-    height: 15px;
-    width: 8px;
-    margin-left: 4px;
-    background-color: var(--brand);
-`
-
-export const ShapeWrapper = styled.div`
-    height: 31px;
-    display: flex;
-    align-items: center;
-`
 
 interface Props {
     isSticky?: boolean
@@ -46,7 +16,9 @@ export default function Logo({ isSticky }: Props) {
         if (node !== null) {
             setTyped(
                 new Typed(node, {
-                    strings: ['Daniel<span style="margin-left: 6px"></span>Westbrook'],
+                    strings: [
+                        'Daniel<span style="margin-left: 6px"></span>Westbrook',
+                    ],
                     startDelay: 50,
                     typeSpeed: 50,
                     showCursor: false,
@@ -60,19 +32,25 @@ export default function Logo({ isSticky }: Props) {
     }, [typed])
 
     return (
-        <LogoText ref={ref}>
+        <div
+            className="font-mono font-bold text-[1.3rem] flex items-center text-brand uppercase select-none"
+            ref={ref}
+        >
             {onScreen &&
                 (isSticky ? (
                     <span className="leading-4">DW</span>
                 ) : (
                     <>
-                        <span ref={logoText} className="hidden leading-4 md:block"></span>
+                        <span
+                            ref={logoText}
+                            className="hidden leading-4 md:block"
+                        ></span>
                         <span className="leading-4 block md:hidden">DW</span>
                     </>
                 ))}
-            <ShapeWrapper>
-                <LogoShape />
-            </ShapeWrapper>
-        </LogoText>
+            <div className="h-[31px] flex items-center">
+                <div className="h-[15px] w-[8px] ml-[4px] bg-brand" />
+            </div>
+        </div>
     )
 }

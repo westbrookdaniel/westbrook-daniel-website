@@ -164,3 +164,15 @@ p a {
 p a:hover {
     text-decoration: none;
 }
+
+.blog-wrapper {
+    max-width: unset;
+}
+
+.blog-wrapper > :not(pre) {
+    max-width: 750px;
+}
+
+.blog-wrapper pre {
+    max-width: 900px;
+}
