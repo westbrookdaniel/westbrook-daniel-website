@@ -5,7 +5,7 @@ import Footer from '../components/sections/Footer'
 import Contact from '../components/sections/Contact'
 import { ProjectData } from '../types'
 import ProjectSection from '../components/sections/ProjectSection'
-import { sideData } from '../data/sideData'
+import { sideData } from '../lib/sideData'
 import HeadWithGraph from '../components/HeadWithGraph'
 
 export { getStaticProps } from '../lib/getProjectData'
