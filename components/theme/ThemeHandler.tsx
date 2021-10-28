@@ -1,19 +1,12 @@
 import * as React from 'react'
 import create from 'zustand'
+import { getLocalStorage, setLocalStorage } from '../../util/localStorage'
 
 interface ThemeStore {
     theme: keyof typeof themes
     updateTheme: (theme: keyof typeof themes) => void
     rotateTheme: () => void
 }
-
-const getLocalStorage = (key: string) =>
-    typeof window !== 'undefined'
-        ? JSON.parse(window.localStorage.getItem(key)!)
-        : null
-const setLocalStorage = (key: string, value: string) =>
-    typeof window !== 'undefined' &&
-    window.localStorage.setItem(key, JSON.stringify(value))
 
 export const useTheme = create<ThemeStore>((set, get) => ({
     theme:
