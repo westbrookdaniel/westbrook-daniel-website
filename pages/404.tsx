@@ -1,10 +1,8 @@
-import Head from 'next/head'
 import Container from '../components/layout/Container'
-import Divider from '../components/Divider'
 import Button from '../components/Button'
 import Link from 'next/link'
 import Nav from '../components/nav/Nav'
-import HeadWithGraph from '../util/HeadWithGraph'
+import HeadWithGraph from '../components/HeadWithGraph'
 
 export default function Error() {
     return (
@@ -25,7 +23,7 @@ export default function Error() {
                             </p>
                             <Link href="/">
                                 <a>
-                                    <Button>Home</Button>
+                                    <Button>Take me home</Button>
                                 </a>
                             </Link>
                         </div>

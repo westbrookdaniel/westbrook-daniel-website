@@ -1,4 +1,4 @@
-import { codeFont } from './codeFont'
+import { codeFont } from './constants'
 
 /**
  * Custom Gruvbox Theme

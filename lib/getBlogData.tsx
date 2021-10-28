@@ -1,29 +1,29 @@
-import { ProjectData } from './types'
+import { BlogData, BlogMeta } from '../types'
 
-export default function getProjectData(): ProjectData[] {
+export default function getBlogData(): BlogData[] {
     const fs = require('fs')
     const path = require('path')
     const reorder = require('../util/reorder').reorder
 
     const files = fs.readdirSync(
-        path.join(process.cwd(), 'pages', 'p'),
+        path.join(process.cwd(), 'pages', 'blog'),
         'utf-8'
     )
     const fileNames = files.filter((fn: string) => !fn.startsWith('.'))
 
-    const rawData: ProjectData[] = []
+    const rawData: BlogMeta[] = []
     fileNames.forEach((file: string) => {
-        const data = require(`../pages/p/${file}/index.mdx`).metadata
+        const data = require(`../pages/blog/${file}/index.mdx`).meta
         if (data) {
-            data.slug = '/p/' + file
+            data.slug = '/blog/' + file
             rawData.push(data)
         }
     })
 
-    return reorder(rawData, 'order')
+    return reorder(rawData, 'date')
 }
 
 export async function getStaticProps() {
-    const projectData = getProjectData()
-    return { props: { projectData } }
+    const blogData = getBlogData()
+    return { props: { blogData } }
 }

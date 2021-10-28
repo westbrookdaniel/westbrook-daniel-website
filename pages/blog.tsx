@@ -1,14 +1,13 @@
+import * as React from 'react'
 import Container from '../components/layout/Container'
 import Nav from '../components/nav/Nav'
 import Footer from '../components/sections/Footer'
 import Contact from '../components/sections/Contact'
-import React from 'react'
 import BlogSection from '../components/sections/BlogSection'
-import { BlogData } from '../util/types'
-import HeadWithGraph from '../util/HeadWithGraph'
-import Divider from '../components/Divider'
+import { BlogData } from '../types'
+import HeadWithGraph from '../components/HeadWithGraph'
 
-export { getStaticProps } from '../util/getBlogData'
+export { getStaticProps } from '../lib/getBlogData'
 
 interface Props {
     blogData: BlogData[]

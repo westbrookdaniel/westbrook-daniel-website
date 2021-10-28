@@ -1,5 +1,5 @@
 import * as React from 'react'
-import useOnScreen from '../util/useOnScreen'
+import useOnScreen from '../hooks/useOnScreen'
 import Typed from 'typed.js'
 
 interface Props {

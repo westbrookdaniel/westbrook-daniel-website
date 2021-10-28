@@ -1,9 +1,9 @@
 import dayjs from 'dayjs'
 import Link from 'next/link'
 import { CgArrowRight } from 'react-icons/cg'
-import { normal } from '../../util/transition'
+import { normalTransition } from '../../util/constants'
 import truncate from '../../util/truncate'
-import { BlogData } from '../../util/types'
+import { BlogData } from '../../types'
 import Image from '../Image'
 
 interface Props {
@@ -18,7 +18,7 @@ const BlogItem: React.FC<Props> = ({ data }) => {
                     <div className="md:block hidden my-3">
                         <Image
                             alt={`${data.title} Project`}
-                            className={`object-cover transform ${normal}`}
+                            className={`object-cover transform ${normalTransition}`}
                             loading="eager"
                             width={400}
                             height={270}

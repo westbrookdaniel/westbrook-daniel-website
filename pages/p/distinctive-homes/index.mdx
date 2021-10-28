@@ -17,7 +17,7 @@ export const metadata = {
     order: 2,
 }
 
-export { getStaticProps } from '../../../util/getProjectData'
+export { getStaticProps } from '../../../lib/getProjectData'
 export default ({ children, projectData }) => (
     <ProjectLayout data={metadata} projectData={projectData}>
         {children}

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useScrollPosition } from '../../util/useScrollPosition'
+import { useScrollPosition } from '../../hooks/useScrollPosition'
 import Divider from '../Divider'
 import Container from '../layout/Container'
 import Nav from './Nav'

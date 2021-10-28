@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { CgArrowRight } from 'react-icons/cg'
-import { normal } from '../../util/transition'
+import { normalTransition } from '../../util/constants'
 import truncate from '../../util/truncate'
-import { ProjectData } from '../../util/types'
+import { ProjectData } from '../../types'
 import Divider from '../Divider'
 import Image from '../project/Image'
 
@@ -25,7 +25,10 @@ const ProjectItem: React.FC<Props> = ({ data, nextProject }) => {
                     <div className="flex w-full items-center">
                         <h3 className="mr-4">{truncate(data.title, 50)}</h3>
                         <div className="arrow">
-                            <CgArrowRight color="var(--lines)" fontSize="1.2rem" />
+                            <CgArrowRight
+                                color="var(--lines)"
+                                fontSize="1.2rem"
+                            />
                         </div>
                     </div>
                     {data.feature ? (
@@ -34,7 +37,7 @@ const ProjectItem: React.FC<Props> = ({ data, nextProject }) => {
                                 alt={`${data.title} Project`}
                                 width={400}
                                 height={270}
-                                className={`object-cover transform ${normal}`}
+                                className={`object-cover transform ${normalTransition}`}
                                 loading="eager"
                                 src={data.feature}
                             />
