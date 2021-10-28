@@ -1,4 +1,4 @@
-import { BlogData, BlogMeta } from '../types'
+import { BlogData, BlogMeta } from '../util/types'
 
 export default function getBlogData(): BlogData[] {
     const fs = require('fs')

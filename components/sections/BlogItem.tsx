@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { CgArrowRight } from 'react-icons/cg'
 import { normalTransition } from '../../util/constants'
 import truncate from '../../util/truncate'
-import { BlogData } from '../../types'
+import { BlogData } from '../../util/types'
 import Image from '../Image'
 
 interface Props {

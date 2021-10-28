@@ -4,7 +4,7 @@ import Nav from '../components/nav/Nav'
 import Footer from '../components/sections/Footer'
 import Contact from '../components/sections/Contact'
 import BlogSection from '../components/sections/BlogSection'
-import { BlogData } from '../types'
+import { BlogData } from '../util/types'
 import HeadWithGraph from '../components/HeadWithGraph'
 
 export { getStaticProps } from '../lib/getBlogData'

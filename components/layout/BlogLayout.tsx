@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 import { FC } from 'react'
 import HeadWithGraph from '../HeadWithGraph'
-import { BlogMeta } from '../../types'
+import { BlogMeta } from '../../util/types'
 import Divider from '../Divider'
 import Image from '../Image'
 import Nav from '../nav/Nav'

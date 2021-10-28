@@ -6,7 +6,7 @@ import Contact from '../components/sections/Contact'
 import Footer from '../components/sections/Footer'
 import getProjectData from '../lib/getProjectData'
 import getBlogData from '../lib/getBlogData'
-import { BlogData, ProjectData } from '../types'
+import { BlogData, ProjectData } from '../util/types'
 import HeadWithGraph from '../components/HeadWithGraph'
 import Divider from '../components/Divider'
 

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { reorder } from '../../util/reorder'
-import { BlogData } from '../../types'
+import { BlogData } from '../../util/types'
 import Divider from '../Divider'
 import Container from '../layout/Container'
 import BlogItem from './BlogItem'

@@ -1,4 +1,4 @@
-import { ProjectData } from '../types'
+import { ProjectData } from '../util/types'
 
 export default function getProjectData(): ProjectData[] {
     const fs = require('fs')

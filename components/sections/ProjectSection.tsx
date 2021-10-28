@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ProjectData } from '../../types'
+import { ProjectData } from '../../util/types'
 import Divider from '../Divider'
 import Container from '../layout/Container'
 import ProjectGrid from '../layout/ProjectGrid'

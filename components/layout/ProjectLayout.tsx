@@ -6,7 +6,7 @@ import Footer from '../sections/Footer'
 import { CgArrowRight } from 'react-icons/cg'
 import { useMemo } from 'react'
 import ProjectItem from '../sections/ProjectItem'
-import { ProjectMeta, ProjectData } from '../../types'
+import { ProjectMeta, ProjectData } from '../../util/types'
 import HeadWithGraph from '../HeadWithGraph'
 
 interface Props {
