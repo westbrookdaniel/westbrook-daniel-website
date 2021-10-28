@@ -8,7 +8,7 @@ import getProjectData from '../lib/getProjectData'
 import getBlogData from '../lib/getBlogData'
 import { BlogData, ProjectData } from '../util/types'
 import HeadWithGraph from '../components/HeadWithGraph'
-import Divider from '../components/Divider'
+import Divider from '../components/common/Divider'
 
 export async function getStaticProps() {
     const projectData = getProjectData()

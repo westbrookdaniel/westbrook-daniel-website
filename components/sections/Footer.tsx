@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import Divider from '../Divider'
-import Container from '../layout/Container'
+import Divider from '../common/Divider'
+import Container from '../common/Container'
 import NavLinks from '../nav/NavLinks'
 import Socials from '../Socials'
-import ThemeChanger from '../ThemeChanger'
+import ThemeChanger from '../theme/ThemeChanger'
 
 interface Props {
     withSocials?: boolean

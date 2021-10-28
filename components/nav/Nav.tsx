@@ -1,4 +1,4 @@
-import Divider from '../Divider'
+import Divider from '../common/Divider'
 import Link from 'next/link'
 import Logo from '../Logo'
 import NavLinks from './NavLinks'

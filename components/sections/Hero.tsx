@@ -1,6 +1,6 @@
-import Container from '../layout/Container'
+import Container from '../common/Container'
 import Nav from '../nav/Nav'
-import Image from '../Image'
+import Image from '../common/Image'
 import me from '../../public/images/me.jpg'
 
 export default function Hero() {

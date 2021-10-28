@@ -1,6 +1,6 @@
 import { BsMoon } from 'react-icons/bs'
-import { useTheme } from './ThemeHandler'
-import { normalTransition } from '../util/constants'
+import { useTheme } from '../theme/ThemeHandler'
+import { normalTransition } from '../../util/constants'
 
 interface Props {
     className?: string

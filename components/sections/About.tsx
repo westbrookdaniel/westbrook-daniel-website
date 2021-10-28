@@ -1,5 +1,5 @@
-import Container from '../layout/Container'
-import Divider from '../Divider'
+import Container from '../common/Container'
+import Divider from '../common/Divider'
 
 export default function About() {
     return (

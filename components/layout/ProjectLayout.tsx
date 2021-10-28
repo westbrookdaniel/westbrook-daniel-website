@@ -1,6 +1,6 @@
-import Container from './Container'
+import Container from '../common/Container'
 import Nav from '../nav/Nav'
-import Divider from '../Divider'
+import Divider from '../common/Divider'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
 import { CgArrowRight } from 'react-icons/cg'

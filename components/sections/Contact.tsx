@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import Container, { ContainerProps } from '../layout/Container'
+import Container, { ContainerProps } from '../common/Container'
 import Socials from '../Socials'
 
 interface ContactProps extends ContainerProps {

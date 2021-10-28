@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Container from '../components/layout/Container'
+import Container from '../components/common/Container'
 import Nav from '../components/nav/Nav'
 import Footer from '../components/sections/Footer'
 import Contact from '../components/sections/Contact'

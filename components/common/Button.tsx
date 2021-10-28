@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes } from 'react'
-import { normalTransition } from '../util/constants'
+import { normalTransition } from '../../util/constants'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
     theme?: 'yellow'

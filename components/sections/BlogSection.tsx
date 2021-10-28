@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { reorder } from '../../util/reorder'
 import { BlogData } from '../../util/types'
-import Divider from '../Divider'
-import Container from '../layout/Container'
+import Divider from '../common/Divider'
+import Container from '../common/Container'
 import BlogItem from './BlogItem'
 
 interface Props {

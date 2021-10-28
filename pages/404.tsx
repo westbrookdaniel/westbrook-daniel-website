@@ -1,5 +1,5 @@
-import Container from '../components/layout/Container'
-import Button from '../components/Button'
+import Container from '../components/common/Container'
+import Button from '../components/common/Button'
 import Link from 'next/link'
 import Nav from '../components/nav/Nav'
 import HeadWithGraph from '../components/HeadWithGraph'

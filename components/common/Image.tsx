@@ -1,5 +1,5 @@
 import NextImage, { ImageProps } from 'next/image'
-import { normalTransition } from '../util/constants'
+import { normalTransition } from '../../util/constants'
 
 export default function Image({ className = '', src, ...props }: ImageProps) {
     return (

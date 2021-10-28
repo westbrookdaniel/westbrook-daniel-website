@@ -6,7 +6,7 @@ import StickyNav from '../components/nav/StickyNav'
 import { MDXProvider } from '@mdx-js/react'
 import { AppProps } from 'next/dist/shared/lib/router/router'
 import { MdxComponents } from '../components/mdx'
-import ThemeHandler from '../components/ThemeHandler'
+import ThemeHandler from '../components/theme/ThemeHandler'
 import Analytics from '../components/Analytics'
 
 function MyApp({ Component, pageProps }: AppProps) {

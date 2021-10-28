@@ -2,12 +2,12 @@ import dayjs from 'dayjs'
 import { FC } from 'react'
 import HeadWithGraph from '../HeadWithGraph'
 import { BlogMeta } from '../../util/types'
-import Divider from '../Divider'
-import Image from '../Image'
+import Divider from '../common/Divider'
+import Image from '../common/Image'
 import Nav from '../nav/Nav'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
-import Container from './Container'
+import Container from '../common/Container'
 
 interface Props {
     prefix: string

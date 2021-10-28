@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { ProjectData } from '../../util/types'
-import Divider from '../Divider'
-import Container from '../layout/Container'
-import ProjectGrid from '../layout/ProjectGrid'
+import Divider from '../common/Divider'
+import Container from '../common/Container'
+import ProjectGrid from './ProjectGrid'
 import ProjectItem from './ProjectItem'
 import SmallItem from './SmallItem'
 

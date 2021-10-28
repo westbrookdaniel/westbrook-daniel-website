@@ -1,5 +1,5 @@
 import React from 'react'
-import StandardImage from '../Image'
+import StandardImage from '../common/Image'
 
 interface Props {
     small?: boolean
