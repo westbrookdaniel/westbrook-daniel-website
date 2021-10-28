@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import * as React from 'react'
 import create from 'zustand'
 
 interface ThemeStore {
@@ -132,7 +132,8 @@ export const themes = {
 const ThemeHandler: React.FC = ({ children }) => {
     const { theme, rotateTheme } = useTheme()
     const updateTheme = useTheme(s => s.updateTheme)
-    useEffect(() => {
+
+    React.useEffect(() => {
         if (!document.documentElement) return
 
         window
@@ -155,7 +156,7 @@ const ThemeHandler: React.FC = ({ children }) => {
         })
     }, [rotateTheme, theme, updateTheme])
 
-    return <div>{children}</div>
+    return <>{children}</>
 }
 
 export default ThemeHandler
