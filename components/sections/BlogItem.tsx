@@ -1,7 +1,7 @@
-import dayjs from 'dayjs'
 import Link from 'next/link'
 import { CgArrowRight } from 'react-icons/cg'
 import { normalTransition } from '../../util/constants'
+import { formatDate } from '../../util/formatDate'
 import truncate from '../../util/truncate'
 import { BlogData } from '../../util/types'
 import Image from '../common/Image'
@@ -36,7 +36,7 @@ const BlogItem: React.FC<Props> = ({ data }) => {
                             </div>
                         </div>
                         <p>
-                            {dayjs(data.date).format('DD/MM/YYYY')} -{' '}
+                            {formatDate(data.date)} -{' '}
                             {data.description}
                         </p>
                     </div>

@@ -1,13 +1,12 @@
-import dayjs from 'dayjs'
 import { FC } from 'react'
 import HeadWithGraph from '../HeadWithGraph'
 import { BlogMeta } from '../../util/types'
-import Divider from '../common/Divider'
 import Image from '../common/Image'
 import Nav from '../nav/Nav'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
 import Container from '../common/Container'
+import { formatDate } from '../../util/formatDate'
 
 interface Props {
     prefix: string
@@ -32,7 +31,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                     <div className="max-w-6xl">
                         <h1 className="mb-4">{meta.title}</h1>
                         <p>
-                            {dayjs(meta.date).format('DD/MM/YYYY')} -{' '}
+                            {formatDate(meta.date)} -{' '}
                             {meta.description}
                         </p>
                     </div>
