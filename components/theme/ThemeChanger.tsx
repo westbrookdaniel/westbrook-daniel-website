@@ -13,9 +13,7 @@ const ThemeChanger: React.FC<Props> = ({ className = '' }) => {
             className={`${normalTransition} inline-flex space-x-3 items-center cursor-pointer color-hover ${className}`}
             onClick={rotateTheme}
         >
-            <p style={{ marginTop: '2px' }} className="select-none">
-                Change Theme
-            </p>
+            <p className="select-none">Change Theme</p>
             <BsMoonFill fontSize="1.2em" />
         </div>
     )
