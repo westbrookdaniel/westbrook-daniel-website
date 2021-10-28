@@ -1,4 +1,4 @@
-import { BsMoon } from 'react-icons/bs'
+import { BsMoonFill } from 'react-icons/bs'
 import { useTheme } from '../theme/ThemeHandler'
 import { normalTransition } from '../../util/constants'
 
@@ -16,7 +16,7 @@ const ThemeChanger: React.FC<Props> = ({ className = '' }) => {
             <p style={{ marginTop: '2px' }} className="select-none">
                 Change Theme
             </p>
-            <BsMoon fontSize="1.2em" />
+            <BsMoonFill fontSize="1.2em" />
         </div>
     )
 }
