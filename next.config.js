@@ -12,8 +12,8 @@ module.exports = withMDX({
     },
     images: {
         formats: ['image/avif', 'image/webp'],
-        deviceSizes: [320, 420, 768, 1024],
-        imageSizes: [320, 420, 768, 1024],
+        deviceSizes: [640, 750, 828, 1080, 1200],
+        imageSizes: [16, 32, 48, 64, 96],
         iconSizes: [],
         domains: [],
         path: '/_next/image',
