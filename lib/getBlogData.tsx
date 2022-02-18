@@ -1,6 +1,6 @@
 import { BlogData, BlogMeta } from '../util/types'
 
-export default function getBlogData(): BlogData[] {
+export default async function getBlogData(): Promise<BlogData[]> {
     const fs = require('fs')
     const path = require('path')
     const reorder = require('../util/reorder').reorder
@@ -11,11 +11,16 @@ export default function getBlogData(): BlogData[] {
     )
     const fileNames = files.filter((fn: string) => !fn.startsWith('.'))
 
+    const modulePromises = fileNames.map(
+        async (file: string) => await require(`../pages/blog/${file}/index.mdx`)
+    )
+    const modules = await Promise.all(modulePromises)
+
     const rawData: BlogMeta[] = []
-    fileNames.forEach((file: string) => {
-        const data = require(`../pages/blog/${file}/index.mdx`).meta
+    modules.forEach((module: any, i) => {
+        const data = module.meta
         if (data) {
-            data.slug = '/blog/' + file
+            data.slug = '/blog/' + fileNames[i]
             rawData.push(data)
         }
     })
@@ -24,6 +29,6 @@ export default function getBlogData(): BlogData[] {
 }
 
 export async function getStaticProps() {
-    const blogData = getBlogData()
+    const blogData = await getBlogData()
     return { props: { blogData } }
 }

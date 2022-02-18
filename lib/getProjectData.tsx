@@ -1,6 +1,6 @@
 import { ProjectData } from '../util/types'
 
-export default function getProjectData(): ProjectData[] {
+export default async function getProjectData(): Promise<ProjectData[]> {
     const fs = require('fs')
     const path = require('path')
     const reorder = require('../util/reorder').reorder
@@ -11,11 +11,16 @@ export default function getProjectData(): ProjectData[] {
     )
     const fileNames = files.filter((fn: string) => !fn.startsWith('.'))
 
+    const modulePromises = fileNames.map(
+        async (file: string) => await require(`../pages/p/${file}/index.mdx`)
+    )
+    const modules = await Promise.all(modulePromises)
+
     const rawData: ProjectData[] = []
-    fileNames.forEach((file: string) => {
-        const data = require(`../pages/p/${file}/index.mdx`).metadata
+    modules.forEach((module: any, i) => {
+        const data = module.metadata
         if (data) {
-            data.slug = '/p/' + file
+            data.slug = '/p/' + fileNames[i]
             rawData.push(data)
         }
     })
@@ -24,6 +29,6 @@ export default function getProjectData(): ProjectData[] {
 }
 
 export async function getStaticProps() {
-    const projectData = getProjectData()
+    const projectData = await getProjectData()
     return { props: { projectData } }
 }

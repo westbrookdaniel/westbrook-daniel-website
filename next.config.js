@@ -9,7 +9,6 @@ module.exports = withMDX({
         scrollRestoration: true,
         reactRoot: 'concurrent',
         concurrentFeatures: true,
-        serverComponents: true,
     },
     images: {
         formats: ['image/avif', 'image/webp'],
