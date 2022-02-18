@@ -42,13 +42,13 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                 </div>
             </Container>
             <Container spaced>
-                <div className="flex-row lg:items-end mb-6">
+                <div className="mb-6 flex-row lg:items-end">
                     <div className="max-w-6xl lg:mr-16">
                         <h1 className="mb-4">{data.title}</h1>
                         <p>{data.description}</p>
                     </div>
                     <div className="flex items-center space-x-10 text-brand">
-                        <div className="flex items-center space-x-2 hover-arrow">
+                        <div className="hover-arrow flex items-center space-x-2">
                             <a
                                 href={data.link}
                                 target="_blank"
@@ -63,7 +63,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                             />
                         </div>
                         {data.source && (
-                            <div className="flex items-center space-x-2 hover-arrow">
+                            <div className="hover-arrow flex items-center space-x-2">
                                 <a
                                     href={data.source}
                                     target="_blank"
@@ -82,8 +82,8 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                 </div>
                 <Divider />
             </Container>
-            <Container className="pb-8 lg:pb-10 flex-grow">
-                <div className="prose lg:prose-lg max-w-none">{children}</div>
+            <Container className="flex-grow pb-8 lg:pb-10">
+                <div className="prose max-w-none lg:prose-lg">{children}</div>
             </Container>
             <Container spaced className="mb-12">
                 <div className="row">

@@ -14,19 +14,19 @@ const BlogItem: React.FC<Props> = ({ data }) => {
     return (
         <Link href={data.slug}>
             <a className="mb-2">
-                <div className="md:grid gap-8 grid-cols-8 hover-arrow">
-                    <div className="md:block hidden my-3">
+                <div className="hover-arrow grid-cols-8 gap-8 md:grid">
+                    <div className="my-3 hidden md:block">
                         <Image
                             alt={`${data.title} Project`}
-                            className={`object-cover transform ${normalTransition}`}
+                            className={`transform object-cover ${normalTransition}`}
                             loading="eager"
                             width={400}
                             height={270}
                             src={data.feature}
                         />
                     </div>
-                    <div className="flex col-span-5 flex-col justify-center">
-                        <div className="flex w-full items-center mb-2">
+                    <div className="col-span-5 flex flex-col justify-center">
+                        <div className="mb-2 flex w-full items-center">
                             <h3 className="mr-4">{truncate(data.title, 90)}</h3>
                             <div className="arrow">
                                 <CgArrowRight
@@ -36,8 +36,7 @@ const BlogItem: React.FC<Props> = ({ data }) => {
                             </div>
                         </div>
                         <p>
-                            {formatDate(data.date)} -{' '}
-                            {data.description}
+                            {formatDate(data.date)} - {data.description}
                         </p>
                     </div>
                 </div>

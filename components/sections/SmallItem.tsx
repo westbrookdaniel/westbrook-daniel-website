@@ -5,7 +5,7 @@ export default function SmallItem({ data }: { data: any }) {
     const contents = (
         <div className="hover-arrow">
             <div className="flex w-full items-center">
-                <h4 className="font-body font-normal mr-2 text-on-background">
+                <h4 className="mr-2 font-body font-normal text-on-background">
                     {data.title}
                 </h4>
                 <div className="arrow">

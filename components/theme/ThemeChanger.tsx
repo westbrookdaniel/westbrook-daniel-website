@@ -10,7 +10,7 @@ const ThemeChanger: React.FC<Props> = ({ className = '' }) => {
     const rotateTheme = useTheme(s => s.rotateTheme)
     return (
         <div
-            className={`${normalTransition} inline-flex space-x-3 items-center cursor-pointer color-hover ${className}`}
+            className={`${normalTransition} color-hover inline-flex cursor-pointer items-center space-x-3 ${className}`}
             onClick={rotateTheme}
         >
             <p className="select-none">Change Theme</p>

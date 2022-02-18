@@ -27,7 +27,7 @@ export default function Socials({
     }
     return (
         <div
-            className={`xs:flex grid ${gridCol} gap-8 xs:gap-0 mt-6 lg:mt-0 xs:space-x-8 items-center ${className}`}
+            className={`grid xs:flex ${gridCol} mt-6 items-center gap-8 xs:gap-0 xs:space-x-8 lg:mt-0 ${className}`}
             {...props}
         >
             <a

@@ -33,7 +33,7 @@ export default function Logo({ isSticky }: Props) {
 
     return (
         <div
-            className="font-mono font-bold text-[1.3rem] flex items-center text-brand uppercase select-none"
+            className="flex select-none items-center font-mono text-[1.3rem] font-bold uppercase text-brand"
             ref={ref}
         >
             {onScreen &&
@@ -45,11 +45,11 @@ export default function Logo({ isSticky }: Props) {
                             ref={logoText}
                             className="hidden leading-4 md:block"
                         ></span>
-                        <span className="leading-4 block md:hidden">DW</span>
+                        <span className="block leading-4 md:hidden">DW</span>
                     </>
                 ))}
-            <div className="h-[31px] flex items-center">
-                <div className="h-[15px] w-[8px] ml-[4px] bg-brand" />
+            <div className="flex h-[31px] items-center">
+                <div className="ml-[4px] h-[15px] w-[8px] bg-brand" />
             </div>
         </div>
     )

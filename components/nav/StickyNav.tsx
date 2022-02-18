@@ -15,7 +15,7 @@ export default function StickyNav() {
 
     return (
         <div className={`${className} ${defaultClasses}`}>
-            <div className="max-w-[1200px] mx-auto bg-background">
+            <div className="mx-auto max-w-[1200px] bg-background">
                 <Container className="max-w-[1200px]">
                     <Nav isSticky withDivider={false} className="pt-3" />
                 </Container>

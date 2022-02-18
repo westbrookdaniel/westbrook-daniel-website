@@ -27,16 +27,16 @@ const BlogSection: React.FC<Props> = ({ data, title, limit }) => {
         <Container spaced>
             {title}
             <Divider className="mt-6" />
-            <div className="grid mt-6 gap-2">
+            <div className="mt-6 grid gap-2">
                 {items.map((Item: () => JSX.Element, i: number) => (
                     <Item key={i} />
                 ))}
             </div>
             {limit ? (
-                <div className="flex mt-4 md:mt-1 items-center space-x-8 w-full">
+                <div className="mt-4 flex w-full items-center space-x-8 md:mt-1">
                     <Divider className="flex-grow" />
                     <Link href="/blog">
-                        <a className="flex link-style justify-center items-center">
+                        <a className="link-style flex items-center justify-center">
                             See All Posts
                         </a>
                     </Link>

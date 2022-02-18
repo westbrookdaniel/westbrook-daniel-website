@@ -27,12 +27,11 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                 </div>
             </Container>
             <Container spaced>
-                <div className="space-y-8 items-end">
+                <div className="items-end space-y-8">
                     <div className="max-w-6xl">
                         <h1 className="mb-4">{meta.title}</h1>
                         <p>
-                            {formatDate(meta.date)} -{' '}
-                            {meta.description}
+                            {formatDate(meta.date)} - {meta.description}
                         </p>
                     </div>
                     {meta.feature ? (
@@ -40,7 +39,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                             <Image
                                 width={500}
                                 height={300}
-                                className="object-cover transform"
+                                className="transform object-cover"
                                 loading="eager"
                                 src={meta.feature}
                                 alt={meta.title}
@@ -49,7 +48,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                     ) : null}
                 </div>
             </Container>
-            <Container className="pb-24 flex-grow">
+            <Container className="flex-grow pb-24">
                 <div className="blog-wrapper prose lg:prose-lg">{children}</div>
             </Container>
             <div className="bg-subtle">

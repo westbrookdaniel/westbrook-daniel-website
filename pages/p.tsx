@@ -22,11 +22,11 @@ const Blog: React.FC<Props> = ({ projectData }) => {
                 image="/images/projects/space-of-the-day/space"
             />
             <Container className="m-auto">
-                <div className="w-full mb-12">
+                <div className="mb-12 w-full">
                     <Nav className="pt-10" />
                 </div>
             </Container>
-            <div className="mb-24 flex-grow">
+            <div className="flex-grow mb-24">
                 <ProjectSection
                     title={
                         <>

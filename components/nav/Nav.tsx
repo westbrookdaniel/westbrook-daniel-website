@@ -16,13 +16,13 @@ export default function Nav({
 }: Props) {
     return (
         <div className={` ${className}`}>
-            <div className="flex justify-between items-center mb-2">
+            <div className="mb-2 flex items-center justify-between">
                 <Link href="/">
                     <a>
                         <Logo isSticky={isSticky} />
                     </a>
                 </Link>
-                <nav className="flex space-x-8 items-center">
+                <nav className="flex items-center space-x-8">
                     <NavLinks />
                 </nav>
             </div>

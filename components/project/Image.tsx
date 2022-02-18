@@ -11,7 +11,7 @@ export default function Image({ small, ...props }: Props) {
         <StandardImage
             width={small ? 400 : 800}
             height={small ? 250 : 500}
-            className="rounded-lg w-full object-cover"
+            className="w-full rounded-lg object-cover"
             {...(props as any)}
         />
     )

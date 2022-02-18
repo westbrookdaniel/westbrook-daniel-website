@@ -32,12 +32,12 @@ const ProjectItem: React.FC<Props> = ({ data, nextProject }) => {
                         </div>
                     </div>
                     {data.feature ? (
-                        <div className="my-3 rounded-lg overflow-hidden">
+                        <div className="my-3 overflow-hidden rounded-lg">
                             <Image
                                 alt={`${data.title} Project`}
                                 width={400}
                                 height={270}
-                                className={`object-cover transform ${normalTransition}`}
+                                className={`transform object-cover ${normalTransition}`}
                                 loading="eager"
                                 src={data.feature}
                             />

@@ -8,8 +8,8 @@ export default function ProjectGrid({ array }: Props) {
     const arrOut = useDividers(array)
     return (
         <div>
-            <Divider className="mt-6 mb-5 col-span-1 md:hidden" />
-            <div className="grid gap-x-8 grid-cols-1 md:grid-cols-2">
+            <Divider className="col-span-1 mt-6 mb-5 md:hidden" />
+            <div className="grid grid-cols-1 gap-x-8 md:grid-cols-2">
                 {arrOut.map((El, i) =>
                     typeof El === 'function' ? <El key={i} /> : null
                 )}
@@ -24,7 +24,7 @@ const useDividers = (arr: (() => JSX.Element)[]) => {
         const El = arr[i] as any
         if (!(i % 2)) {
             output.push(() => (
-                <Divider className="mt-6 mb-5 col-span-1 md:col-span-2 hidden md:block" />
+                <Divider className="col-span-1 mt-6 mb-5 hidden md:col-span-2 md:block" />
             ))
         }
         output.push(() => (

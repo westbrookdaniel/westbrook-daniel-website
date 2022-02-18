@@ -36,7 +36,7 @@ const Home: React.FC<Props> = ({ projectData, blogData }) => {
             <div className="mt-12 mb-6">
                 <About />
             </div>
-            <div className="mb-24 flex-grow">
+            <div className="flex-grow mb-24">
                 <BlogSection
                     title={<h2>Blog Posts</h2>}
                     limit

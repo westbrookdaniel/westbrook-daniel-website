@@ -14,12 +14,15 @@ interface Props {
 }
 
 const ProjectSection: React.FC<Props> = ({ data, small, title, seeAll }) => {
-    const projectItems = data.map((p: any) => function Item() {
-        if (small) {
-            return <SmallItem data={p} />
-        }
-        return <ProjectItem data={p} />
-    })
+    const projectItems = data.map(
+        (p: any) =>
+            function Item() {
+                if (small) {
+                    return <SmallItem data={p} />
+                }
+                return <ProjectItem data={p} />
+            }
+    )
 
     return (
         <Container spaced>
@@ -27,7 +30,7 @@ const ProjectSection: React.FC<Props> = ({ data, small, title, seeAll }) => {
             {small ? (
                 <>
                     <Divider className="mt-6 mb-8" />
-                    <div className="grid mt-4 gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
+                    <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
                         {projectItems.map((Item: any, i: number) => (
                             <Item key={i} />
                         ))}
@@ -37,10 +40,10 @@ const ProjectSection: React.FC<Props> = ({ data, small, title, seeAll }) => {
                 <ProjectGrid array={projectItems} />
             )}
             {seeAll ? (
-                <div className="flex mt-4 items-center space-x-8 w-full">
+                <div className="mt-4 flex w-full items-center space-x-8">
                     <Divider className="flex-grow" />
                     <Link href="/p">
-                        <a className="flex link-style justify-center items-center">
+                        <a className="link-style flex items-center justify-center">
                             See All Projects
                         </a>
                     </Link>

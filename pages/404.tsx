@@ -9,8 +9,8 @@ export default function Error() {
         <>
             <HeadWithGraph title="Page Not Found" />
 
-            <Container className="m-auto flex-grow">
-                <div className="w-full mb-12">
+            <Container className="flex-grow m-auto">
+                <div className="mb-12 w-full">
                     <Nav className="pt-10" />
                 </div>
                 <h1 className="max-w-title">404 Page Not Found</h1>

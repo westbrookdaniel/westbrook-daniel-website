@@ -50,32 +50,32 @@ h6 {
 }
 
 .flex-row {
-    @apply flex lg:flex-row flex-col justify-between;
+    @apply flex flex-col justify-between lg:flex-row;
 }
 
 .flex-row > * + * {
-    @apply ml-0 lg:ml-8 mt-3 lg:mt-0;
+    @apply ml-0 mt-3 lg:ml-8 lg:mt-0;
 }
 
 .row {
-    @apply grid gap-8 grid-cols-1 md:grid-cols-2;
+    @apply grid grid-cols-1 gap-8 md:grid-cols-2;
 }
 
 h1 {
-    @apply text-3xl sm:text-5xl lg:text-6xl font-semibold;
+    @apply text-3xl font-semibold sm:text-5xl lg:text-6xl;
     line-height: 1.2em;
 }
 
 h2 {
-    @apply text-2xl sm:text-4xl font-semibold;
+    @apply text-2xl font-semibold sm:text-4xl;
 }
 
 h3 {
-    @apply font-semibold text-lg sm:text-xl;
+    @apply text-lg font-semibold sm:text-xl;
 }
 
 .btn {
-    @apply px-6 py-2 rounded-md;
+    @apply rounded-md px-6 py-2;
 }
 
 .fade-enter,
@@ -127,7 +127,7 @@ h3 {
 }
 
 .hover-arrow .arrow {
-    @apply transition-transform duration-100 ease-in-out transform;
+    @apply transform transition-transform duration-100 ease-in-out;
 }
 .hover-arrow:hover img {
     @apply scale-105;
@@ -143,7 +143,7 @@ h3 {
 }
 
 .color-hover {
-    @apply hover:text-accent-hover active:text-accent-focus focus:text-accent-focus;
+    @apply hover:text-accent-hover focus:text-accent-focus active:text-accent-focus;
 }
 
 /* This should be handled by tailwind but isn't sometimes */

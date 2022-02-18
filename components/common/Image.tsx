@@ -3,7 +3,7 @@ import { normalTransition } from '../../util/constants'
 
 export default function Image({ className = '', src, ...props }: ImageProps) {
     return (
-        <div className={`rounded-lg overflow-hidden ${normalTransition}`}>
+        <div className={`overflow-hidden rounded-lg ${normalTransition}`}>
             <NextImage
                 layout="responsive"
                 className={className + ' bg-subtle'}

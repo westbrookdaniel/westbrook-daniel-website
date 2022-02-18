@@ -9,8 +9,8 @@ export default function Hero() {
             <div className="w-full pb-10">
                 <Nav className="pt-10" />
             </div>
-            <div className="grid items-center xl:grid-cols-4 lg:grid-cols-3 gap-10 xl:gap-16">
-                <h1 className="max-w-title lg:text-5xl xl:text-6xl col-span-2 xl:col-span-3">
+            <div className="grid items-center gap-10 lg:grid-cols-3 xl:grid-cols-4 xl:gap-16">
+                <h1 className="max-w-title col-span-2 lg:text-5xl xl:col-span-3 xl:text-6xl">
                     Full Stack Developer and Designer, Currently Working at{' '}
                     <a
                         href="https://unearthed.solutions/"
@@ -21,8 +21,8 @@ export default function Hero() {
                         Unearthed
                     </a>
                 </h1>
-                <div className="flex justify-end items-center">
-                    <div className="w-48 max-h-48 xl:w-64 xl:max-h-64">
+                <div className="flex items-center justify-end">
+                    <div className="max-h-48 w-48 xl:max-h-64 xl:w-64">
                         <Image
                             width={200}
                             height={200}

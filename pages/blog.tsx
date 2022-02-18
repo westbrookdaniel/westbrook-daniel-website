@@ -18,11 +18,11 @@ const Blog: React.FC<Props> = ({ blogData }) => {
         <>
             <HeadWithGraph title="Blog" />
             <Container className="m-auto">
-                <div className="w-full mb-12">
+                <div className="mb-12 w-full">
                     <Nav className="pt-10" />
                 </div>
             </Container>
-            <div className="mb-16 flex-grow">
+            <div className="flex-grow mb-16">
                 <BlogSection
                     title={
                         <>
