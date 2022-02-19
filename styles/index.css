@@ -50,11 +50,11 @@ h6 {
 }
 
 .flex-row {
-    @apply flex flex-col justify-between lg:flex-row;
+    @apply flex flex-col justify-between;
 }
 
 .flex-row > * + * {
-    @apply ml-0 mt-3 lg:ml-8 lg:mt-0;
+    @apply mt-3 ml-0 lg:ml-8 lg:mt-0;
 }
 
 .row {
@@ -75,7 +75,7 @@ h3 {
 }
 
 .btn {
-    @apply rounded-md px-6 py-2;
+    @apply px-6 py-2 rounded-md;
 }
 
 .fade-enter,
@@ -127,7 +127,7 @@ h3 {
 }
 
 .hover-arrow .arrow {
-    @apply transform transition-transform duration-100 ease-in-out;
+    @apply transition-transform duration-100 ease-in-out;
 }
 .hover-arrow:hover img {
     @apply scale-105;
