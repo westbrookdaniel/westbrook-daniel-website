@@ -42,17 +42,18 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                 </div>
             </Container>
             <Container spaced>
-                <div className="mb-6 flex-row lg:items-end">
-                    <div className="max-w-6xl lg:mr-16">
+                <div className="flex flex-col mb-6 lg:flex-row space-y-2 lg:space-y-0 lg:items-end">
+                    <div className="w-full">
                         <h1 className="mb-4">{data.title}</h1>
                         <p>{data.description}</p>
                     </div>
                     <div className="flex items-center space-x-10 text-brand">
-                        <div className="hover-arrow flex items-center space-x-2">
+                        <div className="flex items-center hover-arrow space-x-2">
                             <a
                                 href={data.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                className="whitespace-nowrap"
                             >
                                 View Website
                             </a>
@@ -63,7 +64,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                             />
                         </div>
                         {data.source && (
-                            <div className="hover-arrow flex items-center space-x-2">
+                            <div className="flex items-center hover-arrow space-x-2">
                                 <a
                                     href={data.source}
                                     target="_blank"

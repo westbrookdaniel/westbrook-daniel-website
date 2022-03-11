@@ -11,7 +11,7 @@ If you aren't familiar with how Tailwind works traditionally, here's the summary
 in a tailwind.config.js file, on build time...`,
 }
 export { getStaticProps } from '../../../lib/getBlogData'
-export default props => <BlogLayout {...props} />
+export default props => <BlogLayout meta={meta} {...props} />
 
 Photo by [Elevate](https://unsplash.com/@elevatebeer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/packages?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

@@ -6,16 +6,12 @@ interface Props {
 }
 
 const Row: React.FC<Props> = ({ side = 'left', slot, children }) => {
-    const colClass = 'flex-1'
+    const colClass = 'w-full'
     return (
-        <div className="w-100 my-8 flex-row items-end space-x-0 space-y-8 xl:flex xl:space-x-8 xl:space-y-0">
-            {side === 'left' && (
-                <div className={colClass + ' max-w-lg'}>{children}</div>
-            )}
+        <div className="flex flex-col my-8 w-100 space-y-8 lg:flex-row lg:space-x-8">
+            {side === 'left' && <div className={colClass}>{children}</div>}
             <div className={colClass}>{slot}</div>
-            {side === 'right' && (
-                <div className={colClass + ' max-w-lg'}>{children}</div>
-            )}
+            {side === 'right' && <div className={colClass}>{children}</div>}
         </div>
     )
 }

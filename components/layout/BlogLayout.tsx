@@ -39,7 +39,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                             <Image
                                 width={500}
                                 height={300}
-                                className="transform object-cover"
+                                className="object-cover transform"
                                 loading="eager"
                                 src={meta.feature}
                                 alt={meta.title}

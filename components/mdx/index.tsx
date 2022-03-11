@@ -7,7 +7,7 @@ const Anchor = ({ children, ...props }: any) => (
     </a>
 )
 export const MdxComponents = {
-    code: Code,
-    pre: ({ children }: any) => children,
-    a: Anchor,
+    code: (props: any) => <Code {...props} />,
+    pre: ({ children }: any) => <>{children}</>,
+    a: (props: any) => <Anchor {...props} />,
 }
