@@ -11,7 +11,7 @@
         "ts:watch": "tsc --watch"
     },
     "dependencies": {
-        "@mdx-js/react": "^2.0.0",
+        "@mdx-js/react": "^1.x.x",
         "@next/mdx": "^12.0.0",
         "next": "^12.0.0",
         "prism-react-renderer": "^1.2.1",
@@ -22,7 +22,7 @@
         "zustand": "^3.7.1"
     },
     "devDependencies": {
-        "@mdx-js/loader": "^2.0.0",
+        "@mdx-js/loader": "^1.x.x",
         "@tailwindcss/typography": "^0.5.2",
         "@types/mdx-js__react": "^1.5.5",
         "@types/node": "^17.0.21",

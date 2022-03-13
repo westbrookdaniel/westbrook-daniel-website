@@ -24,7 +24,8 @@ const Code = ({ children, className }: Props) => {
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
                 <pre
                     className={
-                        className + ' my-4 overflow-scroll rounded-md p-8'
+                        className +
+                        ' my-4 overflow-scroll rounded-md p-4 lg:p-6'
                     }
                     style={style}
                 >
@@ -39,7 +40,7 @@ const Code = ({ children, className }: Props) => {
                                 key={i}
                                 {...lineProps}
                             >
-                                <span className="hidden select-none pr-2 text-right opacity-25 md:table-cell">
+                                <span className="hidden pr-4 text-right opacity-25 select-none md:table-cell">
                                     {i + 1}
                                 </span>
                                 <span className="table-cell">
