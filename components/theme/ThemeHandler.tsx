@@ -59,7 +59,7 @@ export const themes = {
         accent: '#846929',
         'accent-hover': '#9a7c2e',
         'accent-focus': '#af8f3e',
-        'on-accent': '#fff',
+        'on-accent': '#000',
 
         background: '#000000',
         subtle: '#141618',
@@ -110,7 +110,7 @@ export const themes = {
         accent: '#83bad3',
         'accent-hover': '#729da8',
         'accent-focus': '#5d8392',
-        'on-accent': '#fff',
+        'on-accent': '#162635',
 
         background: '#162635',
         subtle: '#213244',

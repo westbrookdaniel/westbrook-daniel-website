@@ -1,5 +1,5 @@
 import Container from '../components/common/Container'
-import Button from '../components/common/Button'
+import { Button } from '../components/common/Button'
 import Link from 'next/link'
 import Nav from '../components/nav/Nav'
 import HeadWithGraph from '../components/HeadWithGraph'
@@ -10,7 +10,7 @@ export default function Error() {
             <HeadWithGraph title="Page Not Found" />
 
             <Container className="flex-grow m-auto">
-                <div className="mb-12 w-full">
+                <div className="w-full mb-12">
                     <Nav className="pt-10" />
                 </div>
                 <h1 className="max-w-title">404 Page Not Found</h1>

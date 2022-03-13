@@ -66,10 +66,6 @@ h3 {
     @apply text-lg font-semibold sm:text-xl;
 }
 
-.btn {
-    @apply px-6 py-2 rounded-md;
-}
-
 .fade-enter,
 .fade-appear {
     opacity: 0;
