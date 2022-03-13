@@ -306,7 +306,7 @@
   dependencies:
     glob "7.1.7"
 
-"@next/mdx@^12.0.0":
+"@next/mdx@^12.1.0":
   version "12.1.0"
   resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-12.1.0.tgz#0100917865012b16adc6806f0b1b126e7fa6dd79"
   integrity sha512-Y+VF6mMbm7pbiSj6c0YI0bD02aK0JUglWplHW48o65JYGhJSD7jzDfuIJG6/XdQ8fhTnDj/6+kYLnV+1QmXFRQ==
@@ -1063,7 +1063,7 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-next@^12.0.0:
+eslint-config-next@^12.1.0:
   version "12.1.0"
   resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-12.1.0.tgz#8ace680dc5207e6ab6c915f3989adec122f582e7"
   integrity sha512-tBhuUgoDITcdcM7xFvensi9I5WTI4dnvH4ETGRg1U8ZKpXrZsWQFdOKIDzR3RLP5HR3xXrLviaMM4c3zVoE/pA==
@@ -2001,7 +2001,7 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next@^12.0.0:
+next@^12.1.0:
   version "12.1.0"
   resolved "https://registry.yarnpkg.com/next/-/next-12.1.0.tgz#c33d753b644be92fc58e06e5a214f143da61dd5d"
   integrity sha512-s885kWvnIlxsUFHq9UGyIyLiuD0G3BUC/xrH0CEnH5lHEWkwQcHOORgbDF0hbrW9vr/7am4ETfX4A7M6DjrE7Q==
