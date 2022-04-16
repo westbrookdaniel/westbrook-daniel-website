@@ -1,11 +1,7 @@
 import * as React from 'react'
-import Container from '../components/common/Container'
-import Nav from '../components/nav/Nav'
-import Footer from '../components/sections/Footer'
-import Contact from '../components/sections/Contact'
-import BlogSection from '../components/sections/BlogSection'
 import { BlogData } from '../util/types'
-import HeadWithGraph from '../components/HeadWithGraph'
+import Layout from '../components/layout/Layout'
+import BlogItems from '../components/sections/Items/BlogItems'
 
 export { getStaticProps } from '../lib/getBlogData'
 
@@ -15,15 +11,9 @@ interface Props {
 
 const Blog: React.FC<Props> = ({ blogData }) => {
     return (
-        <>
-            <HeadWithGraph title="Blog" />
-            <Container className="m-auto">
-                <div className="mb-12 w-full">
-                    <Nav className="pt-10" />
-                </div>
-            </Container>
+        <Layout title="Blog">
             <div className="flex-grow mb-16">
-                <BlogSection
+                <BlogItems
                     title={
                         <>
                             <h1 className="max-w-title">Blog</h1>
@@ -36,11 +26,7 @@ const Blog: React.FC<Props> = ({ blogData }) => {
                     data={blogData}
                 />
             </div>
-            <div className="bg-subtle">
-                <Contact className="pt-16 pb-32" />
-                <Footer />
-            </div>
-        </>
+        </Layout>
     )
 }
 

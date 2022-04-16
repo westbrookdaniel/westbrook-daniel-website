@@ -53,14 +53,6 @@ export default function Socials({
                 <AiFillGithub {...iconStyle} />
             </a>
             <a
-                href="https://www.behance.net/westbrookdaniel/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${normalTransition} color-hover`}
-            >
-                <AiFillBehanceCircle {...iconStyle} />
-            </a>
-            <a
                 href="https://twitter.com/DanielW29381255"
                 target="_blank"
                 rel="noopener noreferrer"

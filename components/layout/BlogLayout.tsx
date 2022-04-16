@@ -1,12 +1,9 @@
 import { FC } from 'react'
-import HeadWithGraph from '../HeadWithGraph'
 import { BlogMeta } from '../../util/types'
 import Image from '../common/Image'
-import Nav from '../nav/Nav'
-import Contact from '../sections/Contact'
-import Footer from '../sections/Footer'
 import Container from '../common/Container'
 import { formatDate } from '../../util/formatDate'
+import Layout from './Layout'
 
 interface Props {
     prefix: string
@@ -15,17 +12,11 @@ interface Props {
 
 const BlogLayout: FC<Props> = ({ meta, children }) => {
     return (
-        <>
-            <HeadWithGraph
-                title={meta.title}
-                image={meta.feature.src}
-                description={meta.snippet}
-            />
-            <Container>
-                <div className="w-full pb-10">
-                    <Nav className="pt-10" />
-                </div>
-            </Container>
+        <Layout
+            title={meta.title}
+            image={meta.feature.src}
+            description={meta.snippet}
+        >
             <Container spaced>
                 <div className="items-end space-y-8">
                     <div className="max-w-6xl">
@@ -39,7 +30,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                             <Image
                                 width={500}
                                 height={300}
-                                className="object-cover transform"
+                                className="transform object-cover"
                                 loading="eager"
                                 src={meta.feature}
                                 alt={meta.title}
@@ -51,11 +42,7 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
             <Container className="flex-grow pb-24">
                 <div className="blog-wrapper prose lg:prose-lg">{children}</div>
             </Container>
-            <div className="bg-subtle">
-                <Contact blog className="pt-16 pb-40" />
-                <Footer />
-            </div>
-        </>
+        </Layout>
     )
 }
 

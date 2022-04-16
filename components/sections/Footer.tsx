@@ -13,10 +13,10 @@ const Footer: React.FC<Props> = ({ withSocials }) => {
     return (
         <Container spaced>
             <Divider className="mb-10" />
-            <div className="items-center justify-between h-full md:flex">
+            <div className="h-full items-center justify-between md:flex">
                 <ThemeChanger className="mt-6 md:mt-0" />
                 {withSocials ? <Socials className="md:ml-16" /> : null}
-                <nav className="mt-6 text-base space-x-8 md:mt-0 md:ml-16">
+                <nav className="mt-6 space-x-8 text-base md:mt-0 md:ml-16">
                     <Link href="/">
                         <a className="link-style">Home</a>
                     </Link>

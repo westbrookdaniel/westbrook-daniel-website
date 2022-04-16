@@ -40,7 +40,7 @@ const Code = ({ children, className }: Props) => {
                                 key={i}
                                 {...lineProps}
                             >
-                                <span className="hidden pr-4 text-right opacity-25 select-none md:table-cell">
+                                <span className="hidden select-none pr-4 text-right opacity-25 md:table-cell">
                                     {i + 1}
                                 </span>
                                 <span className="table-cell">

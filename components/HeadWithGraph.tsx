@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import React from 'react'
 
-interface Props {
+export interface HeadWithGraphProps {
     title?: string
     image?: string
     description?: string
 }
 
-const HeadWithGraph: React.FC<Props> = ({
+const HeadWithGraph: React.FC<HeadWithGraphProps> = ({
     title,
     image,
     description,

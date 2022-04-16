@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { CgArrowRight } from 'react-icons/cg'
-import { normalTransition } from '../../util/constants'
-import truncate from '../../util/truncate'
-import { ProjectData } from '../../util/types'
-import Divider from '../common/Divider'
-import Image from '../project/Image'
+import { normalTransition } from '../../../util/constants'
+import truncate from '../../../util/truncate'
+import { ProjectData } from '../../../util/types'
+import Divider from '../../common/Divider'
+import Image from '../../project/Image'
 
 interface Props {
     data: ProjectData

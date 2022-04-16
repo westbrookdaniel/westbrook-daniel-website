@@ -3,7 +3,6 @@ export function reorder<T>(
     prop: keyof T,
     reversed: boolean = false
 ) {
-    if (!source) return
     const tempOrder = [...source]
     const newOrder = sortBy(tempOrder, (el: any) => el[prop])
     if (reversed) {

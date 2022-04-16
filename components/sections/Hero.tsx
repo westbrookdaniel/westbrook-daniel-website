@@ -6,9 +6,6 @@ import me from '../../public/images/me.jpg'
 export default function Hero() {
     return (
         <Container className="m-auto">
-            <div className="w-full pb-10">
-                <Nav className="pt-10" />
-            </div>
             <div className="grid items-center gap-10 lg:grid-cols-3 xl:grid-cols-4 xl:gap-16">
                 <h1 className="max-w-title col-span-2 lg:text-5xl xl:col-span-3 xl:text-6xl">
                     Full Stack Developer and Designer, Currently Working at{' '}

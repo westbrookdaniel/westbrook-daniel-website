@@ -1,13 +1,10 @@
 import Container from '../common/Container'
-import Nav from '../nav/Nav'
 import Divider from '../common/Divider'
-import Contact from '../sections/Contact'
-import Footer from '../sections/Footer'
 import { CgArrowRight } from 'react-icons/cg'
 import { useMemo } from 'react'
-import ProjectItem from '../sections/ProjectItem'
+import ProjectItem from '../sections/Items/ProjectItem'
 import { ProjectMeta, ProjectData } from '../../util/types'
-import HeadWithGraph from '../HeadWithGraph'
+import Layout from './Layout'
 
 interface Props {
     data: ProjectMeta
@@ -30,25 +27,19 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
     }, [data.title, projectData])
 
     return (
-        <>
-            <HeadWithGraph
-                title={data.title}
-                image={data.feature?.src}
-                description={data.description}
-            />
-            <Container>
-                <div className="w-full pb-10">
-                    <Nav className="pt-10" />
-                </div>
-            </Container>
+        <Layout
+            title={data.title}
+            image={data.feature?.src}
+            description={data.description}
+        >
             <Container spaced>
-                <div className="flex flex-col mb-6 lg:flex-row space-y-2 lg:space-y-0 lg:items-end">
+                <div className="mb-6 flex flex-col space-y-2 lg:flex-row lg:items-end lg:space-y-0">
                     <div className="w-full">
                         <h1 className="mb-4">{data.title}</h1>
                         <p>{data.description}</p>
                     </div>
                     <div className="flex items-center space-x-10 text-brand">
-                        <div className="flex items-center hover-arrow space-x-2">
+                        <div className="hover-arrow flex items-center space-x-2">
                             <a
                                 href={data.link}
                                 target="_blank"
@@ -64,7 +55,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                             />
                         </div>
                         {data.source && (
-                            <div className="flex items-center hover-arrow space-x-2">
+                            <div className="hover-arrow flex items-center space-x-2">
                                 <a
                                     href={data.source}
                                     target="_blank"
@@ -93,11 +84,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                     )}
                 </div>
             </Container>
-            <div className="bg-subtle">
-                <Contact className="pt-16 pb-40" />
-                <Footer />
-            </div>
-        </>
+        </Layout>
     )
 }
 

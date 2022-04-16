@@ -1,13 +1,11 @@
 import * as React from 'react'
-import Container from '../components/common/Container'
-import Nav from '../components/nav/Nav'
-import Footer from '../components/sections/Footer'
-import Contact from '../components/sections/Contact'
 import { ProjectData } from '../util/types'
-import ProjectSection from '../components/sections/ProjectSection'
 import { sideData } from '../lib/sideData'
-import HeadWithGraph from '../components/HeadWithGraph'
-
+import Layout from '../components/layout/Layout'
+import SmallItem from '../components/sections/SmallItem'
+import ProjectItems from '../components/sections/Items/ProjectItems'
+import Items from '../components/sections/Items/Items'
+import SmallItemLayout from '../components/sections/ItemsLayout/SmallItemLayout'
 export { getStaticProps } from '../lib/getProjectData'
 
 interface Props {
@@ -16,18 +14,12 @@ interface Props {
 
 const Blog: React.FC<Props> = ({ projectData }) => {
     return (
-        <>
-            <HeadWithGraph
-                title="Projects"
-                image="/images/projects/space-of-the-day/space"
-            />
-            <Container className="m-auto">
-                <div className="mb-12 w-full">
-                    <Nav className="pt-10" />
-                </div>
-            </Container>
+        <Layout
+            title="Projects"
+            image="/images/projects/space-of-the-day/space"
+        >
             <div className="flex-grow mb-24">
-                <ProjectSection
+                <ProjectItems
                     title={
                         <>
                             <h1 className="max-w-title">Projects</h1>
@@ -39,17 +31,14 @@ const Blog: React.FC<Props> = ({ projectData }) => {
                     }
                     data={projectData}
                 />
-                <ProjectSection
+                <Items
                     title={<h2>Other Projects</h2>}
-                    small
+                    render={p => <SmallItem data={p} />}
+                    ItemsLayout={SmallItemLayout}
                     data={sideData}
                 />
             </div>
-            <div className="bg-subtle">
-                <Contact className="pt-16 pb-32" />
-                <Footer />
-            </div>
-        </>
+        </Layout>
     )
 }
 

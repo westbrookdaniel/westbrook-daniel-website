@@ -1,13 +1,13 @@
 import About from '../components/sections/About'
 import Hero from '../components/sections/Hero'
-import ProjectSection from '../components/sections/ProjectSection'
-import BlogSection from '../components/sections/BlogSection'
-import Contact from '../components/sections/Contact'
-import Footer from '../components/sections/Footer'
 import getProjectData from '../lib/getProjectData'
 import getBlogData from '../lib/getBlogData'
 import { BlogData, ProjectData } from '../util/types'
-import HeadWithGraph from '../components/HeadWithGraph'
+import Layout from '../components/layout/Layout'
+import BlogItems from '../components/sections/Items/BlogItems'
+import SmallItem from '../components/sections/SmallItem'
+import ProjectItems from '../components/sections/Items/ProjectItems'
+import SmallItemLayout from '../components/sections/ItemsLayout/SmallItemLayout'
 
 export async function getStaticProps() {
     const projectData = await getProjectData()
@@ -27,33 +27,26 @@ interface Props {
 
 const Home: React.FC<Props> = ({ projectData, blogData }) => {
     return (
-        <>
-            <HeadWithGraph />
-
+        <Layout>
             <Hero />
-
             <div className="mt-12 mb-6">
                 <About />
             </div>
             <div className="flex-grow mb-24">
-                <BlogSection
+                <BlogItems
                     title={<h2>Blog Posts</h2>}
-                    limit
                     data={blogData}
+                    limitedWithMessage="See All Posts"
                 />
-                <ProjectSection
+                <ProjectItems
                     title={<h2>Projects</h2>}
-                    small
+                    render={p => <SmallItem data={p} />}
                     data={projectData}
-                    seeAll
+                    ItemsLayout={SmallItemLayout}
+                    limitedWithMessage="See All Projects"
                 />
             </div>
-
-            <div className="bg-subtle">
-                <Contact className="pt-16 pb-32" />
-                <Footer />
-            </div>
-        </>
+        </Layout>
     )
 }
 

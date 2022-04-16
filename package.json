@@ -7,8 +7,8 @@
         "build": "next build",
         "start": "next start",
         "pretty": "npx prettier '**/*' --ignore-unknown --write",
-        "ts": "tsc",
-        "ts:watch": "tsc --watch"
+        "tsc": "tsc",
+        "lint": "next lint"
     },
     "dependencies": {
         "@mdx-js/react": "^1.x.x",
