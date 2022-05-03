@@ -7,7 +7,12 @@ import { MDXProvider } from '@mdx-js/react'
 import { AppProps } from 'next/dist/shared/lib/router/router'
 import { MdxComponents } from '../components/mdx'
 import ThemeHandler from '../components/theme/ThemeHandler'
-import Analytics from '../components/Analytics'
+
+declare global {
+    interface Window {
+        dataLayer: any[]
+    }
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
     React.useEffect(() => {
@@ -17,13 +22,20 @@ function MyApp({ Component, pageProps }: AppProps) {
         )
     }, [])
 
+    // Setup for google analytics
+    React.useEffect(() => {
+        if (!window) return
+        window.dataLayer = window.dataLayer || []
+        window.dataLayer.push('js', new Date())
+        window.dataLayer.push('config', 'G-L3S62B7X3T')
+    }, [])
+
     return (
         <ThemeHandler>
             <MDXProvider components={MdxComponents}>
                 <StickyNav />
                 {/* @ts-ignore Will fix this in rebuild */}
                 <Component {...pageProps} />
-                <Analytics />
             </MDXProvider>
         </ThemeHandler>
     )

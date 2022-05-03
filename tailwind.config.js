@@ -1,13 +1,5 @@
 module.exports = {
-    future: {
-        removeDeprecatedGapUtilities: true,
-        purgeLayersByDefault: true,
-    },
-    experimental: {
-        extendedFontSizeScale: true,
-        applyComplexClasses: true,
-    },
-    purge: [
+    content: [
         './components/**/*.js',
         './util/**/*.js',
         './pages/**/*.js',

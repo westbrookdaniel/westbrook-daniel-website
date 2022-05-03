@@ -54,7 +54,6 @@ const Code = ({ children, className }: Props) => {
                                             })}
                                         />
                                     ))}
-                                    Highlight
                                 </span>
                             </div>
                         )
