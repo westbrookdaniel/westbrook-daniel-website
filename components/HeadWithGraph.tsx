@@ -20,13 +20,13 @@ const HeadWithGraph: React.FC<HeadWithGraphProps> = ({
                 content={
                     title
                         ? title + ' | Daniel Westbrook'
-                        : 'Daniel Westbrook | Full Stack Developer'
+                        : 'Daniel Westbrook | Web Developer'
                 }
             />
             <title>
                 {title
                     ? title + ' | Daniel Westbrook'
-                    : 'Daniel Westbrook | Full Stack Developer'}
+                    : 'Daniel Westbrook | Web Developer'}
             </title>
             <meta
                 property="og:image"
@@ -36,20 +36,16 @@ const HeadWithGraph: React.FC<HeadWithGraphProps> = ({
                 property="og:description"
                 content={
                     description ||
-                    `I am a Full Stack Developer and Designer primarily working
-                    with React building web apps. I enjoy formulating
-                    performant, innovative solutions and exploring new tools and
-                    technologies.`
+                    `I am a web developer who creates and formulates performant and innovative solutions. 
+                    I also love exploring new and exciting tools and technologies.`
                 }
             />
             <meta
                 property="description"
                 content={
                     description ||
-                    `I am a Full Stack Developer and Designer primarily working
-                    with React building web apps. I enjoy formulating
-                    performant, innovative solutions and exploring new tools and
-                    technologies.`
+                    `I am a web developer who creates and formulates performant and innovative solutions. 
+                    I also love exploring new and exciting tools and technologies.`
                 }
             />
             <meta property="og:site_name" content="Daniel Westbrook" />

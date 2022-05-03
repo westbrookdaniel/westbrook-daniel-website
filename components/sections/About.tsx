@@ -8,19 +8,19 @@ export default function About() {
             <Divider className="mt-4 mb-5" />
             <div className="row">
                 <p>
-                    Hi, I&apos;m Daniel Westbrook and I am a Full Stack
-                    Developer and Designer primarily working with React building
-                    web apps. I enjoy creating performant solutions and
-                    exploring new tools and technologies.
+                    Hi, I&apos;m Daniel Westbrook and I am a web developer
+                    primarily working with React building next-gen apps. I enjoy
+                    creating performant solutions and exploring new tools and
+                    technologies.
                 </p>
                 <p>
                     Some of my favourite things are{' '}
                     <a
-                        href="https://nextjs.org/"
+                        href="https://remix.run/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Nextjs
+                        Remix
                     </a>
                     ,{' '}
                     <a

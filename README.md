@@ -2,9 +2,7 @@
 
 This is the website for Me (Daniel Westbrook).
 
-This website is built using React, Nextjs, TailwindCSS, and MDX.
-
-## Scripts
+## A Few Important Scripts
 
 ```bash
 # Development
