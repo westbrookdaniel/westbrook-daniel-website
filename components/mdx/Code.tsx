@@ -15,6 +15,7 @@ const Code = ({ children, className }: Props) => {
         ? (className.replace(/language-/, '') as Language)
         : 'markup'
     return (
+        // @ts-ignore Will fix this in rebuild
         <Highlight
             {...defaultProps}
             theme={theme as PrismTheme}
@@ -40,7 +41,7 @@ const Code = ({ children, className }: Props) => {
                                 key={i}
                                 {...lineProps}
                             >
-                                <span className="hidden select-none pr-4 text-right opacity-25 md:table-cell">
+                                <span className="hidden pr-4 text-right opacity-25 select-none md:table-cell">
                                     {i + 1}
                                 </span>
                                 <span className="table-cell">
@@ -53,6 +54,7 @@ const Code = ({ children, className }: Props) => {
                                             })}
                                         />
                                     ))}
+                                    Highlight
                                 </span>
                             </div>
                         )

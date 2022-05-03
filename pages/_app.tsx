@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ThemeHandler>
             <MDXProvider components={MdxComponents}>
                 <StickyNav />
+                {/* @ts-ignore Will fix this in rebuild */}
                 <Component {...pageProps} />
                 <Analytics />
             </MDXProvider>
