@@ -18,7 +18,7 @@ export default function Hero() {
                         GLX Digital
                     </a>
                 </h1>
-                <div className="flex items-center justify-end">
+                <div className="flex items-center lg:justify-end">
                     <div className="w-32 max-h-32 xl:max-h-40 xl:w-40">
                         <Image
                             width={200}
