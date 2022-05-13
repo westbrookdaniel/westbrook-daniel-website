@@ -1,17 +1,13 @@
-import BlogLayout from '../../../components/layout/BlogLayout'
+---
+title: 'Nextjs 10.1 Development Improvements'
+description: 'Learn about the latest updates to next/image and other improvements'
+date: 1618650842693
+feature: './images/feature.jpg'
+snippet: `Nextjs just got it's most recent update - 10.1 - which brings a lot of new exciting features. Some highlights include: 
+3x faster refresh, Reduced install time/size, next/image Improvements, Custom 500 page, Initial Webpack 5 support.`
+---
+
 import Divider from '../../../components/common/Divider'
-import feature from './images/feature.jpg'
-export const meta = {
-    title: 'Nextjs 10.1 Development Improvements',
-    description:
-        'Learn about the latest updates to next/image and other improvements',
-    date: 1618650842693,
-    feature,
-    snippet: `Nextjs just got it's most recent update - 10.1 - which brings a lot of new exciting features. Some highlights include: 
-    3x faster refresh, Reduced install time/size, next/image Improvements, Custom 500 page, Initial Webpack 5 support.`,
-}
-export { getStaticProps } from '../../../lib/getBlogData'
-export default props => <BlogLayout meta={meta} {...props} />
 
 Photo by [Jake Givens](https://unsplash.com/@jakegivens?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/fast?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

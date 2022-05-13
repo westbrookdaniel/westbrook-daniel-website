@@ -1,15 +1,13 @@
-import BlogLayout from '../../../components/layout/BlogLayout'
+---
+title: 'Valtio Brings Vue's State to React'
+description: 'Be more flexible about where you use state'
+date: 1634347371335
+feature: './images/feature.jpg'
+snippet: `What's great about Vue is that it has a very simple way to manage state. One of the best things about Vue's state is it doesn't have the same restrictions as hooks. For example, the below code is invalid in React because hooks must be used...`
+---
+
 import Divider from '../../../components/common/Divider'
 import feature from './images/feature.jpg'
-export const meta = {
-    title: "Valtio Brings Vue's State to React",
-    description: 'Be more flexible about where you use state',
-    date: 1634347371335,
-    feature,
-    snippet: `What's great about Vue is that it has a very simple way to manage state. One of the best things about Vue's state is it doesn't have the same restrictions as hooks. For example, the below code is invalid in React because hooks must be used...`,
-}
-export { getStaticProps } from '../../../lib/getBlogData'
-export default props => <BlogLayout meta={meta} {...props} />
 
 Photo by [Michael Dziedzic](https://unsplash.com/@lazycreekimages?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/shapes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

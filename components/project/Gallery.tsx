@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Gallery: React.FC = ({ children }) => {
+interface Props {
+    children?: React.ReactNode
+}
+
+const Gallery: React.FC<Props> = ({ children }) => {
     return (
-        <div className="w-100 my-8 grid gap-8 lg:grid-flow-col">{children}</div>
+        <div className="my-8 w-100 grid gap-8 lg:grid-flow-col">{children}</div>
     )
 }
 

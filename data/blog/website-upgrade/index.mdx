@@ -1,23 +1,18 @@
-import BlogLayout from '../../../components/layout/BlogLayout'
-import Divider from '../../../components/common/Divider'
-import feature from './images/feature.jpg'
-import rebass from './images/rebassjs.png'
-import Image from '../../../components/common/Image'
-export const meta = {
-    title: 'Time for a Website Upgrade',
-    description: 'Adding theming and improving performance',
-    date: 1623930322525,
-    feature,
-    snippet: `With the release of Nextjs 11, I decided it was time for some website improvements.
-Some of the key problems I wanted to solve was...Thankfully, these first two are made easy by Nextjs 11. The recent placeholder property
-added to the next/image component...`,
+---
+title: 'Time for a Website Upgrade'
+description: 'Adding theming and improving performance'
+date: 1623930322525
+feature: {
+    href: './images/feature.jpg',
+    author: {
+        name: 'Ana Kolosyuk',
+        referral: 'https://unsplash.com/@anko_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'
+    }
 }
-export { getStaticProps } from '../../../lib/getBlogData'
-export default props => <BlogLayout meta={meta} {...props} />
-
-Photo by <a href="https://unsplash.com/@anko_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anna Kolosyuk</a> on <a href="https://unsplash.com/s/photos/paint?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-<Divider />
+snippet: 'With the release of Nextjs 11, I decided it was time for some website improvements.
+Some of the key problems I wanted to solve was...Thankfully, these first two are made easy by Nextjs 11. 
+The recent placeholder property added to the next/image component...'
+---
 
 With the release of Nextjs 11, I decided it was time for some website improvements.
 Some of the key problems I wanted to solve was:
@@ -44,7 +39,7 @@ I wanted to make more colour schemes avalible whilst still having an automatic c
 My inspiration originally came from the [Rebass website](https://rebassjs.org/) pictured below which
 has a similar colour scheme switcher.
 
-<Image src={rebass} alt="Rebass Website" />
+![Rebass Websote]('./images/rebassjs.png')
 
 The styling of my website is done with [TailwindCSS](https://tailwindcss.com/), and since it supports using CSS custom properties, that
 was where I started my implementation.

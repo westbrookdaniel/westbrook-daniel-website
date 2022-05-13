@@ -9,6 +9,7 @@ import Layout from './Layout'
 interface Props {
     data: ProjectMeta
     projectData: ProjectData[]
+    children: React.ReactNode
 }
 
 const Project: React.FC<Props> = ({ data, children, projectData }) => {
@@ -33,13 +34,13 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
             description={data.description}
         >
             <Container spaced>
-                <div className="mb-6 flex flex-col space-y-2 lg:flex-row lg:items-end lg:space-y-0">
+                <div className="flex flex-col mb-6 space-y-2 lg:flex-row lg:items-end lg:space-y-0">
                     <div className="w-full">
                         <h1 className="mb-4">{data.title}</h1>
                         <p>{data.description}</p>
                     </div>
                     <div className="flex items-center space-x-10 text-brand">
-                        <div className="hover-arrow flex items-center space-x-2">
+                        <div className="flex items-center hover-arrow space-x-2">
                             <a
                                 href={data.link}
                                 target="_blank"
@@ -55,7 +56,7 @@ const Project: React.FC<Props> = ({ data, children, projectData }) => {
                             />
                         </div>
                         {data.source && (
-                            <div className="hover-arrow flex items-center space-x-2">
+                            <div className="flex items-center hover-arrow space-x-2">
                                 <a
                                     href={data.source}
                                     target="_blank"

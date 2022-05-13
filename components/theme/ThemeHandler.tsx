@@ -8,7 +8,7 @@ interface ThemeStore {
     rotateTheme: () => void
 }
 
-export const useTheme = create<ThemeStore>((set, get) => ({
+export const useTheme = create<ThemeStore>(set => ({
     theme:
         getLocalStorage('theme') ||
         (typeof window !== 'undefined'
@@ -122,7 +122,11 @@ export const themes = {
     },
 }
 
-const ThemeHandler: React.FC = ({ children }) => {
+interface ThemeHandlerProps {
+    children?: React.ReactNode
+}
+
+const ThemeHandler: React.FC<ThemeHandlerProps> = ({ children }) => {
     const { theme, rotateTheme } = useTheme()
     const updateTheme = useTheme(s => s.updateTheme)
 

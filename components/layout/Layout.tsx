@@ -7,6 +7,7 @@ import Footer from '../sections/Footer'
 
 interface Props extends HeadWithGraphProps {
     withoutFooter?: boolean
+    children: React.ReactNode
 }
 
 const Layout: React.FC<Props> = ({ children, withoutFooter, ...props }) => {

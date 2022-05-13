@@ -5,6 +5,7 @@ export interface HeadWithGraphProps {
     title?: string
     image?: string
     description?: string
+    children?: React.ReactNode
 }
 
 const HeadWithGraph: React.FC<HeadWithGraphProps> = ({
