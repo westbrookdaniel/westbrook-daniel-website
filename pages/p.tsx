@@ -6,7 +6,8 @@ import SmallItem from '../components/sections/SmallItem'
 import ProjectItems from '../components/sections/Items/ProjectItems'
 import Items from '../components/sections/Items/Items'
 import SmallItemLayout from '../components/sections/ItemsLayout/SmallItemLayout'
-export { getStaticProps } from '../lib/getProjectData'
+
+export { getStaticProps } from '../lib/getProjectData.server'
 
 interface Props {
     projectData: ProjectData[]

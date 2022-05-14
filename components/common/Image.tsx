@@ -7,9 +7,8 @@ export default function Image({ className = '', src, ...props }: ImageProps) {
             <NextImage
                 layout="responsive"
                 className={className + ' bg-subtle'}
-                placeholder="blur"
-                // This type needs fixing
-                src={src as any}
+                placeholder={typeof src === 'string' ? 'empty' : 'blur'}
+                src={src}
                 {...props}
             />
         </div>

@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image'
+
 export interface Feature {
     author: {
         name: string
@@ -10,7 +12,7 @@ export interface ProjectMeta {
     title: string
     description?: string
     link?: string
-    feature?: Feature
+    feature?: StaticImageData
     order?: number
     external?: boolean
     source?: string

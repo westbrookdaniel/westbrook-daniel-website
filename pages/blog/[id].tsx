@@ -1,8 +1,8 @@
 import * as React from 'react'
 import type { GetStaticPaths } from 'next'
-import { getMDXComponent } from 'mdx-bundler/client'
 import { BlogMeta } from '../../util/types'
 import BlogLayout from '../../components/layout/BlogLayout'
+import { useMDXComponent } from '../../lib/mdx'
 
 interface Props {
     code: string
@@ -19,7 +19,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 const BlogPost: React.FC<Props> = ({ code, meta }) => {
-    const Component = React.useMemo(() => getMDXComponent(code), [code])
+    const Component = useMDXComponent(code)
     return (
         <BlogLayout meta={meta}>
             <Component />

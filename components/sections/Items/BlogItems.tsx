@@ -1,10 +1,10 @@
 import * as React from 'react'
 import Items, { ItemsProps } from './Items'
 import BlogItem from './BlogItem'
-import { BlogData, ProjectData } from '../../../util/types'
+import { BlogData } from '../../../util/types'
 import { reorder } from '../../../util/reorder'
 
-interface Props extends Partial<ItemsProps<ProjectData>> {
+interface Props extends Partial<ItemsProps<BlogData>> {
     title: JSX.Element
     data: BlogData[]
 }

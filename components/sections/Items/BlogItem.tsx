@@ -22,7 +22,7 @@ const BlogItem: React.FC<Props> = ({ data }) => {
                             loading="eager"
                             width={400}
                             height={270}
-                            src={data.feature}
+                            src={data.feature.href}
                         />
                     </div>
                     <div className="flex flex-col justify-center col-span-5">

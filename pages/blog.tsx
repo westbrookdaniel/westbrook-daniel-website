@@ -3,7 +3,7 @@ import { BlogData } from '../util/types'
 import Layout from '../components/layout/Layout'
 import BlogItems from '../components/sections/Items/BlogItems'
 
-export { getStaticProps } from '../lib/getBlogData'
+export { getStaticProps } from '../lib/getBlogData.server'
 
 interface Props {
     blogData: BlogData[]
