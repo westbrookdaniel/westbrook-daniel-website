@@ -1,9 +1,8 @@
-import { GetStaticProps } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next'
 import { BlogMeta } from '../util/types'
 import { bundleMDX } from 'mdx-bundler'
 import path from 'path'
 import fs from 'fs/promises'
-import { MdxComponents } from '../components/mdx'
 
 const SOURCE_FOLDER = 'data'
 const BLOG_DIR = 'blog'
@@ -40,4 +39,11 @@ export const getStaticProps: GetStaticProps = async context => {
     if (typeof postId !== 'string') throw new Error('postid is not valid')
     const props = await getMdxData<BlogMeta>(BLOG_DIR, postId)
     return { props }
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+    return {
+        paths: [{ params: { id: 'website-rebuild' } }],
+        fallback: true,
+    }
 }
