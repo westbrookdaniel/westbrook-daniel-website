@@ -1,14 +1,9 @@
 module.exports = {
     content: [
-        './components/**/*.js',
-        './util/**/*.js',
-        './pages/**/*.js',
-        './components/**/*.tsx',
-        './util/**/*.tsx',
-        './pages/**/*.tsx',
-        './components/**/*.ts',
-        './util/**/*.ts',
-        './pages/**/*.ts',
+        './pages/**/*.{js,ts,tsx,jsx}',
+        './util/**/*.{js,ts,tsx,jsx}',
+        './components/**/*.{js,ts,tsx,jsx}',
+        './data/**/*.{js,ts,tsx,jsx,md,mdx}',
         './styles/**/*.css',
     ],
     prefix: '',

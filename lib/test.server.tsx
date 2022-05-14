@@ -19,7 +19,7 @@ export async function getMdxData<Meta extends object>(
     const directoryPath = path.join(process.cwd(), SOURCE_FOLDER, dir, slug)
     const filePath = path.join(directoryPath, 'index.mdx')
 
-    const source = String(await fs.readFile(filePath))
+    let source = String(await fs.readFile(filePath))
 
     const { code, frontmatter, errors } = await bundleMDX({
         source,
@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps = async context => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
     return {
-        paths: [{ params: { id: 'website-rebuild' } }],
+        paths: [{ params: { id: 'website-upgrade' } }],
         fallback: true,
     }
 }
