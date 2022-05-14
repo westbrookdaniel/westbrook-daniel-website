@@ -3,6 +3,7 @@ import { BlogMeta } from '../util/types'
 import { bundleMDX } from 'mdx-bundler'
 import path from 'path'
 import fs from 'fs/promises'
+import rehypePrism from 'rehype-prism-plus'
 
 const SOURCE_FOLDER = 'data'
 const BLOG_DIR = 'blog'
@@ -24,6 +25,18 @@ export async function getMdxData<Meta extends object>(
     const { code, frontmatter, errors } = await bundleMDX({
         source,
         cwd: directoryPath,
+        mdxOptions(options) {
+            options.rehypePlugins = [
+                ...(options.rehypePlugins ?? []),
+                [
+                    rehypePrism,
+                    {
+                        showLineNumbers: true,
+                    },
+                ],
+            ]
+            return options
+        },
     })
 
     if (errors.length > 0) {

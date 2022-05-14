@@ -42,14 +42,16 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
             </Container>
             <Container className="flex-grow pb-24">
                 <div className="blog-wrapper prose lg:prose-lg">
-                    Photo by{' '}
-                    <a href={meta.feature.author.referral}>
-                        {meta.feature.author.name}
-                    </a>{' '}
-                    on{' '}
-                    <a href="https://unsplash.com/s/photos/paint?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                        Unsplash
-                    </a>
+                    <p>
+                        Photo by{' '}
+                        <a href={meta.feature.author.referral}>
+                            {meta.feature.author.name}
+                        </a>{' '}
+                        on{' '}
+                        <a href="https://unsplash.com/s/photos/paint?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                            Unsplash
+                        </a>
+                    </p>
                     <Divider />
                     {children}
                 </div>
