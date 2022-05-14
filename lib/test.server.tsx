@@ -16,10 +16,10 @@ export async function getMdxData<Meta extends object>(
     dir: string,
     slug: string
 ): Promise<MdxData<Meta>> {
-    const directoryPath = path.join(process.cwd(), SOURCE_FOLDER, dir, slug)
-    const filePath = path.join(directoryPath, 'index.mdx')
+    const directoryPath = path.join(process.cwd(), SOURCE_FOLDER, dir)
+    const filePath = path.join(directoryPath, `${slug}.mdx`)
 
-    let source = String(await fs.readFile(filePath))
+    const source = String(await fs.readFile(filePath))
 
     const { code, frontmatter, errors } = await bundleMDX({
         source,
