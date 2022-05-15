@@ -43,6 +43,3 @@ const Home: React.FC<Props> = ({ blogMetas }) => {
 }
 
 export default Home
-function getProjectData() {
-    throw new Error('Function not implemented.')
-}

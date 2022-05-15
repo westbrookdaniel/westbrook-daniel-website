@@ -2,11 +2,11 @@ import * as React from 'react'
 import Items, { ItemsProps } from './Items'
 import ProjectItem from './ProjectItem'
 import ProjectGrid from '../ItemsLayout/ProjectGrid'
-import { Project } from '../../../data/projects'
+import { DetailedProject } from '../../../data/projects'
 
-interface Props extends Partial<ItemsProps<Project>> {
+interface Props extends Partial<ItemsProps<DetailedProject>> {
     title: JSX.Element
-    data: Project[]
+    data: DetailedProject[]
 }
 
 const ProjectItems: React.FC<Props> = ({ title, data, ...props }) => {

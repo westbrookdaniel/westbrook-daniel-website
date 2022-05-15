@@ -1,10 +1,10 @@
-export interface SideProject {
+export interface Project {
     title: string
     website: string
     source?: string
 }
 
-export const sideProjects: SideProject[] = [
+export const sideProjects: Project[] = [
     {
         // TODO: Should put the source for this on github
         website: 'https://img-board.netlify.app/',
@@ -27,12 +27,12 @@ export const sideProjects: SideProject[] = [
     },
 ]
 
-export interface Project extends SideProject {
+export interface DetailedProject extends Project {
     description: string
     feature: string
 }
 
-export const projects: Project[] = [
+export const projects: DetailedProject[] = [
     {
         title: 'Stories for Reddit',
         description: 'Discover and read community made short stories',

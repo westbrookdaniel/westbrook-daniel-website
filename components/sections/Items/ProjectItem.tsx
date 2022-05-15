@@ -1,11 +1,11 @@
 import { CgArrowRight } from 'react-icons/cg'
-import { Project } from '../../../data/projects'
+import { DetailedProject } from '../../../data/projects'
 import { normalTransition } from '../../../util/constants'
 import truncate from '../../../util/truncate'
 import Image from '../../project/Image'
 
 interface Props {
-    data: Project
+    data: DetailedProject
 }
 
 const ProjectItem: React.FC<Props> = ({ data }) => {

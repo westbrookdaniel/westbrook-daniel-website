@@ -1,11 +1,11 @@
-import Link from 'next/link'
 import { CgArrowRight } from 'react-icons/cg'
+import { Project } from '../../data/projects'
 
-export default function SmallItem({ data }: { data: any }) {
+export default function SmallItem({ data }: { data: Project }) {
     const contents = (
         <div className="hover-arrow">
-            <div className="flex w-full items-center">
-                <h4 className="mr-2 font-body font-normal text-on-background">
+            <div className="flex items-center w-full">
+                <h4 className="mr-2 font-normal font-body text-on-background">
                     {data.title}
                 </h4>
                 <div className="arrow">
@@ -15,17 +15,9 @@ export default function SmallItem({ data }: { data: any }) {
         </div>
     )
 
-    if (!!data.external) {
-        return (
-            <a href={data.slug} target="_blank" rel="noopener noreferrer">
-                {contents}
-            </a>
-        )
-    }
-
     return (
-        <Link href={data.slug}>
-            <a>{contents}</a>
-        </Link>
+        <a href={data.website} target="_blank" rel="noopener noreferrer">
+            {contents}
+        </a>
     )
 }
