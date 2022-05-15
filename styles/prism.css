@@ -80,23 +80,25 @@ pre[class*='language-'] {
     hyphens: none;
 }
 
-pre[class*='language-']::-moz-selection,
-pre[class*='language-'] ::-moz-selection,
-code[class*='language-']::-moz-selection,
-code[class*='language-'] ::-moz-selection {
+pre.code-highlight::-moz-selection,
+pre.code-highlight ::-moz-selection,
+code.code-highlight::-moz-selection,
+code.code-highlight ::-moz-selection {
     background: #3c526d;
 }
 
-pre[class*='language-']::selection,
-pre[class*='language-'] ::selection,
-code[class*='language-']::selection,
-code[class*='language-'] ::selection {
+pre.code-highlight::selection,
+pre.code-highlight ::selection,
+code.code-highlight::selection,
+code.code-highlight ::selection {
     background: #3c526d;
 }
 
 /* Code blocks */
 :not(pre) > code[class*='language-'],
-pre[class*='language-'] {
+pre[class*='language-'],
+/* Fix for no language */
+.prose pre {
     background: #111b27;
 }
 

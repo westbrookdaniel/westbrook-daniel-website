@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs/promises'
 import matter from 'gray-matter'
-import { getDirPaths, removeExtension } from './getDirPaths.server'
+import { getDirPaths } from './getDirPaths.server'
 
 export interface WithSlug {
     slug: string
@@ -20,13 +20,14 @@ export async function getDirMeta<Meta extends WithSlug>(
 
     const allMeta = files.reduce((arr, file, i) => {
         const meta = matter(file).data
-        if (meta) {
-            meta.slug = createSlug(fileNames[i])
-            arr.push(meta as Meta)
+        const fileName = fileNames[i]
+        if (Object.keys(meta).length === 0) {
+            throw new Error(`Failed to get meta for ${fileName}`)
         }
+        meta.slug = createSlug(fileName)
+        arr.push(meta as Meta)
         return arr
     }, [] as Meta[])
 
-    console.log(allMeta)
     return allMeta
 }
