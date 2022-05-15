@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { ProjectData } from '../util/types'
-import { sideData } from '../lib/sideData'
+import { sideProjects } from '../data/projects'
 import Layout from '../components/layout/Layout'
 import SmallItem from '../components/sections/SmallItem'
 import ProjectItems from '../components/sections/Items/ProjectItems'
@@ -36,7 +36,7 @@ const Blog: React.FC<Props> = ({ projectData }) => {
                     title={<h2>Other Projects</h2>}
                     render={p => <SmallItem data={p} />}
                     ItemsLayout={SmallItemLayout}
-                    data={sideData}
+                    data={sideProjects}
                 />
             </div>
         </Layout>
