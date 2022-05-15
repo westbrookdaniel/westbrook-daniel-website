@@ -120,8 +120,15 @@ h3 {
 .hover-arrow:hover img {
     @apply scale-105;
 }
+.project.hover-arrow:hover img {
+    @apply translate-y-8;
+}
 .hover-arrow:active img {
     @apply scale-100;
+}
+/* Stop the nextjs image from having overflow hidden */
+.project.hover-arrow > div > span {
+    @apply overflow-visible !important;
 }
 .hover-arrow:hover .arrow {
     @apply translate-x-2;

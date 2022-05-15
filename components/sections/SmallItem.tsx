@@ -16,7 +16,11 @@ export default function SmallItem({ data }: { data: Project }) {
     )
 
     return (
-        <a href={data.website} target="_blank" rel="noopener noreferrer">
+        <a
+            href={data.source || data.website}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             {contents}
         </a>
     )

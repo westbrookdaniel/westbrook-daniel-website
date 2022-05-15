@@ -29,35 +29,41 @@ export const sideProjects: Project[] = [
 
 export interface DetailedProject extends Project {
     description: string
-    feature: string
+    screenshot: string
+    color: string
 }
 
 export const projects: DetailedProject[] = [
+    {
+        title: 'Brisk Poll',
+        description: 'Create and vote in polls quickly and easily',
+        website: 'https://brisk-poll.fly.dev/',
+        source: 'https://github.com/westbrookdaniel/brisk-poll',
+        screenshot: '/images/projects/brisk-poll.png',
+        color: '#a6c1ee',
+    },
     {
         title: 'Stories for Reddit',
         description: 'Discover and read community made short stories',
         website: 'https://stories-for-reddit.vercel.app/',
         source: 'https://github.com/westbrookdaniel/stories-for-reddit',
-        feature: '/images/projects/stories-for-reddit/stories.jpg',
+        screenshot: '/images/projects/stories-for-reddit.png',
+        color: '#c6b6b7',
     },
     {
         title: 'Space of the Day',
         description: 'Discover astronomy pictures with a visual focus',
         website: 'https://spaceoftheday.netlify.app/',
         source: 'https://github.com/westbrookdaniel/space-of-the-day',
-        feature: '/images/projects/space-of-the-day/space.jpg',
+        screenshot: '/images/projects/space-of-the-day.jpg',
+        color: '#91beb7',
     },
     {
         title: 'TeaHome',
         description: 'Online based tea store for limited run teas',
         website: 'https://tea-home.herokuapp.com/',
         source: 'https://github.com/westbrookdaniel/teahome',
-        feature: '/images/projects/teahome/teahome.jpg',
-    },
-    {
-        title: 'Distinctive Homes WA',
-        description: 'Marketing Website for Distinctive Homes WA',
-        website: 'https://www.distinctivehomeswa.com.au/',
-        feature: '/images/projects/distinctive-homes/distinctive.jpg',
+        screenshot: '/images/projects/teahome.png',
+        color: '#bdadca',
     },
 ]

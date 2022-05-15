@@ -18,8 +18,8 @@ const Projects: React.FC = () => {
                         <>
                             <h1 className="max-w-title">Projects</h1>
                             <p className="my-4">
-                                Read about some of the projects or experiments
-                                I&apos;ve worked on.
+                                Read about some of the fun projects and
+                                experiments I&apos;ve made.
                             </p>
                         </>
                     }
