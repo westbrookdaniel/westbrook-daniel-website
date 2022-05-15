@@ -9,7 +9,7 @@ interface Props {
     meta: BlogMeta
 }
 
-export { getStaticProps, getStaticPaths } from '../../lib/test.server'
+export { getStaticProps, getStaticPaths } from '../../lib/blog.server'
 
 const BlogPost: React.FC<Props> = ({ code, meta }) => {
     const Component = useMDXComponent(code)

@@ -1,15 +1,18 @@
 import * as React from 'react'
-import { BlogData } from '../util/types'
 import Layout from '../components/layout/Layout'
 import BlogItems from '../components/sections/Items/BlogItems'
+import { GetStaticProps } from 'next'
+import { BlogMetaWithSlug, getBlogsMeta } from '../lib/blog.server'
 
-export { getStaticProps } from '../lib/getBlogData.server'
-
-interface Props {
-    blogData: BlogData[]
+export const getStaticProps: GetStaticProps = async context => {
+    return { props: { blogMeta: await getBlogsMeta() } }
 }
 
-const Blog: React.FC<Props> = ({ blogData }) => {
+interface Props {
+    blogMeta: BlogMetaWithSlug[]
+}
+
+const Blog: React.FC<Props> = ({ blogMeta }) => {
     return (
         <Layout title="Blog">
             <div className="flex-grow mb-16">
@@ -23,7 +26,7 @@ const Blog: React.FC<Props> = ({ blogData }) => {
                             </p>
                         </>
                     }
-                    data={blogData}
+                    data={blogMeta}
                 />
             </div>
         </Layout>

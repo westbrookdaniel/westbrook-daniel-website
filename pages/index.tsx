@@ -1,17 +1,17 @@
 import About from '../components/sections/About'
 import Hero from '../components/sections/Hero'
 import getProjectData from '../lib/getProjectData.server'
-import getBlogData from '../lib/getBlogData.server'
 import { BlogData, ProjectData } from '../util/types'
 import Layout from '../components/layout/Layout'
 import BlogItems from '../components/sections/Items/BlogItems'
 import SmallItem from '../components/sections/SmallItem'
 import ProjectItems from '../components/sections/Items/ProjectItems'
 import SmallItemLayout from '../components/sections/ItemsLayout/SmallItemLayout'
+import { getBlogsMeta } from '../lib/blog.server'
 
 export async function getStaticProps() {
     const projectData = await getProjectData()
-    const blogData = await getBlogData()
+    const blogData = await getBlogsMeta()
     return {
         props: {
             projectData,

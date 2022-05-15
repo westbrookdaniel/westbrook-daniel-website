@@ -18,6 +18,7 @@ export interface ProjectMeta {
     source?: string
 }
 
+// TODO: Remove these
 export interface ProjectData extends ProjectMeta {
     slug: string
 }
@@ -30,6 +31,7 @@ export interface BlogMeta {
     snippet: string
 }
 
+// TODO: Remove these
 export interface BlogData extends BlogMeta {
     slug: string
 }

@@ -1,23 +1,19 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
-import { BlogMeta } from '../util/types'
 import { bundleMDX } from 'mdx-bundler'
 import path from 'path'
 import fs from 'fs/promises'
 import rehypePrism from 'rehype-prism-plus'
-
-const SOURCE_FOLDER = 'data'
-const BLOG_DIR = 'blog'
+import { getDir } from './getDirPaths.server'
 
 interface MdxData<Meta extends object> {
     code: string
     meta: Meta
 }
 
-export async function getMdxData<Meta extends object>(
+export async function getMDXData<Meta extends object>(
     dir: string,
     slug: string
 ): Promise<MdxData<Meta>> {
-    const directoryPath = path.join(process.cwd(), SOURCE_FOLDER, dir)
+    const directoryPath = getDir(dir)
     const filePath = path.join(directoryPath, `${slug}.mdx`)
 
     const source = String(await fs.readFile(filePath))
@@ -45,18 +41,4 @@ export async function getMdxData<Meta extends object>(
     }
 
     return { code, meta: frontmatter as Meta }
-}
-
-export const getStaticProps: GetStaticProps = async context => {
-    const postId = context.params?.id
-    if (typeof postId !== 'string') throw new Error('postid is not valid')
-    const props = await getMdxData<BlogMeta>(BLOG_DIR, postId)
-    return { props }
-}
-
-export const getStaticPaths: GetStaticPaths = async () => {
-    return {
-        paths: [{ params: { id: 'website-upgrade' } }],
-        fallback: true,
-    }
 }
