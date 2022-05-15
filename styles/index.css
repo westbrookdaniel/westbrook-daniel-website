@@ -121,7 +121,7 @@ h3 {
     @apply scale-105;
 }
 .project.hover-arrow:hover img {
-    @apply translate-y-8;
+    @apply scale-110 translate-y-8;
 }
 .hover-arrow:active img {
     @apply scale-100;
