@@ -30,7 +30,7 @@ const Example = () => {
 
 If we unmount the component while this fetch is in process we will get the following error.
 
-```
+```md showLineNumbers=false
 Warning: Can't perform a React state update on an unmounted component.
 This is a no-op, but it indicates a memory leak in your application.
 To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount
@@ -64,7 +64,7 @@ The `AbortSignal` (`controller.signal`) is then passed into the fetch as an argu
 Although, there is a problem with this solution. When the component is unmounted while a fetch call is in progress, this
 message is logged to the console:
 
-```
+```md showLineNumbers=false
 The user aborted a request.
 ```
 

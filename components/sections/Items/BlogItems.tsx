@@ -14,7 +14,7 @@ const BlogItems: React.FC<Props> = ({ title, data, ...props }) => {
         <Items
             title={title}
             render={p => <BlogItem data={p} />}
-            data={reorder(data, 'date')}
+            data={data}
             {...props}
         />
     )

@@ -14,7 +14,7 @@ export const getBlogsMeta = async () => {
         BLOG_DIR,
         fileName => '/blog/' + removeExtension(fileName)
     )
-    return reorder(allMeta, 'date')
+    return reorder(allMeta, 'date', true)
 }
 
 export const getStaticProps: GetStaticProps = async context => {
