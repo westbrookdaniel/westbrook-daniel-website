@@ -8,7 +8,7 @@ const NavLinks: React.FC<Props> = props => {
             <Link href="/blog">
                 <a className="link-style">Blog</a>
             </Link>
-            <Link href="/p">
+            <Link href="/projects">
                 <a className="link-style">Projects</a>
             </Link>
         </>

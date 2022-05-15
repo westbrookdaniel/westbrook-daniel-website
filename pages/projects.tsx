@@ -1,19 +1,12 @@
 import * as React from 'react'
-import { ProjectData } from '../util/types'
-import { sideProjects } from '../data/projects'
+import { projects, sideProjects } from '../data/projects'
 import Layout from '../components/layout/Layout'
 import SmallItem from '../components/sections/SmallItem'
 import ProjectItems from '../components/sections/Items/ProjectItems'
 import Items from '../components/sections/Items/Items'
 import SmallItemLayout from '../components/sections/ItemsLayout/SmallItemLayout'
 
-export { getStaticProps } from '../lib/getProjectData.server'
-
-interface Props {
-    projectData: ProjectData[]
-}
-
-const Blog: React.FC<Props> = ({ projectData }) => {
+const Projects: React.FC = () => {
     return (
         <Layout
             title="Projects"
@@ -30,7 +23,7 @@ const Blog: React.FC<Props> = ({ projectData }) => {
                             </p>
                         </>
                     }
-                    data={projectData}
+                    data={projects}
                 />
                 <Items
                     title={<h2>Other Projects</h2>}
@@ -43,4 +36,4 @@ const Blog: React.FC<Props> = ({ projectData }) => {
     )
 }
 
-export default Blog
+export default Projects

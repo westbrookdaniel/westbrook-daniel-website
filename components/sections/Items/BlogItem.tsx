@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import { CgArrowRight } from 'react-icons/cg'
+import { BlogMetaWithSlug } from '../../../lib/blog.server'
 import { normalTransition } from '../../../util/constants'
 import { formatDate } from '../../../util/formatDate'
 import truncate from '../../../util/truncate'
-import { BlogData } from '../../../util/types'
 import Image from '../../common/Image'
 
 interface Props {
-    data: BlogData
+    data: BlogMetaWithSlug
 }
 
 const BlogItem: React.FC<Props> = ({ data }) => {

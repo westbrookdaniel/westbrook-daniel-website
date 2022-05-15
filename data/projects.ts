@@ -1,4 +1,10 @@
-export const sideProjects = [
+export interface SideProject {
+    title: string
+    website: string
+    source?: string
+}
+
+export const sideProjects: SideProject[] = [
     {
         // TODO: Should put the source for this on github
         website: 'https://img-board.netlify.app/',
@@ -21,21 +27,37 @@ export const sideProjects = [
     },
 ]
 
-export const projects = [
+export interface Project extends SideProject {
+    description: string
+    feature: string
+}
+
+export const projects: Project[] = [
     {
-        website: 'https://img-board.netlify.app/',
-        title: 'IMG Board',
+        title: 'Stories for Reddit',
+        description: 'Discover and read community made short stories',
+        website: 'https://stories-for-reddit.vercel.app/',
+        source: 'https://github.com/westbrookdaniel/stories-for-reddit',
+        feature: '',
     },
     {
-        website: 'https://color-maker.netlify.app/',
-        title: 'Color Maker',
+        title: 'Space of the Day',
+        description: 'Discover astronomy pictures with a visual focus',
+        website: 'https://spaceoftheday.netlify.app/',
+        source: 'https://github.com/westbrookdaniel/space-of-the-day',
+        feature: '',
     },
     {
-        website: 'https://inspoapp.netlify.app/',
-        title: 'Inspo App',
+        title: 'TeaHome',
+        description: 'Online based tea store for limited run teas',
+        website: 'https://tea-home.herokuapp.com/',
+        source: 'https://github.com/westbrookdaniel/teahome',
+        feature: '',
     },
     {
-        website: 'https://timetablebuilder.netlify.app/',
-        title: 'Timetable Builder',
+        title: 'Distinctive Homes WA',
+        description: 'Marketing Website for Distinctive Homes WA',
+        website: 'https://www.distinctivehomeswa.com.au/',
+        feature: '',
     },
 ]
