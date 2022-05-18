@@ -27,6 +27,7 @@ export default function Socials({
             <a
                 href="mailto:westy12dan@gmail.com"
                 className={`${normalTransition} color-hover`}
+                aria-label="Email"
             >
                 <AiFillMail {...iconStyle} />
             </a>
@@ -35,6 +36,7 @@ export default function Socials({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${normalTransition} color-hover`}
+                aria-label="LinkedIn"
             >
                 <AiFillLinkedin {...iconStyle} />
             </a>
@@ -43,6 +45,7 @@ export default function Socials({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${normalTransition} color-hover`}
+                aria-label="Github"
             >
                 <AiFillGithub {...iconStyle} />
             </a>
@@ -51,6 +54,7 @@ export default function Socials({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${normalTransition} color-hover`}
+                aria-label="Twitter"
             >
                 <AiFillTwitterCircle {...iconStyle} />
             </a>

@@ -18,4 +18,8 @@ module.exports = {
     future: {
         strictPostcssConfiguration: true,
     },
+    i18n: {
+        locales: ['en'],
+        defaultLocale: 'en',
+    },
 }
