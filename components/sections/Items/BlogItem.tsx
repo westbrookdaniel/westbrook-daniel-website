@@ -16,7 +16,7 @@ const BlogItem: React.FC<Props> = ({
     return (
         <Link href={slug}>
             <a>
-                <div className="flex flex-row hover-arrow md:space-x-6">
+                <div className="hover-arrow flex flex-row md:space-x-6">
                     <div className="my-3 hidden w-full max-w-[116px] md:block">
                         <Image
                             alt={`${title} Project`}
@@ -27,10 +27,10 @@ const BlogItem: React.FC<Props> = ({
                             height={270}
                         />
                     </div>
-                    <div className="flex flex-col justify-center col-span-5">
-                        <div className="flex items-center w-full mb-2">
+                    <div className="col-span-5 flex flex-col justify-center">
+                        <div className="mb-2 flex w-full items-center">
                             <h3 className="mr-4">{truncate(title, 90)}</h3>
-                            <div className="hidden arrow md:block">
+                            <div className="arrow hidden md:block">
                                 <CgArrowRight
                                     color="var(--lines)"
                                     fontSize="1.2rem"

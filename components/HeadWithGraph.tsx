@@ -34,15 +34,8 @@ const HeadWithGraph: React.FC<HeadWithGraphProps> = ({
                 content={image || '/images/projects/me.jpg'}
             />
             <meta
+                name="description"
                 property="og:description"
-                content={
-                    description ||
-                    `I am a web developer who creates and formulates performant and innovative solutions. 
-                    I also love exploring new and exciting tools and technologies.`
-                }
-            />
-            <meta
-                property="description"
                 content={
                     description ||
                     `I am a web developer who creates and formulates performant and innovative solutions. 

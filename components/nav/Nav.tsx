@@ -17,7 +17,7 @@ export default function Nav({
     return (
         <div className={` ${className}`}>
             <div className="mb-2 flex items-center justify-between">
-                <Link href="/">
+                <Link href="/" aria-label="Home">
                     <a>
                         <Logo isSticky={isSticky} />
                     </a>
