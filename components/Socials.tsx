@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-    AiFillBehanceCircle,
     AiFillLinkedin,
     AiFillGithub,
     AiFillMail,
@@ -11,14 +10,12 @@ import { normalTransition } from '../util/constants'
 interface Props {
     className?: string
     extras?: JSX.Element | null
-    gridCol?: string
     fontSize?: string
 }
 
 export default function Socials({
     className = '',
     extras = null,
-    gridCol = 'grid-cols-4',
     fontSize,
     ...props
 }: Props) {
@@ -26,13 +23,11 @@ export default function Socials({
         fontSize: fontSize || '1.3em',
     }
     return (
-        <div
-            className={`grid xs:flex ${gridCol} mt-6 items-center gap-8 xs:gap-0 xs:space-x-8 lg:mt-0 ${className}`}
-            {...props}
-        >
+        <div className={`flex items-center space-x-8 ${className}`} {...props}>
             <a
                 href="mailto:westy12dan@gmail.com"
                 className={`${normalTransition} color-hover`}
+                aria-label="Email"
             >
                 <AiFillMail {...iconStyle} />
             </a>
@@ -41,6 +36,7 @@ export default function Socials({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${normalTransition} color-hover`}
+                aria-label="LinkedIn"
             >
                 <AiFillLinkedin {...iconStyle} />
             </a>
@@ -49,6 +45,7 @@ export default function Socials({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${normalTransition} color-hover`}
+                aria-label="Github"
             >
                 <AiFillGithub {...iconStyle} />
             </a>
@@ -57,6 +54,7 @@ export default function Socials({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${normalTransition} color-hover`}
+                aria-label="Twitter"
             >
                 <AiFillTwitterCircle {...iconStyle} />
             </a>

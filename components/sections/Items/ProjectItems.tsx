@@ -1,13 +1,13 @@
 import * as React from 'react'
-import Items, { ItemsProps } from './Items'
+import type { ItemsProps } from './Items'
+import Items from './Items'
 import ProjectItem from './ProjectItem'
-import { ProjectData } from '../../../util/types'
-import { reorder } from '../../../util/reorder'
 import ProjectGrid from '../ItemsLayout/ProjectGrid'
+import type { DetailedProjectWithImage } from '../../../lib/projects.server'
 
-interface Props extends Partial<ItemsProps<ProjectData>> {
+interface Props extends Partial<ItemsProps<DetailedProjectWithImage>> {
     title: JSX.Element
-    data: ProjectData[]
+    data: DetailedProjectWithImage[]
 }
 
 const ProjectItems: React.FC<Props> = ({ title, data, ...props }) => {
@@ -15,7 +15,7 @@ const ProjectItems: React.FC<Props> = ({ title, data, ...props }) => {
         <Items
             title={title}
             render={p => <ProjectItem data={p} />}
-            data={reorder(data, 'order')}
+            data={data}
             ItemsLayout={ProjectGrid}
             {...props}
         />

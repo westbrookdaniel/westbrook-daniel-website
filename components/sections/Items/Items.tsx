@@ -2,13 +2,16 @@ import * as React from 'react'
 import Link from 'next/link'
 import Container from '../../common/Container'
 import Divider from '../../common/Divider'
-import { ItemsLayout } from '../ItemsLayout/types'
+import type { ItemsLayout } from '../ItemsLayout/types'
 import DefaultLayout from '../ItemsLayout/DefaultLayout'
 
 export interface ItemsProps<Item> {
     data: Item[]
     title: JSX.Element | string
-    limitedWithMessage?: string
+    limited?: {
+        url: string
+        message?: string
+    }
     render: (item: Item) => JSX.Element
     ItemsLayout?: ItemsLayout
 }
@@ -16,12 +19,12 @@ export interface ItemsProps<Item> {
 function Items<Item>({
     data,
     title,
-    limitedWithMessage,
+    limited,
     render,
     ItemsLayout = DefaultLayout,
 }: ItemsProps<Item>) {
     const itemElements = data.map(render)
-    const limitedItemElements = limitedWithMessage
+    const limitedItemElements = limited
         ? itemElements.slice(0, 3)
         : itemElements
 
@@ -30,12 +33,12 @@ function Items<Item>({
             {title}
             <Divider className="my-6" />
             <ItemsLayout items={limitedItemElements} />
-            {limitedWithMessage ? (
+            {limited ? (
                 <div className="mt-4 flex w-full items-center space-x-8 md:mt-2">
                     <Divider className="flex-grow" />
-                    <Link href="/blog">
+                    <Link href={limited.url}>
                         <a className="link-style flex items-center justify-center">
-                            {limitedWithMessage}
+                            {limited.message || 'See All'}
                         </a>
                     </Link>
                 </div>

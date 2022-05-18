@@ -1,12 +1,12 @@
 import * as React from 'react'
-import Items, { ItemsProps } from './Items'
+import type { ItemsProps } from './Items'
+import Items from './Items'
 import BlogItem from './BlogItem'
-import { BlogData, ProjectData } from '../../../util/types'
-import { reorder } from '../../../util/reorder'
+import type { BlogMetaWithExtras } from '../../../lib/blog.server'
 
-interface Props extends Partial<ItemsProps<ProjectData>> {
+interface Props extends Partial<ItemsProps<BlogMetaWithExtras>> {
     title: JSX.Element
-    data: BlogData[]
+    data: BlogMetaWithExtras[]
 }
 
 const BlogItems: React.FC<Props> = ({ title, data, ...props }) => {
@@ -14,7 +14,7 @@ const BlogItems: React.FC<Props> = ({ title, data, ...props }) => {
         <Items
             title={title}
             render={p => <BlogItem data={p} />}
-            data={reorder(data, 'date')}
+            data={data}
             {...props}
         />
     )

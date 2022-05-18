@@ -1,12 +1,14 @@
 import * as React from 'react'
 import Container from '../common/Container'
-import HeadWithGraph, { HeadWithGraphProps } from '../HeadWithGraph'
+import type { HeadWithGraphProps } from '../HeadWithGraph'
+import HeadWithGraph from '../HeadWithGraph'
 import Nav from '../nav/Nav'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
 
 interface Props extends HeadWithGraphProps {
     withoutFooter?: boolean
+    children: React.ReactNode
 }
 
 const Layout: React.FC<Props> = ({ children, withoutFooter, ...props }) => {

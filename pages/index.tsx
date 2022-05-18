@@ -1,49 +1,53 @@
 import About from '../components/sections/About'
 import Hero from '../components/sections/Hero'
-import getProjectData from '../lib/getProjectData'
-import getBlogData from '../lib/getBlogData'
-import { BlogData, ProjectData } from '../util/types'
 import Layout from '../components/layout/Layout'
 import BlogItems from '../components/sections/Items/BlogItems'
 import SmallItem from '../components/sections/SmallItem'
-import ProjectItems from '../components/sections/Items/ProjectItems'
 import SmallItemLayout from '../components/sections/ItemsLayout/SmallItemLayout'
+import type { BlogMetaWithExtras } from '../lib/blog.server'
+import { getBlogsMeta } from '../lib/blog.server'
+import { projects } from '../data/projects'
+import type { ImageProps } from '../lib/getImageProps.server'
+import { getImageProps } from '../lib/getImageProps.server'
+import type { GetStaticProps } from 'next'
+import Items from '../components/sections/Items/Items'
 
-export async function getStaticProps() {
-    const projectData = await getProjectData()
-    const blogData = await getBlogData()
-    return {
-        props: {
-            projectData,
-            blogData,
-        },
-    }
+export const getStaticProps: GetStaticProps = async () => {
+    const blogMetas = await getBlogsMeta()
+    const imageProps = await getImageProps('/images/me.jpg')
+    return { props: { blogMetas, imageProps } }
 }
 
 interface Props {
-    projectData: ProjectData[]
-    blogData: BlogData[]
+    blogMetas: BlogMetaWithExtras[]
+    imageProps: ImageProps
 }
 
-const Home: React.FC<Props> = ({ projectData, blogData }) => {
+const Home: React.FC<Props> = ({ blogMetas, imageProps }) => {
     return (
         <Layout>
-            <Hero />
+            <Hero imageProps={imageProps} />
             <div className="mt-12 mb-6">
                 <About />
             </div>
-            <div className="flex-grow mb-24">
+            <div className="mb-24 flex-grow">
                 <BlogItems
                     title={<h2>Blog Posts</h2>}
-                    data={blogData}
-                    limitedWithMessage="See All Posts"
+                    data={blogMetas}
+                    limited={{
+                        message: 'See All Posts',
+                        url: '/blog',
+                    }}
                 />
-                <ProjectItems
+                <Items
                     title={<h2>Projects</h2>}
                     render={p => <SmallItem data={p} />}
-                    data={projectData}
+                    data={projects}
                     ItemsLayout={SmallItemLayout}
-                    limitedWithMessage="See All Projects"
+                    limited={{
+                        message: 'See All Projects',
+                        url: '/projects',
+                    }}
                 />
             </div>
         </Layout>

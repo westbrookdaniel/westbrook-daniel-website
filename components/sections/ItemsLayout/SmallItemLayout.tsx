@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ItemsLayout } from './types'
+import type { ItemsLayout } from './types'
 
 const SmallItemLayout: ItemsLayout = ({ items }) => {
     return (

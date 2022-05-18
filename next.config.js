@@ -1,9 +1,5 @@
-const withMDX = require('@next/mdx')({
-    extension: /\.mdx?$/,
-})
-
-module.exports = withMDX({
-    pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx', 'md'],
+module.exports = {
+    pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
     swcMinify: true,
     experimental: {
         scrollRestoration: true,
@@ -22,4 +18,8 @@ module.exports = withMDX({
     future: {
         strictPostcssConfiguration: true,
     },
-})
+    i18n: {
+        locales: ['en'],
+        defaultLocale: 'en',
+    },
+}

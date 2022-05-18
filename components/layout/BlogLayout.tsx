@@ -1,20 +1,21 @@
-import { FC } from 'react'
-import { BlogMeta } from '../../util/types'
+import * as React from 'react'
 import Image from '../common/Image'
 import Container from '../common/Container'
 import { formatDate } from '../../util/formatDate'
 import Layout from './Layout'
+import Divider from '../common/Divider'
+import type { BlogMetaWithExtras } from '../../lib/blog.server'
 
 interface Props {
-    prefix: string
-    meta: BlogMeta
+    meta: BlogMetaWithExtras
+    children: React.ReactNode
 }
 
-const BlogLayout: FC<Props> = ({ meta, children }) => {
+const BlogLayout: React.FC<Props> = ({ meta, children }) => {
     return (
         <Layout
             title={meta.title}
-            image={meta.feature.src}
+            image={meta.feature.href}
             description={meta.snippet}
         >
             <Container spaced>
@@ -28,19 +29,32 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                     {meta.feature ? (
                         <div className="max-w-lg">
                             <Image
-                                width={500}
-                                height={300}
                                 className="transform object-cover"
                                 loading="eager"
-                                src={meta.feature}
                                 alt={meta.title}
+                                {...meta.imageProps}
+                                width={500}
+                                height={300}
                             />
                         </div>
                     ) : null}
                 </div>
             </Container>
             <Container className="flex-grow pb-24">
-                <div className="blog-wrapper prose lg:prose-lg">{children}</div>
+                <div className="blog-wrapper prose lg:prose-lg">
+                    <p>
+                        Photo by{' '}
+                        <a href={meta.feature.author.referral}>
+                            {meta.feature.author.name}
+                        </a>{' '}
+                        on{' '}
+                        <a href="https://unsplash.com/s/photos/paint?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                            Unsplash
+                        </a>
+                    </p>
+                    <Divider />
+                    {children}
+                </div>
             </Container>
         </Layout>
     )
