@@ -33,7 +33,6 @@ const ProjectItem: React.FC<Props> = ({
                         loading="eager"
                         layout="responsive"
                         className={`translate-y-14 scale-110 transform transform object-contain ${normalTransition}`}
-                        placeholder="empty"
                     />
                 </div>
             </div>
