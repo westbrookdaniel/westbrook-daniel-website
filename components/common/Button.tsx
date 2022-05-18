@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from 'react'
+import type { ButtonHTMLAttributes } from 'react'
 import { normalTransition } from '../../util/constants'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {

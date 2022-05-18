@@ -1,11 +1,11 @@
 import { CgArrowRight } from 'react-icons/cg'
-import { Project } from '../../data/projects'
+import type { Project } from '../../data/projects'
 
 export default function SmallItem({ data }: { data: Project }) {
     const contents = (
         <div className="hover-arrow">
-            <div className="flex items-center w-full">
-                <h4 className="mr-2 font-normal font-body text-on-background">
+            <div className="flex w-full items-center">
+                <h4 className="mr-2 font-body font-normal text-on-background">
                     {data.title}
                 </h4>
                 <div className="arrow">

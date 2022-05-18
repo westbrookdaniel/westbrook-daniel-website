@@ -4,7 +4,7 @@ import '../styles/prism.css'
 
 import * as React from 'react'
 import StickyNav from '../components/nav/StickyNav'
-import { AppProps } from 'next/dist/shared/lib/router/router'
+import type { AppProps } from 'next/dist/shared/lib/router/router'
 import ThemeHandler from '../components/theme/ThemeHandler'
 
 declare global {

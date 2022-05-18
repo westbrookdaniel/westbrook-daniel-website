@@ -2,7 +2,7 @@ import * as React from 'react'
 import Link from 'next/link'
 import Container from '../../common/Container'
 import Divider from '../../common/Divider'
-import { ItemsLayout } from '../ItemsLayout/types'
+import type { ItemsLayout } from '../ItemsLayout/types'
 import DefaultLayout from '../ItemsLayout/DefaultLayout'
 
 export interface ItemsProps<Item> {

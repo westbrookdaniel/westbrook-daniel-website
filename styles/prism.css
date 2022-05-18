@@ -16,7 +16,7 @@ pre::-webkit-scrollbar {
 
 /* Code title styles */
 .remark-code-title {
-    @apply px-5 py-3 font-mono text-sm font-bold rounded-t bg-neutral-700 text-neutral-200;
+    @apply rounded-t bg-neutral-700 px-5 py-3 font-mono text-sm font-bold text-neutral-200;
 }
 
 .remark-code-title + div > pre {
@@ -25,7 +25,7 @@ pre::-webkit-scrollbar {
 
 /* General line styles */
 .code-line {
-    @apply block pl-4 pr-4 -mx-4 border-l-4 border-transparent;
+    @apply -mx-4 block border-l-4 border-transparent pl-4 pr-4;
 }
 
 /* Diff styles */
@@ -51,7 +51,7 @@ pre::-webkit-scrollbar {
 
 /* Line number styles */
 .line-number::before {
-    @apply inline-block w-4 mr-4 -ml-2 text-right;
+    @apply mr-4 -ml-2 inline-block w-4 text-right;
     color: #8da1b9da;
     content: attr(line);
 }

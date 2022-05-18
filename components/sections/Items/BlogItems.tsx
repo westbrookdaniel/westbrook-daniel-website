@@ -1,11 +1,12 @@
 import * as React from 'react'
-import Items, { ItemsProps } from './Items'
+import type { ItemsProps } from './Items'
+import Items from './Items'
 import BlogItem from './BlogItem'
-import { BlogMetaWithSlug } from '../../../lib/blog.server'
+import type { BlogMetaWithExtras } from '../../../lib/blog.server'
 
-interface Props extends Partial<ItemsProps<BlogMetaWithSlug>> {
+interface Props extends Partial<ItemsProps<BlogMetaWithExtras>> {
     title: JSX.Element
-    data: BlogMetaWithSlug[]
+    data: BlogMetaWithExtras[]
 }
 
 const BlogItems: React.FC<Props> = ({ title, data, ...props }) => {

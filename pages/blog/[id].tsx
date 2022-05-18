@@ -1,12 +1,12 @@
 import * as React from 'react'
-import { BlogMeta } from '../../util/types'
 import BlogLayout from '../../components/layout/BlogLayout'
 import { useMDXComponent } from '../../lib/mdx'
 import { MDXComponents } from '../../components/mdx'
+import type { BlogMetaWithExtras } from '../../lib/blog.server'
 
 interface Props {
     code: string
-    meta: BlogMeta
+    meta: BlogMetaWithExtras
 }
 
 export { getStaticProps, getStaticPaths } from '../../lib/blog.server'

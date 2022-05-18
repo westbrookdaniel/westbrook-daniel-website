@@ -1,17 +1,17 @@
-import { FC } from 'react'
-import { BlogMeta } from '../../util/types'
+import * as React from 'react'
 import Image from '../common/Image'
 import Container from '../common/Container'
 import { formatDate } from '../../util/formatDate'
 import Layout from './Layout'
 import Divider from '../common/Divider'
+import type { BlogMetaWithExtras } from '../../lib/blog.server'
 
 interface Props {
-    meta: BlogMeta
+    meta: BlogMetaWithExtras
     children: React.ReactNode
 }
 
-const BlogLayout: FC<Props> = ({ meta, children }) => {
+const BlogLayout: React.FC<Props> = ({ meta, children }) => {
     return (
         <Layout
             title={meta.title}
@@ -29,12 +29,12 @@ const BlogLayout: FC<Props> = ({ meta, children }) => {
                     {meta.feature ? (
                         <div className="max-w-lg">
                             <Image
+                                className="transform object-cover"
+                                loading="eager"
+                                alt={meta.title}
+                                {...meta.imageProps}
                                 width={500}
                                 height={300}
-                                className="object-cover transform"
-                                loading="eager"
-                                src={meta.feature.href}
-                                alt={meta.title}
                             />
                         </div>
                     ) : null}

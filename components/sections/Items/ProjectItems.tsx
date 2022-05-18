@@ -1,12 +1,13 @@
 import * as React from 'react'
-import Items, { ItemsProps } from './Items'
+import type { ItemsProps } from './Items'
+import Items from './Items'
 import ProjectItem from './ProjectItem'
 import ProjectGrid from '../ItemsLayout/ProjectGrid'
-import { DetailedProject } from '../../../data/projects'
+import type { DetailedProjectWithImage } from '../../../lib/projects.server'
 
-interface Props extends Partial<ItemsProps<DetailedProject>> {
+interface Props extends Partial<ItemsProps<DetailedProjectWithImage>> {
     title: JSX.Element
-    data: DetailedProject[]
+    data: DetailedProjectWithImage[]
 }
 
 const ProjectItems: React.FC<Props> = ({ title, data, ...props }) => {

@@ -1,21 +1,22 @@
 import * as React from 'react'
 import Layout from '../components/layout/Layout'
 import BlogItems from '../components/sections/Items/BlogItems'
-import { GetStaticProps } from 'next'
-import { BlogMetaWithSlug, getBlogsMeta } from '../lib/blog.server'
+import type { GetStaticProps } from 'next'
+import type { BlogMetaWithExtras } from '../lib/blog.server'
+import { getBlogsMeta } from '../lib/blog.server'
 
-export const getStaticProps: GetStaticProps = async context => {
+export const getStaticProps: GetStaticProps = async () => {
     return { props: { blogMeta: await getBlogsMeta() } }
 }
 
 interface Props {
-    blogMeta: BlogMetaWithSlug[]
+    blogMeta: BlogMetaWithExtras[]
 }
 
 const Blog: React.FC<Props> = ({ blogMeta }) => {
     return (
         <Layout title="Blog">
-            <div className="flex-grow mb-16">
+            <div className="mb-16 flex-grow">
                 <BlogItems
                     title={
                         <>

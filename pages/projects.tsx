@@ -1,18 +1,25 @@
 import * as React from 'react'
-import { projects, sideProjects } from '../data/projects'
+import { sideProjects } from '../data/projects'
 import Layout from '../components/layout/Layout'
 import SmallItem from '../components/sections/SmallItem'
 import ProjectItems from '../components/sections/Items/ProjectItems'
 import Items from '../components/sections/Items/Items'
 import SmallItemLayout from '../components/sections/ItemsLayout/SmallItemLayout'
+import type { DetailedProjectWithImage } from '../lib/projects.server'
 
-const Projects: React.FC = () => {
+export { getStaticProps } from '../lib/projects.server'
+
+interface Props {
+    projects: DetailedProjectWithImage[]
+}
+
+const Projects: React.FC<Props> = ({ projects }) => {
     return (
         <Layout
             title="Projects"
             image="/images/projects/space-of-the-day/space"
         >
-            <div className="flex-grow mb-24">
+            <div className="mb-24 flex-grow">
                 <ProjectItems
                     title={
                         <>
