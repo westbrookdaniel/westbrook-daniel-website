@@ -34,14 +34,20 @@ const Home: React.FC<Props> = ({ blogMetas, imageProps }) => {
                 <BlogItems
                     title={<h2>Blog Posts</h2>}
                     data={blogMetas}
-                    limitedWithMessage="See All Posts"
+                    limited={{
+                        message: 'See All Posts',
+                        url: '/blog',
+                    }}
                 />
                 <Items
                     title={<h2>Projects</h2>}
                     render={p => <SmallItem data={p} />}
                     data={projects}
                     ItemsLayout={SmallItemLayout}
-                    limitedWithMessage="See All Projects"
+                    limited={{
+                        message: 'See All Projects',
+                        url: '/projects',
+                    }}
                 />
             </div>
         </Layout>
