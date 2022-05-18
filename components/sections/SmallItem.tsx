@@ -4,10 +4,10 @@ import type { Project } from '../../data/projects'
 export default function SmallItem({ data }: { data: Project }) {
     const contents = (
         <div className="hover-arrow">
-            <div className="flex w-full items-center">
-                <h4 className="mr-2 font-body font-normal text-on-background">
+            <div className="flex items-center w-full">
+                <h3 className="mr-2 text-lg font-normal font-body text-on-background">
                     {data.title}
-                </h4>
+                </h3>
                 <div className="arrow">
                     <CgArrowRight color="var(--lines)" fontSize="1.2rem" />
                 </div>
