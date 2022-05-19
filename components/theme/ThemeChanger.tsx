@@ -23,5 +23,3 @@ const ThemeChanger: React.FC<Props> = ({ className = '' }) => {
 }
 
 export default ThemeChanger
-
-// <p className="select-none">Change Theme</p>

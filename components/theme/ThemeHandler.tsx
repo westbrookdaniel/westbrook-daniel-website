@@ -93,14 +93,14 @@ export const themes = {
         accent: '#ffdf99',
         'accent-hover': '#ffcc6c',
         'accent-focus': '#e0b25b',
-        'on-accent': '#42064e',
+        'on-accent': '#110e1e',
 
-        background: '#14132c',
-        subtle: '#1a1931',
+        background: '#0f0e1e',
+        subtle: '#151426',
         'on-background': '#887d9e',
         'heading-on-background': '#fff0d4',
 
-        lines: '#4b355c',
+        lines: '#2d2136',
         selection: '#5f1c68',
     },
     ocean: {

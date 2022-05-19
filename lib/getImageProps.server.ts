@@ -1,12 +1,10 @@
+import type { IGetPlaiceholderReturn } from 'plaiceholder'
 import { getPlaiceholder } from 'plaiceholder'
 
-// TODO: Dynamically type this from getPlaiceholder's return type?
-export interface ImageProps {
-    src: string
-    height: number
-    width: number
-    type?: string
-    blurDataURL: string
+type ImageType = IGetPlaiceholderReturn['img']
+
+export interface ImageProps extends ImageType {
+    blurDataURL: IGetPlaiceholderReturn['base64']
 }
 
 // Not directly used in this file but very handy
