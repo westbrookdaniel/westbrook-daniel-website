@@ -25,5 +25,38 @@
     font-display: block;
 }
 
-/* External Fonts */
-@import 'https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css';
+@font-face {
+    font-family: 'Hack';
+    src: url('/fonts/Hack-Bold.woff2') format('woff2'),
+        url('/fonts/Hack-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Hack';
+    src: url('/fonts/Hack-Regular.woff2') format('woff2'),
+        url('/fonts/Hack-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Hack';
+    src: url('/fonts/Hack-Italic.woff2') format('woff2'),
+        url('/fonts/Hack-Italic.ttf') format('ttf');
+    font-weight: 400;
+    font-style: italic;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Hack';
+    src: url('/fonts/Hack-BoldItalic.woff2') format('woff2'),
+        url('/fonts/Hack-BoldItalic.ttf') format('ttf');
+    font-weight: 700;
+    font-style: italic;
+    font-display: block;
+}

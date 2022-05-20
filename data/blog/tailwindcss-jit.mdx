@@ -29,7 +29,7 @@ There's a couple of ways this could be done normally. _(I'll be using React for 
 
 You could use inline styles:
 
-```jsx
+```jsx showLineNumbers={false}
 <Twitter style={{ color: '#00acee' }} />
 ```
 
@@ -42,7 +42,7 @@ Or an external stylesheet:
 }
 ```
 
-```jsx
+```jsx showLineNumbers={false}
 <Twitter className="twitter-color" />
 ```
 
@@ -59,7 +59,7 @@ module.exports = {
 }
 ```
 
-```jsx
+```jsx showLineNumbers={false}
 <Twitter className="text-twitter" />
 ```
 
@@ -69,7 +69,7 @@ a precise pixel value in your usual Tailwind styles would be the easiest way.
 
 That's where Just-In-Time mode comes in:
 
-```jsx
+```jsx showLineNumbers={false}
 <Twitter className="text-[#00acee]" />
 ```
 

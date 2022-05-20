@@ -12,11 +12,12 @@ pre::-webkit-scrollbar {
 .prose pre {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    @apply px-3;
 }
 
 /* Code title styles */
 .remark-code-title {
-    @apply rounded-t bg-neutral-700 px-5 py-3 font-mono text-sm font-bold text-neutral-200;
+    @apply px-5 py-3 font-mono text-sm font-bold rounded-t bg-neutral-700 text-neutral-200;
 }
 
 .remark-code-title + div > pre {
@@ -25,7 +26,7 @@ pre::-webkit-scrollbar {
 
 /* General line styles */
 .code-line {
-    @apply -mx-4 block border-l-4 border-transparent pl-4 pr-4;
+    @apply block w-auto border-l-4 border-transparent;
 }
 
 /* Diff styles */
@@ -39,19 +40,18 @@ pre::-webkit-scrollbar {
 
 /* Highlight line styles */
 .highlight-line {
-    /* @apply -mx-4 border-l-4 border-neutral-200 bg-neutral-700 bg-opacity-50; */
-    @apply -mx-4 border-l-4 bg-opacity-50;
+    @apply pl-3 -ml-3 -mr-3 border-l-4 bg-opacity-50;
     border-color: #3c526d5f;
     background: #3c526d5f;
 }
 
-.highlight-line.line-number::before {
-    @apply -ml-2;
+.highlight-line.code-line {
+    @apply w-[-webkit-fill-available] w-[fill-available];
 }
 
 /* Line number styles */
 .line-number::before {
-    @apply mr-4 -ml-2 inline-block w-4 text-right;
+    @apply inline-block w-4 mr-4 -ml-1 text-right;
     color: #8da1b9da;
     content: attr(line);
 }
@@ -78,6 +78,10 @@ pre[class*='language-'] {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+}
+
+code[class*='language-'] {
+    @apply inline-block min-w-full;
 }
 
 pre.code-highlight::-moz-selection,
