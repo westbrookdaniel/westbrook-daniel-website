@@ -29,7 +29,7 @@ const BlogLayout: React.FC<Props> = ({ meta, children }) => {
                     {meta.feature ? (
                         <div className="max-w-lg">
                             <Image
-                                className="transform object-cover"
+                                className="object-cover transform"
                                 loading="eager"
                                 alt={meta.title}
                                 {...meta.imageProps}
@@ -40,7 +40,7 @@ const BlogLayout: React.FC<Props> = ({ meta, children }) => {
                     ) : null}
                 </div>
             </Container>
-            <Container className="flex-grow pb-24">
+            <Container className="pb-24 grow">
                 <div className="blog-wrapper prose lg:prose-lg">
                     <p>
                         Photo by{' '}

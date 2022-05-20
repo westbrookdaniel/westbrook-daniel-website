@@ -16,11 +16,11 @@ interface Props {
 const Blog: React.FC<Props> = ({ blogMeta }) => {
     return (
         <Layout title="Blog">
-            <div className="mb-16 flex-grow">
+            <div className="mb-16 grow">
                 <BlogItems
                     title={
                         <>
-                            <h1 className="max-w-title">Blog</h1>
+                            <h1>Blog</h1>
                             <p className="mt-4 mb-10">
                                 Read my latest posts where I write about what
                                 I&apos;m finding interesting

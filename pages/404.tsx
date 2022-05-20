@@ -7,7 +7,7 @@ export default function Error() {
     return (
         <Layout title="Page Not Found" withoutFooter>
             <Container spaced className="space-y-8">
-                <h1 className="max-w-title">404 Page Not Found</h1>
+                <h1>404 Page Not Found</h1>
                 <div className="row">
                     <div className="max-w-sm">
                         <p className="mb-8">

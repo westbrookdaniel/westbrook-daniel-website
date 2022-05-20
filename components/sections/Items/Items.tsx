@@ -34,10 +34,10 @@ function Items<Item>({
             <Divider className="my-6" />
             <ItemsLayout items={limitedItemElements} />
             {limited ? (
-                <div className="mt-4 flex w-full items-center space-x-8 md:mt-2">
-                    <Divider className="flex-grow" />
+                <div className="flex items-center w-full mt-4 space-x-8 md:mt-2">
+                    <Divider className="grow" />
                     <Link href={limited.url}>
-                        <a className="link-style flex items-center justify-center">
+                        <a className="flex items-center justify-center link-style">
                             {limited.message || 'See All'}
                         </a>
                     </Link>

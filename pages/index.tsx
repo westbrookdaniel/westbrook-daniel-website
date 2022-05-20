@@ -30,7 +30,7 @@ const Home: React.FC<Props> = ({ blogMetas, imageProps }) => {
             <div className="mt-12 mb-6">
                 <About />
             </div>
-            <div className="mb-24 flex-grow">
+            <div className="mb-24 grow">
                 <BlogItems
                     title={<h2>Blog Posts</h2>}
                     data={blogMetas}

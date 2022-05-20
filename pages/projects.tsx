@@ -19,11 +19,11 @@ const Projects: React.FC<Props> = ({ projects }) => {
             title="Projects"
             image="/images/projects/space-of-the-day/space"
         >
-            <div className="mb-24 flex-grow">
+            <div className="mb-24 grow">
                 <ProjectItems
                     title={
                         <>
-                            <h1 className="max-w-title">Projects</h1>
+                            <h1>Projects</h1>
                             <p className="my-4">
                                 Read about some of the fun projects and
                                 experiments I&apos;ve made.
