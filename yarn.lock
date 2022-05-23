@@ -2809,6 +2809,11 @@ next@^12.1.0:
     "@next/swc-win32-ia32-msvc" "12.1.6"
     "@next/swc-win32-x64-msvc" "12.1.6"
 
+nextjs-google-analytics@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/nextjs-google-analytics/-/nextjs-google-analytics-1.2.0.tgz#8c11a5ee31280cb36055eb4579748f6b9a1d8fb1"
+  integrity sha512-+Na5jJz4ygPm2B00ZrwvCLjq3LqDYpEY5DOowzP8nkPpc+nUa1m8aWuPiwvCF5fEwcuT2y6xDhcAxG0CRhybTQ==
+
 node-abi@^3.3.0:
   version "3.15.0"
   resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.15.0.tgz#cd9ac8c58328129b49998cc6fa16aa5506152716"

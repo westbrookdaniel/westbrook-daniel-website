@@ -4,8 +4,9 @@ import '../styles/prism.css'
 
 import * as React from 'react'
 import StickyNav from '../components/nav/StickyNav'
-import type { AppProps } from 'next/dist/shared/lib/router/router'
+import type { AppProps, NextWebVitalsMetric } from 'next/app'
 import ThemeHandler from '../components/theme/ThemeHandler'
+import { GoogleAnalytics, usePagesViews, event } from 'nextjs-google-analytics'
 
 declare global {
     interface Window {
@@ -13,7 +14,24 @@ declare global {
     }
 }
 
+export function reportWebVitals({
+    id,
+    name,
+    label,
+    value,
+}: NextWebVitalsMetric) {
+    event(name, {
+        category:
+            label === 'web-vital' ? 'Web Vitals' : 'Next.js custom metric',
+        value: Math.round(name === 'CLS' ? value * 1000 : value), // values must be integers
+        label: id, // id unique to current page load
+        nonInteraction: true, // avoids affecting bounce rate.
+    })
+}
+
 function MyApp({ Component, pageProps }: AppProps) {
+    usePagesViews()
+
     React.useEffect(() => {
         console.log(
             '%c Nothing to See Here...',
@@ -21,16 +39,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         )
     }, [])
 
-    // Setup for google analytics
-    React.useEffect(() => {
-        if (!window) return
-        window.dataLayer = window.dataLayer || []
-        window.dataLayer.push('js', new Date())
-        window.dataLayer.push('config', 'G-L3S62B7X3T')
-    }, [])
-
     return (
         <ThemeHandler>
+            <GoogleAnalytics />
             <StickyNav />
             {/* @ts-ignore Will fix this in rebuild */}
             <Component {...pageProps} />
