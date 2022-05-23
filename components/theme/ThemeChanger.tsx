@@ -3,7 +3,6 @@ import { useTheme } from '../theme/ThemeHandler'
 import { normalTransition } from '../../util/constants'
 import { Button } from '../common/Button'
 import { event } from 'nextjs-google-analytics'
-import { gaId } from '../../pages/_app'
 
 interface Props {
     className?: string
