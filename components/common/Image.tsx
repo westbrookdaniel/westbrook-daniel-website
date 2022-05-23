@@ -3,7 +3,7 @@ import NextImage from 'next/image'
 import { normalTransition } from '../../util/constants'
 
 interface Props {
-    border: boolean
+    border?: boolean
 }
 
 export default function Image({
