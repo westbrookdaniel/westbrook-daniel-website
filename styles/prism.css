@@ -46,7 +46,7 @@ pre::-webkit-scrollbar {
 }
 
 .highlight-line.code-line {
-    @apply w-[-webkit-fill-available] w-[fill-available];
+    @apply w-[-webkit-fill-available] w-[-moz-available] w-[stretch];
 }
 
 /* Line number styles */
