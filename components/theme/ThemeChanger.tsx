@@ -9,14 +9,14 @@ interface Props {
 }
 
 const ThemeChanger: React.FC<Props> = ({ className = '' }) => {
-    const [rotateTheme, theme] = useTheme(s => [s.rotateTheme, s.theme])
+    const [rotateTheme, themeKey] = useTheme(s => [s.rotateTheme, s.themeKey])
     return (
         <div
             className={`${normalTransition} color-hover inline-flex cursor-pointer items-center space-x-3 ${className}`}
             onClick={() => {
                 event('rotate_theme', {
                     category: 'Interactions',
-                    label: theme,
+                    label: themeKey,
                 })
                 rotateTheme()
             }}
