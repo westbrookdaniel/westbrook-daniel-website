@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 import * as React from 'react'
-import useOnScreen from '../hooks/useOnScreen'
+import { useMediaQuery } from '../util/useMediaQuery'
 import Type from './Type'
 
 // This component checks if the font has loaded before starting
@@ -16,14 +16,14 @@ interface Props {
 
 export default function Logo({ isSticky }: Props) {
     const ref = React.useRef(null)
-    const onScreen = useOnScreen(ref)
+    const [isMobile] = useMediaQuery('(max-width: 600px)')
 
     return (
         <div
             className="flex select-none items-center font-mono text-[1.3rem] font-bold uppercase text-brand"
             ref={ref}
         >
-            {onScreen && (isSticky ? <Type>DW</Type> : <Typing />)}
+            {isSticky || isMobile ? <Type>DW</Type> : <Typing />}
         </div>
     )
 }
