@@ -1,7 +1,7 @@
 import { CgArrowRight } from 'react-icons/cg'
 import { normalTransition } from '../../../util/constants'
 import truncate from '../../../util/truncate'
-import NextImage from 'next/image'
+import NextImage from 'next/future/image'
 import type { DetailedProjectWithImage } from '../../../lib/projects.server'
 
 interface Props {
@@ -29,9 +29,9 @@ const ProjectItem: React.FC<Props> = ({
                         alt={`${title} Project`}
                         {...imageProps}
                         width={400}
-                        height={270}
+                        height={300}
                         loading="eager"
-                        className={`translate-y-14 scale-110 transform transform object-contain ${normalTransition}`}
+                        className={`hover:translate-y-8 h-[300px] translate-y-14 transform object-cover object-top ${normalTransition}`}
                     />
                 </div>
             </div>

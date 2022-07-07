@@ -93,6 +93,10 @@ module.exports = {
                         'pre code::after': {
                             content: 'none',
                         },
+                        img: {
+                            // I could override this properly but oh well
+                            margin: '0 !important',
+                        },
                     },
                 },
             },

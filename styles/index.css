@@ -162,9 +162,6 @@ h3 {
 .hover-arrow:hover img {
     @apply scale-105;
 }
-.project.hover-arrow:hover img {
-    @apply translate-y-8 scale-110;
-}
 .hover-arrow:hover:active img {
     @apply scale-100;
 }
@@ -173,11 +170,6 @@ h3 {
 }
 .hover-arrow:active .arrow {
     @apply translate-x-0;
-}
-
-/* Stop the nextjs image from having overflow hidden */
-.project.hover-arrow > div > span {
-    @apply overflow-visible !important;
 }
 
 .color-hover {

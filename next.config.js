@@ -3,8 +3,9 @@ module.exports = {
     swcMinify: true,
     experimental: {
         scrollRestoration: true,
-        reactRoot: 'concurrent',
-        concurrentFeatures: true,
+        images: {
+            allowFutureImage: true,
+        },
     },
     images: {
         formats: ['image/avif', 'image/webp'],
