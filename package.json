@@ -27,9 +27,9 @@
         "rehype-prism-plus": "^1.4.0",
         "remark-frontmatter": "^4.0.1",
         "remark-mdx-frontmatter": "^1.1.1",
-        "sequence-man": "^0.2.0",
         "sharp": "^0.30.4",
         "webfontloader": "^1.6.28",
+        "typed.js": "^2.0.12",
         "zustand": "^3.7.1"
     },
     "devDependencies": {

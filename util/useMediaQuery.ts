@@ -4,9 +4,20 @@ export type UseMediaQueryOptions = {
     fallback?: boolean | boolean[]
     ssr?: boolean
 }
+export function canUseDOM(): boolean {
+    return !!(
+        typeof window !== 'undefined' &&
+        window.document &&
+        window.document.createElement
+    )
+}
+
+const useSafeLayoutEffect = canUseDOM()
+    ? React.useLayoutEffect
+    : React.useEffect
 
 /**
- * Adapted from chakra-ui
+ * Adapted from chakra-ui (and a bunch of the utils above)
  * https://github.com/chakra-ui/chakra-ui/blob/main/packages/media-query/src/use-media-query.ts
  *
  * React hook that tracks state of a CSS media query
@@ -37,7 +48,7 @@ export function useMediaQuery(
         }))
     })
 
-    React.useLayoutEffect(() => {
+    useSafeLayoutEffect(() => {
         // set initial matches
         if (ssr) {
             setValue(
