@@ -3,9 +3,9 @@ module.exports = {
     swcMinify: true,
     experimental: {
         scrollRestoration: true,
-        images: {
-            allowFutureImage: true,
-        },
+        legacyBrowsers: false,
+        browsersListForSwc: true,
+        images: { allowFutureImage: true },
     },
     images: {
         formats: ['image/avif', 'image/webp'],
