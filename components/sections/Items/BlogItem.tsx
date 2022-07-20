@@ -15,8 +15,8 @@ const BlogItem: React.FC<Props> = ({
 }) => {
     return (
         <Link href={slug}>
-            <a>
-                <div className="hover-arrow flex flex-row md:space-x-6">
+            <a className="hover-arrow">
+                <div className="flex flex-row md:space-x-6">
                     <div className="my-3 hidden w-full max-w-[116px] md:block">
                         <Image
                             alt={`${title} Project`}

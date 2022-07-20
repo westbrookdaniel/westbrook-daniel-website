@@ -12,9 +12,14 @@ const ProjectItem: React.FC<Props> = ({
     data: { source, website, description, color, title, imageProps },
 }) => {
     return (
-        <a target="_blank" rel="noopener noreferrer" href={source || website}>
-            <div className="hover-arrow project">
-                <div className="flex items-center w-full">
+        <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={source || website}
+            className="hover-arrow"
+        >
+            <div>
+                <div className="flex w-full items-center">
                     <h3 className="mr-4">{truncate(title, 50)}</h3>
                     <div className="arrow">
                         <CgArrowRight color="var(--lines)" fontSize="1.2rem" />
@@ -31,7 +36,7 @@ const ProjectItem: React.FC<Props> = ({
                         width={400}
                         height={300}
                         loading="eager"
-                        className={`hover:translate-y-8 h-[300px] translate-y-14 transform object-cover object-top ${normalTransition}`}
+                        className={`h-[300px] translate-y-14 transform object-cover object-top hover:translate-y-8 ${normalTransition}`}
                     />
                 </div>
             </div>
