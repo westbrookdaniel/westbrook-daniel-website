@@ -1,8 +1,10 @@
 export default function Header() {
     return (
         <header class="py-8">
-            <nav>
+            <nav class="flex space-x-4">
                 <a href="/">Home</a>
+                <a href="/blog">Blog</a>
+                <a href="/projects">Projects</a>
             </nav>
         </header>
     )

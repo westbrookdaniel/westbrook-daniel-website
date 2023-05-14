@@ -1,8 +1,10 @@
 import { ref } from 'documentx/util'
 import { Divider } from '../components/Divider'
-import { Post, getBlogPosts } from '../data/blog'
-import { formatDate } from '../util/date'
-import { Project, detailedProjects } from '../data/projects'
+import { getBlogPosts } from '../data/blog'
+import { detailedProjects } from '../data/projects'
+import PostItem from '../components/PostItem'
+import ProjectItem from '../components/ProjectItem'
+import DetailedProjectItem from '../components/DetailedProjectItem'
 
 export default async function Home() {
     meta.from({
@@ -43,28 +45,28 @@ export default async function Home() {
             <div>
                 <div class="flex items-baseline justify-between">
                     <h2 class="text-2xl mb-4">Some Things I've Written</h2>
-                    <a href="/">
+                    <a href="/blog">
                         <p class="text-sm">See all</p>
                     </a>
                 </div>
                 <Divider class="mb-10" />
                 <div class="space-y-4">
                     {posts.slice(0, 3).map(post => (
-                        <Post post={post} />
+                        <PostItem post={post} />
                     ))}
                 </div>
             </div>
             <div>
                 <div class="flex items-baseline justify-between">
                     <h2 class="text-2xl mb-4">Other Things I've Made</h2>
-                    <a href="/">
+                    <a href="/projects">
                         <p class="text-sm">See all</p>
                     </a>
                 </div>
                 <Divider class="mb-10" />
-                <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-16">
-                    {detailedProjects.map(project => (
-                        <Project project={project} />
+                <div class="space-y-4 flex flex-col">
+                    {detailedProjects.slice(0, 3).map(project => (
+                        <DetailedProjectItem project={project} />
                     ))}
                 </div>
             </div>
@@ -101,30 +103,5 @@ function Typed({ text }: { text: string }) {
                 class="mb-[-1px] h-[34px] w-[18px] xs:mb-[-2px] xs:h-[52px] xs:w-[24px] md:mb-[-4px] md:h-[114px] md:w-[54px] bg-text inline-block"
             />
         </span>
-    )
-}
-
-async function Post({ post }: { post: Post }) {
-    return (
-        <div class="space-y-2 group/post">
-            <a href={`/blog/${post.id}`} class="no-underline w-full">
-                <h3 class="font-body underline group-hover/post:no-underline xs:mb-2 md:mb-0">
-                    {post.info.title}
-                </h3>
-                <div class="flex flex-col md:flex-row justify-between">
-                    <p class="hidden xs:block">{post.info.description}</p>
-                    <div class="flex-grow border-t-2 border-text/10 self-center mx-4" />
-                    <p>{formatDate(post.info.date)}</p>
-                </div>
-            </a>
-        </div>
-    )
-}
-
-function Project({ project }: { project: Project }) {
-    return (
-        <a href="/">
-            <h3 class="font-body">{project.title}</h3>
-        </a>
     )
 }
