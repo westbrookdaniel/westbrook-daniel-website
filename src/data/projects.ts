@@ -18,7 +18,7 @@ export const projects: Project[] = [
     },
 ]
 
-export const detailsProjects: DetailedProject[] = [
+export const detailedProjects: DetailedProject[] = [
     {
         title: 'Brisk Poll',
         description: 'Create and vote in polls quickly and easily',

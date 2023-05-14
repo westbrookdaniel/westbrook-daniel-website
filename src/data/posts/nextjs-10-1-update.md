@@ -2,15 +2,6 @@
 title: 'Nextjs 10.1 Development Improvements'
 description: 'Learn about the latest updates to next/image and other improvements'
 date: 1618650842693
-feature:
-    {
-        href: '/images/blog/nextjs-10-1-update/feature.jpg',
-        author:
-            {
-                name: 'Jake Givens',
-                referral: 'https://unsplash.com/@jakegivens?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText',
-            },
-    }
 snippet: "Nextjs just got it's most recent update - 10.1 - which brings a lot of new exciting features. Some highlights include: 3x faster refresh, Reduced install time/size, next/image Improvements, Custom 500 page, Initial Webpack 5 support."
 ---
 

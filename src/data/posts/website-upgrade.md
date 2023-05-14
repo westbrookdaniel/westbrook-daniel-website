@@ -2,15 +2,6 @@
 title: 'Time for a Website Upgrade'
 description: 'Adding theming and improving performance'
 date: 1623930322525
-feature:
-    {
-        href: '/images/blog/website-upgrade/feature.jpg',
-        author:
-            {
-                name: 'Ana Kolosyuk',
-                referral: 'https://unsplash.com/@anko_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText',
-            },
-    }
 snippet: 'With the release of Nextjs 11, I decided it was time for some website improvements. Some of the key problems I wanted to solve was...Thankfully, these first two are made easy by Nextjs 11. The recent placeholder property added to the next/image component...'
 ---
 
@@ -39,7 +30,7 @@ I wanted to make more colour schemes avalible whilst still having an automatic c
 My inspiration originally came from the [Rebass website](https://rebassjs.org/) pictured below which
 has a similar colour scheme switcher.
 
-[Rebase Website](/images/blog/website-upgrade/rebassjs.png)
+![Rebase Website](/images/blog/website-upgrade/rebassjs.png)
 
 The styling of my website is done with [TailwindCSS](https://tailwindcss.com/), and since it supports using CSS custom properties, that
 was where I started my implementation.

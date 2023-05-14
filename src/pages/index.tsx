@@ -1,13 +1,18 @@
 import { ref } from 'documentx/util'
 import { Divider } from '../components/Divider'
+import { Post, getBlogPosts } from '../data/blog'
+import { formatDate } from '../util/date'
+import { Project, detailedProjects } from '../data/projects'
 
-export default function Home() {
+export default async function Home() {
     meta.from({
         title: 'Daniel Westbrook | Web Developer',
         description:
             'I am a web developer primarily working with React building next-gen apps. I enjoy creating performant solutions and exploring new tools and technologies.',
         noSuffix: true,
     })
+
+    const posts = await getBlogPosts()
 
     return (
         <div class="space-y-28">
@@ -44,9 +49,9 @@ export default function Home() {
                 </div>
                 <Divider class="mb-10" />
                 <div class="space-y-4">
-                    <Post />
-                    <Post />
-                    <Post />
+                    {posts.slice(0, 3).map(post => (
+                        <Post post={post} />
+                    ))}
                 </div>
             </div>
             <div>
@@ -58,9 +63,9 @@ export default function Home() {
                 </div>
                 <Divider class="mb-10" />
                 <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-16">
-                    <Project />
-                    <Project />
-                    <Project />
+                    {detailedProjects.map(project => (
+                        <Project project={project} />
+                    ))}
                 </div>
             </div>
         </div>
@@ -99,29 +104,27 @@ function Typed({ text }: { text: string }) {
     )
 }
 
-function Post() {
+async function Post({ post }: { post: Post }) {
     return (
         <div class="space-y-2 group/post">
-            <a href="/" class="no-underline w-full">
+            <a href={`/blog/${post.id}`} class="no-underline w-full">
                 <h3 class="font-body underline group-hover/post:no-underline xs:mb-2 md:mb-0">
-                    Auditing React Performance
+                    {post.info.title}
                 </h3>
                 <div class="flex flex-col md:flex-row justify-between">
-                    <p class="hidden xs:block">
-                        How to use the React DevTools Profiler
-                    </p>
+                    <p class="hidden xs:block">{post.info.description}</p>
                     <div class="flex-grow border-t-2 border-text/10 self-center mx-4" />
-                    <p>20/5/2022</p>
+                    <p>{formatDate(post.info.date)}</p>
                 </div>
             </a>
         </div>
     )
 }
 
-function Project() {
+function Project({ project }: { project: Project }) {
     return (
         <a href="/">
-            <h3 class="font-body">Brisk Poll</h3>
+            <h3 class="font-body">{project.title}</h3>
         </a>
     )
 }

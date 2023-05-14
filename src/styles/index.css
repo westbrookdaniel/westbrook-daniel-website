@@ -7,6 +7,7 @@ body {
     @apply bg-bg text-text font-body;
 }
 
+.prose,
 .prose * {
     @apply text-text;
 }
@@ -22,4 +23,8 @@ h4,
 h5,
 h6 {
     @apply font-heading;
+}
+
+img {
+    @apply rounded-xl;
 }

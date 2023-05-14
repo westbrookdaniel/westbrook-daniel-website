@@ -2,15 +2,6 @@
 title: 'Start Any Project With Vite'
 description: 'Explore a new, fast, and easy to use build tool'
 date: 1624016139854
-feature:
-    {
-        href: '/images/blog/start-any-project-with-vite/feature.jpg',
-        author:
-            {
-                name: 'Jonathan Chng',
-                referral: 'https://unsplash.com/@jon_chng?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText',
-            },
-    }
 snippet: "Recently I've been using Vite (pronounced /vit/) when starting up my new projects, specifically Vite 2.0. Vite is a easy to use build tool like Create React App but supports many libraries and frameworks, with the below templates in Javascript and Typescript..."
 ---
 

@@ -2,15 +2,6 @@
 title: 'Client Side File-Based Router'
 description: 'See how you can use a file-based router in your client side projects'
 date: 1627804215996
-feature:
-    {
-        href: '/images/blog/client-file-based-router/feature.jpg',
-        author:
-            {
-                name: 'Jordan Madrid',
-                referral: 'https://unsplash.com/@jordanmadrid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText',
-            },
-    }
 snippet: 'Nextjs and other server-side frameworks have a great feature that makes adding new pages in your web app very continent, referred to as a file-based router. Usually, within a `pages` folder...'
 ---
 

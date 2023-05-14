@@ -2,15 +2,6 @@
 title: 'Using AbortControllers to Cancel Fetch in React'
 description: 'How to use the web api to cancel fetch easily'
 date: 1618230568834
-feature:
-    {
-        href: '/images/blog/react-abort-controllers/feature.jpg',
-        author:
-            {
-                name: 'Vishu',
-                referral: 'https://unsplash.com/@vishujoo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText',
-            },
-    }
 snippet: 'In react we can use fetch in a useEffect to get a request when the page loads... This uses the web api AbortController as the signal for fetch. By returning a function from useEffect we can trigger the abort controller on dismount...'
 ---
 
