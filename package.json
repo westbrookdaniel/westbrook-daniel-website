@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "documentx-ssr dev",
         "build": "documentx-ssr build",
-        "preview": "node dist",
+        "start": "node dist",
         "format": "prettier --write ."
     },
     "devDependencies": {
