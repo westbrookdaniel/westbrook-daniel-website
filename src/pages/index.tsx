@@ -3,7 +3,6 @@ import { Divider } from '../components/Divider'
 import { getBlogPosts } from '../data/blog'
 import { detailedProjects } from '../data/projects'
 import PostItem from '../components/PostItem'
-import ProjectItem from '../components/ProjectItem'
 import DetailedProjectItem from '../components/DetailedProjectItem'
 
 export default async function Home() {
