@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    @apply bg-bg text-text font-body;
+}
+
+.prose * {
+    @apply text-text;
+}
+
+a {
+    @apply underline hover:no-underline inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-heading;
+}
