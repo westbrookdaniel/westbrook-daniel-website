@@ -27,7 +27,9 @@ export default async function App() {
     })
 
     if (typeof document !== 'undefined') {
-        await document.fonts.ready
+        try {
+            await document.fonts.ready
+        } catch {}
     }
 
     return (
