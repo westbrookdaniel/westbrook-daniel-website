@@ -4,8 +4,8 @@
     "version": "0.2.0",
     "type": "module",
     "scripts": {
-        "dev": "documentx-ssr dev",
-        "build": "documentx-ssr build",
+        "dev": "node codegen && documentx-ssr dev",
+        "build": "node codegen && documentx-ssr build",
         "start": "node dist",
         "format": "prettier --write ."
     },

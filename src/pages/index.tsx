@@ -13,7 +13,7 @@ export default async function Home() {
         noSuffix: true,
     })
 
-    const posts = await getBlogPosts()
+    const posts = getBlogPosts()
 
     return (
         <div class="space-y-28">

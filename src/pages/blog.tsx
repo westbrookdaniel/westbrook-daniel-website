@@ -7,7 +7,7 @@ export default async function Blog() {
         title: 'Blog',
     })
 
-    const posts = await getBlogPosts()
+    const posts = getBlogPosts()
 
     return (
         <div class="space-y-28">
