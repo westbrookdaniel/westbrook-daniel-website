@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # Codegen
-src/data/posts.json
+src/data/generated

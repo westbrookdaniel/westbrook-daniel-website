@@ -1,7 +1,7 @@
-import { Post } from '../data/blog'
+import { PostInfo } from '../data/blog'
 import { formatDate } from '../util/date'
 
-export default async function PostItem({ post }: { post: Post }) {
+export default async function PostItem({ post }: { post: PostInfo }) {
     return (
         <div class="space-y-2 group/post">
             <a href={`/blog/${post.id}`} class="no-underline w-full">

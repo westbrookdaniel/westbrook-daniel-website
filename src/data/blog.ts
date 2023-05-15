@@ -1,24 +1,33 @@
-import _posts from './posts.json'
+import _info from './generated/info.json'
 
-export interface PostInfo {
+export interface Info {
     title: string
     description: string
     date: number
     snippet: string
 }
 
-export type Post = {
-    id: string
-    info: PostInfo
+export type Post = PostInfo & {
     html: string
 }
 
-const posts = _posts as Post[]
+export type PostInfo = {
+    id: string
+    info: Info
+}
 
-export const getBlogPosts = () => {
+const postsHtml = import.meta.glob('./generated/posts/*.html', { as: 'raw' })
+
+const posts = _info as PostInfo[]
+
+export const getBlogPostInfo = () => {
     return posts.sort((a, b) => b.info.date - a.info.date)
 }
 
-export const getBlogPost = (id: string) => {
-    return posts.find(post => post.id === id)
+export const getBlogPost = async (id: string) => {
+    const postInfo = posts.find(post => post.id === id)
+    if (!postInfo) return null
+    const html = await postsHtml[`./generated/posts/${id}.html`]()
+    if (!html) throw new Error(`No html found for ${id}`)
+    return { ...postInfo, html }
 }

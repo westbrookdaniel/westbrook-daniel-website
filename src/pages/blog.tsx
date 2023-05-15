@@ -1,13 +1,13 @@
 import { Divider } from '../components/Divider'
 import PostItem from '../components/PostItem'
-import { getBlogPosts } from '../data/blog'
+import { getBlogPostInfo } from '../data/blog'
 
 export default async function Blog() {
     meta.from({
         title: 'Blog',
     })
 
-    const posts = getBlogPosts()
+    const posts = getBlogPostInfo()
 
     return (
         <div class="space-y-28">

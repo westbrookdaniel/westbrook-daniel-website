@@ -34,4 +34,22 @@ const blogPosts = await Promise.all(
     })
 )
 
-fs.writeFileSync('./src/data/posts.json', JSON.stringify(blogPosts))
+// Check if the generated folder exists and clear it
+if (!fs.existsSync('./src/data/generated')) {
+    fs.mkdirSync('./src/data/generated')
+} else {
+    fs.rmSync('./src/data/generated', { recursive: true })
+    fs.mkdirSync('./src/data/generated')
+}
+
+// Blog posts
+fs.mkdirSync('./src/data/generated/posts')
+blogPosts.forEach(({ id, html }) => {
+    fs.writeFileSync(`./src/data/generated/posts/${id}.html`, html)
+})
+
+// Blog posts only with id and info
+fs.writeFileSync(
+    './src/data/generated/info.json',
+    JSON.stringify(blogPosts.map(({ id, info }) => ({ id, info })))
+)

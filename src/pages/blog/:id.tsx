@@ -6,7 +6,7 @@ import { formatDate } from '../../util/date'
 export default async function BlogPost() {
     const { id } = router.params()
 
-    const post = getBlogPost(id)
+    const post = await getBlogPost(id)
 
     if (!post) return <NotFound />
 

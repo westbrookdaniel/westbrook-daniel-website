@@ -1,6 +1,6 @@
 import { ref } from 'documentx/util'
 import { Divider } from '../components/Divider'
-import { getBlogPosts } from '../data/blog'
+import { getBlogPostInfo } from '../data/blog'
 import { detailedProjects } from '../data/projects'
 import PostItem from '../components/PostItem'
 import DetailedProjectItem from '../components/DetailedProjectItem'
@@ -13,7 +13,7 @@ export default async function Home() {
         noSuffix: true,
     })
 
-    const posts = getBlogPosts()
+    const posts = getBlogPostInfo()
 
     return (
         <div class="space-y-28">
@@ -99,7 +99,7 @@ function Typed({ text }: { text: string }) {
             <span ref={textEl} />
             <span
                 ref={boxEl}
-                class="mb-[-1px] h-[34px] w-[18px] xs:mb-[-2px] xs:h-[52px] xs:w-[24px] md:mb-[-4px] md:h-[114px] md:w-[54px] bg-text inline-block"
+                class="mb-[-1px] h-[32px] w-[16px] xs:mb-[-2px] xs:h-[52px] xs:w-[24px] md:mb-[-4px] md:h-[114px] md:w-[54px] bg-text inline-block"
             />
         </span>
     )
