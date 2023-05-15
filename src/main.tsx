@@ -46,3 +46,13 @@ if (typeof document !== 'undefined') {
         document.querySelector('#app')!.replaceChildren(...children)
     })
 }
+
+/**
+ * Things TODO
+ *
+ * Router Link Preload
+ * Markdown formatting, images, codes
+ * Favicon
+ * Socials
+ * Type
+ */
