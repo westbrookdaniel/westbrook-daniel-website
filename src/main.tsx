@@ -26,6 +26,10 @@ export default async function App() {
         error: err => <h1>Error: {err}</h1>,
     })
 
+    if (typeof document !== 'undefined') {
+        await document.fonts.ready
+    }
+
     return (
         <div class="max-w-3xl m-auto px-6">
             <Header />
