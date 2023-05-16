@@ -39,11 +39,3 @@ if (typeof document !== 'undefined') {
         document.querySelector('#app')!.replaceChildren(...children)
     })
 }
-
-/**
- * Things TODO
- *
- * Markdown formatting, images, codes
- * Favicon
- * Socials
- */

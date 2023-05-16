@@ -23,6 +23,7 @@
         "vite": "^4.3.6"
     },
     "dependencies": {
+        "@ant-design/icons-svg": "^4.2.1",
         "documentx": "^0.9.0",
         "rehype-pretty-code": "^0.9.5",
         "rehype-stringify": "^9.0.3",
