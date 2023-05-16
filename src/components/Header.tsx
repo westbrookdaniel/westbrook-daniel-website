@@ -1,9 +1,9 @@
-import type { IconDefinition } from '@ant-design/icons-svg/es/types'
-import Github from '@ant-design/icons-svg/es/asn/GithubFilled'
-import Linkedin from '@ant-design/icons-svg/es/asn/LinkedinFilled'
-import Twitter from '@ant-design/icons-svg/es/asn/TwitterCircleFilled'
-import Email from '@ant-design/icons-svg/es/asn/MailFilled'
-import { renderIconDefinitionToSVGElement } from '@ant-design/icons-svg/es/helpers'
+import type { IconDefinition } from '@ant-design/icons-svg/lib/types'
+import Github from '@ant-design/icons-svg/lib/asn/GithubFilled'
+import Linkedin from '@ant-design/icons-svg/lib/asn/LinkedinFilled'
+import Twitter from '@ant-design/icons-svg/lib/asn/TwitterCircleFilled'
+import Email from '@ant-design/icons-svg/lib/asn/MailFilled'
+import { renderIconDefinitionToSVGElement } from '@ant-design/icons-svg/lib/helpers'
 
 const getHtml = (def: IconDefinition) => {
     return renderIconDefinitionToSVGElement(def, {
@@ -16,7 +16,6 @@ const getHtml = (def: IconDefinition) => {
 }
 
 export default function Header() {
-    console.log(Github)
     return (
         <header class="py-8 w-full flex justify-between">
             <nav class="flex space-x-4">
