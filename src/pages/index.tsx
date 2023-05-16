@@ -7,9 +7,9 @@ import DetailedProjectItem from '../components/DetailedProjectItem'
 
 export default async function Home() {
     meta.from({
-        title: 'Daniel Westbrook | Web Developer',
+        title: 'Daniel Westbrook - Web Developer',
         description:
-            'I am a web developer primarily working with React building next-gen apps. I enjoy creating performant solutions and exploring new tools and technologies.',
+            "I love building awesome web apps with React (and more). I'm always looking for ways to make my code faster, cleaner and more fun to work with.",
         noSuffix: true,
     })
 
@@ -30,15 +30,11 @@ export default async function Home() {
                 <h2 class="mb-4">About Me</h2>
                 <Divider class="mb-10" />
                 <p>
-                    Hi, I'm Daniel Westbrook and I am a web developer primarily
-                    working with React building next-gen apps. I enjoy creating
-                    performant solutions and exploring new tools and
-                    technologies.
-                </p>
-                <p>
-                    Some of my favourite things are TailwindCSS, and Typescript.
-                    When I'm not coding you can find me playing sport (tennis
-                    and hockey), video games, or listening to music.
+                    Hey there, I'm Daniel Westbrook and I love building awesome
+                    web apps with React (and more). I'm always looking for ways
+                    to make my code faster, cleaner and more fun to work with.
+                    When I take a break from coding, I play sports like hockey
+                    and tennis, and unwind with music and video games.
                 </p>
             </div>
             <div>

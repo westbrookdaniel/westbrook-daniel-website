@@ -10,7 +10,7 @@ register({
     router: createRouter(
         fileRouter(import.meta.glob('./pages/**/*.tsx'), './pages')
     ),
-    meta: new Meta({ suffix: ' | Daniel Westbrook' }),
+    meta: new Meta({ suffix: ' - Daniel Westbrook' }),
 })
 
 export default async function App() {
