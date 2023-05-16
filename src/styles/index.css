@@ -2,29 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-    @apply bg-bg text-text font-body;
-}
+@layer base {
+    :root {
+        --bg: 81 72 16;
+        --text: 174 244 226;
+    }
 
-.prose,
-.prose * {
-    @apply text-text;
-}
+    html,
+    body {
+        @apply bg-bg text-text font-body;
+    }
 
-a {
-    @apply underline hover:no-underline inline-block;
-}
+    a {
+        @apply underline hover:no-underline inline-block;
+    }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    @apply font-heading;
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading;
+    }
 
-img {
-    @apply rounded-xl;
+    img {
+        @apply rounded-xl;
+    }
 }
