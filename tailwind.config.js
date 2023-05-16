@@ -6,6 +6,7 @@ export default {
             colors: {
                 bg: 'rgb(var(--bg) / <alpha-value>)',
                 text: 'rgb(var(--text) / <alpha-value>)',
+                accent: 'rgb(var(--accent) / <alpha-value>)',
             },
             fontFamily: {
                 body: ['GeneralSans-Regular', 'sans-serif'],
@@ -16,7 +17,7 @@ export default {
             },
             typography: theme => {
                 const heading = {
-                    color: theme('colors.text'),
+                    color: 'rgb(var(--accent) / 1)',
                     fontWeight: 'normal',
                 }
                 return {
@@ -27,15 +28,15 @@ export default {
                             '> :not(pre)': {
                                 maxWidth: '65ch',
                             },
-                            color: theme('colors.text'),
+                            color: 'rgb(var(--text) / 1)',
                             a: {
-                                color: theme('colors.text'),
+                                color: 'rgb(var(--accent) / 1)',
                                 '&:hover': {
-                                    color: theme('colors.text'),
+                                    color: 'rgb(var(--accent) / 1)',
                                 },
                             },
                             code: {
-                                color: theme('colors.text'),
+                                color: 'rgb(var(--text) / 1)',
                                 fontWeight: 'normal',
                             },
                             'ul > li::marker': {

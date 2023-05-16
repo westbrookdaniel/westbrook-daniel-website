@@ -84,7 +84,7 @@ function Typed({ text }: { text: string }) {
                 clearInterval(int)
 
                 setInterval(() => {
-                    boxEl.target.classList.toggle('bg-text')
+                    boxEl.target.classList.toggle('bg-accent')
                 }, 500)
             }
         }, 90)
@@ -95,7 +95,7 @@ function Typed({ text }: { text: string }) {
             <span ref={textEl} />
             <span
                 ref={boxEl}
-                class="mb-[-1px] h-[32px] w-[16px] xs:mb-[-2px] xs:h-[52px] xs:w-[24px] md:mb-[-4px] md:h-[114px] md:w-[54px] bg-text inline-block"
+                class="mb-[-1px] h-[32px] w-[16px] xs:mb-[-2px] xs:h-[52px] xs:w-[24px] md:mb-[-4px] md:h-[114px] md:w-[54px] bg-accent inline-block"
             />
         </span>
     )
