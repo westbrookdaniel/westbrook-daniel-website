@@ -21,6 +21,10 @@ export default async function App() {
             'I am a web developer primarily working with React building next-gen apps. I enjoy creating performant solutions and exploring new tools and technologies.',
     })
 
+    console.log(
+        'Source code available at https://github.com/westbrookdaniel/westbrook-daniel-website'
+    )
+
     const route = await router.bind(el)
 
     return (
