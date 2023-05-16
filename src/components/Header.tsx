@@ -17,19 +17,19 @@ const getHtml = (def: IconDefinition) => {
 
 export default function Header() {
     return (
-        <header class="py-8 w-full flex justify-between">
+        <header class="py-8 w-full flex flex-col md:flex-row space-y-4 md:space-y-0 justify-between mb-8">
             <nav class="flex space-x-4">
                 <a href="/">Home</a>
                 <a href="/blog">Blog</a>
                 <a href="/projects">Projects</a>
             </nav>
 
-            <div class="flex items-center space-x-1">
+            <div class="flex items-center space-x-1 self-end">
                 <a
                     href="mailto:westy12dan@gmail.com"
                     aria-label="Email"
                     label="Email"
-                    class="px-2 hover:opacity-80"
+                    class="pr-2 hover:opacity-80"
                     dangerouslySetInnerHTML={{ __html: getHtml(Email) }}
                 />
                 <a

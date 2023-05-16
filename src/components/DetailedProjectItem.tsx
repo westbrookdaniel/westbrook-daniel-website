@@ -18,7 +18,7 @@ export default function DetailedProjectItem({
                 </h3>
                 <div class="flex flex-row justify-between">
                     <p>{project.description}</p>
-                    <div class="flex-grow border-t-2 border-text/10 self-center mx-4" />
+                    <div class="flex-grow border-t-2 border-text/10 self-center mx-4 hidden md:block" />
                 </div>
             </a>
         </div>
