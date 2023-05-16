@@ -3,6 +3,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import remarkFrontmatter from 'remark-frontmatter'
 import rehypeStringify from 'rehype-stringify'
+import rehypePrettyPlugin from 'rehype-pretty-code'
 import { matter } from 'vfile-matter'
 import { visit } from 'unist-util-visit'
 import fs from 'node:fs'
@@ -17,8 +18,17 @@ const processMarkdown = unified()
         matter(file)
     })
     .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypePrettyPlugin, {
+        theme: 'github-dark-dimmed',
+    })
     .use(() => tree => {
         visit(tree, 'element', node => {
+            if ('data-rehype-pretty-code-fragment' in node.properties) {
+                // If pretty code fragment move it's children to replace it
+                Object.entries(node.children[0]).forEach(([key, value]) => {
+                    node[key] = value
+                })
+            }
             if (['a'].includes(node.tagName)) {
                 node.properties.target = '_blank'
                 node.properties.rel = 'noopener noreferrer'
@@ -55,22 +65,24 @@ const blogPosts = await Promise.all(
     })
 )
 
+const root = path.resolve(__dirname, '../src/data/generated')
+
 // Check if the generated folder exists and clear it
-if (!fs.existsSync('./src/data/generated')) {
-    fs.mkdirSync('./src/data/generated')
+if (!fs.existsSync(root)) {
+    fs.mkdirSync(root)
 } else {
-    fs.rmSync('./src/data/generated', { recursive: true })
-    fs.mkdirSync('./src/data/generated')
+    fs.rmSync(root, { recursive: true })
+    fs.mkdirSync(root)
 }
 
 // Blog posts
-fs.mkdirSync('./src/data/generated/posts')
+fs.mkdirSync(path.join(root, 'posts'))
 blogPosts.forEach(({ id, html }) => {
-    fs.writeFileSync(`./src/data/generated/posts/${id}.html`, html)
+    fs.writeFileSync(path.join(root, `posts/${id}.html`), html)
 })
 
 // Blog posts only with id and info
 fs.writeFileSync(
-    './src/data/generated/info.json',
+    path.join(root, 'info.json'),
     JSON.stringify(blogPosts.map(({ id, info }) => ({ id, info })))
 )
