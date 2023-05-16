@@ -4,6 +4,7 @@ import remarkRehype from 'remark-rehype'
 import remarkFrontmatter from 'remark-frontmatter'
 import rehypeStringify from 'rehype-stringify'
 import { matter } from 'vfile-matter'
+import { visit } from 'unist-util-visit'
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -16,6 +17,26 @@ const processMarkdown = unified()
         matter(file)
     })
     .use(remarkRehype, { allowDangerousHtml: true })
+    .use(() => tree => {
+        visit(tree, 'element', node => {
+            if (['a'].includes(node.tagName)) {
+                node.properties.target = '_blank'
+                node.properties.rel = 'noopener noreferrer'
+            }
+            if (['img'].includes(node.tagName)) {
+                node.properties.loading = 'lazy'
+                // Turn https://example.com/image.jpg?100x100 into [100, 100] and remove it from the src
+                const dims = node.properties.src.split('?')[1]
+                if (dims) {
+                    const [width, height] = dims.split('x')
+                    node.properties.width = width
+                    node.properties.height = height
+                    node.properties.src = node.properties.src.split('?')[0]
+                }
+                // TODO: Do some image processing and add srcset
+            }
+        })
+    })
     .use(rehypeStringify, { allowDangerousHtml: true })
 
 const blogPosts = await Promise.all(
