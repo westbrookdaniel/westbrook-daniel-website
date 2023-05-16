@@ -43,9 +43,7 @@ if (typeof document !== 'undefined') {
 /**
  * Things TODO
  *
- * Router Link Preload
  * Markdown formatting, images, codes
  * Favicon
  * Socials
- * Type
  */
