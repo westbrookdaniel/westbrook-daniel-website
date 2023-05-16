@@ -4,8 +4,8 @@
     "version": "0.2.0",
     "type": "module",
     "scripts": {
-        "dev": "node codegen && documentx-ssr dev",
-        "build": "node codegen && documentx-ssr build",
+        "dev": "node codegen && documentx dev",
+        "build": "node codegen && documentx build",
         "start": "node dist",
         "format": "prettier --write ."
     },
@@ -23,7 +23,6 @@
     },
     "dependencies": {
         "documentx": "^0.8.6",
-        "documentx-ssr": "^3.0.8",
         "rehype-stringify": "^9.0.3",
         "remark-frontmatter": "^4.0.1",
         "remark-parse": "^10.0.1",

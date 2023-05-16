@@ -3,8 +3,7 @@ import './styles/gambarino.css'
 import './styles/general-sans.css'
 
 import { Meta, createRouter, fileRouter, ref } from 'documentx/util'
-import { render } from 'documentx'
-import { register } from 'documentx-ssr'
+import { render, register } from 'documentx'
 import Header from './components/Header'
 
 register({
@@ -22,15 +21,7 @@ export default async function App() {
             'I am a web developer primarily working with React building next-gen apps. I enjoy creating performant solutions and exploring new tools and technologies.',
     })
 
-    const route = await router.bind(el, {
-        error: err => <h1>Error: {err}</h1>,
-    })
-
-    if (typeof document !== 'undefined') {
-        try {
-            await document.fonts.ready
-        } catch {}
-    }
+    const route = await router.bind(el)
 
     return (
         <div class="max-w-3xl m-auto px-6">
