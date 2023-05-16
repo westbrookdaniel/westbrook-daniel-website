@@ -4,6 +4,7 @@ import { getBlogPostInfo } from '../data/blog'
 import { detailedProjects } from '../data/projects'
 import PostItem from '../components/PostItem'
 import DetailedProjectItem from '../components/DetailedProjectItem'
+import Socials from '../components/Socials'
 
 export default async function Home() {
     meta.from({
@@ -36,6 +37,11 @@ export default async function Home() {
                     When I take a break from coding, I play sports like hockey
                     and tennis, and unwind with music and video games.
                 </p>
+                <p>
+                    You can find my work or get in touch with me using the links
+                    below.
+                </p>
+                <Socials />
             </div>
             <div>
                 <div class="flex items-baseline justify-between">

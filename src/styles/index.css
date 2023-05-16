@@ -18,13 +18,16 @@
         @apply text-accent underline hover:no-underline inline-block;
     }
 
-    h1,
+    h1 {
+        @apply font-heading text-accent;
+    }
+
     h2,
     h3,
     h4,
     h5,
     h6 {
-        @apply font-heading text-accent;
+        @apply font-heading text-text;
     }
 
     img {

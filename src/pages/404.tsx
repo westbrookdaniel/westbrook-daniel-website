@@ -6,7 +6,7 @@ export default function NotFound() {
     })
 
     return (
-        <div class="min-h-[33vh] flex flex-col justify-center space-y-4 md:space-y-8">
+        <div class="min-h-[33vh] flex flex-col justify-center space-y-4 md:space-y-8 py-16">
             <h1 class="text-4xl xs:text-6xl md:text-6xl">Not Found</h1>
             <Divider />
             <div class="space-y-2">

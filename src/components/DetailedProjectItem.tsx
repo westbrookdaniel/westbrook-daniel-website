@@ -13,7 +13,7 @@ export default function DetailedProjectItem({
                 rel="noopener noreferrer"
                 class="no-underline w-full"
             >
-                <h3 class="font-body underline group-hover/post:no-underline mb-1">
+                <h3 class="font-body underline group-hover/post:no-underline mb-1 text-accent">
                     {project.title}
                 </h3>
                 <div class="flex flex-row justify-between text-text">

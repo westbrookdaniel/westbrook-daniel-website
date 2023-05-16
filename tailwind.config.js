@@ -17,7 +17,7 @@ export default {
             },
             typography: theme => {
                 const heading = {
-                    color: 'rgb(var(--accent) / 1)',
+                    color: 'rgb(var(--text) / 1)',
                     fontWeight: 'normal',
                 }
                 return {

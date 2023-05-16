@@ -4,7 +4,7 @@ import './styles/general-sans.css'
 
 import { Meta, createRouter, fileRouter, ref } from 'documentx/util'
 import { render, register } from 'documentx'
-import Header from './components/Header'
+import Socials from './components/Socials'
 
 register({
     router: createRouter(
@@ -29,9 +29,16 @@ export default async function App() {
 
     return (
         <div class="max-w-3xl m-auto px-6">
-            <Header />
+            <header class="py-8 w-full flex flex-col mb-8">
+                <nav class="flex space-x-4">
+                    <a href="/">Home</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/projects">Projects</a>
+                </nav>
+            </header>
             <main ref={el}>{route}</main>
-            <footer class="py-8 mt-64 text-sm">
+            <footer class="py-8 mt-64 text-sm space-y-4">
+                <Socials />
                 <p>Made By Daniel Westbrook ({new Date().getFullYear()})</p>
             </footer>
         </div>

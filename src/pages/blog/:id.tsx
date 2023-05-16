@@ -17,7 +17,7 @@ export default async function BlogPost() {
 
     return (
         <div>
-            <div class="min-h-[33vh] flex flex-col justify-center space-y-4 md:space-y-8">
+            <div class="min-h-[33vh] flex flex-col justify-center space-y-4 md:space-y-8 py-16">
                 <h1 class="text-4xl xs:text-6xl md:text-6xl">
                     {post.info.title}
                 </h1>
