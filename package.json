@@ -13,7 +13,7 @@
         "@tailwindcss/forms": "^0.5.3",
         "@tailwindcss/typography": "^0.5.9",
         "@types/express": "^4.17.17",
-        "@types/node": "^18.16.10",
+        "@types/node": "^18.16.12",
         "autoprefixer": "^10.4.14",
         "jimp": "^0.22.8",
         "postcss": "^8.4.23",
@@ -21,16 +21,16 @@
         "tailwindcss": "^3.3.2",
         "typescript": "5.1.0-beta",
         "unist-util-visit": "^4.1.2",
-        "vite": "^4.3.6"
+        "vite": "^4.3.7"
     },
     "dependencies": {
         "@ant-design/icons-svg": "^4.2.1",
         "color2k": "^2.0.2",
-        "documentx": "^0.9.0",
+        "documentx": "^0.10.0",
         "rehype-pretty-code": "^0.9.5",
         "rehype-stringify": "^9.0.3",
         "remark-frontmatter": "^4.0.1",
-        "remark-parse": "^10.0.1",
+        "remark-parse": "^10.0.2",
         "remark-rehype": "^10.1.0",
         "shiki": "^0.14.2",
         "unified": "^10.1.2",
