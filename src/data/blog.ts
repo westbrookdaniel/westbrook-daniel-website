@@ -3,7 +3,7 @@ import _info from './generated/info.json'
 export interface Info {
     title: string
     description: string
-    date: number
+    date: number | string
     snippet: string
 }
 
@@ -21,7 +21,10 @@ const postsHtml = import.meta.glob('./generated/posts/*.html', { as: 'raw' })
 const posts = _info as PostInfo[]
 
 export const getBlogPostInfo = () => {
-    return posts.sort((a, b) => b.info.date - a.info.date)
+    return posts.sort(
+        (a, b) =>
+            new Date(b.info.date).getTime() - new Date(a.info.date).getTime()
+    )
 }
 
 export const getBlogPost = async (id: string) => {
