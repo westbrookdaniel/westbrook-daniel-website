@@ -5,6 +5,7 @@ import {
     parseToRgba,
     parseToHsla,
     hsla,
+    darken,
 } from 'color2k'
 
 type Rgb = number[]
@@ -19,17 +20,12 @@ export const getRandomTheme = () => {
         '--accent': randRgb(),
     }
 
-    /**
-     * Found that ligtening text and desaturating background
-     * gave the most consistent results for the feel I was going for
-     */
-
     newVars['--text'] = parseToRgba(
         lighten(`rgb(${newVars['--text'].join(', ')})`, 0.6)
     ).slice(0, 3)
 
     newVars['--bg'] = parseToRgba(
-        desaturate(`rgb(${newVars['--bg'].join(', ')})`, 0.3)
+        darken(desaturate(`rgb(${newVars['--bg'].join(', ')})`, 0.3), 0.3)
     ).slice(0, 3)
 
     newVars['--bg'] = toA11yColor(newVars['--bg'], newVars['--text'])
