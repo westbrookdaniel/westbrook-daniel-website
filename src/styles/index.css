@@ -33,4 +33,8 @@
     img {
         @apply rounded-xl;
     }
+
+    button {
+        @apply px-2 py-1 rounded-md bg-text/10 text-text hover:bg-text/20 active:bg-text/30 transition-colors duration-75;
+    }
 }

@@ -13,7 +13,7 @@ export default {
                 heading: ['Gambarino-Regular', 'serif'],
             },
             screens: {
-                xs: '400px',
+                xs: '370px',
             },
             typography: theme => {
                 const heading = {

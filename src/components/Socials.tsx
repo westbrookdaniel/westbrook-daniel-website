@@ -1,22 +1,8 @@
-import type { IconDefinition } from '@ant-design/icons-svg/lib/types'
 import Github from '@ant-design/icons-svg/lib/asn/GithubFilled'
 import Linkedin from '@ant-design/icons-svg/lib/asn/LinkedinFilled'
 import Twitter from '@ant-design/icons-svg/lib/asn/TwitterCircleFilled'
 import Email from '@ant-design/icons-svg/lib/asn/MailFilled'
-import { renderIconDefinitionToSVGElement } from '@ant-design/icons-svg/lib/helpers'
-
-const getHtml = (def: IconDefinition) => {
-    let actualDef = def
-    // TODO: Why the server be like this
-    if ('default' in def) actualDef = def.default as IconDefinition
-    return renderIconDefinitionToSVGElement(actualDef, {
-        extraSVGAttrs: {
-            width: '1.2em',
-            height: '1.2em',
-            fill: 'currentColor',
-        },
-    })
-}
+import { getIconHtml } from '../util/icon'
 
 export default function Socials() {
     return (
@@ -26,7 +12,7 @@ export default function Socials() {
                 aria-label="Email"
                 label="Email"
                 class="pr-2 hover:opacity-80"
-                dangerouslySetInnerHTML={{ __html: getHtml(Email) }}
+                dangerouslySetInnerHTML={{ __html: getIconHtml(Email) }}
             />
             <a
                 href="https://www.linkedin.com/in/daniel-westbrook-692227196/"
@@ -34,7 +20,7 @@ export default function Socials() {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 class="px-2 hover:opacity-80"
-                dangerouslySetInnerHTML={{ __html: getHtml(Linkedin) }}
+                dangerouslySetInnerHTML={{ __html: getIconHtml(Linkedin) }}
             />
             <a
                 href="https://github.com/westbrookdaniel/"
@@ -42,7 +28,7 @@ export default function Socials() {
                 rel="noopener noreferrer"
                 aria-label="Github"
                 class="px-2 hover:opacity-80"
-                dangerouslySetInnerHTML={{ __html: getHtml(Github) }}
+                dangerouslySetInnerHTML={{ __html: getIconHtml(Github) }}
             />
             <a
                 href="https://twitter.com/DanielW29381255"
@@ -50,7 +36,7 @@ export default function Socials() {
                 rel="noopener noreferrer"
                 aria-label="Twitter"
                 class="pl-2 hover:opacity-80"
-                dangerouslySetInnerHTML={{ __html: getHtml(Twitter) }}
+                dangerouslySetInnerHTML={{ __html: getIconHtml(Twitter) }}
             />
         </div>
     )
