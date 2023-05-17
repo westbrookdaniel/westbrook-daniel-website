@@ -25,3 +25,4 @@ dist-ssr
 
 # Codegen
 src/data/generated
+public/generated

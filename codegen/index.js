@@ -6,6 +6,7 @@ import rehypeStringify from 'rehype-stringify'
 import rehypePrettyPlugin from 'rehype-pretty-code'
 import { matter } from 'vfile-matter'
 import { visit } from 'unist-util-visit'
+import Jimp from 'jimp'
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -41,7 +42,25 @@ const processMarkdown = unified()
                     const [width, height] = dims.split('x')
                     node.properties.width = width
                     node.properties.height = height
-                    node.properties.src = node.properties.src.split('?')[0]
+
+                    // Optimize the image
+                    const originalSrc = node.properties.src
+                        .split('?')[0]
+                        .substring(1)
+
+                    node.properties.src = `/generated/${originalSrc}`
+
+                    const publicRoot = path.resolve(__dirname, '../public')
+                    const outRoot = path.resolve(
+                        __dirname,
+                        '../public/generated'
+                    )
+
+                    Jimp.read(path.join(publicRoot, originalSrc)).then(img => {
+                        img.resize(parseInt(width), parseInt(height))
+                            .quality(80)
+                            .write(path.join(outRoot, originalSrc))
+                    })
                 }
                 // TODO: Do some image processing and add srcset
             }
