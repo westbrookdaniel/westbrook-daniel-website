@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --bg: 81 72 16;
-        --text: 210 210 100;
-        --accent: 174 244 226;
-    }
-
     html,
     body {
         @apply bg-bg text-text font-body;
@@ -35,6 +29,6 @@
     }
 
     button {
-        @apply px-2 py-1 rounded-md bg-text/10 text-text hover:bg-text/20 active:bg-text/30 transition-colors duration-75;
+        @apply px-2 py-1 rounded-md text-sm flex items-center bg-text/10 text-text hover:bg-text/20 active:bg-text/30 transition-colors duration-75;
     }
 }
