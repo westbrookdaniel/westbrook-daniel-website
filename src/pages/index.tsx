@@ -5,6 +5,7 @@ import { detailedProjects } from '../data/projects'
 import PostItem from '../components/PostItem'
 import DetailedProjectItem from '../components/DetailedProjectItem'
 import Socials from '../components/Socials'
+import { randomiseTheme } from '../components/Themer'
 
 export default async function Home() {
     meta.from({
@@ -44,10 +45,10 @@ export default async function Home() {
                 <Socials />
             </div>
             <div>
-                <div class="flex items-baseline justify-between">
-                    <h2 class="text-2xl mb-4">Some Things I've Written</h2>
-                    <a href="/blog">
-                        <p class="text-sm">See all</p>
+                <div class="flex items-end justify-between mb-4">
+                    <h2 class="text-2xl">Some Things I've Written</h2>
+                    <a href="/blog" class="no-underline mb-0.5">
+                        <button>See all</button>
                     </a>
                 </div>
                 <Divider class="mb-10" />
@@ -58,10 +59,10 @@ export default async function Home() {
                 </div>
             </div>
             <div>
-                <div class="flex items-baseline justify-between">
-                    <h2 class="text-2xl mb-4">Other Things I've Made</h2>
-                    <a href="/projects">
-                        <p class="text-sm">See all</p>
+                <div class="flex items-end justify-between mb-4">
+                    <h2 class="text-2xl ">Other Things I've Made</h2>
+                    <a href="/projects" class="no-underline m-0.5">
+                        <button>See all</button>
                     </a>
                 </div>
                 <Divider class="mb-10" />
@@ -75,6 +76,8 @@ export default async function Home() {
     )
 }
 
+let firstTime = router.history.location.pathname === '/'
+
 function Typed({ text }: { text: string }) {
     const textEl = ref()
     const boxEl = ref()
@@ -86,14 +89,16 @@ function Typed({ text }: { text: string }) {
         const int = setInterval(() => {
             textEl.target.textContent = chars.slice(0, i).join('')
             i++
+            if (!(i % 2) && firstTime) randomiseTheme()
             if (i > chars.length) {
                 clearInterval(int)
+                firstTime = false
 
                 setInterval(() => {
                     boxEl.target.classList.toggle('bg-accent')
                 }, 500)
             }
-        }, 90)
+        }, 180)
     }
 
     return (

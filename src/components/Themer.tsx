@@ -10,6 +10,18 @@ const createFavicon = (color: string) => {
     )
 }
 
+export function randomiseTheme() {
+    const newVars = getRandomTheme()
+    // Set the CSS variables
+    Object.entries(newVars).forEach(([key, value]) => {
+        document.documentElement.style.setProperty(key, value.join(' '))
+    })
+    // Set the favicon
+    meta.set([createFavicon(`rgb(${newVars['--accent'].join(',')})`)])
+    // Store the theme in a cookie for
+    document.cookie = `theme=${JSON.stringify(newVars)};path=/`
+}
+
 export function Themer() {
     if (typeof document === 'undefined') {
         let theme: Record<string, number[]>
@@ -42,20 +54,8 @@ export function Themer() {
         document.cookie = `theme=${JSON.stringify(styles)};path=/`
     }
 
-    function onClick() {
-        const newVars = getRandomTheme()
-        // Set the CSS variables
-        Object.entries(newVars).forEach(([key, value]) => {
-            document.documentElement.style.setProperty(key, value.join(' '))
-        })
-        // Set the favicon
-        meta.set([createFavicon(`rgb(${newVars['--accent'].join(',')})`)])
-        // Store the theme in a cookie for
-        document.cookie = `theme=${JSON.stringify(newVars)};path=/`
-    }
-
     return (
-        <button onClick={onClick} class="space-x-1.5">
+        <button onClick={randomiseTheme} class="space-x-1.5">
             <span>New Theme</span>
             <span
                 class="py-0.5"

@@ -28,13 +28,45 @@ export default async function App() {
 
     const route = await router.bind(el)
 
+    const routes = [
+        { path: '/', name: 'Home', ref: ref() },
+        { path: '/blog', name: 'Blog', ref: ref() },
+        { path: '/projects', name: 'Projects', ref: ref() },
+    ]
+
+    router.history.listen(() => {
+        if (typeof document === 'undefined') return
+        routes.forEach(({ path, ref }) => {
+            const c = router.currentMatch().route
+            const matching = path === '/' ? c === path : c?.startsWith(path)
+            if (matching) {
+                ref.target.classList.remove('bg-[unset]')
+            } else {
+                ref.target.classList.add('bg-[unset]')
+            }
+        })
+    })
+
+    const c = router.currentMatch().route
+
     return (
         <div class="max-w-3xl m-auto px-6">
             <header class="py-8 w-full flex justify-between items-center mb-8">
-                <nav class="flex space-x-4">
-                    <a href="/">Home</a>
-                    <a href="/blog">Blog</a>
-                    <a href="/projects">Projects</a>
+                <nav class="flex space-x-2">
+                    {routes.map(({ name, path, ref }) => {
+                        const matching =
+                            path === '/' ? c === path : c?.startsWith(path)
+                        return (
+                            <a href={path} class="no-underline">
+                                <button
+                                    ref={ref}
+                                    class={matching ? undefined : 'bg-[unset]'}
+                                >
+                                    {name}
+                                </button>
+                            </a>
+                        )
+                    })}
                 </nav>
                 <Themer />
             </header>
