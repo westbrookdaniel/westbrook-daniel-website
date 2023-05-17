@@ -31,6 +31,15 @@ export function Themer() {
                 }}
             />,
         ])
+    } else {
+        // Get current theme from CSS variables and store it in a cookie
+        const comp = getComputedStyle(document.documentElement)
+        const styles = {
+            '--accent': comp.getPropertyValue('--accent').split(' '),
+            '--text': comp.getPropertyValue('--text').split(' '),
+            '--bg': comp.getPropertyValue('--bg').split(' '),
+        }
+        document.cookie = `theme=${JSON.stringify(styles)};path=/`
     }
 
     function onClick() {
@@ -42,7 +51,7 @@ export function Themer() {
         // Set the favicon
         meta.set([createFavicon(`rgb(${newVars['--accent'].join(',')})`)])
         // Store the theme in a cookie for
-        document.cookie = `theme=${JSON.stringify(newVars)};`
+        document.cookie = `theme=${JSON.stringify(newVars)};path=/`
     }
 
     return (
