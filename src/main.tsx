@@ -39,7 +39,7 @@ export default async function App() {
                 <Themer />
             </header>
             <main ref={el}>{route}</main>
-            <footer class="py-8 mt-64 text-sm space-y-4">
+            <footer class="py-8 mt-64 text-sm space-y-6">
                 <Socials />
                 <p>Made By Daniel Westbrook ({new Date().getFullYear()})</p>
             </footer>

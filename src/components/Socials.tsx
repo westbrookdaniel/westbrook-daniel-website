@@ -6,7 +6,7 @@ import { getIconHtml } from '../util/icon'
 
 export default function Socials() {
     return (
-        <div class="flex items-center space-x-1 self-end">
+        <div class="flex items-center space-x-2 self-end">
             <a
                 href="mailto:westy12dan@gmail.com"
                 aria-label="Email"

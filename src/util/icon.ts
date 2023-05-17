@@ -7,8 +7,8 @@ export const getIconHtml = (def: IconDefinition) => {
     if ('default' in def) actualDef = def.default as IconDefinition
     return renderIconDefinitionToSVGElement(actualDef, {
         extraSVGAttrs: {
-            width: '1.2em',
-            height: '1.2em',
+            width: '1.4em',
+            height: '1.4em',
             fill: 'currentColor',
         },
     })
