@@ -31,7 +31,6 @@ export default async function App() {
     const routes = [
         { path: '/', name: 'Home', ref: ref() },
         { path: '/blog', name: 'Blog', ref: ref() },
-        { path: '/projects', name: 'Projects', ref: ref() },
     ]
 
     router.history.listen(() => {
@@ -73,7 +72,7 @@ export default async function App() {
             <main ref={el}>{route}</main>
             <footer class="py-8 mt-64 text-sm space-y-6">
                 <Socials />
-                <p>Made By Daniel Westbrook ({new Date().getFullYear()})</p>
+                <p>Made By Daniel Westbrook</p>
             </footer>
         </div>
     )

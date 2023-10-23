@@ -1,10 +1,7 @@
 import { ref } from 'documentx/util'
 import { Divider } from '../components/Divider'
 import { getBlogPostInfo } from '../data/blog'
-import { detailedProjects } from '../data/projects'
 import PostItem from '../components/PostItem'
-import DetailedProjectItem from '../components/DetailedProjectItem'
-import Socials from '../components/Socials'
 import { randomiseTheme } from '../components/Themer'
 
 export default async function Home() {
@@ -26,7 +23,28 @@ export default async function Home() {
                     <Typed text="Westbrook" />
                 </h1>
                 <Divider />
-                <p class="xs:self-end">Currently developing at GLX Digitial</p>
+                <div class="text-right">
+                    <p class="xs:self-end">
+                        Currently developing at{' '}
+                        <a
+                            href="https://www.glxdigital.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GLX Digital
+                        </a>
+                    </p>
+                    <p class="xs:self-end">
+                        You can find my other projects on my{' '}
+                        <a
+                            href="https://github.com/westbrookdaniel/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Github
+                        </a>
+                    </p>
+                </div>
             </div>
             <div class="prose">
                 <h2 class="mb-4">About Me</h2>
@@ -38,11 +56,6 @@ export default async function Home() {
                     When I take a break from coding, I play sports like hockey
                     and tennis, and unwind with music and video games.
                 </p>
-                <p>
-                    You can find my work or get in touch with me using the links
-                    below.
-                </p>
-                <Socials />
             </div>
             <div>
                 <div class="flex items-end justify-between mb-4">
@@ -55,20 +68,6 @@ export default async function Home() {
                 <div class="space-y-4">
                     {posts.slice(0, 3).map(post => (
                         <PostItem post={post} />
-                    ))}
-                </div>
-            </div>
-            <div>
-                <div class="flex items-end justify-between mb-4">
-                    <h2 class="text-2xl ">Other Things I've Made</h2>
-                    <a href="/projects" class="no-underline m-0.5">
-                        <button>See all</button>
-                    </a>
-                </div>
-                <Divider class="mb-10" />
-                <div class="space-y-4 flex flex-col">
-                    {detailedProjects.slice(0, 3).map(project => (
-                        <DetailedProjectItem project={project} />
                     ))}
                 </div>
             </div>
