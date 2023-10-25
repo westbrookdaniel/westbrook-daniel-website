@@ -22,7 +22,7 @@ React Server Components represent a paradigm shift as they move a substantial po
 rendering logic from the client to the server. I think their biggest advantages include:
 
 -   Enhanced Performance: Offloading rendering to the server reduces client-side processing, leading to faster load times. This also leads to a lot less work to do that stems from transferring data between the client and the server.
--   Improved Security: Minimizing client-side code reduces the attack surface, enhancing security. Some of the [features in Next.js](https://nextjs.org/blog/security-nextjs-server-components-actions) help with this too.
+-   Improved Security: Minimizing client-side code reduces the attack surface, enhancing security. Some of the new features in Next.js 14 help with this too.
 -   Simplicity: Server Components can simplify your code structure, leading to less code to get the same result. Less code also leads to a more maintainable codebase.
 
 ## Handling Interactivity
