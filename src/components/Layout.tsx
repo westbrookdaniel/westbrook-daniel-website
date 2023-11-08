@@ -1,8 +1,8 @@
-import './styles/index.css'
-import './styles/gambarino.css'
-import './styles/general-sans.css'
+import '../styles/index.css'
+import '../styles/gambarino.css'
+import '../styles/general-sans.css'
 
-import { ref } from 'documentx/util'
+import { ref } from 'documentx'
 
 import Socials from './Socials'
 import { Themer } from './Themer'

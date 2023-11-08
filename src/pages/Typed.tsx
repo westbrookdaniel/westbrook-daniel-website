@@ -1,4 +1,4 @@
-import { ref } from 'documentx/util'
+import { ref } from 'documentx'
 import { randomiseTheme } from '../components/Themer'
 
 let firstTime = location.pathname === '/'
