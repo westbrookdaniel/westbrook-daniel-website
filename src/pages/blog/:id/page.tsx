@@ -1,22 +1,25 @@
-import { Divider } from '../../components/Divider'
-import NotFound from '../404'
-import { getBlogPost } from '../../data/blog'
-import { formatDate } from '../../util/date'
+import { Divider } from '../../../components/Divider'
+import NotFound from '../../404'
+import { getBlogPost } from '../../../data/blog'
+import { formatDate } from '../../../util/date'
+import Layout from '../../../components/Layout'
+import { setMeta } from '../../../util/setMeta'
 
 export default async function BlogPost() {
-    const { id } = router.params()
+    // const { id } = router.params()
+    const id = 'TODO'
 
     const post = await getBlogPost(id)
 
     if (!post) return <NotFound />
 
-    meta.from({
+    setMeta({
         title: post.info.title,
         description: post.info.snippet,
     })
 
     return (
-        <div>
+        <Layout>
             <div class="min-h-[33vh] flex flex-col justify-center space-y-4 md:space-y-8 py-16">
                 <h1 class="text-4xl xs:text-5xl md:text-6xl">
                     {post.info.title}
@@ -40,7 +43,7 @@ export default async function BlogPost() {
                     <span>All Posts</span>
                 </button>
             </a>
-        </div>
+        </Layout>
     )
 }
 
